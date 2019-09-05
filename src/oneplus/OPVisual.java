@@ -12,14 +12,10 @@
 
 package oneplus;
 
-import java.awt.BorderLayout;
-import java.awt.Container;
 import java.awt.Cursor;
 import java.awt.Desktop;
-import java.awt.event.ActionEvent;
 import java.io.BufferedOutputStream;
 import java.io.BufferedReader;
-import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -30,18 +26,15 @@ import java.net.InetSocketAddress;
 import java.net.Socket;
 import java.net.URL;
 import java.util.Map;
-import java.util.concurrent.TimeUnit;
-import java.util.concurrent.atomic.AtomicBoolean;
-import java.util.concurrent.locks.LockSupport;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import javax.swing.BorderFactory;
-import javax.swing.JButton;
-import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 import javax.swing.JProgressBar;
 import javax.swing.SwingUtilities;
 import javax.swing.WindowConstants;
+import javax.swing.JFrame;
+import java.io.File;
+import javax.swing.ImageIcon;
 
 /**
  *
@@ -102,6 +95,8 @@ public class OPVisual extends javax.swing.JFrame {
         jMenuItem2 = new javax.swing.JMenuItem();
         jSeparator2 = new javax.swing.JPopupMenu.Separator();
         jMenuItem3 = new javax.swing.JMenuItem();
+        jSeparator6 = new javax.swing.JPopupMenu.Separator();
+        jMenuItem11 = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("OnePlus Tool - BETA Es");
@@ -365,6 +360,8 @@ public class OPVisual extends javax.swing.JFrame {
             }
         });
         jMenu3.add(jMenuItem9);
+
+        jSeparator5.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jMenu3.add(jSeparator5);
 
         jMenuItem10.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
@@ -411,6 +408,14 @@ public class OPVisual extends javax.swing.JFrame {
             }
         });
         jMenu4.add(jMenuItem3);
+        jMenu4.add(jSeparator6);
+
+        jMenuItem11.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        jMenuItem11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/oneplus/images/bug.png"))); // NOI18N
+        jMenuItem11.setText("Bugs");
+        jMenuItem11.setToolTipText("Errores que se registran en el programa");
+        jMenuItem11.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jMenu4.add(jMenuItem11);
 
         jMenuBar2.add(jMenu4);
 
@@ -486,6 +491,8 @@ public class OPVisual extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void formWindowOpened(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowOpened
+
+    this.setIconImage(new ImageIcon(getClass().getResource("Icon.png")).getImage());
 
     jFormattedTextField1.setText("Bienvendio a OnePlus Tool");
     
@@ -762,6 +769,7 @@ public class OPVisual extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(null, "ERROR: " +ex);
         } 
         
+        JOptionPane.showMessageDialog(null,"Se desbloqueará el bootloader, por favor conecta el dispositivo");
         ProcessBuilder pb =  new ProcessBuilder("fastboot", "oem", "unlock");
         try {
             Map<String, String> env = pb.environment();
@@ -1030,7 +1038,7 @@ public class OPVisual extends javax.swing.JFrame {
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
             ProcessBuilder pb =
-                    new ProcessBuilder("fastboot", "reboot", "recovery");
+                    new ProcessBuilder("adb", "reboot", "recovery");
         try {
             Map<String, String> env = pb.environment();
             env.put("VAR1", "myValue");
@@ -1182,28 +1190,8 @@ public class OPVisual extends javax.swing.JFrame {
         };
         new Thread(updatethread).start();
     
- }
-           
-        }catch (IOException e) {
-
-        jProgressBar.setString("Calculando tamaño del archivo...");
-        jFormattedTextField1.setText("Error no se pudo establecer conexion con el servidor.");
-       
-        }finally{
-            try { 
-            sock.close(); 
-        }catch (IOException e) { 
-            }
-        } 
-        
-        
-    File f = new File("/img/recovery/twrp-3.3.1-0-20190713-codeworkx-cheeseburger.img");
-   
-    if(!f.exists()){
-
-    }else{ 
-        ProcessBuilder pb =
-                    new ProcessBuilder("fastboot", "flash", "recovery", "twrp-3.3.1-0-20190713-codeworkx-cheeseburger.img");
+ }else{ 
+        ProcessBuilder pb = new ProcessBuilder("fastboot", "flash", "recovery", "twrp-3.3.1-0-20190713-codeworkx-cheeseburger.img");
         try {
             Map<String, String> env = pb.environment();
             env.put("VAR1", "myValue");
@@ -1229,7 +1217,21 @@ public class OPVisual extends javax.swing.JFrame {
             assert p.getInputStream().read() == -1; 
         } catch (IOException ex) {
             JOptionPane.showMessageDialog(null, "ERROR: " +ex);
-        }              
+        }     
+        }
+           
+        }catch (IOException e) {
+
+        jProgressBar.setString("Calculando tamaño del archivo...");
+        jFormattedTextField1.setText("Error no se pudo establecer conexion con el servidor.");
+       
+        }finally{
+            try { 
+            sock.close(); 
+        }catch (IOException e) { 
+            }
+        } 
+                     
         //Read LOG
  try {
                 try (FileInputStream fstream = new FileInputStream("log")) {
@@ -1245,7 +1247,6 @@ public class OPVisual extends javax.swing.JFrame {
      jFormattedTextField1.setText("Error: " +e.getMessage());    
      JOptionPane.showMessageDialog(null,"Error:  " +e.getMessage());
 }
-    }
  //End Reading LOG when fail
     }//GEN-LAST:event_jButton4ActionPerformed
 
@@ -1504,6 +1505,7 @@ public class OPVisual extends javax.swing.JFrame {
     private javax.swing.JMenuBar jMenuBar2;
     private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JMenuItem jMenuItem10;
+    private javax.swing.JMenuItem jMenuItem11;
     private javax.swing.JMenuItem jMenuItem2;
     private javax.swing.JMenuItem jMenuItem3;
     private javax.swing.JMenuItem jMenuItem4;
@@ -1517,6 +1519,7 @@ public class OPVisual extends javax.swing.JFrame {
     private javax.swing.JPopupMenu.Separator jSeparator3;
     private javax.swing.JPopupMenu.Separator jSeparator4;
     private javax.swing.JPopupMenu.Separator jSeparator5;
+    private javax.swing.JPopupMenu.Separator jSeparator6;
     // End of variables declaration//GEN-END:variables
 
 }

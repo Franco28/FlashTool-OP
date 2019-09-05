@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<launch4jConfig>
+  <dontWrapJar>false</dontWrapJar>
+  <headerType>gui</headerType>
+  <obj>w32api/crt2.o</obj>
+  <obj>head/guihead.o</obj>
+  <obj>head/head.o</obj>
+  <lib>w32api/libmingw32.a</lib>
+  <lib>w32api/libgcc.a</lib>
+  <lib>w32api/libmsvcrt.a</lib>
+  <lib>w32api/libkernel32.a</lib>
+  <lib>w32api/libuser32.a</lib>
+  <lib>w32api/libadvapi32.a</lib>
+  <lib>w32api/libshell32.a</lib>
+  <jar>C:\Users\Franco\Documents\NetBeansProjects\OnePlus\dist\OnePlus.jar</jar>
+  <outfile>C:\Users\Franco\Desktop\OnePlus 5\OnePlusTool\Tool.exe</outfile>
+  <errTitle>Error Java no encontrado, por favor descargue java</errTitle>
+  <cmdLine></cmdLine>
+  <chdir>.</chdir>
+  <priority>high</priority>
+  <downloadUrl>http://java.com/download</downloadUrl>
+  <supportUrl>https://franco28.github.io/stockrom/</supportUrl>
+  <stayAlive>true</stayAlive>
+  <restartOnCrash>true</restartOnCrash>
+  <manifest></manifest>
+  <icon>C:\Users\Franco\Documents\favicon.ico</icon>
+  <jre>
+    <path>C:\Program Files\Java\jre1.8.0_111</path>
+    <bundledJre64Bit>true</bundledJre64Bit>
+    <bundledJreAsFallback>false</bundledJreAsFallback>
+    <minVersion>8</minVersion>
+    <maxVersion>9</maxVersion>
+    <jdkPreference>preferJre</jdkPreference>
+    <runtimeBits>64</runtimeBits>
+    <initialHeapSize>1048</initialHeapSize>
+    <maxHeapSize>2048</maxHeapSize>
+  </jre>
+  <versionInfo>
+    <fileVersion>1.0.0.1</fileVersion>
+    <txtFileVersion>1.0.0.1.RC1</txtFileVersion>
+    <fileDescription>Tool para OnePlus</fileDescription>
+    <copyright>franco28 2019</copyright>
+    <productVersion>1.0.0.1</productVersion>
+    <txtProductVersion>1.0.0.1.RC1</txtProductVersion>
+    <productName>OnePlus Tool</productName>
+    <companyName>franco28 dev</companyName>
+    <internalName>franco28 dev</internalName>
+    <originalFilename>Tool.exe</originalFilename>
+    <trademarks>OnePlus</trademarks>
+    <language>SPANISH_MEXICO</language>
+  </versionInfo>
+  <messages>
+    <startupErr>Error al ejecutar aplicación</startupErr>
+    <bundledJreErr>Esta aplicación se configuró para usar un Java Runtime Environment incluido pero el tiempo de ejecución falta o está dañado.</bundledJreErr>
+    <jreVersionErr>Esta aplicación requiere un entorno de ejecución de Java</jreVersionErr>
+    <launcherErr>El registro hace referencia a una instalación de Java Runtime Environment inexistente o el tiempo de ejecución está dañado.</launcherErr>
+    <instanceAlreadyExistsMsg>Ya se está ejecutando una instancia de aplicación.</instanceAlreadyExistsMsg>
+  </messages>
+</launch4jConfig>
