@@ -729,11 +729,40 @@ public class OPVisual extends javax.swing.JFrame {
     }//GEN-LAST:event_formWindowOpened
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-
+       
     int reply = JOptionPane.showConfirmDialog(null, "Este proceso eliminara toda su memoria interna, realizar backup antes de continuar", "Cuidado! Desea continuar?", JOptionPane.YES_NO_OPTION);
-        if (reply == JOptionPane.YES_OPTION) {
-            ProcessBuilder pb =
-                    new ProcessBuilder("fastboot", "oem", "unlock");
+    JOptionPane.showMessageDialog(null,"Por favor activa las opciones de desarrollador y activa: \n\n - Desbloqueo OEM \n\n - Depuración por USB");
+    if (reply == JOptionPane.YES_OPTION) {
+        ProcessBuilder rb =  new ProcessBuilder("adb", "reboot", "bootloader");
+        try {
+            Map<String, String> env = rb.environment();
+            env.put("VAR1", "myValue");
+            env.remove("OTHERVAR");
+            env.put("VAR2", env.get("VAR1") + "suffix");
+            rb.directory(new File("adb/"));
+            File log = new File("log");
+            rb.redirectErrorStream(true);
+            rb.redirectOutput(Redirect.appendTo(log));
+            Process p = rb.start();
+            jFormattedTextField1.setText("" +p);     
+            if (p != rb.start()){
+              JOptionPane.showMessageDialog(null,"Error:  " +rb.start()+ "\n\n Conecta el dispositivo");
+              dispose();//To close the current window
+              String path = "Tool.exe";
+              File file = new File(path);
+              if (! file.exists()) {
+              throw new IllegalArgumentException("El archivo " + path + " no existe");
+              }
+              Process t = Runtime.getRuntime().exec(file.getAbsolutePath());
+            }
+            assert rb.redirectInput() == Redirect.PIPE;
+            assert rb.redirectOutput().file() == log;
+            assert p.getInputStream().read() == -1; 
+        } catch (IOException ex) {
+            JOptionPane.showMessageDialog(null, "ERROR: " +ex);
+        } 
+        
+        ProcessBuilder pb =  new ProcessBuilder("fastboot", "oem", "unlock");
         try {
             Map<String, String> env = pb.environment();
             env.put("VAR1", "myValue");
