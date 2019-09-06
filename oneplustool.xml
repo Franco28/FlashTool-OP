@@ -36,12 +36,12 @@
     <maxHeapSize>2048</maxHeapSize>
   </jre>
   <versionInfo>
-    <fileVersion>1.0.0.1</fileVersion>
-    <txtFileVersion>1.0.0.1.RC1</txtFileVersion>
+    <fileVersion>1.0.0.0</fileVersion>
+    <txtFileVersion>1.0.0.0.RC1</txtFileVersion>
     <fileDescription>Tool para OnePlus</fileDescription>
     <copyright>franco28 2019</copyright>
-    <productVersion>1.0.0.1</productVersion>
-    <txtProductVersion>1.0.0.1.RC1</txtProductVersion>
+    <productVersion>1.0.0.2</productVersion>
+    <txtProductVersion>1.0.0.2.RC1</txtProductVersion>
     <productName>OnePlus Tool</productName>
     <companyName>franco28 dev</companyName>
     <internalName>franco28 dev</internalName>

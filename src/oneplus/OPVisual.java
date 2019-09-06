@@ -34,6 +34,7 @@ import javax.swing.SwingUtilities;
 import javax.swing.WindowConstants;
 import javax.swing.JFrame;
 import java.io.File;
+import java.io.InputStream;
 import javax.swing.ImageIcon;
 
 /**
@@ -79,23 +80,35 @@ public class OPVisual extends javax.swing.JFrame {
         jMenuItem4 = new javax.swing.JMenuItem();
         jSeparator1 = new javax.swing.JPopupMenu.Separator();
         jMenuItem1 = new javax.swing.JMenuItem();
+        jSeparator7 = new javax.swing.JPopupMenu.Separator();
+        jMenu6 = new javax.swing.JMenu();
+        jMenuItem12 = new javax.swing.JMenuItem();
+        jMenuItem13 = new javax.swing.JMenuItem();
+        jMenuItem14 = new javax.swing.JMenuItem();
+        jMenu3 = new javax.swing.JMenu();
+        jMenuItem9 = new javax.swing.JMenuItem();
+        jSeparator5 = new javax.swing.JPopupMenu.Separator();
+        jMenuItem10 = new javax.swing.JMenuItem();
         jMenu2 = new javax.swing.JMenu();
         jMenuItem6 = new javax.swing.JMenuItem();
         jSeparator3 = new javax.swing.JPopupMenu.Separator();
         jMenuItem5 = new javax.swing.JMenuItem();
         jSeparator4 = new javax.swing.JPopupMenu.Separator();
+        jMenuItem16 = new javax.swing.JMenuItem();
+        jSeparator9 = new javax.swing.JPopupMenu.Separator();
+        jMenu7 = new javax.swing.JMenu();
+        jMenuItem15 = new javax.swing.JMenuItem();
+        jSeparator8 = new javax.swing.JPopupMenu.Separator();
         jMenu5 = new javax.swing.JMenu();
         jMenuItem7 = new javax.swing.JMenuItem();
         jMenuItem8 = new javax.swing.JMenuItem();
-        jMenu3 = new javax.swing.JMenu();
-        jMenuItem9 = new javax.swing.JMenuItem();
-        jSeparator5 = new javax.swing.JPopupMenu.Separator();
-        jMenuItem10 = new javax.swing.JMenuItem();
         jMenu4 = new javax.swing.JMenu();
         jMenuItem2 = new javax.swing.JMenuItem();
         jSeparator2 = new javax.swing.JPopupMenu.Separator();
         jMenuItem3 = new javax.swing.JMenuItem();
         jSeparator6 = new javax.swing.JPopupMenu.Separator();
+        jMenuItem17 = new javax.swing.JMenuItem();
+        jSeparator10 = new javax.swing.JPopupMenu.Separator();
         jMenuItem11 = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -190,11 +203,6 @@ public class OPVisual extends javax.swing.JFrame {
         jFormattedTextField1.setCaretColor(new java.awt.Color(255, 0, 0));
         jFormattedTextField1.setCursor(new java.awt.Cursor(java.awt.Cursor.WAIT_CURSOR));
         jFormattedTextField1.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
-        jFormattedTextField1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jFormattedTextField1ActionPerformed(evt);
-            }
-        });
 
         jLabel3.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
         jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -270,8 +278,86 @@ public class OPVisual extends javax.swing.JFrame {
             }
         });
         jMenu1.add(jMenuItem1);
+        jMenu1.add(jSeparator7);
+
+        jMenu6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/oneplus/images/open16.png"))); // NOI18N
+        jMenu6.setText("Abrir sub carpetas");
+        jMenu6.setToolTipText("Abre las carpetas dentro de img");
+        jMenu6.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jMenu6.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+
+        jMenuItem12.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        jMenuItem12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/oneplus/images/rebooto.png"))); // NOI18N
+        jMenuItem12.setText("TWRP");
+        jMenuItem12.setToolTipText("Esta carpeta contiene la imagen del recovery twrp oficial");
+        jMenuItem12.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jMenuItem12.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem12ActionPerformed(evt);
+            }
+        });
+        jMenu6.add(jMenuItem12);
+
+        jMenuItem13.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        jMenuItem13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/oneplus/images/depurar.png"))); // NOI18N
+        jMenuItem13.setText("Firmware");
+        jMenuItem13.setToolTipText("Esta carpeta contiene OxygenOS 9.0.8");
+        jMenuItem13.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem13ActionPerformed(evt);
+            }
+        });
+        jMenu6.add(jMenuItem13);
+
+        jMenuItem14.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        jMenuItem14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/oneplus/images/recov.png"))); // NOI18N
+        jMenuItem14.setText("Recovery");
+        jMenuItem14.setToolTipText("Esta carpeta contiene el Recovery TWRP pero para flashear el firmware OxygenOS");
+        jMenuItem14.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem14ActionPerformed(evt);
+            }
+        });
+        jMenu6.add(jMenuItem14);
+
+        jMenu1.add(jMenu6);
 
         jMenuBar2.add(jMenu1);
+
+        jMenu3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/oneplus/images/flashb.png"))); // NOI18N
+        jMenu3.setText("Flash");
+        jMenu3.setToolTipText("Menu Flash ");
+        jMenu3.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jMenu3.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+
+        jMenuItem9.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        jMenuItem9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/oneplus/images/edit_add16.png"))); // NOI18N
+        jMenuItem9.setText("Flashear Firmware Stock");
+        jMenuItem9.setToolTipText("Esto abrirá el menú para flashear el firmware Stock");
+        jMenuItem9.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jMenuItem9.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem9ActionPerformed(evt);
+            }
+        });
+        jMenu3.add(jMenuItem9);
+
+        jSeparator5.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        jMenu3.add(jSeparator5);
+
+        jMenuItem10.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        jMenuItem10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/oneplus/images/download.png"))); // NOI18N
+        jMenuItem10.setText("Descargar última OxygenOS One Plus 5");
+        jMenuItem10.setToolTipText("Descargue el último firmware OP5");
+        jMenuItem10.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jMenuItem10.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem10ActionPerformed(evt);
+            }
+        });
+        jMenu3.add(jMenuItem10);
+
+        jMenuBar2.add(jMenu3);
 
         jMenu2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/oneplus/images/build.png"))); // NOI18N
         jMenu2.setText("Otros");
@@ -295,7 +381,7 @@ public class OPVisual extends javax.swing.JFrame {
 
         jMenuItem5.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_T, java.awt.event.InputEvent.ALT_MASK | java.awt.event.InputEvent.CTRL_MASK));
         jMenuItem5.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jMenuItem5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/oneplus/images/cancel16.png"))); // NOI18N
+        jMenuItem5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/oneplus/images/java.png"))); // NOI18N
         jMenuItem5.setText("Terminar proceso Java");
         jMenuItem5.setToolTipText("Se cerrara por completo Java (Mata el proceso)");
         jMenuItem5.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -306,6 +392,41 @@ public class OPVisual extends javax.swing.JFrame {
         });
         jMenu2.add(jMenuItem5);
         jMenu2.add(jSeparator4);
+
+        jMenuItem16.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        jMenuItem16.setForeground(new java.awt.Color(204, 102, 0));
+        jMenuItem16.setIcon(new javax.swing.ImageIcon(getClass().getResource("/oneplus/images/cancel16.png"))); // NOI18N
+        jMenuItem16.setText("Terminar todos los procesos ");
+        jMenuItem16.setToolTipText("Cerrara por completo el programa y sus subprogramas abiertos");
+        jMenuItem16.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jMenuItem16.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem16ActionPerformed(evt);
+            }
+        });
+        jMenu2.add(jMenuItem16);
+        jMenu2.add(jSeparator9);
+
+        jMenu7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/oneplus/images/tool.png"))); // NOI18N
+        jMenu7.setText("Otros Tool");
+        jMenu7.setToolTipText("Tools extras para diferentes dispositivos");
+        jMenu7.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jMenu7.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+
+        jMenuItem15.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        jMenuItem15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/oneplus/images/mi.png"))); // NOI18N
+        jMenuItem15.setText("Xiaomi MI A2/6X Tool");
+        jMenuItem15.setToolTipText("Xiaomi Tool Beta");
+        jMenuItem15.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jMenuItem15.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem15ActionPerformed(evt);
+            }
+        });
+        jMenu7.add(jMenuItem15);
+
+        jMenu2.add(jMenu7);
+        jMenu2.add(jSeparator8);
 
         jMenu5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/oneplus/images/len.png"))); // NOI18N
         jMenu5.setText("Idioma");
@@ -343,41 +464,6 @@ public class OPVisual extends javax.swing.JFrame {
 
         jMenuBar2.add(jMenu2);
 
-        jMenu3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/oneplus/images/flashb.png"))); // NOI18N
-        jMenu3.setText("Flash");
-        jMenu3.setToolTipText("Menu Flash ");
-        jMenu3.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jMenu3.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-
-        jMenuItem9.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jMenuItem9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/oneplus/images/edit_add16.png"))); // NOI18N
-        jMenuItem9.setText("Flashear Firmware Stock");
-        jMenuItem9.setToolTipText("Esto abrirá el menú para flashear el firmware Stock");
-        jMenuItem9.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jMenuItem9.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem9ActionPerformed(evt);
-            }
-        });
-        jMenu3.add(jMenuItem9);
-
-        jSeparator5.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jMenu3.add(jSeparator5);
-
-        jMenuItem10.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jMenuItem10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/oneplus/images/download.png"))); // NOI18N
-        jMenuItem10.setText("Descargar última OxygenOS One Plus 5");
-        jMenuItem10.setToolTipText("Descargue el último firmware OP5");
-        jMenuItem10.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jMenuItem10.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem10ActionPerformed(evt);
-            }
-        });
-        jMenu3.add(jMenuItem10);
-
-        jMenuBar2.add(jMenu3);
-
         jMenu4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/oneplus/images/info.png"))); // NOI18N
         jMenu4.setText("Ayuda");
         jMenu4.setToolTipText("Menú ayuda");
@@ -410,11 +496,27 @@ public class OPVisual extends javax.swing.JFrame {
         jMenu4.add(jMenuItem3);
         jMenu4.add(jSeparator6);
 
+        jMenuItem17.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        jMenuItem17.setIcon(new javax.swing.ImageIcon(getClass().getResource("/oneplus/images/new16.png"))); // NOI18N
+        jMenuItem17.setText("Licencia");
+        jMenuItem17.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem17ActionPerformed(evt);
+            }
+        });
+        jMenu4.add(jMenuItem17);
+        jMenu4.add(jSeparator10);
+
         jMenuItem11.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jMenuItem11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/oneplus/images/bug.png"))); // NOI18N
         jMenuItem11.setText("Bugs");
         jMenuItem11.setToolTipText("Errores que se registran en el programa");
         jMenuItem11.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jMenuItem11.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem11ActionPerformed(evt);
+            }
+        });
         jMenu4.add(jMenuItem11);
 
         jMenuBar2.add(jMenu4);
@@ -500,39 +602,77 @@ public class OPVisual extends javax.swing.JFrame {
         InetSocketAddress addr=new InetSocketAddress("www.google.com",80);
         try {
         sock.connect(addr,3000);
-       
-        File a = new File("adb/adb.zip");
-        if (a.exists() == true){
-        Desktop desktop = Desktop.getDesktop();
-        File dirToOpen = null;
-        try {
-            dirToOpen = new File("adb");
-            desktop.open(dirToOpen);
-            JOptionPane.showMessageDialog(null,"Extraiga el archivo .zip por favor y despues presione OK");
-            a.delete();
-              this.dispose();//To close the current window
-              String path = "Tool.exe";
-              File file = new File(path);
-              Process t = Runtime.getRuntime().exec(file.getAbsolutePath()); 
-        } catch (IllegalArgumentException iae) {
-            JOptionPane.showMessageDialog(null,"Error: Carpeta " +dirToOpen+ " no encontrada");
-        } catch (IOException ex) {
-            Logger.getLogger(OPVisual.class.getName()).log(Level.SEVERE, null, ex);
-        }  
-        }
         
-        File f = new File("adb/adb.exe"); 
-        if(!f.exists()){
+        File f = new File("C:\\adb\\adb.exe"); 
+        
+        if (!f.exists() == true){
         jFormattedTextField1.setText("Descargando adb & fastboot...");
-        JOptionPane.showMessageDialog(null,"Error: No se pudo encontrar los archivos adb & fastboot \n\n Se abrira una pestaña, cuando se descarguen extraiga los archivos por favor /OnePlusTools/adb");
-        if(new NetFile(new File("adb/adb.zip"), "https://bitbucket.org/Franco28/flashtool-motorola-moto-g5-g5plus/downloads/adb.zip", -1).load()) {          
-        jFormattedTextField1.setText("Archivos descargados!");
-              this.dispose();//To close the current window
-              String path = "Tool.exe";
-              File file = new File(path);
-              Process t = Runtime.getRuntime().exec(file.getAbsolutePath()); 
+        JOptionPane.showMessageDialog(null,"Error: No se pudo encontrar los archivos adb & fastboot \n\n El archivo se instalará en C:\\adb");
+        final JProgressBar jProgressBar = new JProgressBar();
+        jProgressBar.setMaximum(100000);
+        jProgressBar.setCursor (Cursor.getPredefinedCursor (Cursor.WAIT_CURSOR));
+        jProgressBar.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        jProgressBar.setBorderPainted(false);
+        jProgressBar.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        jProgressBar.setDebugGraphicsOptions(javax.swing.DebugGraphics.NONE_OPTION);
+        jProgressBar.setStringPainted(true);
+        jProgressBar.setString("Iniciando...");
+        JFrame frame = new JFrame("Descargando adb & fastboot...");
+        frame.setContentPane(jProgressBar);
+        frame.setDefaultCloseOperation(WindowConstants.DO_NOTHING_ON_CLOSE);
+        frame.setSize(600, 100);
+        frame.setVisible(true);
+        frame.setResizable(false);
+        frame.setLocationRelativeTo(null);
+        Runnable updatethread;
+            updatethread = () -> {
+            try {
+                URL url = new URL("https://bitbucket.org/Franco28/flashtool-motorola-moto-g5-g5plus/downloads/adb.zip");
+                HttpURLConnection httpConnection = (HttpURLConnection) (url.openConnection());
+                long completeFileSize = httpConnection.getContentLength();
+                try (final java.io.BufferedInputStream in = new java.io.BufferedInputStream(httpConnection.getInputStream())) {
+                    java.io.FileOutputStream fos = new java.io.FileOutputStream("C:\\adb\\adb.zip");
+                    try (final java.io.BufferedOutputStream bout = new BufferedOutputStream(fos, 1024)) {
+                        byte[] data = new byte[1024];
+                        long downloadedFileSize = 0;
+                        int x1 = 0;
+                        while ((x1 = in.read(data, 0, 1024)) >= 0) {
+                            downloadedFileSize += x1;
+                            // calculate progress
+                            final int currentProgress = (int) ((((double)downloadedFileSize) / ((double)completeFileSize)) * 100000d);
+                            // update progress bar
+                            jProgressBar.setString("Calculando tamaño del archivo...");
+                            SwingUtilities.invokeLater(() -> {
+                                jProgressBar.setString("Descargando adb & fastboot: \n" +currentProgress+ " Bytes");
+                                jProgressBar.setValue(currentProgress);
+                            });
+                            bout.write(data, 0, x1);
+                        }
+                    }
+        frame.setVisible(false);
+        File adb = new File("C:\\adb\\adb.zip"); 
+        String zipFilePath = "C:\\adb\\adb.zip";
+        String destDirectory = "C:\\adb";
+        UnzipUtility unzipper = new UnzipUtility();
+        try {
+            unzipper.unzip(zipFilePath, destDirectory);
+        } catch (IOException ex) {
+                // some errors occurred
         }
-        }
+            adb.delete();
+            dispose();//To close the current window
+            String path = "Tool.exe";
+            File file = new File(path);
+            Process t = Runtime.getRuntime().exec(file.getAbsolutePath());
+ 
+    }
+            }catch (FileNotFoundException e) {
+            }catch (IOException ex) {
+                Logger.getLogger(OPVisual.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        };
+        new Thread(updatethread).start(); 
+ }
            
         }catch (IOException e) {
 
@@ -544,8 +684,9 @@ public class OPVisual extends javax.swing.JFrame {
         }catch (IOException e) { 
             }
         } 
-            
-    
+
+        File f = new File("img"); 
+        if (!f.exists() == true){
 // Create a directory; all non-existent ancestor directories are
 // automatically created
  try{
@@ -557,33 +698,49 @@ public class OPVisual extends javax.swing.JFrame {
   new File(strDirectoy)).mkdir();
   if (success) {
   jFormattedTextField1.setText("Directorio: " + strManyDirectories + " creado...");    
-              dispose();//To close the current window
-              String path = "Tool.exe";
-              File file = new File(path);
-              if (!file.exists()) {
-              JOptionPane.showMessageDialog(null,"Error: " +path+ " no existe");
-              throw new IllegalArgumentException("El archivo " + path + " no existe");
-              }
-              Process t = Runtime.getRuntime().exec(file.getAbsolutePath()); 
+  jFormattedTextField1.setText("Bienvendio a OnePlus Tool");
   }  
   // Create multiple directories
   success = (new File(strManyDirectories)).mkdirs();
   if (success) {
   jFormattedTextField1.setText("Directorios: " + strManyDirectories + " creado...");  
-              dispose();//To close the current window
-              String path = "Tool.exe";
-              File file = new File(path);
-              if (!file.exists()) {
-              JOptionPane.showMessageDialog(null,"Error: " +path+ " no existe");
-              throw new IllegalArgumentException("El archivo " + path + " no existe");
-              }
-              Process t = Runtime.getRuntime().exec(file.getAbsolutePath()); 
+  jFormattedTextField1.setText("Bienvendio a OnePlus Tool");
   }
 
-  }catch (IOException | IllegalArgumentException e){//Catch exception if any
+  }catch (IllegalArgumentException e){//Catch exception if any
   jFormattedTextField1.setText("Error: " + e.getMessage());     
   }
- 
+}
+        
+        File bl = new File("img/bootloader"); 
+        if (!bl.exists() == true){
+// Create a directory; all non-existent ancestor directories are
+// automatically created
+ try{
+  String strDirectoy ="img";
+  String strManyDirectories="img/bootloader";
+
+  // Create one directory
+  boolean success = (
+  new File(strDirectoy)).mkdir();
+  if (success) {
+  jFormattedTextField1.setText("Directorio: " + strManyDirectories + " creado...");    
+  jFormattedTextField1.setText("Bienvendio a OnePlus Tool");
+  }  
+  // Create multiple directories
+  success = (new File(strManyDirectories)).mkdirs();
+  if (success) {
+  jFormattedTextField1.setText("Directorios: " + strManyDirectories + " creado...");  
+  jFormattedTextField1.setText("Bienvendio a OnePlus Tool");
+  }
+
+  }catch (IllegalArgumentException e){//Catch exception if any
+  jFormattedTextField1.setText("Error: " + e.getMessage());     
+  }
+}
+        
+    File r = new File("img/recovery"); 
+    if (!r.exists() == true){
  // Create a directory; all non-existent ancestor directories are
 // automatically created
  try{
@@ -595,33 +752,21 @@ public class OPVisual extends javax.swing.JFrame {
   new File(strDirectoy)).mkdir();
   if (success) {
   jFormattedTextField1.setText("Directorio: " + strManyDirectories + " creado...");    
-              dispose();//To close the current window
-              String path = "Tool.exe";
-              File file = new File(path);
-              if (!file.exists()) {
-              JOptionPane.showMessageDialog(null,"Error: " +path+ " no existe");
-              throw new IllegalArgumentException("El archivo " + path + " no existe");
-              }
-              Process t = Runtime.getRuntime().exec(file.getAbsolutePath()); 
+  jFormattedTextField1.setText("Bienvendio a OnePlus Tool");
   }  
   // Create multiple directories
   success = (new File(strManyDirectories)).mkdirs();
   if (success) {
   jFormattedTextField1.setText("Directorios: " + strManyDirectories + " creado...");  
-              dispose();//To close the current window
-              String path = "Tool.exe";
-              File file = new File(path);
-              if (!file.exists()) {
-              JOptionPane.showMessageDialog(null,"Error: " +path+ " no existe");
-              throw new IllegalArgumentException("El archivo " + path + " no existe");
-              }
-              Process t = Runtime.getRuntime().exec(file.getAbsolutePath()); 
+  jFormattedTextField1.setText("Bienvendio a OnePlus Tool");
   }
-
-  }catch (IOException | IllegalArgumentException e){//Catch exception if any
+  }catch (IllegalArgumentException e){//Catch exception if any
   jFormattedTextField1.setText("Error: " + e.getMessage());     
   }
- 
+}
+
+        File tr = new File("img/twrp"); 
+        if (!tr.exists() == true){    
  // Create a directory; all non-existent ancestor directories are
 // automatically created
  try{
@@ -632,70 +777,46 @@ public class OPVisual extends javax.swing.JFrame {
   boolean success = (
   new File(strDirectoy)).mkdir();
   if (success) {
-  jFormattedTextField1.setText("Directorio: " + strManyDirectories + " creado...");    
-              dispose();//To close the current window
-              String path = "Tool.exe";
-              File file = new File(path);
-              if (!file.exists()) {
-              JOptionPane.showMessageDialog(null,"Error: " +path+ " no existe");
-              throw new IllegalArgumentException("El archivo " + path + " no existe");
-              }
-              Process t = Runtime.getRuntime().exec(file.getAbsolutePath()); 
+  jFormattedTextField1.setText("Directorio: " + strManyDirectories + " creado...");   
+  jFormattedTextField1.setText("Bienvendio a OnePlus Tool");
   }  
   // Create multiple directories
   success = (new File(strManyDirectories)).mkdirs();
   if (success) {
   jFormattedTextField1.setText("Directorios: " + strManyDirectories + " creado...");  
-              dispose();//To close the current window
-              String path = "Tool.exe";
-              File file = new File(path);
-              if (!file.exists()) {
-              JOptionPane.showMessageDialog(null,"Error: " +path+ " no existe");
-              throw new IllegalArgumentException("El archivo " + path + " no existe");
-              }
-              Process t = Runtime.getRuntime().exec(file.getAbsolutePath()); 
+  jFormattedTextField1.setText("Bienvendio a OnePlus Tool");
   }
 
-  }catch (IOException | IllegalArgumentException e){//Catch exception if any
+  }catch (IllegalArgumentException e){//Catch exception if any
   jFormattedTextField1.setText("Error: " + e.getMessage());     
   }
- 
+}
+        File adb = new File("C:\\adb"); 
+        if (!adb.exists() == true){
   try{
-  String strDirectoy ="adb";
-  String strManyDirectories="adb";
+  String strDirectoy ="C:\\adb";
+  String strManyDirectories="C:\\adb";
 
   // Create one directory
   boolean success = (
   new File(strDirectoy)).mkdir();
   if (success) {
   jFormattedTextField1.setText("Directorio: " + strManyDirectories + " creado...");  
-              dispose();//To close the current window
-              String path = "Tool.exe";
-              File file = new File(path);
-              if (!file.exists()) {
-              JOptionPane.showMessageDialog(null,"Error: " +path+ " no existe");
-              throw new IllegalArgumentException("El archivo " + path + " no existe");
-              }
-              Process t = Runtime.getRuntime().exec(file.getAbsolutePath()); 
+  jFormattedTextField1.setText("Bienvendio a OnePlus Tool");
   }  
   // Create multiple directories
   success = (new File(strManyDirectories)).mkdirs();
   if (success) {
   jFormattedTextField1.setText("Directorios: " + strManyDirectories + " creado...");     
-              dispose();//To close the current window
-              String path = "Tool.exe";
-              File file = new File(path);
-              if (!file.exists()) {
-              JOptionPane.showMessageDialog(null,"Error: " +path+ " no existe");
-              throw new IllegalArgumentException("El archivo " + path + " no existe");
-              }
-              Process t = Runtime.getRuntime().exec(file.getAbsolutePath());          
+  jFormattedTextField1.setText("Bienvendio a OnePlus Tool");
   }
-
-  }catch (IOException | IllegalArgumentException e){//Catch exception if any
+  }catch (IllegalArgumentException e){//Catch exception if any
   jFormattedTextField1.setText("Error: " + e.getMessage());     
   }
- 
+}
+
+    File se = new File(".settings"); 
+    if (!se.exists() == true){
   try{
   String strDirectoy =".settings";
   String strManyDirectories=".settings";
@@ -705,115 +826,38 @@ public class OPVisual extends javax.swing.JFrame {
   new File(strDirectoy)).mkdir();
   if (success) {
   jFormattedTextField1.setText("Directorio: " + strManyDirectories + " creado...");  
-              dispose();//To close the current window
-              String path = "Tool.exe";
-              File file = new File(path);
-              if (!file.exists()) {
-              JOptionPane.showMessageDialog(null,"Error: " +path+ " no existe");
-              throw new IllegalArgumentException("El archivo " + path + " no existe");
-              }
-              Process t = Runtime.getRuntime().exec(file.getAbsolutePath()); 
+  jFormattedTextField1.setText("Bienvendio a OnePlus Tool");
   }  
   // Create multiple directories
   success = (new File(strManyDirectories)).mkdirs();
   if (success) {
-  jFormattedTextField1.setText("Directorios: " + strManyDirectories + " creado...");     
-              dispose();//To close the current window
-              String path = "Tool.exe";
-              File file = new File(path);
-              if (!file.exists()) {
-              JOptionPane.showMessageDialog(null,"Error: " +path+ " no existe");
-              throw new IllegalArgumentException("El archivo " + path + " no existe");
-              }
-              Process t = Runtime.getRuntime().exec(file.getAbsolutePath());          
+  jFormattedTextField1.setText("Directorios: " + strManyDirectories + " creado...");    
+  jFormattedTextField1.setText("Bienvendio a OnePlus Tool");
   }
 
-  }catch (IOException | IllegalArgumentException e){//Catch exception if any
+  }catch (IllegalArgumentException e){//Catch exception if any
   jFormattedTextField1.setText("Error: " + e.getMessage());     
   }
+    }
   
-
     }//GEN-LAST:event_formWindowOpened
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
        
     int reply = JOptionPane.showConfirmDialog(null, "Este proceso eliminara toda su memoria interna, realizar backup antes de continuar", "Cuidado! Desea continuar?", JOptionPane.YES_NO_OPTION);
     JOptionPane.showMessageDialog(null,"Por favor activa las opciones de desarrollador y activa: \n\n - Desbloqueo OEM \n\n - Depuración por USB");
-    if (reply == JOptionPane.YES_OPTION) {
-        ProcessBuilder rb =  new ProcessBuilder("adb", "reboot", "bootloader");
-        try {
-            Map<String, String> env = rb.environment();
-            env.put("VAR1", "myValue");
-            env.remove("OTHERVAR");
-            env.put("VAR2", env.get("VAR1") + "suffix");
-            rb.directory(new File("adb/"));
-            File log = new File(".settings/log");
-            rb.redirectErrorStream(true);
-            rb.redirectOutput(Redirect.appendTo(log));
-            Process p = rb.start();
-            jFormattedTextField1.setText("" +p);     
-            if (p != rb.start()){
-              JOptionPane.showMessageDialog(null,"Error:  " +rb.start()+ "\n\n Conecta el dispositivo");
-              dispose();//To close the current window
-              String path = "Tool.exe";
-              File file = new File(path);
-              if (! file.exists()) {
-              throw new IllegalArgumentException("El archivo " + path + " no existe");
-              }
-              Process t = Runtime.getRuntime().exec(file.getAbsolutePath());
-            }
-            assert rb.redirectInput() == Redirect.PIPE;
-            assert rb.redirectOutput().file() == log;
-            assert p.getInputStream().read() == -1; 
-        } catch (IOException ex) {
-            JOptionPane.showMessageDialog(null, "ERROR: " +ex);
-        } 
-        
-        JOptionPane.showMessageDialog(null,"Se desbloqueará el bootloader, por favor conecta el dispositivo");
-        ProcessBuilder pb =  new ProcessBuilder("fastboot", "oem", "unlock");
-        try {
-            Map<String, String> env = pb.environment();
-            env.put("VAR1", "myValue");
-            env.remove("OTHERVAR");
-            env.put("VAR2", env.get("VAR1") + "suffix");
-            pb.directory(new File("adb/"));
-            File log = new File("log");
-            pb.redirectErrorStream(true);
-            pb.redirectOutput(Redirect.appendTo(log));
-            Process p = pb.start();
-            if (p != pb.start()){
-              JOptionPane.showMessageDialog(null,"Error:  " +pb.start()+ "\n\n Conecta el dispositivo");
-              dispose();//To close the current window
-              String path = "Tool.exe";
-              File file = new File(path);
-              if (! file.exists()) {
-              throw new IllegalArgumentException("El archivo " + path + " no existe");
-              }
-              Process t = Runtime.getRuntime().exec(file.getAbsolutePath());
-            }
-            assert pb.redirectInput() == Redirect.PIPE;
-            assert pb.redirectOutput().file() == log;
-            assert p.getInputStream().read() == -1; 
-        } catch (IOException ex) {
-            JOptionPane.showMessageDialog(null, "ERROR: " +ex);
-        }              
-        //Read LOG
- try {
-                try (FileInputStream fstream = new FileInputStream("log")) {
-                    BufferedReader br = new BufferedReader(new InputStreamReader(fstream));
-                    String strLine;
-                    /* read log line by line */
-                    while ((strLine = br.readLine()) != null)   {
-                        /* parse strLine to obtain what you want */
-                        jFormattedTextField1.setText(strLine);     
-                    }            
-                }
-} catch (IOException e) {
-     jFormattedTextField1.setText("Error: " +e.getMessage());    
-     JOptionPane.showMessageDialog(null,"Error:  " +e.getMessage());
-}
- //End Reading LOG when fail         
-       
+    if (reply == JOptionPane.YES_OPTION) {     
+   Runtime runtime = Runtime.getRuntime();
+try {
+    Process p1 = runtime.exec("cmd /c start img\\bootloader\\unlock.bat");
+    InputStream is = p1.getInputStream();
+    int i = 0;
+    while( (i = is.read() ) != -1) {
+       JOptionPane.showMessageDialog(null, +i);
+    }
+} catch(IOException ioException) {
+    JOptionPane.showMessageDialog(null, ioException.getMessage());
+}       
         }else {
            JOptionPane.showMessageDialog(null, "Proceso cancelado");
               dispose();//To close the current window
@@ -873,6 +917,7 @@ public class OPVisual extends javax.swing.JFrame {
                             bout.write(data, 0, x1);
                         }
                     }
+                    frame.setVisible(false);
                 }
             }catch (FileNotFoundException e) {
             }catch (IOException ex) {
@@ -895,51 +940,21 @@ public class OPVisual extends javax.swing.JFrame {
             }
         } 
         
-    File f = new File("/img/recovery/twrp-3.3.1-0-cheeseburger.img");
+    File f = new File("img/twrp/twrp-3.3.1-0-cheeseburger.img");
    
-    if(!f.exists()){
-
-    }else{        
-        ProcessBuilder pb =
-                    new ProcessBuilder("fastboot", "flash", "recovery", "twrp-3.3.1-0-cheeseburger.img.img");            
-        try {
-            Map<String, String> env = pb.environment();
-            env.put("VAR1", "myValue");
-            env.remove("OTHERVAR");
-            env.put("VAR2", env.get("VAR1") + "suffix");
-            pb.directory(new File("adb/"));
-            File log = new File(".settings/log");
-            pb.redirectErrorStream(true);
-            pb.redirectOutput(Redirect.appendTo(log));
-            Process p = pb.start();
-            if (p != pb.start()){
-              JOptionPane.showMessageDialog(null,"Error:  " +pb.start()+ "\n\n Conecta el dispositivo");
-              dispose();//To close the current window
-              new OPVisual().setVisible(true); 
-            }           
-            assert pb.redirectInput() == Redirect.PIPE;
-            assert pb.redirectOutput().file() == log;
-            assert p.getInputStream().read() == -1; 
-        } catch (IOException ex) {
-            JOptionPane.showMessageDialog(null, "ERROR: " +ex);
-        }              
-        //Read LOG
- try {
-                try (FileInputStream fstream = new FileInputStream("log")) {
-                    BufferedReader br = new BufferedReader(new InputStreamReader(fstream));
-                    String strLine;
-                    /* read log line by line */
-                    while ((strLine = br.readLine()) != null)   {
-                        /* parse strLine to obtain what you want */
-                        jFormattedTextField1.setText(strLine);     
-                    }            
-                }
-} catch (IOException e) {
-     jFormattedTextField1.setText("Error: " +e.getMessage());    
-     JOptionPane.showMessageDialog(null,"Error:  " +e.getMessage());
+    if(f.exists() == true){
+   Runtime runtime = Runtime.getRuntime();
+try {
+    Process p1 = runtime.exec("cmd /c start img\\twrp\\twrp.bat");
+    InputStream is = p1.getInputStream();
+    int i = 0;
+    while( (i = is.read() ) != -1) {
+       JOptionPane.showMessageDialog(null, +i);
+    }
+} catch(IOException ioException) {
+    JOptionPane.showMessageDialog(null, ioException.getMessage());
 }
- //End Reading LOG when fail
- }
+  }
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
@@ -1182,6 +1197,7 @@ public class OPVisual extends javax.swing.JFrame {
                             bout.write(data, 0, x1);
                         }
                     }
+                    frame.setVisible(false);
                 }
             }catch (FileNotFoundException e) {
             }catch (IOException ex) {
@@ -1190,39 +1206,25 @@ public class OPVisual extends javax.swing.JFrame {
         };
         new Thread(updatethread).start();
     
- }else{ 
-        ProcessBuilder pb = new ProcessBuilder("fastboot", "flash", "recovery", "twrp-3.3.1-0-20190713-codeworkx-cheeseburger.img");
-        try {
-            Map<String, String> env = pb.environment();
-            env.put("VAR1", "myValue");
-            env.remove("OTHERVAR");
-            env.put("VAR2", env.get("VAR1") + "suffix");
-            pb.directory(new File("adb/"));
-            File log = new File(".settings/log");
-            pb.redirectErrorStream(true);
-            pb.redirectOutput(Redirect.appendTo(log));
-            Process p = pb.start();
-            if (p != pb.start()){
-              JOptionPane.showMessageDialog(null,"Error:  " +pb.start()+ "\n\n Conecta el dispositivo");
-              dispose();//To close the current window
-              String path = "Tool.exe";
-              File file = new File(path);
-              if (! file.exists()) {
-              throw new IllegalArgumentException("El archivo " + path + " no existe");
-              }
-              Process t = Runtime.getRuntime().exec(file.getAbsolutePath());
-            }
-            assert pb.redirectInput() == Redirect.PIPE;
-            assert pb.redirectOutput().file() == log;
-            assert p.getInputStream().read() == -1; 
-        } catch (IOException ex) {
-            JOptionPane.showMessageDialog(null, "ERROR: " +ex);
-        }     
-        }
+ }
+    File of = new File("img/recovery/twrp-3.3.1-0-20190713-codeworkx-cheeseburger.img");
+   
+    if(of.exists() == true){
+   Runtime runtime = Runtime.getRuntime();
+try {
+    Process p1 = runtime.exec("cmd /c start img\\recovery\\recovery.bat");
+    InputStream is = p1.getInputStream();
+    int i = 0;
+    while( (i = is.read() ) != -1) {
+       JOptionPane.showMessageDialog(null, +i);
+    }
+} catch(IOException ioException) {
+    JOptionPane.showMessageDialog(null, ioException.getMessage());
+}
+  }
            
         }catch (IOException e) {
-
-        jProgressBar.setString("Calculando tamaño del archivo...");
+        
         jFormattedTextField1.setText("Error no se pudo establecer conexion con el servidor.");
        
         }finally{
@@ -1231,75 +1233,24 @@ public class OPVisual extends javax.swing.JFrame {
         }catch (IOException e) { 
             }
         } 
-                     
-        //Read LOG
- try {
-                try (FileInputStream fstream = new FileInputStream("log")) {
-                    BufferedReader br = new BufferedReader(new InputStreamReader(fstream));
-                    String strLine;
-                    /* read log line by line */
-                    while ((strLine = br.readLine()) != null)   {
-                        /* parse strLine to obtain what you want */
-                        jFormattedTextField1.setText(strLine);     
-                    }            
-                }
-} catch (IOException e) {
-     jFormattedTextField1.setText("Error: " +e.getMessage());    
-     JOptionPane.showMessageDialog(null,"Error:  " +e.getMessage());
-}
- //End Reading LOG when fail
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
 
     int reply = JOptionPane.showConfirmDialog(null, "Este proceso eliminara toda su memoria interna, realizar backup antes de continuar", "Cuidado! Desea continuar?", JOptionPane.YES_NO_OPTION);
      
-    if (reply == JOptionPane.YES_OPTION) {
-   
-        ProcessBuilder pb =
-                    new ProcessBuilder("fastboot", "oem", "lock");
-        try {
-            Map<String, String> env = pb.environment();
-            env.put("VAR1", "myValue");
-            env.remove("OTHERVAR");
-            env.put("VAR2", env.get("VAR1") + "suffix");
-            pb.directory(new File("adb/"));
-            File log = new File(".settings/log");
-            pb.redirectErrorStream(true);
-            pb.redirectOutput(Redirect.appendTo(log));
-            Process p = pb.start();
-            if (p != pb.start()){
-              JOptionPane.showMessageDialog(null,"Error:  " +pb.start()+ "\n\n Conecta el dispositivo");
-              dispose();//To close the current window
-              String path = "Tool.exe";
-              File file = new File(path);
-              if (! file.exists()) {
-              throw new IllegalArgumentException("El archivo " + path + " no existe");
-              }
-              Process t = Runtime.getRuntime().exec(file.getAbsolutePath());
-            }
-            assert pb.redirectInput() == Redirect.PIPE;
-            assert pb.redirectOutput().file() == log;
-            assert p.getInputStream().read() == -1; 
-        } catch (IOException ex) {
-            JOptionPane.showMessageDialog(null, "ERROR: " +ex);
-        }              
-        //Read LOG
- try {
-                try (FileInputStream fstream = new FileInputStream("log")) {
-                    BufferedReader br = new BufferedReader(new InputStreamReader(fstream));
-                    String strLine;
-                    /* read log line by line */
-                    while ((strLine = br.readLine()) != null)   {
-                        /* parse strLine to obtain what you want */
-                        jFormattedTextField1.setText(strLine);     
-                    }            
-                }
-} catch (IOException e) {
-     jFormattedTextField1.setText("Error: " +e.getMessage());    
-     JOptionPane.showMessageDialog(null,"Error:  " +e.getMessage());
-}
- //End Reading LOG when fail
+    if (reply == JOptionPane.YES_OPTION) {  
+   Runtime runtime = Runtime.getRuntime();
+try {
+    Process p1 = runtime.exec("cmd /c start img\\bootloader\\lock.bat");
+    InputStream is = p1.getInputStream();
+    int i = 0;
+    while( (i = is.read() ) != -1) {
+       JOptionPane.showMessageDialog(null, +i);
+    }
+} catch(IOException ioException) {
+    JOptionPane.showMessageDialog(null, ioException.getMessage());
+}        
         }else {
            JOptionPane.showMessageDialog(null, "Proceso cancelado");
               dispose();//To close the current window
@@ -1308,7 +1259,10 @@ public class OPVisual extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
-              new changelog().setVisible(true); 
+try {
+    Runtime.getRuntime().exec(new String[] { "c:\\Windows\\notepad.exe", ".settings\\others\\changelog.txt" });
+} catch (IOException e) {
+} 
     }//GEN-LAST:event_jMenuItem2ActionPerformed
 
     private void jMenuItem3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem3ActionPerformed
@@ -1319,7 +1273,7 @@ public class OPVisual extends javax.swing.JFrame {
         Desktop desktop = Desktop.getDesktop();
         File dirToOpen = null;
         try {
-            dirToOpen = new File("adb");
+            dirToOpen = new File("C:\\adb");
             desktop.open(dirToOpen);
         } catch (IllegalArgumentException iae) {
             JOptionPane.showMessageDialog(null,"Error: Carpeta " +dirToOpen+ " no encontrada");
@@ -1353,6 +1307,17 @@ public class OPVisual extends javax.swing.JFrame {
     }//GEN-LAST:event_jMenuItem6ActionPerformed
 
     private void jMenuItem5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem5ActionPerformed
+Runtime runtime = Runtime.getRuntime();
+try {
+    Process p1 = runtime.exec("cmd /c start .settings\\bin\\killjava.bat");
+    InputStream is = p1.getInputStream();
+    int i = 0;
+    while( (i = is.read() ) != -1) {
+       JOptionPane.showMessageDialog(null, +i);
+    }
+} catch(IOException ioException) {
+    JOptionPane.showMessageDialog(null, ioException.getMessage());
+}
     System.exit(0);
     }//GEN-LAST:event_jMenuItem5ActionPerformed
 
@@ -1365,10 +1330,6 @@ public class OPVisual extends javax.swing.JFrame {
         this.dispose();    
         new OPVisual().setVisible(true);            
     }//GEN-LAST:event_jMenuItem7ActionPerformed
-
-    private void jFormattedTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jFormattedTextField1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jFormattedTextField1ActionPerformed
 
     private void jMenuItem9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem9ActionPerformed
         JOptionPane.showMessageDialog(null, "Opción no disponible...");     
@@ -1428,6 +1389,7 @@ public class OPVisual extends javax.swing.JFrame {
                             bout.write(data, 0, x1);
                         }
                     }
+                    frame.setVisible(false);
                 }
             }catch (FileNotFoundException e) {
             }catch (IOException ex) {
@@ -1451,6 +1413,77 @@ public class OPVisual extends javax.swing.JFrame {
         } 
     }
     }//GEN-LAST:event_jMenuItem10ActionPerformed
+
+    private void jMenuItem14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem14ActionPerformed
+        Desktop desktop = Desktop.getDesktop();
+        File dirToOpen = null;
+        try {
+            dirToOpen = new File("img/recovery");
+            desktop.open(dirToOpen);
+        } catch (IllegalArgumentException iae) {
+            JOptionPane.showMessageDialog(null,"Error: Carpeta " +dirToOpen+ " no encontrada");
+        } catch (IOException ex) {
+            Logger.getLogger(OPVisual.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }//GEN-LAST:event_jMenuItem14ActionPerformed
+
+    private void jMenuItem12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem12ActionPerformed
+        Desktop desktop = Desktop.getDesktop();
+        File dirToOpen = null;
+        try {
+            dirToOpen = new File("img/twrp");
+            desktop.open(dirToOpen);
+        } catch (IllegalArgumentException iae) {
+            JOptionPane.showMessageDialog(null,"Error: Carpeta " +dirToOpen+ " no encontrada");
+        } catch (IOException ex) {
+            Logger.getLogger(OPVisual.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }//GEN-LAST:event_jMenuItem12ActionPerformed
+
+    private void jMenuItem13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem13ActionPerformed
+        Desktop desktop = Desktop.getDesktop();
+        File dirToOpen = null;
+        try {
+            dirToOpen = new File("img/firmware");
+            desktop.open(dirToOpen);
+        } catch (IllegalArgumentException iae) {
+            JOptionPane.showMessageDialog(null,"Error: Carpeta " +dirToOpen+ " no encontrada");
+        } catch (IOException ex) {
+            Logger.getLogger(OPVisual.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }//GEN-LAST:event_jMenuItem13ActionPerformed
+
+    private void jMenuItem15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem15ActionPerformed
+        JOptionPane.showMessageDialog(null, "Opción no disponible...");     
+    }//GEN-LAST:event_jMenuItem15ActionPerformed
+
+    private void jMenuItem16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem16ActionPerformed
+Runtime runtime = Runtime.getRuntime();
+try {
+    Process p1 = runtime.exec("cmd /c start .settings\\bin\\killall.bat");
+    InputStream is = p1.getInputStream();
+    int i = 0;
+    while( (i = is.read() ) != -1) {
+       JOptionPane.showMessageDialog(null, +i);
+    }
+} catch(IOException ioException) {
+    JOptionPane.showMessageDialog(null, ioException.getMessage());
+}
+    }//GEN-LAST:event_jMenuItem16ActionPerformed
+
+    private void jMenuItem11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem11ActionPerformed
+try {
+    Runtime.getRuntime().exec(new String[] { "c:\\Windows\\notepad.exe", ".settings\\others\\bugs.txt" });
+} catch (IOException e) {
+} 
+    }//GEN-LAST:event_jMenuItem11ActionPerformed
+
+    private void jMenuItem17ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem17ActionPerformed
+try {
+    Runtime.getRuntime().exec(new String[] { "c:\\Windows\\notepad.exe", ".settings\\LICENSE.txt" });
+} catch (IOException e) {
+} 
+    }//GEN-LAST:event_jMenuItem17ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -1502,10 +1535,18 @@ public class OPVisual extends javax.swing.JFrame {
     private javax.swing.JMenu jMenu3;
     private javax.swing.JMenu jMenu4;
     private javax.swing.JMenu jMenu5;
+    private javax.swing.JMenu jMenu6;
+    private javax.swing.JMenu jMenu7;
     private javax.swing.JMenuBar jMenuBar2;
     private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JMenuItem jMenuItem10;
     private javax.swing.JMenuItem jMenuItem11;
+    private javax.swing.JMenuItem jMenuItem12;
+    private javax.swing.JMenuItem jMenuItem13;
+    private javax.swing.JMenuItem jMenuItem14;
+    private javax.swing.JMenuItem jMenuItem15;
+    private javax.swing.JMenuItem jMenuItem16;
+    private javax.swing.JMenuItem jMenuItem17;
     private javax.swing.JMenuItem jMenuItem2;
     private javax.swing.JMenuItem jMenuItem3;
     private javax.swing.JMenuItem jMenuItem4;
@@ -1515,11 +1556,15 @@ public class OPVisual extends javax.swing.JFrame {
     private javax.swing.JMenuItem jMenuItem8;
     private javax.swing.JMenuItem jMenuItem9;
     private javax.swing.JPopupMenu.Separator jSeparator1;
+    private javax.swing.JPopupMenu.Separator jSeparator10;
     private javax.swing.JPopupMenu.Separator jSeparator2;
     private javax.swing.JPopupMenu.Separator jSeparator3;
     private javax.swing.JPopupMenu.Separator jSeparator4;
     private javax.swing.JPopupMenu.Separator jSeparator5;
     private javax.swing.JPopupMenu.Separator jSeparator6;
+    private javax.swing.JPopupMenu.Separator jSeparator7;
+    private javax.swing.JPopupMenu.Separator jSeparator8;
+    private javax.swing.JPopupMenu.Separator jSeparator9;
     // End of variables declaration//GEN-END:variables
 
 }
