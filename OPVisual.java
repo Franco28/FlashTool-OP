@@ -510,6 +510,7 @@ public class OPVisual extends javax.swing.JFrame {
         jMenuItem17.setIcon(new javax.swing.ImageIcon(getClass().getResource("/oneplus/images/new16.png"))); // NOI18N
         jMenuItem17.setText("Licencia");
         jMenuItem17.setToolTipText("Licencia ");
+        jMenuItem17.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jMenuItem17.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jMenuItem17ActionPerformed(evt);
@@ -1007,8 +1008,8 @@ try {
             env.put("VAR1", "myValue");
             env.remove("OTHERVAR");
             env.put("VAR2", env.get("VAR1") + "suffix");
-            pb.directory(new File("adb/"));
-            File log = new File(".settings/log");
+            pb.directory(new File("C:\\adb"));
+            File log = new File(".settings/others/log");
             pb.redirectErrorStream(true);
             pb.redirectOutput(Redirect.appendTo(log));
             Process p = pb.start();
@@ -1030,7 +1031,7 @@ try {
         }              
         //Read LOG
  try {
-                try (FileInputStream fstream = new FileInputStream("log")) {
+                try (FileInputStream fstream = new FileInputStream(".settings/others/log")) {
                     BufferedReader br = new BufferedReader(new InputStreamReader(fstream));
                     String strLine;
                     /* read log line by line */
@@ -1054,8 +1055,8 @@ try {
             env.put("VAR1", "myValue");
             env.remove("OTHERVAR");
             env.put("VAR2", env.get("VAR1") + "suffix");
-            pb.directory(new File("adb/"));
-            File log = new File(".settings/log");
+            pb.directory(new File("C:\\adb"));
+            File log = new File(".settings/others/log");
             pb.redirectErrorStream(true);
             pb.redirectOutput(Redirect.appendTo(log));
             Process p = pb.start();
@@ -1077,7 +1078,7 @@ try {
         }              
         //Read LOG
  try {
-                try (FileInputStream fstream = new FileInputStream("log")) {
+                try (FileInputStream fstream = new FileInputStream(".settings/others/log")) {
                     BufferedReader br = new BufferedReader(new InputStreamReader(fstream));
                     String strLine;
                     /* read log line by line */
@@ -1101,8 +1102,8 @@ try {
             env.put("VAR1", "myValue");
             env.remove("OTHERVAR");
             env.put("VAR2", env.get("VAR1") + "suffix");
-            pb.directory(new File("adb/"));
-            File log = new File(".settings/log");
+            pb.directory(new File("C:\\adb"));
+            File log = new File(".settings/others/log");
             pb.redirectErrorStream(true);
             pb.redirectOutput(Redirect.appendTo(log));
             Process p = pb.start();
@@ -1124,7 +1125,7 @@ try {
         }              
         //Read LOG
  try {
-                try (FileInputStream fstream = new FileInputStream("log")) {
+                try (FileInputStream fstream = new FileInputStream(".settings/others/log")) {
                     BufferedReader br = new BufferedReader(new InputStreamReader(fstream));
                     String strLine;
                     /* read log line by line */
@@ -1148,8 +1149,8 @@ try {
             env.put("VAR1", "myValue");
             env.remove("OTHERVAR");
             env.put("VAR2", env.get("VAR1") + "suffix");
-            pb.directory(new File("adb/"));
-            File log = new File(".settings/log");
+            pb.directory(new File("C:\\adb"));
+            File log = new File(".settings/others/log");
             pb.redirectErrorStream(true);
             pb.redirectOutput(Redirect.appendTo(log));
             Process p = pb.start();
@@ -1171,7 +1172,7 @@ try {
         }              
         //Read LOG
  try {
-                try (FileInputStream fstream = new FileInputStream("log")) {
+                try (FileInputStream fstream = new FileInputStream(".settings/others/log")) {
                     BufferedReader br = new BufferedReader(new InputStreamReader(fstream));
                     String strLine;
                     /* read log line by line */
