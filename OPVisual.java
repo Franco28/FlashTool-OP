@@ -120,6 +120,9 @@ public class OPVisual extends javax.swing.JFrame {
         setTitle("OnePlus Tool - BETA Es");
         setResizable(false);
         addWindowListener(new java.awt.event.WindowAdapter() {
+            public void windowClosing(java.awt.event.WindowEvent evt) {
+                formWindowClosing(evt);
+            }
             public void windowOpened(java.awt.event.WindowEvent evt) {
                 formWindowOpened(evt);
             }
@@ -307,6 +310,7 @@ public class OPVisual extends javax.swing.JFrame {
         jMenuItem13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/oneplus/images/depurar.png"))); // NOI18N
         jMenuItem13.setText("Firmware");
         jMenuItem13.setToolTipText("Esta carpeta contiene OxygenOS 9.0.8");
+        jMenuItem13.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jMenuItem13.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jMenuItem13ActionPerformed(evt);
@@ -318,6 +322,7 @@ public class OPVisual extends javax.swing.JFrame {
         jMenuItem14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/oneplus/images/recov.png"))); // NOI18N
         jMenuItem14.setText("Recovery");
         jMenuItem14.setToolTipText("Esta carpeta contiene el Recovery TWRP pero para flashear el firmware OxygenOS");
+        jMenuItem14.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jMenuItem14.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jMenuItem14ActionPerformed(evt);
@@ -1537,6 +1542,20 @@ try {
 } catch (IOException | URISyntaxException e2) {
 } 
     }//GEN-LAST:event_jMenuItem18ActionPerformed
+
+    private void formWindowClosing(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowClosing
+Runtime runtime = Runtime.getRuntime();
+try {
+    Process p1 = runtime.exec("cmd /c start .settings\\bin\\killall.bat");
+    InputStream is = p1.getInputStream();
+    int i = 0;
+    while( (i = is.read() ) != -1) {
+       JOptionPane.showMessageDialog(null, +i);
+    }
+} catch(IOException ioException) {
+    JOptionPane.showMessageDialog(null, ioException.getMessage());
+}
+    }//GEN-LAST:event_formWindowClosing
 
     /**
      * @param args the command line arguments
