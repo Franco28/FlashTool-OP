@@ -1533,7 +1533,7 @@ try {
     private void jMenuItem18ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem18ActionPerformed
 Desktop d = Desktop.getDesktop();
 try {
-    d.browse(new URI("https://github.com/Franco28/FlashTool-OP/blob/master/src/oneplus/OPVisual.java"));
+    d.browse(new URI("https://github.com/Franco28/FlashTool-OP"));
 } catch (IOException | URISyntaxException e2) {
 } 
     }//GEN-LAST:event_jMenuItem18ActionPerformed
