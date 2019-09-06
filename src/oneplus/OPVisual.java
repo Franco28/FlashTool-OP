@@ -747,7 +747,7 @@ public class OPVisual extends javax.swing.JFrame {
             env.remove("OTHERVAR");
             env.put("VAR2", env.get("VAR1") + "suffix");
             rb.directory(new File("adb/"));
-            File log = new File("log");
+            File log = new File(".settings/log");
             rb.redirectErrorStream(true);
             rb.redirectOutput(Redirect.appendTo(log));
             Process p = rb.start();
@@ -908,7 +908,7 @@ public class OPVisual extends javax.swing.JFrame {
             env.remove("OTHERVAR");
             env.put("VAR2", env.get("VAR1") + "suffix");
             pb.directory(new File("adb/"));
-            File log = new File("log");
+            File log = new File(".settings/log");
             pb.redirectErrorStream(true);
             pb.redirectOutput(Redirect.appendTo(log));
             Process p = pb.start();
@@ -951,7 +951,7 @@ public class OPVisual extends javax.swing.JFrame {
             env.remove("OTHERVAR");
             env.put("VAR2", env.get("VAR1") + "suffix");
             pb.directory(new File("adb/"));
-            File log = new File("log");
+            File log = new File(".settings/log");
             pb.redirectErrorStream(true);
             pb.redirectOutput(Redirect.appendTo(log));
             Process p = pb.start();
@@ -998,7 +998,7 @@ public class OPVisual extends javax.swing.JFrame {
             env.remove("OTHERVAR");
             env.put("VAR2", env.get("VAR1") + "suffix");
             pb.directory(new File("adb/"));
-            File log = new File("log");
+            File log = new File(".settings/log");
             pb.redirectErrorStream(true);
             pb.redirectOutput(Redirect.appendTo(log));
             Process p = pb.start();
@@ -1045,7 +1045,7 @@ public class OPVisual extends javax.swing.JFrame {
             env.remove("OTHERVAR");
             env.put("VAR2", env.get("VAR1") + "suffix");
             pb.directory(new File("adb/"));
-            File log = new File("log");
+            File log = new File(".settings/log");
             pb.redirectErrorStream(true);
             pb.redirectOutput(Redirect.appendTo(log));
             Process p = pb.start();
@@ -1092,7 +1092,7 @@ public class OPVisual extends javax.swing.JFrame {
             env.remove("OTHERVAR");
             env.put("VAR2", env.get("VAR1") + "suffix");
             pb.directory(new File("adb/"));
-            File log = new File("log");
+            File log = new File(".settings/log");
             pb.redirectErrorStream(true);
             pb.redirectOutput(Redirect.appendTo(log));
             Process p = pb.start();
@@ -1198,7 +1198,7 @@ public class OPVisual extends javax.swing.JFrame {
             env.remove("OTHERVAR");
             env.put("VAR2", env.get("VAR1") + "suffix");
             pb.directory(new File("adb/"));
-            File log = new File("log");
+            File log = new File(".settings/log");
             pb.redirectErrorStream(true);
             pb.redirectOutput(Redirect.appendTo(log));
             Process p = pb.start();
@@ -1264,7 +1264,7 @@ public class OPVisual extends javax.swing.JFrame {
             env.remove("OTHERVAR");
             env.put("VAR2", env.get("VAR1") + "suffix");
             pb.directory(new File("adb/"));
-            File log = new File("log");
+            File log = new File(".settings/log");
             pb.redirectErrorStream(true);
             pb.redirectOutput(Redirect.appendTo(log));
             Process p = pb.start();
