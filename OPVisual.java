@@ -15,17 +15,11 @@ package oneplus;
 import java.awt.Cursor;
 import java.awt.Desktop;
 import java.io.BufferedOutputStream;
-import java.io.BufferedReader;
-import java.io.FileInputStream;
 import java.io.FileNotFoundException;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.lang.ProcessBuilder.Redirect;
 import java.net.HttpURLConnection;
 import java.net.InetSocketAddress;
 import java.net.Socket;
 import java.net.URL;
-import java.util.Map;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JOptionPane;
@@ -38,6 +32,13 @@ import java.io.InputStream;
 import java.net.URI;
 import java.net.URISyntaxException;
 import javax.swing.ImageIcon;
+import java.io.IOException;
+import java.nio.file.FileVisitResult;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.nio.file.SimpleFileVisitor;
+import java.nio.file.attribute.BasicFileAttributes;
 
 /**
  *
@@ -104,6 +105,8 @@ public class OPVisual extends javax.swing.JFrame {
         jMenu5 = new javax.swing.JMenu();
         jMenuItem7 = new javax.swing.JMenuItem();
         jMenuItem8 = new javax.swing.JMenuItem();
+        jSeparator10 = new javax.swing.JPopupMenu.Separator();
+        jMenuItem20 = new javax.swing.JMenuItem();
         jMenu4 = new javax.swing.JMenu();
         jMenuItem2 = new javax.swing.JMenuItem();
         jSeparator2 = new javax.swing.JPopupMenu.Separator();
@@ -224,7 +227,7 @@ public class OPVisual extends javax.swing.JFrame {
 
         jButton7.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
         jButton7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/oneplus/images/ok16.png"))); // NOI18N
-        jButton7.setText("Verificar Modo Bootloader");
+        jButton7.setText("Verificar adb devices");
         jButton7.setToolTipText("Verifica el modo bootloader con adb ");
         jButton7.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButton7.addActionListener(new java.awt.event.ActionListener() {
@@ -471,6 +474,20 @@ public class OPVisual extends javax.swing.JFrame {
         jMenu5.add(jMenuItem8);
 
         jMenu2.add(jMenu5);
+        jMenu2.add(jSeparator10);
+
+        jMenuItem20.setFont(new java.awt.Font("Segoe UI Black", 1, 12)); // NOI18N
+        jMenuItem20.setForeground(new java.awt.Color(255, 51, 0));
+        jMenuItem20.setIcon(new javax.swing.ImageIcon(getClass().getResource("/oneplus/images/warn.png"))); // NOI18N
+        jMenuItem20.setText("Eliminar Tool por completo");
+        jMenuItem20.setToolTipText("Eliminar tool y sus archivos y carpetas");
+        jMenuItem20.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jMenuItem20.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem20ActionPerformed(evt);
+            }
+        });
+        jMenu2.add(jMenuItem20);
 
         jMenuBar2.add(jMenu2);
 
@@ -649,7 +666,6 @@ public class OPVisual extends javax.swing.JFrame {
         File f = new File("C:\\adb\\adb.exe"); 
         
         if (!f.exists() == true){
-        jFormattedTextField1.setText("Descargando adb & fastboot...");
         JOptionPane.showMessageDialog(null,"Error: No se pudo encontrar los archivos adb & fastboot \n\n El archivo se instalará en C:\\adb");
         final JProgressBar jProgressBar = new JProgressBar();
         jProgressBar.setMaximum(100000);
@@ -686,6 +702,7 @@ public class OPVisual extends javax.swing.JFrame {
                             // update progress bar
                             jProgressBar.setString("Calculando tamaño del archivo...");
                             SwingUtilities.invokeLater(() -> {
+                                jFormattedTextField1.setText("Descargando adb & fastboot..." +currentProgress+ " Bytes");
                                 jProgressBar.setString("Descargando adb & fastboot: \n" +currentProgress+ " Bytes");
                                 jProgressBar.setValue(currentProgress);
                             });
@@ -710,17 +727,90 @@ public class OPVisual extends javax.swing.JFrame {
  
     }
             }catch (FileNotFoundException e) {
+            jProgressBar.setString("Descargando adb & fastboot: ERROR");
+            jFormattedTextField1.setText("ERROR: " +e);
             }catch (IOException ex) {
                 Logger.getLogger(OPVisual.class.getName()).log(Level.SEVERE, null, ex);
             }
         };
         new Thread(updatethread).start(); 
  }
-           
+        
+        File bin = new File(".settings"); 
+        if (!bin.exists() == true){
+        JOptionPane.showMessageDialog(null,"Error: No se pudieron encontrar los binarios \n\n El archivo se instalará en .settings");
+        final JProgressBar jProgressBar = new JProgressBar();
+        jProgressBar.setMaximum(100000);
+        jProgressBar.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        jProgressBar.setBorderPainted(false);
+        jProgressBar.setCursor(new java.awt.Cursor(java.awt.Cursor.WAIT_CURSOR));
+        jProgressBar.setDebugGraphicsOptions(javax.swing.DebugGraphics.NONE_OPTION);
+        jProgressBar.setStringPainted(true);
+        jProgressBar.setString("Iniciando...");
+        JFrame frame = new JFrame("Descargando binarios...");
+        frame.setContentPane(jProgressBar);
+        frame.setDefaultCloseOperation(WindowConstants.DO_NOTHING_ON_CLOSE);
+        frame.setSize(600, 100);
+        frame.setVisible(true);
+        frame.setResizable(false);
+        frame.setLocationRelativeTo(null);
+        Runnable updatethread;
+            updatethread = () -> {
+            try {
+                URL url = new URL("https://bitbucket.org/Franco28/flashtool-motorola-moto-g5-g5plus/downloads/bin.zip");
+                HttpURLConnection httpConnection = (HttpURLConnection) (url.openConnection());
+                long completeFileSize = httpConnection.getContentLength();
+                try (final java.io.BufferedInputStream in = new java.io.BufferedInputStream(httpConnection.getInputStream())) {
+                    java.io.FileOutputStream fos = new java.io.FileOutputStream(".settings\\bin.zip");
+                    try (final java.io.BufferedOutputStream bout = new BufferedOutputStream(fos, 1024)) {
+                        byte[] data = new byte[1024];
+                        long downloadedFileSize = 0;
+                        int x1 = 0;
+                        while ((x1 = in.read(data, 0, 1024)) >= 0) {
+                            downloadedFileSize += x1;
+                            // calculate progress
+                            final int currentProgress = (int) ((((double)downloadedFileSize) / ((double)completeFileSize)) * 100000d);
+                            // update progress bar
+                            jProgressBar.setString("Calculando tamaño del archivo...");
+                            SwingUtilities.invokeLater(() -> {
+                                jFormattedTextField1.setText("Descargando binarios..." +currentProgress+ " Bytes");
+                                jProgressBar.setString("Descargando binarios: \n" +currentProgress+ " Bytes");
+                                jProgressBar.setValue(currentProgress);
+                            });
+                            bout.write(data, 0, x1);
+                        }
+                    }
+        frame.setVisible(false);
+        File adb = new File(".settings\\bin.zip"); 
+        String zipFilePath = ".settings\\bin.zip";
+        String destDirectory = ".settings";
+        UnzipUtility unzipper = new UnzipUtility();
+        try {
+            unzipper.unzip(zipFilePath, destDirectory);
+        } catch (IOException ex) {
+                // some errors occurred
+        }
+            adb.delete();
+            dispose();//To close the current window
+            String path = "Tool.exe";
+            File file = new File(path);
+            Process t = Runtime.getRuntime().exec(file.getAbsolutePath());
+ 
+    }
+            }catch (FileNotFoundException e) {
+            jProgressBar.setString("Descargando binarios: ERROR");
+            jFormattedTextField1.setText("ERROR: " +e);
+            }catch (IOException ex) {
+                Logger.getLogger(OPVisual.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        };
+        new Thread(updatethread).start(); 
+ }
+        
         }catch (IOException e) {
-
-        jFormattedTextField1.setText("Error no se pudo establecer conexion con el servidor.");
-       
+        jFormattedTextField1.setText("Error no se pudo establecer conexion con el servidor.");            
+        JOptionPane.showMessageDialog(null,"Error: Verifique su conexión a internet y vuelva a intentarlo...");
+        dispose();//To close the current window         
         }finally{
             try { 
             sock.close(); 
@@ -754,14 +844,13 @@ public class OPVisual extends javax.swing.JFrame {
   jFormattedTextField1.setText("Error: " + e.getMessage());     
   }
 }
-        
-        File bl = new File("img/bootloader"); 
-        if (!bl.exists() == true){
+        File binf = new File(".settings/bin"); 
+        if (!binf.exists() == true){
 // Create a directory; all non-existent ancestor directories are
 // automatically created
  try{
-  String strDirectoy ="img";
-  String strManyDirectories="img/bootloader";
+  String strDirectoy =".settings";
+  String strManyDirectories=".settings/bin";
 
   // Create one directory
   boolean success = (
@@ -892,7 +981,7 @@ public class OPVisual extends javax.swing.JFrame {
     if (reply == JOptionPane.YES_OPTION) {     
    Runtime runtime = Runtime.getRuntime();
 try {
-    Process p1 = runtime.exec("cmd /c start img\\bootloader\\unlock.bat");
+    Process p1 = runtime.exec("cmd /c start .settings\\bin\\unlock.bat");
     InputStream is = p1.getInputStream();
     int i = 0;
     while( (i = is.read() ) != -1) {
@@ -917,7 +1006,6 @@ try {
         File f = new File("img/twrp/twrp-3.3.1-0-cheeseburger.img"); 
         
         if(!f.exists()){
-        jFormattedTextField1.setText("Descargando TWRP Oficial Cheeseburger...");
         JOptionPane.showMessageDialog(null,"Error: No se pudo encontrar TWRP Para Flashear Stock OxygenOS");
         final JProgressBar jProgressBar = new JProgressBar();
         jProgressBar.setMaximum(100000);
@@ -954,6 +1042,7 @@ try {
                             // update progress bar
                             jProgressBar.setString("Calculando tamaño del archivo...");
                             SwingUtilities.invokeLater(() -> {
+                                jFormattedTextField1.setText("Descargando TWRP Oficial Cheeseburger..." +currentProgress+ " Bytes");
                                 jProgressBar.setString("Descargando TWRP Oficial Cheeseburger: \n" +currentProgress+ " Bytes");
                                 jProgressBar.setValue(currentProgress);
                             });
@@ -963,6 +1052,8 @@ try {
                     frame.setVisible(false);
                 }
             }catch (FileNotFoundException e) {
+            jProgressBar.setString("Descargando TWRP Oficial Cheeseburger: ERROR");
+            jFormattedTextField1.setText("ERROR: " +e);
             }catch (IOException ex) {
                 Logger.getLogger(OPVisual.class.getName()).log(Level.SEVERE, null, ex);
             }
@@ -973,8 +1064,9 @@ try {
            
         }catch (IOException e) {
 
-        jProgressBar.setString("Error no se pudo establecer conexion con el servidor.");
-        jFormattedTextField1.setText("Error no se pudo establecer conexion con el servidor.");
+        jFormattedTextField1.setText("Error no se pudo establecer conexion con el servidor.");            
+        JOptionPane.showMessageDialog(null,"Error: Verifique su conexión a internet y vuelva a intentarlo...");
+        dispose();//To close the current window 
        
         }finally{
             try { 
@@ -988,7 +1080,7 @@ try {
     if(f.exists() == true){
    Runtime runtime = Runtime.getRuntime();
 try {
-    Process p1 = runtime.exec("cmd /c start img\\twrp\\twrp.bat");
+    Process p1 = runtime.exec("cmd /c start .settings\\bin\\twrp.bat");
     InputStream is = p1.getInputStream();
     int i = 0;
     while( (i = is.read() ) != -1) {
@@ -1001,191 +1093,59 @@ try {
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
-            ProcessBuilder pb =
-                    new ProcessBuilder("adb", "reboot", "bootloader");
-        try {
-            Map<String, String> env = pb.environment();
-            env.put("VAR1", "myValue");
-            env.remove("OTHERVAR");
-            env.put("VAR2", env.get("VAR1") + "suffix");
-            pb.directory(new File("C:\\adb"));
-            File log = new File(".settings/others/log");
-            pb.redirectErrorStream(true);
-            pb.redirectOutput(Redirect.appendTo(log));
-            Process p = pb.start();
-            if (p != pb.start()){
-              JOptionPane.showMessageDialog(null,"Error:  " +pb.start()+ "\n\n Conecta el dispositivo");
-              dispose();//To close the current window
-              String path = "Tool.exe";
-              File file = new File(path);
-              if (! file.exists()) {
-              throw new IllegalArgumentException("El archivo " + path + " no existe");
-              }
-              Process t = Runtime.getRuntime().exec(file.getAbsolutePath());
-            }
-            assert pb.redirectInput() == Redirect.PIPE;
-            assert pb.redirectOutput().file() == log;
-            assert p.getInputStream().read() == -1; 
-        } catch (IOException ex) {
-            JOptionPane.showMessageDialog(null, "ERROR: " +ex);
-        }              
-        //Read LOG
- try {
-                try (FileInputStream fstream = new FileInputStream(".settings/others/log")) {
-                    BufferedReader br = new BufferedReader(new InputStreamReader(fstream));
-                    String strLine;
-                    /* read log line by line */
-                    while ((strLine = br.readLine()) != null)   {
-                        /* parse strLine to obtain what you want */
-                        jFormattedTextField1.setText(strLine);     
-                    }            
-                }
-} catch (IOException e) {
-     jFormattedTextField1.setText("Error: " +e.getMessage());    
-     JOptionPane.showMessageDialog(null,"Error:  " +e.getMessage());
-}
- //End Reading LOG when fail
+      Runtime runtime = Runtime.getRuntime();
+try {
+    Process p1 = runtime.exec("cmd /c start .settings\\bin\\rebootb.bat");
+    InputStream is = p1.getInputStream();
+    int i = 0;
+    while( (i = is.read() ) != -1) {
+       JOptionPane.showMessageDialog(null, +i);
+    }
+} catch(IOException ioException) {
+    JOptionPane.showMessageDialog(null, ioException.getMessage());
+} 
     }//GEN-LAST:event_jButton5ActionPerformed
 
     private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
-                   ProcessBuilder pb =
-                    new ProcessBuilder("adb", "devices");
-        try {
-            Map<String, String> env = pb.environment();
-            env.put("VAR1", "myValue");
-            env.remove("OTHERVAR");
-            env.put("VAR2", env.get("VAR1") + "suffix");
-            pb.directory(new File("C:\\adb"));
-            File log = new File(".settings/others/log");
-            pb.redirectErrorStream(true);
-            pb.redirectOutput(Redirect.appendTo(log));
-            Process p = pb.start();
-            if (p != pb.start()){
-              JOptionPane.showMessageDialog(null,"Error:  " +pb.start()+ "\n\n Conecta el dispositivo");
-              dispose();//To close the current window
-              String path = "Tool.exe";
-              File file = new File(path);
-              if (! file.exists()) {
-              throw new IllegalArgumentException("El archivo " + path + " no existe");
-              }
-              Process t = Runtime.getRuntime().exec(file.getAbsolutePath());
-            }
-            assert pb.redirectInput() == Redirect.PIPE;
-            assert pb.redirectOutput().file() == log;
-            assert p.getInputStream().read() == -1; 
-        } catch (IOException ex) {
-            JOptionPane.showMessageDialog(null, "ERROR: " +ex);
-        }              
-        //Read LOG
- try {
-                try (FileInputStream fstream = new FileInputStream(".settings/others/log")) {
-                    BufferedReader br = new BufferedReader(new InputStreamReader(fstream));
-                    String strLine;
-                    /* read log line by line */
-                    while ((strLine = br.readLine()) != null)   {
-                        /* parse strLine to obtain what you want */
-                        jFormattedTextField1.setText(strLine);     
-                    }            
-                }
-} catch (IOException e) {
-     jFormattedTextField1.setText("Error: " +e.getMessage());    
-     JOptionPane.showMessageDialog(null,"Error:  " +e.getMessage());
-}
- //End Reading LOG when fail
+      Runtime runtime = Runtime.getRuntime();
+try {
+    Process p1 = runtime.exec("cmd /c start img\\bootloader\\checkb.bat");
+    InputStream is = p1.getInputStream();
+    int i = 0;
+    while( (i = is.read() ) != -1) {
+       JOptionPane.showMessageDialog(null, +i);
+    }
+} catch(IOException ioException) {
+    JOptionPane.showMessageDialog(null, ioException.getMessage());
+} 
     }//GEN-LAST:event_jButton7ActionPerformed
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
-            ProcessBuilder pb =
-                    new ProcessBuilder("adb", "reboot", "recovery");
-        try {
-            Map<String, String> env = pb.environment();
-            env.put("VAR1", "myValue");
-            env.remove("OTHERVAR");
-            env.put("VAR2", env.get("VAR1") + "suffix");
-            pb.directory(new File("C:\\adb"));
-            File log = new File(".settings/others/log");
-            pb.redirectErrorStream(true);
-            pb.redirectOutput(Redirect.appendTo(log));
-            Process p = pb.start();
-            if (p != pb.start()){
-              JOptionPane.showMessageDialog(null,"Error:  " +pb.start()+ "\n\n Conecta el dispositivo");
-              dispose();//To close the current window
-              String path = "Tool.exe";
-              File file = new File(path);
-              if (! file.exists()) {
-              throw new IllegalArgumentException("El archivo " + path + " no existe");
-              }
-              Process t = Runtime.getRuntime().exec(file.getAbsolutePath());
-            }
-            assert pb.redirectInput() == Redirect.PIPE;
-            assert pb.redirectOutput().file() == log;
-            assert p.getInputStream().read() == -1; 
-        } catch (IOException ex) {
-            JOptionPane.showMessageDialog(null, "ERROR: " +ex);
-        }              
-        //Read LOG
- try {
-                try (FileInputStream fstream = new FileInputStream(".settings/others/log")) {
-                    BufferedReader br = new BufferedReader(new InputStreamReader(fstream));
-                    String strLine;
-                    /* read log line by line */
-                    while ((strLine = br.readLine()) != null)   {
-                        /* parse strLine to obtain what you want */
-                        jFormattedTextField1.setText(strLine);     
-                    }            
-                }
-} catch (IOException e) {
-     jFormattedTextField1.setText("Error: " +e.getMessage());    
-     JOptionPane.showMessageDialog(null,"Error:  " +e.getMessage());
-}
- //End Reading LOG when fail
+      Runtime runtime = Runtime.getRuntime();
+try {
+    Process p1 = runtime.exec("cmd /c start .settings\\bin\\rebootr.bat");
+    InputStream is = p1.getInputStream();
+    int i = 0;
+    while( (i = is.read() ) != -1) {
+       JOptionPane.showMessageDialog(null, +i);
+    }
+} catch(IOException ioException) {
+    JOptionPane.showMessageDialog(null, ioException.getMessage());
+} 
     }//GEN-LAST:event_jButton6ActionPerformed
 
     private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
-            ProcessBuilder pb =
-                    new ProcessBuilder("fastboot", "devices");
-        try {
-            Map<String, String> env = pb.environment();
-            env.put("VAR1", "myValue");
-            env.remove("OTHERVAR");
-            env.put("VAR2", env.get("VAR1") + "suffix");
-            pb.directory(new File("C:\\adb"));
-            File log = new File(".settings/others/log");
-            pb.redirectErrorStream(true);
-            pb.redirectOutput(Redirect.appendTo(log));
-            Process p = pb.start();
-            if (p != pb.start()){
-              JOptionPane.showMessageDialog(null,"Error:  " +pb.start()+ "\n\n Conecta el dispositivo");
-              dispose();//To close the current window
-              String path = "Tool.exe";
-              File file = new File(path);
-              if (! file.exists()) {
-              throw new IllegalArgumentException("El archivo " + path + " no existe");
-              }
-              Process t = Runtime.getRuntime().exec(file.getAbsolutePath());
-            }
-            assert pb.redirectInput() == Redirect.PIPE;
-            assert pb.redirectOutput().file() == log;
-            assert p.getInputStream().read() == -1; 
-        } catch (IOException ex) {
-            JOptionPane.showMessageDialog(null, "ERROR: " +ex);
-        }              
-        //Read LOG
- try {
-                try (FileInputStream fstream = new FileInputStream(".settings/others/log")) {
-                    BufferedReader br = new BufferedReader(new InputStreamReader(fstream));
-                    String strLine;
-                    /* read log line by line */
-                    while ((strLine = br.readLine()) != null)   {
-                        /* parse strLine to obtain what you want */
-                        jFormattedTextField1.setText(strLine);     
-                    }            
-                }
-} catch (IOException e) {
-     jFormattedTextField1.setText("Error: " +e.getMessage());    
-     JOptionPane.showMessageDialog(null,"Error:  " +e.getMessage());
-}
- //End Reading LOG when fail
+      Runtime runtime = Runtime.getRuntime();
+try {
+    Process p1 = runtime.exec("cmd /c start img\\bootloader\\checkf.bat");
+    InputStream is = p1.getInputStream();
+    int i = 0;
+    while( (i = is.read() ) != -1) {
+       JOptionPane.showMessageDialog(null, +i);
+    }
+} catch(IOException ioException) {
+    JOptionPane.showMessageDialog(null, ioException.getMessage());
+} 
     }//GEN-LAST:event_jButton8ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
@@ -1197,7 +1157,6 @@ try {
         File f = new File("img/recovery/twrp-3.3.1-0-20190713-codeworkx-cheeseburger.img"); 
         
         if(!f.exists()){
-        jFormattedTextField1.setText("Descargando TWRP Para Flashear Stock OxygenOS...");
         JOptionPane.showMessageDialog(null,"Error: No se pudo encontrar TWRP Para Flashear Stock OxygenOS");
         final JProgressBar jProgressBar = new JProgressBar();
         jProgressBar.setMaximum(100000);
@@ -1234,6 +1193,7 @@ try {
                             // update progress bar
                             jProgressBar.setString("Calculando tamaño del archivo...");
                             SwingUtilities.invokeLater(() -> {
+                                jFormattedTextField1.setText("Descargando TWRP Para Flashear Stock OxygenOS..." +currentProgress+ " Bytes");
                                 jProgressBar.setString("Descargando TWRP Para Flashear Stock OxygenOS: \n" +currentProgress+ " Bytes");
                                 jProgressBar.setValue(currentProgress);
                             });
@@ -1243,6 +1203,8 @@ try {
                     frame.setVisible(false);
                 }
             }catch (FileNotFoundException e) {
+            jProgressBar.setString("Descargando TWRP Para Flashear Stock OxygenOS: ERROR");
+            jFormattedTextField1.setText("ERROR: " +e);
             }catch (IOException ex) {
                 Logger.getLogger(OPVisual.class.getName()).log(Level.SEVERE, null, ex);
             }
@@ -1255,7 +1217,7 @@ try {
     if(of.exists() == true){
    Runtime runtime = Runtime.getRuntime();
 try {
-    Process p1 = runtime.exec("cmd /c start img\\recovery\\recovery.bat");
+    Process p1 = runtime.exec("cmd /c start .settings\\bin\\recovery.bat");
     InputStream is = p1.getInputStream();
     int i = 0;
     while( (i = is.read() ) != -1) {
@@ -1268,8 +1230,10 @@ try {
            
         }catch (IOException e) {
         
-        jFormattedTextField1.setText("Error no se pudo establecer conexion con el servidor.");
-       
+        jFormattedTextField1.setText("Error no se pudo establecer conexion con el servidor.");            
+        JOptionPane.showMessageDialog(null,"Error: Verifique su conexión a internet y vuelva a intentarlo...");
+        dispose();//To close the current window 
+        
         }finally{
             try { 
             sock.close(); 
@@ -1285,7 +1249,7 @@ try {
     if (reply == JOptionPane.YES_OPTION) {  
    Runtime runtime = Runtime.getRuntime();
 try {
-    Process p1 = runtime.exec("cmd /c start img\\bootloader\\lock.bat");
+    Process p1 = runtime.exec("cmd /c start .settings\\bin\\lock.bat");
     InputStream is = p1.getInputStream();
     int i = 0;
     while( (i = is.read() ) != -1) {
@@ -1350,17 +1314,16 @@ try {
     }//GEN-LAST:event_jMenuItem6ActionPerformed
 
     private void jMenuItem5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem5ActionPerformed
-Runtime runtime = Runtime.getRuntime();
-try {
-    Process p1 = runtime.exec("cmd /c start .settings\\bin\\killjava.bat");
-    InputStream is = p1.getInputStream();
-    int i = 0;
-    while( (i = is.read() ) != -1) {
-       JOptionPane.showMessageDialog(null, +i);
+    try {
+    Process process = Runtime.getRuntime().exec("TASKKILL /F /IM javaw.exe");
+    } catch (IOException e) {
+        JOptionPane.showMessageDialog(null, "Error no se pudo cerrar" +e);
     }
-} catch(IOException ioException) {
-    JOptionPane.showMessageDialog(null, ioException.getMessage());
-}
+    try {
+    Process process = Runtime.getRuntime().exec("TASKKILL /F /IM Tool.exe");
+    } catch (IOException e) {
+        JOptionPane.showMessageDialog(null, "Error no se pudo cerrar" +e);
+    }
     System.exit(0);
     }//GEN-LAST:event_jMenuItem5ActionPerformed
 
@@ -1389,8 +1352,6 @@ try {
         File f = new File("img/firmware/OnePlus5Oxygen_23_OTA_051_all_1907311835_5de64c.zip"); 
         
         if(!f.exists()){
-        jFormattedTextField1.setText("Descargando OnePlus5Oxygen_23_OTA_051_all_1907311835_5de64c...");
-        JOptionPane.showMessageDialog(null,"Error: No se pudo encontrar el firmware");
         final JProgressBar jProgressBar = new JProgressBar();
         jProgressBar.setMaximum(100000);
         jProgressBar.setCursor (Cursor.getPredefinedCursor (Cursor.WAIT_CURSOR));
@@ -1400,7 +1361,7 @@ try {
         jProgressBar.setDebugGraphicsOptions(javax.swing.DebugGraphics.NONE_OPTION);
         jProgressBar.setStringPainted(true);
         jProgressBar.setString("Iniciando...");
-        JFrame frame = new JFrame("Descargando TWRP Oficial Cheeseburger...");
+        JFrame frame = new JFrame("Descargando OnePlus5Oxygen_23_OTA_051_all_1907311835_5de64c....");
         frame.setContentPane(jProgressBar);
         frame.setDefaultCloseOperation(WindowConstants.DO_NOTHING_ON_CLOSE);
         frame.setSize(600, 100);
@@ -1426,6 +1387,7 @@ try {
                             // update progress bar
                             jProgressBar.setString("Calculando tamaño del archivo...");
                             SwingUtilities.invokeLater(() -> {
+                                jFormattedTextField1.setText("Descargando OnePlus5Oxygen_23_OTA_051_all_1907311835_5de64c..." +currentProgress+ " Bytes");
                                 jProgressBar.setString("Descargando OnePlus5Oxygen_23_OTA_051_all_1907311835_5de64c: \n" +currentProgress+ " Bytes");
                                 jProgressBar.setValue(currentProgress);
                             });
@@ -1435,6 +1397,8 @@ try {
                     frame.setVisible(false);
                 }
             }catch (FileNotFoundException e) {
+            jProgressBar.setString("Descargando OnePlus5Oxygen_23_OTA_051_all_1907311835_5de64c: ERROR");
+            jFormattedTextField1.setText("ERROR: " +e);
             }catch (IOException ex) {
                 Logger.getLogger(OPVisual.class.getName()).log(Level.SEVERE, null, ex);
             }
@@ -1445,8 +1409,9 @@ try {
            
         }catch (IOException e) {
 
-        jProgressBar.setString("Error no se pudo establecer conexion con el servidor.");
-        jFormattedTextField1.setText("Error no se pudo establecer conexion con el servidor.");
+        jFormattedTextField1.setText("Error no se pudo establecer conexion con el servidor.");            
+        JOptionPane.showMessageDialog(null,"Error: Verifique su conexión a internet y vuelva a intentarlo...");
+        dispose();//To close the current window 
        
         }finally{
             try { 
@@ -1501,17 +1466,26 @@ try {
     }//GEN-LAST:event_jMenuItem15ActionPerformed
 
     private void jMenuItem16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem16ActionPerformed
-Runtime runtime = Runtime.getRuntime();
-try {
-    Process p1 = runtime.exec("cmd /c start .settings\\bin\\killall.bat");
-    InputStream is = p1.getInputStream();
-    int i = 0;
-    while( (i = is.read() ) != -1) {
-       JOptionPane.showMessageDialog(null, +i);
+    try {
+    Process process = Runtime.getRuntime().exec("TASKKILL /F /IM javaw.exe");
+    } catch (IOException e) {
+        JOptionPane.showMessageDialog(null, "Error no se pudo cerrar" +e);
     }
-} catch(IOException ioException) {
-    JOptionPane.showMessageDialog(null, ioException.getMessage());
-}
+    try {
+    Process process = Runtime.getRuntime().exec("TASKKILL /F /IM Tool.exe");
+    } catch (IOException e) {
+        JOptionPane.showMessageDialog(null, "Error no se pudo cerrar" +e);
+    }
+    try {
+    Process process = Runtime.getRuntime().exec("TASKKILL /F /IM adb.exe");
+    } catch (IOException e) {
+        JOptionPane.showMessageDialog(null, "Error no se pudo cerrar" +e);
+    }
+        try {
+    Process process = Runtime.getRuntime().exec("TASKKILL /F /IM fastboot.exe");
+    } catch (IOException e) {
+        JOptionPane.showMessageDialog(null, "Error no se pudo cerrar" +e);
+    }
     }//GEN-LAST:event_jMenuItem16ActionPerformed
 
     private void jMenuItem11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem11ActionPerformed
@@ -1557,6 +1531,89 @@ try {
     JOptionPane.showMessageDialog(null, ioException.getMessage());
 }
     }//GEN-LAST:event_formWindowClosing
+
+    private void jMenuItem20ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem20ActionPerformed
+        int reply = JOptionPane.showConfirmDialog(null, "Se eliminaran todas las carpetas y el mismo Tool!", "Cuidado! Desea continuar?", JOptionPane.YES_NO_OPTION);
+        if (reply == JOptionPane.YES_OPTION) {            
+            try {
+                Path directory = Paths.get(".settings");
+                Files.walkFileTree(directory, new SimpleFileVisitor<Path>() {
+                    @Override
+                    public FileVisitResult visitFile(Path file, BasicFileAttributes attributes) throws IOException {
+                        Files.delete(file); // this will work because it's always a File
+                        return FileVisitResult.CONTINUE;
+                    }
+                    
+                    @Override
+                    public FileVisitResult postVisitDirectory(Path dir, IOException exc) throws IOException {
+                        Files.delete(dir); //this will work because Files in the directory are already deleted
+                        return FileVisitResult.CONTINUE;
+                    }
+                });
+            } catch (IOException ex) {
+            JOptionPane.showMessageDialog(null, "Error no se pudo eliminar" +ex);
+            }
+          
+            try {
+                Path directory = Paths.get("img");
+                Files.walkFileTree(directory, new SimpleFileVisitor<Path>() {
+                    @Override
+                    public FileVisitResult visitFile(Path file, BasicFileAttributes attributes) throws IOException {
+                        Files.delete(file); // this will work because it's always a File
+                        return FileVisitResult.CONTINUE;
+                    }
+                    
+                    @Override
+                    public FileVisitResult postVisitDirectory(Path dir, IOException exc) throws IOException {
+                        Files.delete(dir); //this will work because Files in the directory are already deleted
+                        return FileVisitResult.CONTINUE;
+                    }
+                });
+            } catch (IOException ex) {
+            JOptionPane.showMessageDialog(null, "Error no se pudo eliminar" +ex);
+            }
+                        
+    JOptionPane.showMessageDialog(null, "Se removió por completo el Tool :( \n Hasta la próxima!");
+    try {
+    Process process = Runtime.getRuntime().exec("TASKKILL /F /IM javaw.exe");
+    } catch (IOException e) {
+        JOptionPane.showMessageDialog(null, "Error no se pudo cerrar" +e);
+    }
+    try {
+    Process process = Runtime.getRuntime().exec("TASKKILL /F /IM Tool.exe");
+    } catch (IOException e) {
+        JOptionPane.showMessageDialog(null, "Error no se pudo cerrar" +e);
+    }
+                try {
+                Path directory = Paths.get("Tool.exe");
+                Files.walkFileTree(directory, new SimpleFileVisitor<Path>() {
+                    @Override
+                    public FileVisitResult visitFile(Path file, BasicFileAttributes attributes) throws IOException {
+                        Files.delete(file); // this will work because it's always a File
+                        return FileVisitResult.CONTINUE;
+                    }
+                    
+                    @Override
+                    public FileVisitResult postVisitDirectory(Path dir, IOException exc) throws IOException {
+                        Files.delete(dir); //this will work because Files in the directory are already deleted
+                        return FileVisitResult.CONTINUE;
+                    }
+                });
+            } catch (IOException ex) {
+            JOptionPane.showMessageDialog(null, "Error no se pudo eliminar" +ex);
+            }
+
+        }else{
+            dispose();//To close the current window
+            String path = "Tool.exe";
+            File file = new File(path);
+            try {
+                Process t = Runtime.getRuntime().exec(file.getAbsolutePath());
+            } catch (IOException ex) {
+                Logger.getLogger(OPVisual.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        }        
+    }//GEN-LAST:event_jMenuItem20ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -1624,6 +1681,7 @@ try {
     private javax.swing.JMenuItem jMenuItem18;
     private javax.swing.JMenuItem jMenuItem19;
     private javax.swing.JMenuItem jMenuItem2;
+    private javax.swing.JMenuItem jMenuItem20;
     private javax.swing.JMenuItem jMenuItem3;
     private javax.swing.JMenuItem jMenuItem4;
     private javax.swing.JMenuItem jMenuItem5;
@@ -1632,6 +1690,7 @@ try {
     private javax.swing.JMenuItem jMenuItem8;
     private javax.swing.JMenuItem jMenuItem9;
     private javax.swing.JPopupMenu.Separator jSeparator1;
+    private javax.swing.JPopupMenu.Separator jSeparator10;
     private javax.swing.JPopupMenu.Separator jSeparator13;
     private javax.swing.JPopupMenu.Separator jSeparator2;
     private javax.swing.JPopupMenu.Separator jSeparator3;
