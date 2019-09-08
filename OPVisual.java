@@ -1,17 +1,17 @@
 /**
  * Tool OP
  * 
- * @author (Franco Mato) 
- * @version (1.0)
+ * @author (Franco Mato - franco28) 
+ * @version (1.0.0.4.RC1)
  * 
- * Changelog
- * 1.0
- * Inicio
+ * 
  * 
  */
 
 package oneplus;
 
+import java.awt.Color;
+import java.awt.Container;
 import java.awt.Cursor;
 import java.awt.Desktop;
 import java.io.BufferedOutputStream;
@@ -39,6 +39,7 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.nio.file.SimpleFileVisitor;
 import java.nio.file.attribute.BasicFileAttributes;
+import javax.swing.UnsupportedLookAndFeelException;
 
 /**
  *
@@ -46,6 +47,8 @@ import java.nio.file.attribute.BasicFileAttributes;
  */
 public class OPVisual extends javax.swing.JFrame {
 
+    
+    
     /**
      * Creates new form OPVisual
      */
@@ -123,6 +126,8 @@ public class OPVisual extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("OnePlus Tool - BETA Es");
+        setBackground(java.awt.Color.darkGray);
+        setForeground(java.awt.Color.darkGray);
         setResizable(false);
         addWindowListener(new java.awt.event.WindowAdapter() {
             public void windowClosing(java.awt.event.WindowEvent evt) {
@@ -668,13 +673,14 @@ public class OPVisual extends javax.swing.JFrame {
         );
 
         getAccessibleContext().setAccessibleDescription("Tool for OP");
+        getAccessibleContext().setAccessibleParent(this);
 
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void formWindowOpened(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowOpened
-
+       
     this.setIconImage(new ImageIcon(getClass().getResource("Icon.png")).getImage());
 
     jFormattedTextField1.setText("Bienvendio a OnePlus Tool");
@@ -1700,7 +1706,7 @@ try {
          */
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
+                if ("Windows".equals(info.getName())) {
                     javax.swing.UIManager.setLookAndFeel(info.getClassName());
                     break;
                 }
