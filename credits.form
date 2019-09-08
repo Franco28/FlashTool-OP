@@ -71,7 +71,7 @@
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Trebuchet MS" size="18" style="1"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="franco28"/>
+        <Property name="text" type="java.lang.String" value="franco28 (Java Tool)"/>
         <Property name="toolTipText" type="java.lang.String" value="Abrir franco28 p&#xe1;gina"/>
         <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
           <Color id="Cursor de Mano"/>
@@ -95,7 +95,7 @@
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Trebuchet MS" size="18" style="1"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="codeworkx "/>
+        <Property name="text" type="java.lang.String" value="Thanks codeworkx for TWRP"/>
         <Property name="toolTipText" type="java.lang.String" value="Desarrollador del Recovery TWRP para OP5"/>
         <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
           <Color id="Cursor de Mano"/>

@@ -50,7 +50,7 @@ public class credits extends javax.swing.JFrame {
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/oneplus/images/logo.png"))); // NOI18N
 
         jButton1.setFont(new java.awt.Font("Trebuchet MS", 1, 18)); // NOI18N
-        jButton1.setText("franco28");
+        jButton1.setText("franco28 (Java Tool)");
         jButton1.setToolTipText("Abrir franco28 página");
         jButton1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -64,7 +64,7 @@ public class credits extends javax.swing.JFrame {
         jLabel2.setText("Créditos");
 
         jButton2.setFont(new java.awt.Font("Trebuchet MS", 1, 18)); // NOI18N
-        jButton2.setText("codeworkx ");
+        jButton2.setText("Thanks codeworkx for TWRP");
         jButton2.setToolTipText("Desarrollador del Recovery TWRP para OP5");
         jButton2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButton2.addActionListener(new java.awt.event.ActionListener() {
