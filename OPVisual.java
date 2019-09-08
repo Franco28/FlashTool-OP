@@ -118,8 +118,9 @@ public class OPVisual extends javax.swing.JFrame {
         jMenuItem17 = new javax.swing.JMenuItem();
         jSeparator8 = new javax.swing.JPopupMenu.Separator();
         jMenu8 = new javax.swing.JMenu();
-        jMenuItem18 = new javax.swing.JMenuItem();
         jMenuItem19 = new javax.swing.JMenuItem();
+        jMenuItem23 = new javax.swing.JMenuItem();
+        jMenuItem18 = new javax.swing.JMenuItem();
         jMenuItem11 = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -577,18 +578,6 @@ public class OPVisual extends javax.swing.JFrame {
         jMenu8.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jMenu8.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
 
-        jMenuItem18.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jMenuItem18.setIcon(new javax.swing.ImageIcon(getClass().getResource("/oneplus/images/git.png"))); // NOI18N
-        jMenuItem18.setText("GitHub");
-        jMenuItem18.setToolTipText("Código del programa java");
-        jMenuItem18.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jMenuItem18.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem18ActionPerformed(evt);
-            }
-        });
-        jMenu8.add(jMenuItem18);
-
         jMenuItem19.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jMenuItem19.setIcon(new javax.swing.ImageIcon(getClass().getResource("/oneplus/images/web.png"))); // NOI18N
         jMenuItem19.setText("Página ");
@@ -600,6 +589,30 @@ public class OPVisual extends javax.swing.JFrame {
             }
         });
         jMenu8.add(jMenuItem19);
+
+        jMenuItem23.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        jMenuItem23.setIcon(new javax.swing.ImageIcon(getClass().getResource("/oneplus/images/update.png"))); // NOI18N
+        jMenuItem23.setText("Releases");
+        jMenuItem23.setToolTipText("Descargas del Tool");
+        jMenuItem23.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jMenuItem23.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem23ActionPerformed(evt);
+            }
+        });
+        jMenu8.add(jMenuItem23);
+
+        jMenuItem18.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        jMenuItem18.setIcon(new javax.swing.ImageIcon(getClass().getResource("/oneplus/images/git.png"))); // NOI18N
+        jMenuItem18.setText("GitHub");
+        jMenuItem18.setToolTipText("Código del programa java");
+        jMenuItem18.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jMenuItem18.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem18ActionPerformed(evt);
+            }
+        });
+        jMenu8.add(jMenuItem18);
 
         jMenuItem11.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jMenuItem11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/oneplus/images/bug.png"))); // NOI18N
@@ -1728,6 +1741,14 @@ try {
         new OP5tVisual().setVisible(true);
     }//GEN-LAST:event_jMenuItem1ActionPerformed
 
+    private void jMenuItem23ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem23ActionPerformed
+Desktop d = Desktop.getDesktop();
+try {
+    d.browse(new URI("https://github.com/Franco28/FlashTool-OP/releases"));
+} catch (IOException | URISyntaxException e2) {
+} 
+    }//GEN-LAST:event_jMenuItem23ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -1798,6 +1819,7 @@ try {
     private javax.swing.JMenuItem jMenuItem20;
     private javax.swing.JMenuItem jMenuItem21;
     private javax.swing.JMenuItem jMenuItem22;
+    private javax.swing.JMenuItem jMenuItem23;
     private javax.swing.JMenuItem jMenuItem3;
     private javax.swing.JMenuItem jMenuItem4;
     private javax.swing.JMenuItem jMenuItem5;
