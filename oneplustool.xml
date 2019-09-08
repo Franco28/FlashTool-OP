@@ -13,7 +13,7 @@
   <lib>w32api/libadvapi32.a</lib>
   <lib>w32api/libshell32.a</lib>
   <jar>C:\Users\Franco\Documents\NetBeansProjects\OnePlus\dist\OnePlus.jar</jar>
-  <outfile>C:\Users\Franco\Desktop\OnePlus 5\OnePlusTool\Tool.exe</outfile>
+  <outfile>C:\Users\Franco\Desktop\OnePlus 5\Tool.exe</outfile>
   <errTitle>Error Java no encontrado, por favor descargue java</errTitle>
   <cmdLine></cmdLine>
   <chdir>.</chdir>
