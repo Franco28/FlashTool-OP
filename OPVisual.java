@@ -1,9 +1,8 @@
 /**
- * Tool OP
+ * Tool
  * 
  * @author (Franco Mato - franco28) 
- * @version (1.0.0.4.RC1)
- * 
+ * @version (1.0.0.6.RC1)
  * 
  * 
  */
@@ -31,6 +30,7 @@ import java.net.URI;
 import java.net.URISyntaxException;
 import javax.swing.ImageIcon;
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.nio.file.FileVisitResult;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -40,7 +40,7 @@ import java.nio.file.attribute.BasicFileAttributes;
 
 /**
  *
- * @author Franco
+ * @author franco28
  */
 public class OPVisual extends javax.swing.JFrame {
 
@@ -489,7 +489,7 @@ public class OPVisual extends javax.swing.JFrame {
         jMenuItem5.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jMenuItem5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/oneplus/images/java.png"))); // NOI18N
         jMenuItem5.setText("Terminar proceso Java");
-        jMenuItem5.setToolTipText("Se cerrara por completo Java (Mata el proceso)");
+        jMenuItem5.setToolTipText("Se cerrara por completo Java y del Tool");
         jMenuItem5.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jMenuItem5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -516,7 +516,7 @@ public class OPVisual extends javax.swing.JFrame {
         jMenuItem20.setFont(new java.awt.Font("Segoe UI Black", 1, 12)); // NOI18N
         jMenuItem20.setForeground(new java.awt.Color(255, 51, 0));
         jMenuItem20.setIcon(new javax.swing.ImageIcon(getClass().getResource("/oneplus/images/warn.png"))); // NOI18N
-        jMenuItem20.setText("Eliminar Tool por completo - Beta");
+        jMenuItem20.setText("Eliminar Tool por completo");
         jMenuItem20.setToolTipText("Eliminar tool y sus archivos y carpetas");
         jMenuItem20.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jMenuItem20.addActionListener(new java.awt.event.ActionListener() {
@@ -733,6 +733,7 @@ public class OPVisual extends javax.swing.JFrame {
         frame.setVisible(true);
         frame.setResizable(false);
         frame.setLocationRelativeTo(null);
+        frame.setAlwaysOnTop(true);
         Runnable updatethread;
             updatethread = () -> {
             try {
@@ -788,7 +789,7 @@ public class OPVisual extends javax.swing.JFrame {
         
         File bin = new File("C:\\OPTool\\.settings"); 
         if (!bin.exists() == true){
-        JOptionPane.showMessageDialog(null,"No se pudieron encontrar los binarios \n\n El archivo se instalará en C:\\OPTool\\.settings","Error",JOptionPane.INFORMATION_MESSAGE,null);
+        JOptionPane.showMessageDialog(null,"No se pudieron encontrar los binarios \n\n El archivo se instalará en C:\\OPTool\\.settings","Error",JOptionPane.ERROR_MESSAGE);
         final JProgressBar jProgressBar = new JProgressBar();
         jProgressBar.setMaximum(100000);
         jProgressBar.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
@@ -805,6 +806,7 @@ public class OPVisual extends javax.swing.JFrame {
         frame.setVisible(true);
         frame.setResizable(false);
         frame.setLocationRelativeTo(null);
+        frame.setAlwaysOnTop(true);
         Runnable updatethread;
             updatethread = () -> {
             try {
@@ -868,7 +870,7 @@ public class OPVisual extends javax.swing.JFrame {
         }catch (IOException e) { 
             }
         } 
-
+        
         File f = new File("C:\\OPTool\\img"); 
         if (!f.exists() == true){
 // Create a directory; all non-existent ancestor directories are
@@ -1057,17 +1059,44 @@ public class OPVisual extends javax.swing.JFrame {
     int reply = JOptionPane.showConfirmDialog(null, "Este proceso eliminara toda su memoria interna, realizar backup antes de continuar", "Cuidado! Desea continuar?", JOptionPane.YES_NO_OPTION);
     JOptionPane.showMessageDialog(null,"Por favor activa las opciones de desarrollador y activa: \n\n - Desbloqueo OEM \n\n - Depuración por USB");
     if (reply == JOptionPane.YES_OPTION) {     
+    final File file = new File("C:\\OPTool\\.settings\\bin\\unlock.bat");
+        try {
+            file.createNewFile();
+        } catch (IOException ex) {
+        JOptionPane.showMessageDialog(null,"No se pudo crear el archivo","Error",JOptionPane.ERROR_MESSAGE);
+        }
+        try (PrintWriter writer = new PrintWriter(file, "UTF-8")) {
+            writer.println("@echo off");
+            writer.println("title Unlock Bootloader");
+            writer.println("color C");
+            writer.println("echo.");
+            writer.println("echo Unlock Bootloader...");
+            writer.println("echo.");
+            writer.println("echo Press any key to continue...");
+            writer.println("pause>nul");
+            writer.println("echo.");
+            writer.println("fastboot oem unlock");
+            writer.println("echo.");
+            writer.println("echo Press any key to exit...");
+            writer.println("echo.");
+            writer.println("pause>nul");
+            writer.println("del \"%~f0\" & exit");
+
+        }catch (IOException e) {
+         JOptionPane.showMessageDialog(null,"" +e ,"Error",JOptionPane.ERROR_MESSAGE);
+        }
+                
    Runtime runtime = Runtime.getRuntime();
 try {
     Process p1 = runtime.exec("cmd /c start C:\\OPTool\\.settings\\bin\\unlock.bat");
     InputStream is = p1.getInputStream();
     int i = 0;
     while( (i = is.read() ) != -1) {
-       JOptionPane.showMessageDialog(null, +i);
+       JOptionPane.showMessageDialog(null, +i,"Error",JOptionPane.ERROR_MESSAGE);
     }
 } catch(IOException ioException) {
-    JOptionPane.showMessageDialog(null, ioException.getMessage());
-}       
+    JOptionPane.showMessageDialog(null, ioException.getMessage(),"Error",JOptionPane.ERROR_MESSAGE);
+}   
         }else {
            JOptionPane.showMessageDialog(null, "Proceso cancelado");
               dispose();//To close the current window
@@ -1156,85 +1185,211 @@ try {
         
     File f = new File("C:\\OPTool\\img\\twrp\\twrp-3.3.1-0-cheeseburger.img");
    
-    if(f.exists() == true){        
+    if(f.exists() == true){
+    final File file = new File("C:\\OPTool\\.settings\\bin\\twrp.bat");
+        try {
+            file.createNewFile();
+        } catch (IOException ex) {
+        JOptionPane.showMessageDialog(null,"No se pudo crear el archivo","Error",JOptionPane.ERROR_MESSAGE);
+        }
+        try (PrintWriter writer = new PrintWriter(file, "UTF-8")) {
+            writer.println("@echo off");
+            writer.println("title FLASH OP5 TWRP");
+            writer.println("color C");
+            writer.println("echo.");
+            writer.println("echo Flashing TWRP twrp-3.3.1-0-cheeseburger for OP5...");
+            writer.println("echo.");
+            writer.println("echo Press any key to continue...");
+            writer.println("pause>nul");
+            writer.println("cd C:\\OPTool\\img\\twrp");
+            writer.println("echo.");
+            writer.println("fastboot flash recovery twrp-3.3.1-0-cheeseburger.img");
+            writer.println("echo.");
+            writer.println("echo Press any key to exit...");
+            writer.println("echo.");
+            writer.println("pause>nul");
+            writer.println("del \"%~f0\" & exit");
+
+        }catch (IOException e) {
+         JOptionPane.showMessageDialog(null,"" +e ,"Error",JOptionPane.ERROR_MESSAGE);
+        }
+                
    Runtime runtime = Runtime.getRuntime();
 try {
     Process p1 = runtime.exec("cmd /c start C:\\OPTool\\.settings\\bin\\twrp.bat");
     InputStream is = p1.getInputStream();
     int i = 0;
     while( (i = is.read() ) != -1) {
-       JOptionPane.showMessageDialog(null, +i);
+       JOptionPane.showMessageDialog(null, +i,"Error",JOptionPane.ERROR_MESSAGE);
     }
 } catch(IOException ioException) {
-    JOptionPane.showMessageDialog(null, ioException.getMessage());
+    JOptionPane.showMessageDialog(null, ioException.getMessage(),"Error",JOptionPane.ERROR_MESSAGE);
 }
   }
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
-        Runtime runtime = Runtime.getRuntime();
+    final File file = new File("C:\\OPTool\\.settings\\bin\\rebootb.bat");
+        try {
+            file.createNewFile();
+        } catch (IOException ex) {
+        JOptionPane.showMessageDialog(null,"No se pudo crear el archivo","Error",JOptionPane.ERROR_MESSAGE);
+        }
+        try (PrintWriter writer = new PrintWriter(file, "UTF-8")) {
+            writer.println("@echo off");
+            writer.println("title Reboot Bootloader");
+            writer.println("color C");
+            writer.println("echo.");
+            writer.println("echo Reboot Bootloader...");
+            writer.println("echo.");
+            writer.println("echo Press any key to continue...");
+            writer.println("pause>nul");
+            writer.println("echo.");
+            writer.println("adb reboot bootloader");
+            writer.println("echo.");
+            writer.println("echo Press any key to exit...");
+            writer.println("echo.");
+            writer.println("pause>nul");
+            writer.println("del \"%~f0\" & exit");
+
+        }catch (IOException e) {
+         JOptionPane.showMessageDialog(null,"" +e ,"Error",JOptionPane.ERROR_MESSAGE);
+        }
+                
+   Runtime runtime = Runtime.getRuntime();
 try {
     Process p1 = runtime.exec("cmd /c start C:\\OPTool\\.settings\\bin\\rebootb.bat");
     InputStream is = p1.getInputStream();
     int i = 0;
     while( (i = is.read() ) != -1) {
-       JOptionPane.showMessageDialog(null, +i);
+       JOptionPane.showMessageDialog(null, +i,"Error",JOptionPane.ERROR_MESSAGE);
     }
 } catch(IOException ioException) {
-    JOptionPane.showMessageDialog(null, ioException.getMessage());
-} 
-    try {
-    Process process = Runtime.getRuntime().exec("TASKKILL /F /IM cmd.exe");
-    } catch (IOException e) {
-        JOptionPane.showMessageDialog(null, "Error no se pudo cerrar" +e);
-    }
+    JOptionPane.showMessageDialog(null, ioException.getMessage(),"Error",JOptionPane.ERROR_MESSAGE);
+}   
     }//GEN-LAST:event_jButton5ActionPerformed
 
     private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
-      Runtime runtime = Runtime.getRuntime();
+    final File file = new File("C:\\OPTool\\.settings\\bin\\checkadb.bat");
+        try {
+            file.createNewFile();
+        } catch (IOException ex) {
+        JOptionPane.showMessageDialog(null,"No se pudo crear el archivo","Error",JOptionPane.ERROR_MESSAGE);
+        }
+        try (PrintWriter writer = new PrintWriter(file, "UTF-8")) {
+            writer.println("@echo off");
+            writer.println("title Check adb devices");
+            writer.println("color C");
+            writer.println("echo.");
+            writer.println("echo Check adb devices...");
+            writer.println("echo.");
+            writer.println("echo Press any key to continue...");
+            writer.println("pause>nul");
+            writer.println("echo.");
+            writer.println("adb devices");
+            writer.println("echo.");
+            writer.println("echo Press any key to exit...");
+            writer.println("echo.");
+            writer.println("pause>nul");
+            writer.println("del \"%~f0\" & exit");
+
+        }catch (IOException e) {
+         JOptionPane.showMessageDialog(null,"" +e ,"Error",JOptionPane.ERROR_MESSAGE);
+        }
+                
+   Runtime runtime = Runtime.getRuntime();
 try {
-    Process p1 = runtime.exec("cmd /c start C:\\OPTool\\img\\bootloader\\checkb.bat");
+    Process p1 = runtime.exec("cmd /c start C:\\OPTool\\.settings\\bin\\checkadb.bat");
     InputStream is = p1.getInputStream();
     int i = 0;
     while( (i = is.read() ) != -1) {
-       JOptionPane.showMessageDialog(null, +i);
+       JOptionPane.showMessageDialog(null, +i,"Error",JOptionPane.ERROR_MESSAGE);
     }
 } catch(IOException ioException) {
-    JOptionPane.showMessageDialog(null, ioException.getMessage());
-} 
+    JOptionPane.showMessageDialog(null, ioException.getMessage(),"Error",JOptionPane.ERROR_MESSAGE);
+}   
     }//GEN-LAST:event_jButton7ActionPerformed
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
-      Runtime runtime = Runtime.getRuntime();
+    final File file = new File("C:\\OPTool\\.settings\\bin\\rebootr.bat");
+        try {
+            file.createNewFile();
+        } catch (IOException ex) {
+        JOptionPane.showMessageDialog(null,"No se pudo crear el archivo","Error",JOptionPane.ERROR_MESSAGE);
+        }
+        try (PrintWriter writer = new PrintWriter(file, "UTF-8")) {
+            writer.println("@echo off");
+            writer.println("title Reboot Recovery");
+            writer.println("color C");
+            writer.println("echo.");
+            writer.println("echo Reboot Recovery...");
+            writer.println("echo.");
+            writer.println("echo Press any key to continue...");
+            writer.println("pause>nul");
+            writer.println("echo.");
+            writer.println("adb reboot recovery");
+            writer.println("echo.");
+            writer.println("echo Press any key to exit...");
+            writer.println("echo.");
+            writer.println("pause>nul");
+            writer.println("del \"%~f0\" & exit");
+
+        }catch (IOException e) {
+         JOptionPane.showMessageDialog(null,"" +e ,"Error",JOptionPane.ERROR_MESSAGE);
+        }
+                
+   Runtime runtime = Runtime.getRuntime();
 try {
     Process p1 = runtime.exec("cmd /c start C:\\OPTool\\.settings\\bin\\rebootr.bat");
     InputStream is = p1.getInputStream();
     int i = 0;
     while( (i = is.read() ) != -1) {
-       JOptionPane.showMessageDialog(null, +i);
+       JOptionPane.showMessageDialog(null, +i,"Error",JOptionPane.ERROR_MESSAGE);
     }
 } catch(IOException ioException) {
-    JOptionPane.showMessageDialog(null, ioException.getMessage());
-} 
-    try {
-    Process process = Runtime.getRuntime().exec("TASKKILL /F /IM cmd.exe");
-    } catch (IOException e) {
-        JOptionPane.showMessageDialog(null, "Error no se pudo cerrar" +e);
-    }
+    JOptionPane.showMessageDialog(null, ioException.getMessage(),"Error",JOptionPane.ERROR_MESSAGE);
+}   
     }//GEN-LAST:event_jButton6ActionPerformed
 
     private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
-      Runtime runtime = Runtime.getRuntime();
+final File file = new File("C:\\OPTool\\.settings\\bin\\checkf.bat");
+        try {
+            file.createNewFile();
+        } catch (IOException ex) {
+        JOptionPane.showMessageDialog(null,"No se pudo crear el archivo","Error",JOptionPane.ERROR_MESSAGE);
+        }
+        try (PrintWriter writer = new PrintWriter(file, "UTF-8")) {
+            writer.println("@echo off");
+            writer.println("title Check fastboot devices");
+            writer.println("color C");
+            writer.println("echo.");
+            writer.println("echo Check fastboot devices...");
+            writer.println("echo.");
+            writer.println("echo Press any key to continue...");
+            writer.println("pause>nul");
+            writer.println("echo.");
+            writer.println("fastboot devices");
+            writer.println("echo.");
+            writer.println("echo Press any key to exit...");
+            writer.println("echo.");
+            writer.println("pause>nul");
+            writer.println("del \"%~f0\" & exit");
+
+        }catch (IOException e) {
+         JOptionPane.showMessageDialog(null,"" +e ,"Error",JOptionPane.ERROR_MESSAGE);
+        }
+                
+   Runtime runtime = Runtime.getRuntime();
 try {
-    Process p1 = runtime.exec("cmd /c start C:\\OPTool\\img\\bootloader\\checkf.bat");
+    Process p1 = runtime.exec("cmd /c start C:\\OPTool\\.settings\\bin\\checkf.bat");
     InputStream is = p1.getInputStream();
     int i = 0;
     while( (i = is.read() ) != -1) {
-       JOptionPane.showMessageDialog(null, +i);
+       JOptionPane.showMessageDialog(null, +i,"Error",JOptionPane.ERROR_MESSAGE);
     }
 } catch(IOException ioException) {
-    JOptionPane.showMessageDialog(null, ioException.getMessage());
-} 
+    JOptionPane.showMessageDialog(null, ioException.getMessage(),"Error",JOptionPane.ERROR_MESSAGE);
+}   
     }//GEN-LAST:event_jButton8ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
@@ -1246,7 +1401,7 @@ try {
         File f = new File("C:\\OPTool\\img\\recovery\\twrp-3.3.1-0-20190713-codeworkx-cheeseburger.img"); 
         
         if(!f.exists()){
-        JOptionPane.showMessageDialog(null,"Error: No se pudo encontrar TWRP Para Flashear Stock OxygenOS");
+        JOptionPane.showMessageDialog(null, "No se pudo encontrar TWRP Para Flashear Stock OxygenOS","Error",JOptionPane.ERROR_MESSAGE);
         final JProgressBar jProgressBar = new JProgressBar();
         jProgressBar.setMaximum(100000);
         jProgressBar.setCursor (Cursor.getPredefinedCursor (Cursor.WAIT_CURSOR));
@@ -1305,16 +1460,44 @@ try {
     File of = new File("C:\\OPTool\\img\\recovery\\twrp-3.3.1-0-20190713-codeworkx-cheeseburger.img");
    
     if(of.exists() == true){
+    final File file = new File("C:\\OPTool\\.settings\\bin\\recovery.bat");
+        try {
+            file.createNewFile();
+        } catch (IOException ex) {
+        JOptionPane.showMessageDialog(null,"No se pudo crear el archivo","Error",JOptionPane.ERROR_MESSAGE);
+        }
+        try (PrintWriter writer = new PrintWriter(file, "UTF-8")) {
+            writer.println("@echo off");
+            writer.println("title FLASH OP5 TWRP");
+            writer.println("color C");
+            writer.println("echo.");
+            writer.println("echo Flashing twrp-3.3.1-0-20190713-codeworkx-cheeseburger for OP5...");
+            writer.println("echo.");
+            writer.println("echo Press any key to continue...");
+            writer.println("pause>nul");
+            writer.println("cd C:\\OPTool\\img\\recovery");
+            writer.println("echo.");
+            writer.println("fastboot flash recovery twrp-3.3.1-0-20190713-codeworkx-cheeseburger.img");
+            writer.println("echo.");
+            writer.println("echo Press any key to exit...");
+            writer.println("echo.");
+            writer.println("pause>nul");
+            writer.println("del \"%~f0\" & exit");
+
+        }catch (IOException e) {
+         JOptionPane.showMessageDialog(null,"" +e ,"Error",JOptionPane.ERROR_MESSAGE);
+        }
+                
    Runtime runtime = Runtime.getRuntime();
 try {
     Process p1 = runtime.exec("cmd /c start C:\\OPTool\\.settings\\bin\\recovery.bat");
     InputStream is = p1.getInputStream();
     int i = 0;
     while( (i = is.read() ) != -1) {
-       JOptionPane.showMessageDialog(null, +i);
+       JOptionPane.showMessageDialog(null, +i,"Error",JOptionPane.ERROR_MESSAGE);
     }
 } catch(IOException ioException) {
-    JOptionPane.showMessageDialog(null, ioException.getMessage());
+    JOptionPane.showMessageDialog(null, ioException.getMessage(),"Error",JOptionPane.ERROR_MESSAGE);
 }
   }
            
@@ -1333,20 +1516,45 @@ try {
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-
     int reply = JOptionPane.showConfirmDialog(null, "Este proceso eliminara toda su memoria interna, realizar backup antes de continuar", "Cuidado! Desea continuar?", JOptionPane.YES_NO_OPTION);
-     
     if (reply == JOptionPane.YES_OPTION) {  
+    final File file = new File("C:\\OPTool\\.settings\\bin\\lock.bat");
+        try {
+            file.createNewFile();
+        } catch (IOException ex) {
+        JOptionPane.showMessageDialog(null,"No se pudo crear el archivo","Error",JOptionPane.ERROR_MESSAGE);
+        }
+        try (PrintWriter writer = new PrintWriter(file, "UTF-8")) {
+            writer.println("@echo off");
+            writer.println("title Lock Bootloader");
+            writer.println("color C");
+            writer.println("echo.");
+            writer.println("echo Lock Bootloader...");
+            writer.println("echo.");
+            writer.println("echo Press any key to continue...");
+            writer.println("pause>nul");
+            writer.println("echo.");
+            writer.println("fastboot oem lock");
+            writer.println("echo.");
+            writer.println("echo Press any key to exit...");
+            writer.println("echo.");
+            writer.println("pause>nul");
+            writer.println("del \"%~f0\" & exit");
+
+        }catch (IOException e) {
+         JOptionPane.showMessageDialog(null,"" +e ,"Error",JOptionPane.ERROR_MESSAGE);
+        }
+                
    Runtime runtime = Runtime.getRuntime();
 try {
     Process p1 = runtime.exec("cmd /c start C:\\OPTool\\.settings\\bin\\lock.bat");
     InputStream is = p1.getInputStream();
     int i = 0;
     while( (i = is.read() ) != -1) {
-       JOptionPane.showMessageDialog(null, +i);
+       JOptionPane.showMessageDialog(null, +i,"Error",JOptionPane.ERROR_MESSAGE);
     }
 } catch(IOException ioException) {
-    JOptionPane.showMessageDialog(null, ioException.getMessage());
+    JOptionPane.showMessageDialog(null, ioException.getMessage(),"Error",JOptionPane.ERROR_MESSAGE);
 }        
         }else {
            JOptionPane.showMessageDialog(null, "Proceso cancelado");
@@ -1373,7 +1581,7 @@ try {
             dirToOpen = new File("C:\\adb");
             desktop.open(dirToOpen);
         } catch (IllegalArgumentException iae) {
-            JOptionPane.showMessageDialog(null,"Error: Carpeta " +dirToOpen+ " no encontrada");
+            JOptionPane.showMessageDialog(null,"Carpeta " +dirToOpen+ "no encontrada","Error",JOptionPane.ERROR_MESSAGE);
         } catch (IOException ex) {
             Logger.getLogger(OPVisual.class.getName()).log(Level.SEVERE, null, ex);
         }
@@ -1394,22 +1602,22 @@ try {
     try {
     Process process = Runtime.getRuntime().exec("TASKKILL /F /IM javaw.exe");
     } catch (IOException e) {
-        JOptionPane.showMessageDialog(null, "Error no se pudo cerrar" +e);
+        JOptionPane.showMessageDialog(null, "Error no se pudo cerrar" +e,"Error",JOptionPane.ERROR_MESSAGE);
     }
     try {
     Process process = Runtime.getRuntime().exec("TASKKILL /F /IM Tool.exe");
     } catch (IOException e) {
-        JOptionPane.showMessageDialog(null, "Error no se pudo cerrar" +e);
+        JOptionPane.showMessageDialog(null, "Error no se pudo cerrar" +e,"Error",JOptionPane.ERROR_MESSAGE);
     }
     System.exit(0);
     }//GEN-LAST:event_jMenuItem5ActionPerformed
 
     private void jMenuItem8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem8ActionPerformed
-        JOptionPane.showMessageDialog(null, "Error usted ya se encuentra en el Tool Español");     
+        JOptionPane.showMessageDialog(null, "Usted ya se encuentra en el Tool Español","Error",JOptionPane.ERROR_MESSAGE);     
     }//GEN-LAST:event_jMenuItem8ActionPerformed
 
     private void jMenuItem7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem7ActionPerformed
-        JOptionPane.showMessageDialog(null, "Error English lang it´s not made yet...");     
+        JOptionPane.showMessageDialog(null, "English lang it´s not made yet...","Error",JOptionPane.ERROR_MESSAGE);     
         this.dispose();    
         new OPVisual().setVisible(true);            
     }//GEN-LAST:event_jMenuItem7ActionPerformed
@@ -1487,7 +1695,7 @@ try {
         }catch (IOException e) {
 
         jFormattedTextField1.setText("Error no se pudo establecer conexion con el servidor.");            
-        JOptionPane.showMessageDialog(null,"Error: Verifique su conexión a internet y vuelva a intentarlo...");
+        JOptionPane.showMessageDialog(null,"Verifique su conexión a internet y vuelva a intentarlo...","Error",JOptionPane.ERROR_MESSAGE);
         dispose();//To close the current window 
        
         }finally{
@@ -1508,13 +1716,24 @@ try {
     InputStream is = p1.getInputStream();
     int i = 0;
     while( (i = is.read() ) != -1) {
-       JOptionPane.showMessageDialog(null, +i);
+       JOptionPane.showMessageDialog(null, +i,"Error",JOptionPane.ERROR_MESSAGE);
     }
 } catch(IOException ioException) {
-    JOptionPane.showMessageDialog(null, ioException.getMessage());
+    JOptionPane.showMessageDialog(null, ioException.getMessage(),"Error",JOptionPane.ERROR_MESSAGE);
 }
   }
     }
+       Desktop desktop = Desktop.getDesktop();
+        File dirToOpen = null;
+        JOptionPane.showMessageDialog(null,"Mueva el firmware a la memoria interna del teléfono");
+        try {
+            dirToOpen = new File("C:\\OPTool\\img\\firmware");
+            desktop.open(dirToOpen);
+        } catch (IllegalArgumentException iae) {
+            JOptionPane.showMessageDialog(null,"Carpeta " +dirToOpen+ " no encontrada","Error",JOptionPane.ERROR_MESSAGE);
+        } catch (IOException ex) {
+            Logger.getLogger(OPVisual.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }//GEN-LAST:event_jMenuItem10ActionPerformed
 
     private void jMenuItem14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem14ActionPerformed
@@ -1524,7 +1743,7 @@ try {
             dirToOpen = new File("C:\\OPTool\\img\\recovery");
             desktop.open(dirToOpen);
         } catch (IllegalArgumentException iae) {
-            JOptionPane.showMessageDialog(null,"Error: Carpeta " +dirToOpen+ " no encontrada");
+            JOptionPane.showMessageDialog(null,"Carpeta " +dirToOpen+ " no encontrada","Error",JOptionPane.ERROR_MESSAGE);
         } catch (IOException ex) {
             Logger.getLogger(OPVisual.class.getName()).log(Level.SEVERE, null, ex);
         }
@@ -1537,7 +1756,7 @@ try {
             dirToOpen = new File("C:\\OPTool\\img\\twrp");
             desktop.open(dirToOpen);
         } catch (IllegalArgumentException iae) {
-            JOptionPane.showMessageDialog(null,"Error: Carpeta " +dirToOpen+ " no encontrada");
+            JOptionPane.showMessageDialog(null,"Carpeta " +dirToOpen+ " no encontrada","Error",JOptionPane.ERROR_MESSAGE);
         } catch (IOException ex) {
             Logger.getLogger(OPVisual.class.getName()).log(Level.SEVERE, null, ex);
         }
@@ -1550,7 +1769,7 @@ try {
             dirToOpen = new File("C:\\OPTool\\img\\firmware");
             desktop.open(dirToOpen);
         } catch (IllegalArgumentException iae) {
-            JOptionPane.showMessageDialog(null,"Error: Carpeta " +dirToOpen+ " no encontrada");
+            JOptionPane.showMessageDialog(null,"Carpeta " +dirToOpen+ " no encontrada","Error",JOptionPane.ERROR_MESSAGE);
         } catch (IOException ex) {
             Logger.getLogger(OPVisual.class.getName()).log(Level.SEVERE, null, ex);
         }
@@ -1564,22 +1783,22 @@ try {
     try {
     Process process = Runtime.getRuntime().exec("TASKKILL /F /IM javaw.exe");
     } catch (IOException e) {
-        JOptionPane.showMessageDialog(null, "Error no se pudo cerrar" +e);
+        JOptionPane.showMessageDialog(null, "No se pudo cerrar" +e,"Error",JOptionPane.ERROR_MESSAGE);
     }
     try {
     Process process = Runtime.getRuntime().exec("TASKKILL /F /IM Tool.exe");
     } catch (IOException e) {
-        JOptionPane.showMessageDialog(null, "Error no se pudo cerrar" +e);
+        JOptionPane.showMessageDialog(null, "No se pudo cerrar" +e,"Error",JOptionPane.ERROR_MESSAGE);
     }
     try {
     Process process = Runtime.getRuntime().exec("TASKKILL /F /IM adb.exe");
     } catch (IOException e) {
-        JOptionPane.showMessageDialog(null, "Error no se pudo cerrar" +e);
+        JOptionPane.showMessageDialog(null, "No se pudo cerrar" +e,"Error",JOptionPane.ERROR_MESSAGE);
     }
         try {
     Process process = Runtime.getRuntime().exec("TASKKILL /F /IM fastboot.exe");
     } catch (IOException e) {
-        JOptionPane.showMessageDialog(null, "Error no se pudo cerrar" +e);
+        JOptionPane.showMessageDialog(null, "No se pudo cerrar" +e,"Error",JOptionPane.ERROR_MESSAGE);
     }
     }//GEN-LAST:event_jMenuItem16ActionPerformed
 
@@ -1614,54 +1833,48 @@ try {
     }//GEN-LAST:event_jMenuItem18ActionPerformed
 
     private void formWindowClosing(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowClosing
-Runtime runtime = Runtime.getRuntime();
+
+        final File file = new File("C:\\OPTool\\.settings\\bin\\kill.bat");
+        try {
+            file.createNewFile();
+        } catch (IOException ex) {
+        JOptionPane.showMessageDialog(null,"No se pudo crear el archivo","Error",JOptionPane.ERROR_MESSAGE);
+        }
+        try (PrintWriter writer = new PrintWriter(file, "UTF-8")) {
+            writer.println("@echo off");
+            writer.println("color C");
+            writer.println("TASKKILL /F /IM javaw.exe");
+            writer.println("TASKKILL /F /IM Tool.exe");
+            writer.println("TASKKILL /F /IM adb.exe");
+            writer.println("TASKKILL /F /IM fastboot.exe");
+            writer.println("TASKKILL /F /IM javaw.exe");
+            writer.println("TASKKILL /F /IM Tool.exe");
+            writer.println("TASKKILL /F /IM adb.exe");
+            writer.println("TASKKILL /F /IM fastboot.exe");
+            writer.println("del \"%~f0\" & exit");
+
+        }catch (IOException e) {
+         JOptionPane.showMessageDialog(null,"" +e ,"Error",JOptionPane.ERROR_MESSAGE);
+        }
+                
+   Runtime runtime = Runtime.getRuntime();
 try {
-    Process p1 = runtime.exec("cmd /c start C:\\OPTool\\.settings\\bin\\killall.bat");
+    Process p1 = runtime.exec("cmd /c start C:\\OPTool\\.settings\\bin\\kill.bat");
     InputStream is = p1.getInputStream();
     int i = 0;
     while( (i = is.read() ) != -1) {
-       JOptionPane.showMessageDialog(null, +i);
+       JOptionPane.showMessageDialog(null, +i,"Error",JOptionPane.ERROR_MESSAGE);
     }
 } catch(IOException ioException) {
-    JOptionPane.showMessageDialog(null, ioException.getMessage());
-}
+    JOptionPane.showMessageDialog(null, ioException.getMessage(),"Error",JOptionPane.ERROR_MESSAGE);
+}   
     }//GEN-LAST:event_formWindowClosing
 
     private void jMenuItem20ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem20ActionPerformed
         int reply = JOptionPane.showConfirmDialog(null, "Se eliminaran todas las carpetas y el mismo Tool!", "Cuidado! Desea continuar?", JOptionPane.YES_NO_OPTION);
-        if (reply == JOptionPane.YES_OPTION) {            
-            try {
-                Path directory = Paths.get("C:\\OPTool\\.settings");
-                Files.walkFileTree(directory, new SimpleFileVisitor<Path>() {
-                    @Override
-                    public FileVisitResult visitFile(Path file, BasicFileAttributes attributes) throws IOException {
-                        Files.delete(file); // this will work because it's always a File
-                        return FileVisitResult.CONTINUE;
-                    }
-                    
-                    @Override
-                    public FileVisitResult postVisitDirectory(Path dir, IOException exc) throws IOException {
-                        Files.delete(dir); //this will work because Files in the directory are already deleted
-                        return FileVisitResult.CONTINUE;
-                    }
-                });
-            } catch (IOException ex) {
-            JOptionPane.showMessageDialog(null, "Error no se pudo eliminar" +ex);
-            }
-                        
-    JOptionPane.showMessageDialog(null, "Se removió por completo el Tool :( \n Hasta la próxima!");
-    try {
-    Process process = Runtime.getRuntime().exec("TASKKILL /IM javaw.exe /F");
-    } catch (IOException e) {
-        JOptionPane.showMessageDialog(null, "Error no se pudo cerrar" +e);
-    }
-    try {
-    Process process = Runtime.getRuntime().exec("TASKKILL /IM Tool.exe /F");
-    } catch (IOException e) {
-        JOptionPane.showMessageDialog(null, "Error no se pudo cerrar" +e);
-    }
+        if (reply == JOptionPane.YES_OPTION) {               
                 try {
-                Path directory = Paths.get("Tool.exe");
+                Path directory = Paths.get("C:\\OPTool");
                 Files.walkFileTree(directory, new SimpleFileVisitor<Path>() {
                     @Override
                     public FileVisitResult visitFile(Path file, BasicFileAttributes attributes) throws IOException {
@@ -1676,9 +1889,39 @@ try {
                     }
                 });
             } catch (IOException ex) {
-            JOptionPane.showMessageDialog(null, "Error no se pudo eliminar" +ex);
+            JOptionPane.showMessageDialog(null, "No se pudo eliminar " +ex,"Error",JOptionPane.ERROR_MESSAGE);
             }
 
+        final File file = new File("uninstall.bat");
+        try {
+            file.createNewFile();
+        } catch (IOException ex) {
+        JOptionPane.showMessageDialog(null,"No se pudo crear el archivo","Error",JOptionPane.ERROR_MESSAGE);
+        }
+        try (PrintWriter writer = new PrintWriter(file, "UTF-8")) {
+            writer.println("@echo off");
+            writer.println("titel Eliminando Tool...");
+            writer.println("color C");
+            writer.println("TASKKILL /IM Tool.exe /F");
+            writer.println("TASKKILL /IM javaw.exe /F");
+            writer.println("For /F \"tokens=*\" %%I in ('Dir C:\\Users\\%USERNAME%\\Desktop\\Tool.exe /s /b') do set FOUND=\"%%~fI\"");
+            writer.println("del %FOUND%");
+            writer.println("del \"%~f0\" & exit");
+        }catch (IOException e) {
+         JOptionPane.showMessageDialog(null,"" +e ,"Error",JOptionPane.ERROR_MESSAGE);
+        }
+                
+   Runtime runtime = Runtime.getRuntime();
+try {
+    Process p1 = runtime.exec("cmd /c start uninstall.bat");
+    InputStream is = p1.getInputStream();
+    int i = 0;
+    while( (i = is.read() ) != -1) {
+       JOptionPane.showMessageDialog(null, +i,"Error",JOptionPane.ERROR_MESSAGE);
+    }
+} catch(IOException ioException) {
+    JOptionPane.showMessageDialog(null, ioException.getMessage(),"Error",JOptionPane.ERROR_MESSAGE);
+}
         }else{
             dispose();//To close the current window
             String path = "Tool.exe";
@@ -1698,7 +1941,7 @@ try {
             dirToOpen = new File("C:\\OPTool\\img");
             desktop.open(dirToOpen);
         } catch (IllegalArgumentException iae) {
-            JOptionPane.showMessageDialog(null,"Error: Carpeta " +dirToOpen+ " no encontrada" +iae);
+            JOptionPane.showMessageDialog(null,"Carpeta " +dirToOpen+ " no encontrada " +iae,"Error",JOptionPane.ERROR_MESSAGE);
             dispose();//To close the current window
             String path = "Tool.exe";
             File file = new File(path);
@@ -1731,14 +1974,13 @@ try {
                     }
                 });
             } catch (IOException ex) {
-            JOptionPane.showMessageDialog(null, "no se pudo eliminar " +ex,"Error",JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(null, "No se pudo eliminar " +ex,"Error",JOptionPane.ERROR_MESSAGE);
             }
         }
     }//GEN-LAST:event_jMenuItem22ActionPerformed
 
     private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
-        this.dispose();
-        new OP5tVisual().setVisible(true);
+        JOptionPane.showMessageDialog(null, "Este Tool todavía no está listo!","Error",JOptionPane.ERROR_MESSAGE);     
     }//GEN-LAST:event_jMenuItem1ActionPerformed
 
     private void jMenuItem23ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem23ActionPerformed
