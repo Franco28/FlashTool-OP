@@ -58,71 +58,70 @@ public class OPVisual extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jButton5 = new javax.swing.JButton();
-        jButton6 = new javax.swing.JButton();
-        jFormattedTextField1 = new javax.swing.JFormattedTextField();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        jButton7 = new javax.swing.JButton();
-        jButton8 = new javax.swing.JButton();
-        jLabel5 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
-        jMenuBar2 = new javax.swing.JMenuBar();
-        jMenu1 = new javax.swing.JMenu();
-        jMenuItem4 = new javax.swing.JMenuItem();
-        jSeparator3 = new javax.swing.JPopupMenu.Separator();
-        jMenu9 = new javax.swing.JMenu();
-        jMenuItem21 = new javax.swing.JMenuItem();
-        jMenuItem22 = new javax.swing.JMenuItem();
-        jSeparator7 = new javax.swing.JPopupMenu.Separator();
-        jMenu6 = new javax.swing.JMenu();
-        jMenuItem12 = new javax.swing.JMenuItem();
-        jMenuItem13 = new javax.swing.JMenuItem();
-        jMenuItem14 = new javax.swing.JMenuItem();
-        jMenu3 = new javax.swing.JMenu();
-        jMenuItem9 = new javax.swing.JMenuItem();
-        jSeparator5 = new javax.swing.JPopupMenu.Separator();
-        jMenuItem10 = new javax.swing.JMenuItem();
-        jMenu2 = new javax.swing.JMenu();
-        jMenuItem6 = new javax.swing.JMenuItem();
-        jSeparator9 = new javax.swing.JPopupMenu.Separator();
-        jMenu5 = new javax.swing.JMenu();
-        jMenuItem7 = new javax.swing.JMenuItem();
-        jMenuItem8 = new javax.swing.JMenuItem();
-        jSeparator13 = new javax.swing.JPopupMenu.Separator();
-        jMenu7 = new javax.swing.JMenu();
-        jMenuItem1 = new javax.swing.JMenuItem();
-        jMenuItem15 = new javax.swing.JMenuItem();
-        jSeparator11 = new javax.swing.JPopupMenu.Separator();
-        jMenuItem5 = new javax.swing.JMenuItem();
-        jSeparator14 = new javax.swing.JPopupMenu.Separator();
-        jMenuItem16 = new javax.swing.JMenuItem();
-        jSeparator12 = new javax.swing.JPopupMenu.Separator();
-        jMenuItem20 = new javax.swing.JMenuItem();
-        jMenu4 = new javax.swing.JMenu();
-        jMenuItem2 = new javax.swing.JMenuItem();
-        jSeparator2 = new javax.swing.JPopupMenu.Separator();
-        jMenuItem3 = new javax.swing.JMenuItem();
-        jSeparator6 = new javax.swing.JPopupMenu.Separator();
-        jMenuItem17 = new javax.swing.JMenuItem();
-        jSeparator8 = new javax.swing.JPopupMenu.Separator();
-        jMenu8 = new javax.swing.JMenu();
-        jMenuItem19 = new javax.swing.JMenuItem();
-        jMenuItem23 = new javax.swing.JMenuItem();
-        jMenuItem18 = new javax.swing.JMenuItem();
-        jMenuItem11 = new javax.swing.JMenuItem();
+        UnlockBootloaderBTN = new javax.swing.JButton();
+        LockBootloaderBTN = new javax.swing.JButton();
+        FlashTWRPOfficialBTN = new javax.swing.JButton();
+        FlashTWRPOxygenOSBTN = new javax.swing.JButton();
+        BootloaderLabel = new javax.swing.JLabel();
+        RecoveryLabel = new javax.swing.JLabel();
+        RebootBootloaderBTN = new javax.swing.JButton();
+        RebootRecoveryBTN = new javax.swing.JButton();
+        DebugConsole = new javax.swing.JFormattedTextField();
+        RebootLabel = new javax.swing.JLabel();
+        ConsoleLabel = new javax.swing.JLabel();
+        CheckADBDevicesBTN = new javax.swing.JButton();
+        CheckFastbootDevicesBTN = new javax.swing.JButton();
+        OPLogo = new javax.swing.JLabel();
+        CheckLabel = new javax.swing.JLabel();
+        TaskBar = new javax.swing.JMenuBar();
+        MenuFiles = new javax.swing.JMenu();
+        MenuItemOpenADB = new javax.swing.JMenuItem();
+        MenuFilesSeparator1 = new javax.swing.JPopupMenu.Separator();
+        MenuIMGFolders = new javax.swing.JMenu();
+        MenuItemOpenIMGFolder = new javax.swing.JMenuItem();
+        MenuItemEmptyIMGFolder = new javax.swing.JMenuItem();
+        MenuFilesSeparator2 = new javax.swing.JPopupMenu.Separator();
+        MenuSubDirs = new javax.swing.JMenu();
+        MenuItemTWRP = new javax.swing.JMenuItem();
+        MenuItemFirmware = new javax.swing.JMenuItem();
+        MenuItemRecovery = new javax.swing.JMenuItem();
+        MenuFlash = new javax.swing.JMenu();
+        MenuItemFlashFirmware = new javax.swing.JMenuItem();
+        MenuItemFlashFirmwareSeparator = new javax.swing.JPopupMenu.Separator();
+        MenuItemDownloadFirmware = new javax.swing.JMenuItem();
+        MenuOthers = new javax.swing.JMenu();
+        MenuItemRebootTool = new javax.swing.JMenuItem();
+        MenuOthersSeparator1 = new javax.swing.JPopupMenu.Separator();
+        MenuLang = new javax.swing.JMenu();
+        MenuItemEnglish = new javax.swing.JMenuItem();
+        MenuItemSpanish = new javax.swing.JMenuItem();
+        MenuOthersSeparator2 = new javax.swing.JPopupMenu.Separator();
+        MenuTool = new javax.swing.JMenu();
+        MenuItemOP5Tool = new javax.swing.JMenuItem();
+        MenuItemXiaomi = new javax.swing.JMenuItem();
+        MenuOthersSeparator3 = new javax.swing.JPopupMenu.Separator();
+        MenuItemEndJavaProcess = new javax.swing.JMenuItem();
+        MenuOthersSeparator4 = new javax.swing.JPopupMenu.Separator();
+        MenuItemEndAllProcess = new javax.swing.JMenuItem();
+        MenuOthersSeparator5 = new javax.swing.JPopupMenu.Separator();
+        MenuItemUninstallTool = new javax.swing.JMenuItem();
+        MenuHelp = new javax.swing.JMenu();
+        MenuItemChangelog = new javax.swing.JMenuItem();
+        MenuHelpSeparator1 = new javax.swing.JPopupMenu.Separator();
+        MenuItemCredits = new javax.swing.JMenuItem();
+        MenuHelpSeparator2 = new javax.swing.JPopupMenu.Separator();
+        MenuItemLisence = new javax.swing.JMenuItem();
+        MenuHelpSeparator3 = new javax.swing.JPopupMenu.Separator();
+        MenuCodeOthers = new javax.swing.JMenu();
+        MenuItemPage = new javax.swing.JMenuItem();
+        MenuItemReleases = new javax.swing.JMenuItem();
+        MenuItemGit = new javax.swing.JMenuItem();
+        MenuItemBugs = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("OnePlus Tool - BETA Es");
         setBackground(java.awt.Color.darkGray);
         setForeground(java.awt.Color.darkGray);
-        setResizable(false);
         addWindowListener(new java.awt.event.WindowAdapter() {
             public void windowClosing(java.awt.event.WindowEvent evt) {
                 formWindowClosing(evt);
@@ -132,561 +131,563 @@ public class OPVisual extends javax.swing.JFrame {
             }
         });
 
-        jButton1.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
-        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/oneplus/images/unlocked.png"))); // NOI18N
-        jButton1.setText("Desbloquear Bootloader");
-        jButton1.setToolTipText("Desbloquea bootloader del télefono, esto eliminara todos sus datos");
-        jButton1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jButton1.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        UnlockBootloaderBTN.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
+        UnlockBootloaderBTN.setIcon(new javax.swing.ImageIcon(getClass().getResource("/oneplus/images/unlocked.png"))); // NOI18N
+        UnlockBootloaderBTN.setText("Desbloquear Bootloader");
+        UnlockBootloaderBTN.setToolTipText("Desbloquea bootloader del télefono, esto eliminara todos sus datos");
+        UnlockBootloaderBTN.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        UnlockBootloaderBTN.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
+        UnlockBootloaderBTN.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                UnlockBootloaderBTNActionPerformed(evt);
             }
         });
 
-        jButton2.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
-        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/oneplus/images/locked.png"))); // NOI18N
-        jButton2.setText("Bloquear Bootloader");
-        jButton2.setToolTipText("Bloquea bootloader del télefono, esto eliminara todos sus datos");
-        jButton2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        LockBootloaderBTN.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
+        LockBootloaderBTN.setIcon(new javax.swing.ImageIcon(getClass().getResource("/oneplus/images/locked.png"))); // NOI18N
+        LockBootloaderBTN.setText("Bloquear Bootloader");
+        LockBootloaderBTN.setToolTipText("Bloquea bootloader del télefono, esto eliminara todos sus datos");
+        LockBootloaderBTN.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        LockBootloaderBTN.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                LockBootloaderBTNActionPerformed(evt);
             }
         });
 
-        jButton3.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
-        jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/oneplus/images/flash.png"))); // NOI18N
-        jButton3.setText("Flashear TWRP Oficial");
-        jButton3.setToolTipText("");
-        jButton3.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
+        FlashTWRPOfficialBTN.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
+        FlashTWRPOfficialBTN.setIcon(new javax.swing.ImageIcon(getClass().getResource("/oneplus/images/flash.png"))); // NOI18N
+        FlashTWRPOfficialBTN.setText("Flashear TWRP Oficial");
+        FlashTWRPOfficialBTN.setToolTipText("");
+        FlashTWRPOfficialBTN.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        FlashTWRPOfficialBTN.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
+                FlashTWRPOfficialBTNActionPerformed(evt);
             }
         });
 
-        jButton4.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
-        jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/oneplus/images/flash.png"))); // NOI18N
-        jButton4.setText("Flashear TWRP OxygenOS");
-        jButton4.setToolTipText("");
-        jButton4.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jButton4.addActionListener(new java.awt.event.ActionListener() {
+        FlashTWRPOxygenOSBTN.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
+        FlashTWRPOxygenOSBTN.setIcon(new javax.swing.ImageIcon(getClass().getResource("/oneplus/images/flash.png"))); // NOI18N
+        FlashTWRPOxygenOSBTN.setText("Flashear TWRP OxygenOS");
+        FlashTWRPOxygenOSBTN.setToolTipText("");
+        FlashTWRPOxygenOSBTN.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        FlashTWRPOxygenOSBTN.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton4ActionPerformed(evt);
+                FlashTWRPOxygenOSBTNActionPerformed(evt);
             }
         });
 
-        jLabel1.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
-        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/oneplus/images/bootl.png"))); // NOI18N
-        jLabel1.setText("Bootloader");
+        BootloaderLabel.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
+        BootloaderLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        BootloaderLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/oneplus/images/bootl.png"))); // NOI18N
+        BootloaderLabel.setText("Bootloader");
 
-        jLabel2.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
-        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/oneplus/images/recov.png"))); // NOI18N
-        jLabel2.setText("Recovery");
+        RecoveryLabel.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
+        RecoveryLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        RecoveryLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/oneplus/images/recov.png"))); // NOI18N
+        RecoveryLabel.setText("Recovery");
 
-        jButton5.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
-        jButton5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/oneplus/images/rebooto.png"))); // NOI18N
-        jButton5.setText("Reiniciar Bootloader");
-        jButton5.setToolTipText("");
-        jButton5.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jButton5.addActionListener(new java.awt.event.ActionListener() {
+        RebootBootloaderBTN.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
+        RebootBootloaderBTN.setIcon(new javax.swing.ImageIcon(getClass().getResource("/oneplus/images/rebooto.png"))); // NOI18N
+        RebootBootloaderBTN.setText("Reiniciar Bootloader");
+        RebootBootloaderBTN.setToolTipText("");
+        RebootBootloaderBTN.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        RebootBootloaderBTN.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton5ActionPerformed(evt);
+                RebootBootloaderBTNActionPerformed(evt);
             }
         });
 
-        jButton6.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
-        jButton6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/oneplus/images/rebooto.png"))); // NOI18N
-        jButton6.setText("Reiniciar Recovery");
-        jButton6.setToolTipText("");
-        jButton6.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jButton6.addActionListener(new java.awt.event.ActionListener() {
+        RebootRecoveryBTN.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
+        RebootRecoveryBTN.setIcon(new javax.swing.ImageIcon(getClass().getResource("/oneplus/images/rebooto.png"))); // NOI18N
+        RebootRecoveryBTN.setText("Reiniciar Recovery");
+        RebootRecoveryBTN.setToolTipText("");
+        RebootRecoveryBTN.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        RebootRecoveryBTN.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton6ActionPerformed(evt);
+                RebootRecoveryBTNActionPerformed(evt);
             }
         });
 
-        jFormattedTextField1.setEditable(false);
-        jFormattedTextField1.setForeground(new java.awt.Color(204, 51, 0));
-        jFormattedTextField1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        jFormattedTextField1.setCaretColor(new java.awt.Color(255, 0, 0));
-        jFormattedTextField1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        jFormattedTextField1.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
+        DebugConsole.setEditable(false);
+        DebugConsole.setForeground(new java.awt.Color(204, 51, 0));
+        DebugConsole.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        DebugConsole.setCaretColor(new java.awt.Color(255, 0, 0));
+        DebugConsole.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        DebugConsole.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
 
-        jLabel3.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
-        jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/oneplus/images/reboot.png"))); // NOI18N
-        jLabel3.setText("Reinicio");
+        RebootLabel.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
+        RebootLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        RebootLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/oneplus/images/reboot.png"))); // NOI18N
+        RebootLabel.setText("Reinicio");
 
-        jLabel4.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
-        jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/oneplus/images/depurar.png"))); // NOI18N
-        jLabel4.setText("Consola depuradora");
+        ConsoleLabel.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
+        ConsoleLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        ConsoleLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/oneplus/images/depurar.png"))); // NOI18N
+        ConsoleLabel.setText("Consola depuradora");
 
-        jButton7.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
-        jButton7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/oneplus/images/ok16.png"))); // NOI18N
-        jButton7.setText("Verificar adb devices");
-        jButton7.setToolTipText("");
-        jButton7.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jButton7.addActionListener(new java.awt.event.ActionListener() {
+        CheckADBDevicesBTN.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
+        CheckADBDevicesBTN.setIcon(new javax.swing.ImageIcon(getClass().getResource("/oneplus/images/ok16.png"))); // NOI18N
+        CheckADBDevicesBTN.setText("Verificar adb devices");
+        CheckADBDevicesBTN.setToolTipText("");
+        CheckADBDevicesBTN.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        CheckADBDevicesBTN.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton7ActionPerformed(evt);
+                CheckADBDevicesBTNActionPerformed(evt);
             }
         });
 
-        jButton8.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
-        jButton8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/oneplus/images/ok16.png"))); // NOI18N
-        jButton8.setText("Verificar fastboot devices");
-        jButton8.setToolTipText("");
-        jButton8.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jButton8.addActionListener(new java.awt.event.ActionListener() {
+        CheckFastbootDevicesBTN.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
+        CheckFastbootDevicesBTN.setIcon(new javax.swing.ImageIcon(getClass().getResource("/oneplus/images/ok16.png"))); // NOI18N
+        CheckFastbootDevicesBTN.setText("Verificar fastboot devices");
+        CheckFastbootDevicesBTN.setToolTipText("");
+        CheckFastbootDevicesBTN.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        CheckFastbootDevicesBTN.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton8ActionPerformed(evt);
+                CheckFastbootDevicesBTNActionPerformed(evt);
             }
         });
 
-        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/oneplus/images/logo.png"))); // NOI18N
+        OPLogo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        OPLogo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/oneplus/images/logo.png"))); // NOI18N
+        OPLogo.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 
-        jLabel6.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
-        jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/oneplus/images/check.png"))); // NOI18N
-        jLabel6.setText("Verificar");
+        CheckLabel.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
+        CheckLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        CheckLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/oneplus/images/check.png"))); // NOI18N
+        CheckLabel.setText("Verificar");
 
-        jMenuBar2.setToolTipText("Barra de tareas");
-        jMenuBar2.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        TaskBar.setToolTipText("Barra de tareas");
+        TaskBar.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
 
-        jMenu1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/oneplus/images/open.png"))); // NOI18N
-        jMenu1.setText("Archivo");
-        jMenu1.setToolTipText("");
-        jMenu1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jMenu1.setFont(new java.awt.Font("Segoe UI Black", 1, 12)); // NOI18N
+        MenuFiles.setIcon(new javax.swing.ImageIcon(getClass().getResource("/oneplus/images/open.png"))); // NOI18N
+        MenuFiles.setText("Archivo");
+        MenuFiles.setToolTipText("");
+        MenuFiles.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        MenuFiles.setFont(new java.awt.Font("Segoe UI Black", 1, 12)); // NOI18N
 
-        jMenuItem4.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_A, java.awt.event.InputEvent.ALT_MASK | java.awt.event.InputEvent.CTRL_MASK));
-        jMenuItem4.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jMenuItem4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/oneplus/images/open16.png"))); // NOI18N
-        jMenuItem4.setText("Carpeta adb");
-        jMenuItem4.setToolTipText("Se abrirá la carpeta que contiene los archivos adb&fastboot");
-        jMenuItem4.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jMenuItem4.addActionListener(new java.awt.event.ActionListener() {
+        MenuItemOpenADB.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_A, java.awt.event.InputEvent.ALT_MASK | java.awt.event.InputEvent.CTRL_MASK));
+        MenuItemOpenADB.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        MenuItemOpenADB.setIcon(new javax.swing.ImageIcon(getClass().getResource("/oneplus/images/open16.png"))); // NOI18N
+        MenuItemOpenADB.setText("Carpeta adb");
+        MenuItemOpenADB.setToolTipText("Se abrirá la carpeta que contiene los archivos adb&fastboot");
+        MenuItemOpenADB.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        MenuItemOpenADB.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem4ActionPerformed(evt);
+                MenuItemOpenADBActionPerformed(evt);
             }
         });
-        jMenu1.add(jMenuItem4);
-        jMenu1.add(jSeparator3);
+        MenuFiles.add(MenuItemOpenADB);
+        MenuFiles.add(MenuFilesSeparator1);
 
-        jMenu9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/oneplus/images/open16.png"))); // NOI18N
-        jMenu9.setText("Carpeta img");
-        jMenu9.setToolTipText("Vacia o abre la carpeta img");
-        jMenu9.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jMenu9.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        MenuIMGFolders.setIcon(new javax.swing.ImageIcon(getClass().getResource("/oneplus/images/open16.png"))); // NOI18N
+        MenuIMGFolders.setText("Carpeta img");
+        MenuIMGFolders.setToolTipText("Vacia o abre la carpeta img");
+        MenuIMGFolders.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        MenuIMGFolders.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
 
-        jMenuItem21.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jMenuItem21.setIcon(new javax.swing.ImageIcon(getClass().getResource("/oneplus/images/open16.png"))); // NOI18N
-        jMenuItem21.setText("Abrir carpeta img");
-        jMenuItem21.setToolTipText("Abre la ubicacion img donde se encuentran los archivos del usuario");
-        jMenuItem21.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jMenuItem21.addActionListener(new java.awt.event.ActionListener() {
+        MenuItemOpenIMGFolder.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        MenuItemOpenIMGFolder.setIcon(new javax.swing.ImageIcon(getClass().getResource("/oneplus/images/open16.png"))); // NOI18N
+        MenuItemOpenIMGFolder.setText("Abrir carpeta img");
+        MenuItemOpenIMGFolder.setToolTipText("Abre la ubicacion img donde se encuentran los archivos del usuario");
+        MenuItemOpenIMGFolder.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        MenuItemOpenIMGFolder.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem21ActionPerformed(evt);
+                MenuItemOpenIMGFolderActionPerformed(evt);
             }
         });
-        jMenu9.add(jMenuItem21);
+        MenuIMGFolders.add(MenuItemOpenIMGFolder);
 
-        jMenuItem22.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jMenuItem22.setIcon(new javax.swing.ImageIcon(getClass().getResource("/oneplus/images/asterix.gif"))); // NOI18N
-        jMenuItem22.setText("Vaciar carpeta img");
-        jMenuItem22.setToolTipText("Elimina todos los archivos acumulados en la carpeta img");
-        jMenuItem22.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jMenuItem22.addActionListener(new java.awt.event.ActionListener() {
+        MenuItemEmptyIMGFolder.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        MenuItemEmptyIMGFolder.setIcon(new javax.swing.ImageIcon(getClass().getResource("/oneplus/images/asterix.gif"))); // NOI18N
+        MenuItemEmptyIMGFolder.setText("Vaciar carpeta img");
+        MenuItemEmptyIMGFolder.setToolTipText("Elimina todos los archivos acumulados en la carpeta img");
+        MenuItemEmptyIMGFolder.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        MenuItemEmptyIMGFolder.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem22ActionPerformed(evt);
+                MenuItemEmptyIMGFolderActionPerformed(evt);
             }
         });
-        jMenu9.add(jMenuItem22);
+        MenuIMGFolders.add(MenuItemEmptyIMGFolder);
 
-        jMenu1.add(jMenu9);
-        jMenu1.add(jSeparator7);
+        MenuFiles.add(MenuIMGFolders);
+        MenuFiles.add(MenuFilesSeparator2);
 
-        jMenu6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/oneplus/images/open16.png"))); // NOI18N
-        jMenu6.setText("Abrir sub carpetas");
-        jMenu6.setToolTipText("Abre las carpetas dentro de img");
-        jMenu6.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jMenu6.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        MenuSubDirs.setIcon(new javax.swing.ImageIcon(getClass().getResource("/oneplus/images/open16.png"))); // NOI18N
+        MenuSubDirs.setText("Abrir sub carpetas");
+        MenuSubDirs.setToolTipText("Abre las carpetas dentro de img");
+        MenuSubDirs.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        MenuSubDirs.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
 
-        jMenuItem12.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jMenuItem12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/oneplus/images/rebooto.png"))); // NOI18N
-        jMenuItem12.setText("TWRP");
-        jMenuItem12.setToolTipText("Esta carpeta contiene la imagen del recovery twrp oficial");
-        jMenuItem12.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jMenuItem12.addActionListener(new java.awt.event.ActionListener() {
+        MenuItemTWRP.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        MenuItemTWRP.setIcon(new javax.swing.ImageIcon(getClass().getResource("/oneplus/images/rebooto.png"))); // NOI18N
+        MenuItemTWRP.setText("TWRP");
+        MenuItemTWRP.setToolTipText("Esta carpeta contiene la imagen del recovery twrp oficial");
+        MenuItemTWRP.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        MenuItemTWRP.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem12ActionPerformed(evt);
+                MenuItemTWRPActionPerformed(evt);
             }
         });
-        jMenu6.add(jMenuItem12);
+        MenuSubDirs.add(MenuItemTWRP);
 
-        jMenuItem13.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jMenuItem13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/oneplus/images/depurar.png"))); // NOI18N
-        jMenuItem13.setText("Firmware");
-        jMenuItem13.setToolTipText("Esta carpeta contiene OxygenOS 9.0.8");
-        jMenuItem13.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jMenuItem13.addActionListener(new java.awt.event.ActionListener() {
+        MenuItemFirmware.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        MenuItemFirmware.setIcon(new javax.swing.ImageIcon(getClass().getResource("/oneplus/images/depurar.png"))); // NOI18N
+        MenuItemFirmware.setText("Firmware");
+        MenuItemFirmware.setToolTipText("Esta carpeta contiene OxygenOS 9.0.8");
+        MenuItemFirmware.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        MenuItemFirmware.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem13ActionPerformed(evt);
+                MenuItemFirmwareActionPerformed(evt);
             }
         });
-        jMenu6.add(jMenuItem13);
+        MenuSubDirs.add(MenuItemFirmware);
 
-        jMenuItem14.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jMenuItem14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/oneplus/images/recov.png"))); // NOI18N
-        jMenuItem14.setText("Recovery");
-        jMenuItem14.setToolTipText("Esta carpeta contiene el Recovery TWRP pero para flashear el firmware OxygenOS");
-        jMenuItem14.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jMenuItem14.addActionListener(new java.awt.event.ActionListener() {
+        MenuItemRecovery.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        MenuItemRecovery.setIcon(new javax.swing.ImageIcon(getClass().getResource("/oneplus/images/recov.png"))); // NOI18N
+        MenuItemRecovery.setText("Recovery");
+        MenuItemRecovery.setToolTipText("Esta carpeta contiene el Recovery TWRP pero para flashear el firmware OxygenOS");
+        MenuItemRecovery.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        MenuItemRecovery.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem14ActionPerformed(evt);
+                MenuItemRecoveryActionPerformed(evt);
             }
         });
-        jMenu6.add(jMenuItem14);
+        MenuSubDirs.add(MenuItemRecovery);
 
-        jMenu1.add(jMenu6);
+        MenuFiles.add(MenuSubDirs);
 
-        jMenuBar2.add(jMenu1);
+        TaskBar.add(MenuFiles);
 
-        jMenu3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/oneplus/images/flashb.png"))); // NOI18N
-        jMenu3.setText("Flash");
-        jMenu3.setToolTipText("Menu Flash ");
-        jMenu3.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jMenu3.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        MenuFlash.setIcon(new javax.swing.ImageIcon(getClass().getResource("/oneplus/images/flashb.png"))); // NOI18N
+        MenuFlash.setText("Flash");
+        MenuFlash.setToolTipText("Menu Flash ");
+        MenuFlash.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        MenuFlash.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
 
-        jMenuItem9.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jMenuItem9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/oneplus/images/edit_add16.png"))); // NOI18N
-        jMenuItem9.setText("Flashear Firmware Stock");
-        jMenuItem9.setToolTipText("");
-        jMenuItem9.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jMenuItem9.addActionListener(new java.awt.event.ActionListener() {
+        MenuItemFlashFirmware.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        MenuItemFlashFirmware.setIcon(new javax.swing.ImageIcon(getClass().getResource("/oneplus/images/edit_add16.png"))); // NOI18N
+        MenuItemFlashFirmware.setText("Flashear Firmware Stock");
+        MenuItemFlashFirmware.setToolTipText("");
+        MenuItemFlashFirmware.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        MenuItemFlashFirmware.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem9ActionPerformed(evt);
+                MenuItemFlashFirmwareActionPerformed(evt);
             }
         });
-        jMenu3.add(jMenuItem9);
+        MenuFlash.add(MenuItemFlashFirmware);
 
-        jSeparator5.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jMenu3.add(jSeparator5);
+        MenuItemFlashFirmwareSeparator.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        MenuFlash.add(MenuItemFlashFirmwareSeparator);
 
-        jMenuItem10.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jMenuItem10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/oneplus/images/download.png"))); // NOI18N
-        jMenuItem10.setText("Descargar última OxygenOS One Plus 5");
-        jMenuItem10.setToolTipText("");
-        jMenuItem10.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jMenuItem10.addActionListener(new java.awt.event.ActionListener() {
+        MenuItemDownloadFirmware.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        MenuItemDownloadFirmware.setIcon(new javax.swing.ImageIcon(getClass().getResource("/oneplus/images/download.png"))); // NOI18N
+        MenuItemDownloadFirmware.setText("Descargar última OxygenOS One Plus 5");
+        MenuItemDownloadFirmware.setToolTipText("");
+        MenuItemDownloadFirmware.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        MenuItemDownloadFirmware.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem10ActionPerformed(evt);
+                MenuItemDownloadFirmwareActionPerformed(evt);
             }
         });
-        jMenu3.add(jMenuItem10);
+        MenuFlash.add(MenuItemDownloadFirmware);
 
-        jMenuBar2.add(jMenu3);
+        TaskBar.add(MenuFlash);
 
-        jMenu2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/oneplus/images/build.png"))); // NOI18N
-        jMenu2.setText("Otros");
-        jMenu2.setToolTipText("");
-        jMenu2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jMenu2.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        MenuOthers.setIcon(new javax.swing.ImageIcon(getClass().getResource("/oneplus/images/build.png"))); // NOI18N
+        MenuOthers.setText("Otros");
+        MenuOthers.setToolTipText("");
+        MenuOthers.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        MenuOthers.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
 
-        jMenuItem6.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_R, java.awt.event.InputEvent.ALT_MASK | java.awt.event.InputEvent.CTRL_MASK));
-        jMenuItem6.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jMenuItem6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/oneplus/images/button_ok.png"))); // NOI18N
-        jMenuItem6.setText("Reiniciar Tool");
-        jMenuItem6.setToolTipText("Se reiniciara el Tool de manera pasiva");
-        jMenuItem6.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jMenuItem6.addActionListener(new java.awt.event.ActionListener() {
+        MenuItemRebootTool.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_R, java.awt.event.InputEvent.ALT_MASK | java.awt.event.InputEvent.CTRL_MASK));
+        MenuItemRebootTool.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        MenuItemRebootTool.setIcon(new javax.swing.ImageIcon(getClass().getResource("/oneplus/images/button_ok.png"))); // NOI18N
+        MenuItemRebootTool.setText("Reiniciar Tool");
+        MenuItemRebootTool.setToolTipText("Se reiniciara el Tool de manera pasiva");
+        MenuItemRebootTool.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        MenuItemRebootTool.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem6ActionPerformed(evt);
+                MenuItemRebootToolActionPerformed(evt);
             }
         });
-        jMenu2.add(jMenuItem6);
-        jMenu2.add(jSeparator9);
+        MenuOthers.add(MenuItemRebootTool);
+        MenuOthers.add(MenuOthersSeparator1);
 
-        jMenu5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/oneplus/images/len.png"))); // NOI18N
-        jMenu5.setText("Idioma");
-        jMenu5.setToolTipText("Puede cambiar el idioma");
-        jMenu5.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jMenu5.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        MenuLang.setIcon(new javax.swing.ImageIcon(getClass().getResource("/oneplus/images/len.png"))); // NOI18N
+        MenuLang.setText("Idioma");
+        MenuLang.setToolTipText("Puede cambiar el idioma");
+        MenuLang.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        MenuLang.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
 
-        jMenuItem7.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_E, java.awt.event.InputEvent.ALT_MASK | java.awt.event.InputEvent.CTRL_MASK));
-        jMenuItem7.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jMenuItem7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/oneplus/images/english.png"))); // NOI18N
-        jMenuItem7.setText("English");
-        jMenuItem7.setToolTipText("");
-        jMenuItem7.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jMenuItem7.addActionListener(new java.awt.event.ActionListener() {
+        MenuItemEnglish.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_E, java.awt.event.InputEvent.ALT_MASK | java.awt.event.InputEvent.CTRL_MASK));
+        MenuItemEnglish.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        MenuItemEnglish.setIcon(new javax.swing.ImageIcon(getClass().getResource("/oneplus/images/english.png"))); // NOI18N
+        MenuItemEnglish.setText("English");
+        MenuItemEnglish.setToolTipText("");
+        MenuItemEnglish.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        MenuItemEnglish.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem7ActionPerformed(evt);
+                MenuItemEnglishActionPerformed(evt);
             }
         });
-        jMenu5.add(jMenuItem7);
+        MenuLang.add(MenuItemEnglish);
 
-        jMenuItem8.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_E, java.awt.event.InputEvent.ALT_MASK));
-        jMenuItem8.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jMenuItem8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/oneplus/images/spanish-language.png"))); // NOI18N
-        jMenuItem8.setText("Español");
-        jMenuItem8.setToolTipText("");
-        jMenuItem8.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jMenuItem8.addActionListener(new java.awt.event.ActionListener() {
+        MenuItemSpanish.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_E, java.awt.event.InputEvent.ALT_MASK));
+        MenuItemSpanish.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        MenuItemSpanish.setIcon(new javax.swing.ImageIcon(getClass().getResource("/oneplus/images/spanish-language.png"))); // NOI18N
+        MenuItemSpanish.setText("Español");
+        MenuItemSpanish.setToolTipText("");
+        MenuItemSpanish.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        MenuItemSpanish.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem8ActionPerformed(evt);
+                MenuItemSpanishActionPerformed(evt);
             }
         });
-        jMenu5.add(jMenuItem8);
+        MenuLang.add(MenuItemSpanish);
 
-        jMenu2.add(jMenu5);
-        jMenu2.add(jSeparator13);
+        MenuOthers.add(MenuLang);
+        MenuOthers.add(MenuOthersSeparator2);
 
-        jMenu7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/oneplus/images/tool.png"))); // NOI18N
-        jMenu7.setText("Otros Tool");
-        jMenu7.setToolTipText("Tools extras para diferentes dispositivos");
-        jMenu7.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jMenu7.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        MenuTool.setIcon(new javax.swing.ImageIcon(getClass().getResource("/oneplus/images/tool.png"))); // NOI18N
+        MenuTool.setText("Otros Tool");
+        MenuTool.setToolTipText("Tools extras para diferentes dispositivos");
+        MenuTool.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        MenuTool.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
 
-        jMenuItem1.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jMenuItem1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/oneplus/images/favicon.png"))); // NOI18N
-        jMenuItem1.setText("OnePlus 5T Tool");
-        jMenuItem1.setToolTipText("");
-        jMenuItem1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
+        MenuItemOP5Tool.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        MenuItemOP5Tool.setIcon(new javax.swing.ImageIcon(getClass().getResource("/oneplus/images/favicon.png"))); // NOI18N
+        MenuItemOP5Tool.setText("OnePlus 5T Tool");
+        MenuItemOP5Tool.setToolTipText("");
+        MenuItemOP5Tool.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        MenuItemOP5Tool.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem1ActionPerformed(evt);
+                MenuItemOP5ToolActionPerformed(evt);
             }
         });
-        jMenu7.add(jMenuItem1);
+        MenuTool.add(MenuItemOP5Tool);
 
-        jMenuItem15.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jMenuItem15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/oneplus/images/mi.png"))); // NOI18N
-        jMenuItem15.setText("Xiaomi MI A2/6X Tool");
-        jMenuItem15.setToolTipText("");
-        jMenuItem15.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jMenuItem15.addActionListener(new java.awt.event.ActionListener() {
+        MenuItemXiaomi.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        MenuItemXiaomi.setIcon(new javax.swing.ImageIcon(getClass().getResource("/oneplus/images/mi.png"))); // NOI18N
+        MenuItemXiaomi.setText("Xiaomi MI A2/6X Tool");
+        MenuItemXiaomi.setToolTipText("");
+        MenuItemXiaomi.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        MenuItemXiaomi.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem15ActionPerformed(evt);
+                MenuItemXiaomiActionPerformed(evt);
             }
         });
-        jMenu7.add(jMenuItem15);
+        MenuTool.add(MenuItemXiaomi);
 
-        jMenu2.add(jMenu7);
-        jMenu2.add(jSeparator11);
+        MenuOthers.add(MenuTool);
+        MenuOthers.add(MenuOthersSeparator3);
 
-        jMenuItem5.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_T, java.awt.event.InputEvent.ALT_MASK | java.awt.event.InputEvent.CTRL_MASK));
-        jMenuItem5.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jMenuItem5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/oneplus/images/java.png"))); // NOI18N
-        jMenuItem5.setText("Terminar proceso Java");
-        jMenuItem5.setToolTipText("Se cerrara por completo Java y del Tool");
-        jMenuItem5.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jMenuItem5.addActionListener(new java.awt.event.ActionListener() {
+        MenuItemEndJavaProcess.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_T, java.awt.event.InputEvent.ALT_MASK | java.awt.event.InputEvent.CTRL_MASK));
+        MenuItemEndJavaProcess.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        MenuItemEndJavaProcess.setIcon(new javax.swing.ImageIcon(getClass().getResource("/oneplus/images/java.png"))); // NOI18N
+        MenuItemEndJavaProcess.setText("Terminar proceso Java");
+        MenuItemEndJavaProcess.setToolTipText("Se cerrara por completo Java y del Tool");
+        MenuItemEndJavaProcess.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        MenuItemEndJavaProcess.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem5ActionPerformed(evt);
+                MenuItemEndJavaProcessActionPerformed(evt);
             }
         });
-        jMenu2.add(jMenuItem5);
-        jMenu2.add(jSeparator14);
+        MenuOthers.add(MenuItemEndJavaProcess);
+        MenuOthers.add(MenuOthersSeparator4);
 
-        jMenuItem16.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jMenuItem16.setForeground(new java.awt.Color(204, 102, 0));
-        jMenuItem16.setIcon(new javax.swing.ImageIcon(getClass().getResource("/oneplus/images/cancel16.png"))); // NOI18N
-        jMenuItem16.setText("Terminar todos los procesos ");
-        jMenuItem16.setToolTipText("Cerrara por completo el programa y sus subprogramas abiertos");
-        jMenuItem16.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jMenuItem16.addActionListener(new java.awt.event.ActionListener() {
+        MenuItemEndAllProcess.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        MenuItemEndAllProcess.setForeground(new java.awt.Color(204, 102, 0));
+        MenuItemEndAllProcess.setIcon(new javax.swing.ImageIcon(getClass().getResource("/oneplus/images/cancel16.png"))); // NOI18N
+        MenuItemEndAllProcess.setText("Terminar todos los procesos ");
+        MenuItemEndAllProcess.setToolTipText("Cerrara por completo el programa y sus subprogramas abiertos");
+        MenuItemEndAllProcess.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        MenuItemEndAllProcess.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem16ActionPerformed(evt);
+                MenuItemEndAllProcessActionPerformed(evt);
             }
         });
-        jMenu2.add(jMenuItem16);
-        jMenu2.add(jSeparator12);
+        MenuOthers.add(MenuItemEndAllProcess);
+        MenuOthers.add(MenuOthersSeparator5);
 
-        jMenuItem20.setFont(new java.awt.Font("Segoe UI Black", 1, 12)); // NOI18N
-        jMenuItem20.setForeground(new java.awt.Color(255, 51, 0));
-        jMenuItem20.setIcon(new javax.swing.ImageIcon(getClass().getResource("/oneplus/images/warn.png"))); // NOI18N
-        jMenuItem20.setText("Eliminar Tool por completo");
-        jMenuItem20.setToolTipText("Eliminar tool y sus archivos y carpetas");
-        jMenuItem20.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jMenuItem20.addActionListener(new java.awt.event.ActionListener() {
+        MenuItemUninstallTool.setFont(new java.awt.Font("Segoe UI Black", 1, 12)); // NOI18N
+        MenuItemUninstallTool.setForeground(new java.awt.Color(255, 51, 0));
+        MenuItemUninstallTool.setIcon(new javax.swing.ImageIcon(getClass().getResource("/oneplus/images/warn.png"))); // NOI18N
+        MenuItemUninstallTool.setText("Eliminar Tool por completo");
+        MenuItemUninstallTool.setToolTipText("Eliminar tool y sus archivos y carpetas");
+        MenuItemUninstallTool.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        MenuItemUninstallTool.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem20ActionPerformed(evt);
+                MenuItemUninstallToolActionPerformed(evt);
             }
         });
-        jMenu2.add(jMenuItem20);
+        MenuOthers.add(MenuItemUninstallTool);
 
-        jMenuBar2.add(jMenu2);
+        TaskBar.add(MenuOthers);
 
-        jMenu4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/oneplus/images/info.png"))); // NOI18N
-        jMenu4.setText("Ayuda");
-        jMenu4.setToolTipText("");
-        jMenu4.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jMenu4.setFont(new java.awt.Font("Segoe UI Black", 1, 12)); // NOI18N
+        MenuHelp.setIcon(new javax.swing.ImageIcon(getClass().getResource("/oneplus/images/info.png"))); // NOI18N
+        MenuHelp.setText("Ayuda");
+        MenuHelp.setToolTipText("");
+        MenuHelp.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        MenuHelp.setFont(new java.awt.Font("Segoe UI Black", 1, 12)); // NOI18N
 
-        jMenuItem2.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jMenuItem2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/oneplus/images/new16.png"))); // NOI18N
-        jMenuItem2.setText("Changelog");
-        jMenuItem2.setToolTipText("Registros de cambios");
-        jMenuItem2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jMenuItem2.addActionListener(new java.awt.event.ActionListener() {
+        MenuItemChangelog.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        MenuItemChangelog.setIcon(new javax.swing.ImageIcon(getClass().getResource("/oneplus/images/new16.png"))); // NOI18N
+        MenuItemChangelog.setText("Changelog");
+        MenuItemChangelog.setToolTipText("Registros de cambios");
+        MenuItemChangelog.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        MenuItemChangelog.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem2ActionPerformed(evt);
+                MenuItemChangelogActionPerformed(evt);
             }
         });
-        jMenu4.add(jMenuItem2);
-        jMenu4.add(jSeparator2);
+        MenuHelp.add(MenuItemChangelog);
+        MenuHelp.add(MenuHelpSeparator1);
 
-        jMenuItem3.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jMenuItem3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/oneplus/images/new16.png"))); // NOI18N
-        jMenuItem3.setText("Créditos");
-        jMenuItem3.setToolTipText("Créditos de autor");
-        jMenuItem3.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jMenuItem3.addActionListener(new java.awt.event.ActionListener() {
+        MenuItemCredits.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        MenuItemCredits.setIcon(new javax.swing.ImageIcon(getClass().getResource("/oneplus/images/new16.png"))); // NOI18N
+        MenuItemCredits.setText("Créditos");
+        MenuItemCredits.setToolTipText("Créditos de autor");
+        MenuItemCredits.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        MenuItemCredits.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem3ActionPerformed(evt);
+                MenuItemCreditsActionPerformed(evt);
             }
         });
-        jMenu4.add(jMenuItem3);
-        jMenu4.add(jSeparator6);
+        MenuHelp.add(MenuItemCredits);
+        MenuHelp.add(MenuHelpSeparator2);
 
-        jMenuItem17.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jMenuItem17.setIcon(new javax.swing.ImageIcon(getClass().getResource("/oneplus/images/new16.png"))); // NOI18N
-        jMenuItem17.setText("Licencia");
-        jMenuItem17.setToolTipText("");
-        jMenuItem17.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jMenuItem17.addActionListener(new java.awt.event.ActionListener() {
+        MenuItemLisence.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        MenuItemLisence.setIcon(new javax.swing.ImageIcon(getClass().getResource("/oneplus/images/new16.png"))); // NOI18N
+        MenuItemLisence.setText("Licencia");
+        MenuItemLisence.setToolTipText("");
+        MenuItemLisence.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        MenuItemLisence.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem17ActionPerformed(evt);
+                MenuItemLisenceActionPerformed(evt);
             }
         });
-        jMenu4.add(jMenuItem17);
-        jMenu4.add(jSeparator8);
+        MenuHelp.add(MenuItemLisence);
+        MenuHelp.add(MenuHelpSeparator3);
 
-        jMenu8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/oneplus/images/code.png"))); // NOI18N
-        jMenu8.setText("Código/Otros");
-        jMenu8.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jMenu8.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        MenuCodeOthers.setIcon(new javax.swing.ImageIcon(getClass().getResource("/oneplus/images/code.png"))); // NOI18N
+        MenuCodeOthers.setText("Código/Otros");
+        MenuCodeOthers.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        MenuCodeOthers.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
 
-        jMenuItem19.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jMenuItem19.setIcon(new javax.swing.ImageIcon(getClass().getResource("/oneplus/images/web.png"))); // NOI18N
-        jMenuItem19.setText("Página ");
-        jMenuItem19.setToolTipText("Página del desarrollador para contacto");
-        jMenuItem19.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jMenuItem19.addActionListener(new java.awt.event.ActionListener() {
+        MenuItemPage.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        MenuItemPage.setIcon(new javax.swing.ImageIcon(getClass().getResource("/oneplus/images/web.png"))); // NOI18N
+        MenuItemPage.setText("Página ");
+        MenuItemPage.setToolTipText("Página del desarrollador para contacto");
+        MenuItemPage.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        MenuItemPage.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem19ActionPerformed(evt);
+                MenuItemPageActionPerformed(evt);
             }
         });
-        jMenu8.add(jMenuItem19);
+        MenuCodeOthers.add(MenuItemPage);
 
-        jMenuItem23.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jMenuItem23.setIcon(new javax.swing.ImageIcon(getClass().getResource("/oneplus/images/update.png"))); // NOI18N
-        jMenuItem23.setText("Releases");
-        jMenuItem23.setToolTipText("Descargas del Tool");
-        jMenuItem23.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jMenuItem23.addActionListener(new java.awt.event.ActionListener() {
+        MenuItemReleases.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        MenuItemReleases.setIcon(new javax.swing.ImageIcon(getClass().getResource("/oneplus/images/update.png"))); // NOI18N
+        MenuItemReleases.setText("Releases");
+        MenuItemReleases.setToolTipText("Descargas del Tool");
+        MenuItemReleases.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        MenuItemReleases.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem23ActionPerformed(evt);
+                MenuItemReleasesActionPerformed(evt);
             }
         });
-        jMenu8.add(jMenuItem23);
+        MenuCodeOthers.add(MenuItemReleases);
 
-        jMenuItem18.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jMenuItem18.setIcon(new javax.swing.ImageIcon(getClass().getResource("/oneplus/images/git.png"))); // NOI18N
-        jMenuItem18.setText("GitHub");
-        jMenuItem18.setToolTipText("Código del programa java");
-        jMenuItem18.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jMenuItem18.addActionListener(new java.awt.event.ActionListener() {
+        MenuItemGit.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        MenuItemGit.setIcon(new javax.swing.ImageIcon(getClass().getResource("/oneplus/images/git.png"))); // NOI18N
+        MenuItemGit.setText("GitHub");
+        MenuItemGit.setToolTipText("Código del programa java");
+        MenuItemGit.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        MenuItemGit.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem18ActionPerformed(evt);
+                MenuItemGitActionPerformed(evt);
             }
         });
-        jMenu8.add(jMenuItem18);
+        MenuCodeOthers.add(MenuItemGit);
 
-        jMenuItem11.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jMenuItem11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/oneplus/images/bug.png"))); // NOI18N
-        jMenuItem11.setText("Bugs");
-        jMenuItem11.setToolTipText("Errores que se registran en el programa");
-        jMenuItem11.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jMenuItem11.addActionListener(new java.awt.event.ActionListener() {
+        MenuItemBugs.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        MenuItemBugs.setIcon(new javax.swing.ImageIcon(getClass().getResource("/oneplus/images/bug.png"))); // NOI18N
+        MenuItemBugs.setText("Bugs");
+        MenuItemBugs.setToolTipText("Errores que se registran en el programa");
+        MenuItemBugs.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        MenuItemBugs.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem11ActionPerformed(evt);
+                MenuItemBugsActionPerformed(evt);
             }
         });
-        jMenu8.add(jMenuItem11);
+        MenuCodeOthers.add(MenuItemBugs);
 
-        jMenu4.add(jMenu8);
+        MenuHelp.add(MenuCodeOthers);
 
-        jMenuBar2.add(jMenu4);
+        TaskBar.add(MenuHelp);
 
-        setJMenuBar(jMenuBar2);
+        setJMenuBar(TaskBar);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel5, javax.swing.GroupLayout.Alignment.TRAILING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jButton3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jButton4, javax.swing.GroupLayout.DEFAULT_SIZE, 300, Short.MAX_VALUE))
+                            .addComponent(LockBootloaderBTN, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(UnlockBootloaderBTN, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(BootloaderLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(FlashTWRPOfficialBTN, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(RecoveryLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(FlashTWRPOxygenOSBTN, javax.swing.GroupLayout.DEFAULT_SIZE, 300, Short.MAX_VALUE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addComponent(jButton6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jButton5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jButton7, javax.swing.GroupLayout.DEFAULT_SIZE, 300, Short.MAX_VALUE)
-                            .addComponent(jButton8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jLabel6, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                    .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jFormattedTextField1, javax.swing.GroupLayout.Alignment.TRAILING))
+                            .addComponent(RebootRecoveryBTN, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(RebootBootloaderBTN, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(RebootLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(CheckADBDevicesBTN, javax.swing.GroupLayout.DEFAULT_SIZE, 300, Short.MAX_VALUE)
+                            .addComponent(CheckFastbootDevicesBTN, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(CheckLabel, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                    .addComponent(ConsoleLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(DebugConsole, javax.swing.GroupLayout.Alignment.TRAILING))
                 .addContainerGap())
+            .addComponent(OPLogo, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(jLabel5)
+                .addComponent(OPLogo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(BootloaderLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(RebootLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton5)
-                    .addComponent(jButton1))
+                    .addComponent(RebootBootloaderBTN)
+                    .addComponent(UnlockBootloaderBTN))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton2)
-                    .addComponent(jButton6))
+                    .addComponent(LockBootloaderBTN)
+                    .addComponent(RebootRecoveryBTN))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(ConsoleLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jFormattedTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(DebugConsole, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, 31, Short.MAX_VALUE)
-                    .addComponent(jLabel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(RecoveryLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 31, Short.MAX_VALUE)
+                    .addComponent(CheckLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton3)
-                    .addComponent(jButton7))
+                    .addComponent(FlashTWRPOfficialBTN)
+                    .addComponent(CheckADBDevicesBTN))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton4)
-                    .addComponent(jButton8))
+                    .addComponent(FlashTWRPOxygenOSBTN)
+                    .addComponent(CheckFastbootDevicesBTN))
                 .addContainerGap())
         );
 
@@ -698,10 +699,12 @@ public class OPVisual extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void formWindowOpened(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowOpened
-       
+
+    this.setExtendedState(this.getExtendedState() | JFrame.MAXIMIZED_BOTH);
+        
     this.setIconImage(new ImageIcon(getClass().getResource("Icon.png")).getImage());
     
-    jFormattedTextField1.setText("Bienvendio a OnePlus 5 Tool");
+    DebugConsole.setText("Bienvendio a OnePlus 5 Tool");
     
         Socket sock= new Socket();
         InetSocketAddress addr=new InetSocketAddress("www.google.com",80);
@@ -748,7 +751,7 @@ public class OPVisual extends javax.swing.JFrame {
                             // update progress bar
                             jProgressBar.setString("Calculando tamaño del archivo...");
                             SwingUtilities.invokeLater(() -> {
-                                jFormattedTextField1.setText("Descargando adb & fastboot... " +currentProgress+ " Bytes");
+                                DebugConsole.setText("Descargando adb & fastboot... " +currentProgress+ " Bytes");
                                 jProgressBar.setString("Descargando adb & fastboot: \n" +currentProgress+ " Bytes");
                                 jProgressBar.setValue(currentProgress);
                             });
@@ -774,7 +777,7 @@ public class OPVisual extends javax.swing.JFrame {
     }
             }catch (FileNotFoundException e) {
             jProgressBar.setString("Descargando adb & fastboot: ERROR");
-            jFormattedTextField1.setText("ERROR: " +e);
+            DebugConsole.setText("ERROR: " +e);
             }catch (IOException ex) {
                 Logger.getLogger(OPVisual.class.getName()).log(Level.SEVERE, null, ex);
             }
@@ -821,7 +824,7 @@ public class OPVisual extends javax.swing.JFrame {
                             // update progress bar
                             jProgressBar.setString("Calculando tamaño del archivo...");
                             SwingUtilities.invokeLater(() -> {
-                                jFormattedTextField1.setText("Descargando binarios... " +currentProgress+ " Bytes");
+                                DebugConsole.setText("Descargando binarios... " +currentProgress+ " Bytes");
                                 jProgressBar.setString("Descargando binarios: \n" +currentProgress+ " Bytes");
                                 jProgressBar.setValue(currentProgress);
                             });
@@ -847,7 +850,7 @@ public class OPVisual extends javax.swing.JFrame {
     }
             }catch (FileNotFoundException e) {
             jProgressBar.setString("Descargando binarios: ERROR");
-            jFormattedTextField1.setText("ERROR: " +e);
+            DebugConsole.setText("ERROR: " +e);
             }catch (IOException ex) {
                 Logger.getLogger(OPVisual.class.getName()).log(Level.SEVERE, null, ex);
             }
@@ -856,7 +859,7 @@ public class OPVisual extends javax.swing.JFrame {
  }
         
         }catch (IOException e) {
-        jFormattedTextField1.setText("Error no se pudo establecer conexion con el servidor.");            
+        DebugConsole.setText("Error no se pudo establecer conexion con el servidor.");            
         JOptionPane.showMessageDialog(null,"Verifique su conexión a internet y vuelva a intentarlo...","Error",JOptionPane.ERROR_MESSAGE);
         dispose();//To close the current window         
         }finally{
@@ -878,18 +881,18 @@ public class OPVisual extends javax.swing.JFrame {
   boolean success = (
   new File(strDirectoy)).mkdir();
   if (success) {
-  jFormattedTextField1.setText("Directorio: " + strManyDirectories + " creado...");    
-  jFormattedTextField1.setText("Bienvendio a OnePlus Tool");
+  DebugConsole.setText("Directorio: " + strManyDirectories + " creado...");    
+  DebugConsole.setText("Bienvendio a OnePlus Tool");
   }  
   // Create multiple directories
   success = (new File(strManyDirectories)).mkdirs();
   if (success) {
-  jFormattedTextField1.setText("Directorios: " + strManyDirectories + " creado...");  
-  jFormattedTextField1.setText("Bienvendio a OnePlus Tool");
+  DebugConsole.setText("Directorios: " + strManyDirectories + " creado...");  
+  DebugConsole.setText("Bienvendio a OnePlus Tool");
   }
 
   }catch (IllegalArgumentException e){//Catch exception if any
-  jFormattedTextField1.setText("Error: " + e.getMessage());     
+  DebugConsole.setText("Error: " + e.getMessage());     
   }
 }
         File optool = new File("OPTool"); 
@@ -904,18 +907,18 @@ public class OPVisual extends javax.swing.JFrame {
   boolean success = (
   new File(strDirectoy)).mkdir();
   if (success) {
-  jFormattedTextField1.setText("Directorio: " + strManyDirectories + " creado...");    
-  jFormattedTextField1.setText("Bienvendio a OnePlus Tool");
+  DebugConsole.setText("Directorio: " + strManyDirectories + " creado...");    
+  DebugConsole.setText("Bienvendio a OnePlus Tool");
   }  
   // Create multiple directories
   success = (new File(strManyDirectories)).mkdirs();
   if (success) {
-  jFormattedTextField1.setText("Directorios: " + strManyDirectories + " creado...");  
-  jFormattedTextField1.setText("Bienvendio a OnePlus Tool");
+  DebugConsole.setText("Directorios: " + strManyDirectories + " creado...");  
+  DebugConsole.setText("Bienvendio a OnePlus Tool");
   }
 
   }catch (IllegalArgumentException e){//Catch exception if any
-  jFormattedTextField1.setText("Error: " + e.getMessage());     
+  DebugConsole.setText("Error: " + e.getMessage());     
   }
 }
         
@@ -931,18 +934,18 @@ public class OPVisual extends javax.swing.JFrame {
   boolean success = (
   new File(strDirectoy)).mkdir();
   if (success) {
-  jFormattedTextField1.setText("Directorio: " + strManyDirectories + " creado...");    
-  jFormattedTextField1.setText("Bienvendio a OnePlus Tool");
+  DebugConsole.setText("Directorio: " + strManyDirectories + " creado...");    
+  DebugConsole.setText("Bienvendio a OnePlus Tool");
   }  
   // Create multiple directories
   success = (new File(strManyDirectories)).mkdirs();
   if (success) {
-  jFormattedTextField1.setText("Directorios: " + strManyDirectories + " creado...");  
-  jFormattedTextField1.setText("Bienvendio a OnePlus Tool");
+  DebugConsole.setText("Directorios: " + strManyDirectories + " creado...");  
+  DebugConsole.setText("Bienvendio a OnePlus Tool");
   }
 
   }catch (IllegalArgumentException e){//Catch exception if any
-  jFormattedTextField1.setText("Error: " + e.getMessage());     
+  DebugConsole.setText("Error: " + e.getMessage());     
   }
 }
         
@@ -958,17 +961,17 @@ public class OPVisual extends javax.swing.JFrame {
   boolean success = (
   new File(strDirectoy)).mkdir();
   if (success) {
-  jFormattedTextField1.setText("Directorio: " + strManyDirectories + " creado...");    
-  jFormattedTextField1.setText("Bienvendio a OnePlus Tool");
+  DebugConsole.setText("Directorio: " + strManyDirectories + " creado...");    
+  DebugConsole.setText("Bienvendio a OnePlus Tool");
   }  
   // Create multiple directories
   success = (new File(strManyDirectories)).mkdirs();
   if (success) {
-  jFormattedTextField1.setText("Directorios: " + strManyDirectories + " creado...");  
-  jFormattedTextField1.setText("Bienvendio a OnePlus Tool");
+  DebugConsole.setText("Directorios: " + strManyDirectories + " creado...");  
+  DebugConsole.setText("Bienvendio a OnePlus Tool");
   }
   }catch (IllegalArgumentException e){//Catch exception if any
-  jFormattedTextField1.setText("Error: " + e.getMessage());     
+  DebugConsole.setText("Error: " + e.getMessage());     
   }
 }
 
@@ -984,18 +987,18 @@ public class OPVisual extends javax.swing.JFrame {
   boolean success = (
   new File(strDirectoy)).mkdir();
   if (success) {
-  jFormattedTextField1.setText("Directorio: " + strManyDirectories + " creado...");   
-  jFormattedTextField1.setText("Bienvendio a OnePlus Tool");
+  DebugConsole.setText("Directorio: " + strManyDirectories + " creado...");   
+  DebugConsole.setText("Bienvendio a OnePlus Tool");
   }  
   // Create multiple directories
   success = (new File(strManyDirectories)).mkdirs();
   if (success) {
-  jFormattedTextField1.setText("Directorios: " + strManyDirectories + " creado...");  
-  jFormattedTextField1.setText("Bienvendio a OnePlus Tool");
+  DebugConsole.setText("Directorios: " + strManyDirectories + " creado...");  
+  DebugConsole.setText("Bienvendio a OnePlus Tool");
   }
 
   }catch (IllegalArgumentException e){//Catch exception if any
-  jFormattedTextField1.setText("Error: " + e.getMessage());     
+  DebugConsole.setText("Error: " + e.getMessage());     
   }
 }
         File adb = new File("C:\\adb"); 
@@ -1008,17 +1011,17 @@ public class OPVisual extends javax.swing.JFrame {
   boolean success = (
   new File(strDirectoy)).mkdir();
   if (success) {
-  jFormattedTextField1.setText("Directorio: " + strManyDirectories + " creado...");  
-  jFormattedTextField1.setText("Bienvendio a OnePlus Tool");
+  DebugConsole.setText("Directorio: " + strManyDirectories + " creado...");  
+  DebugConsole.setText("Bienvendio a OnePlus Tool");
   }  
   // Create multiple directories
   success = (new File(strManyDirectories)).mkdirs();
   if (success) {
-  jFormattedTextField1.setText("Directorios: " + strManyDirectories + " creado...");     
-  jFormattedTextField1.setText("Bienvendio a OnePlus Tool");
+  DebugConsole.setText("Directorios: " + strManyDirectories + " creado...");     
+  DebugConsole.setText("Bienvendio a OnePlus Tool");
   }
   }catch (IllegalArgumentException e){//Catch exception if any
-  jFormattedTextField1.setText("Error: " + e.getMessage());     
+  DebugConsole.setText("Error: " + e.getMessage());     
   }
 }
 
@@ -1032,24 +1035,24 @@ public class OPVisual extends javax.swing.JFrame {
   boolean success = (
   new File(strDirectoy)).mkdir();
   if (success) {
-  jFormattedTextField1.setText("Directorio: " + strManyDirectories + " creado...");  
-  jFormattedTextField1.setText("Bienvendio a OnePlus Tool");
+  DebugConsole.setText("Directorio: " + strManyDirectories + " creado...");  
+  DebugConsole.setText("Bienvendio a OnePlus Tool");
   }  
   // Create multiple directories
   success = (new File(strManyDirectories)).mkdirs();
   if (success) {
-  jFormattedTextField1.setText("Directorios: " + strManyDirectories + " creado...");    
-  jFormattedTextField1.setText("Bienvendio a OnePlus Tool");
+  DebugConsole.setText("Directorios: " + strManyDirectories + " creado...");    
+  DebugConsole.setText("Bienvendio a OnePlus Tool");
   }
 
   }catch (IllegalArgumentException e){//Catch exception if any
-  jFormattedTextField1.setText("Error: " + e.getMessage());     
+  DebugConsole.setText("Error: " + e.getMessage());     
   }
     }
   
     }//GEN-LAST:event_formWindowOpened
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void UnlockBootloaderBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_UnlockBootloaderBTNActionPerformed
        
     int reply = JOptionPane.showConfirmDialog(null, "Este proceso eliminara toda su memoria interna, realizar backup antes de continuar", "Cuidado! Desea continuar?", JOptionPane.YES_NO_OPTION);
     JOptionPane.showMessageDialog(null,"Por favor activa las opciones de desarrollador y activa: \n\n - Desbloqueo OEM \n\n - Depuración por USB");
@@ -1098,9 +1101,9 @@ try {
               dispose();//To close the current window
               new OPVisual().setVisible(true);  
         }
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_UnlockBootloaderBTNActionPerformed
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+    private void FlashTWRPOfficialBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_FlashTWRPOfficialBTNActionPerformed
         Socket sock= new Socket();
         InetSocketAddress addr=new InetSocketAddress("www.google.com",80);
         try {
@@ -1146,7 +1149,7 @@ try {
                             // update progress bar
                             jProgressBar.setString("Calculando tamaño del archivo...");
                             SwingUtilities.invokeLater(() -> {
-                                jFormattedTextField1.setText("Descargando TWRP Oficial Cheeseburger..." +currentProgress+ " Bytes");
+                                DebugConsole.setText("Descargando TWRP Oficial Cheeseburger..." +currentProgress+ " Bytes");
                                 jProgressBar.setString("Descargando TWRP Oficial Cheeseburger: \n" +currentProgress+ " Bytes");
                                 jProgressBar.setValue(currentProgress);
                             });
@@ -1157,7 +1160,7 @@ try {
                 }
             }catch (FileNotFoundException e) {
             jProgressBar.setString("Descargando TWRP Oficial Cheeseburger: ERROR");
-            jFormattedTextField1.setText("ERROR: " +e);
+            DebugConsole.setText("ERROR: " +e);
             }catch (IOException ex) {
                 Logger.getLogger(OPVisual.class.getName()).log(Level.SEVERE, null, ex);
             }
@@ -1168,7 +1171,7 @@ try {
            
         }catch (IOException e) {
 
-        jFormattedTextField1.setText("Error no se pudo establecer conexion con el servidor.");            
+        DebugConsole.setText("Error no se pudo establecer conexion con el servidor.");            
         JOptionPane.showMessageDialog(null,"Verifique su conexión a internet y vuelva a intentarlo...","Error",JOptionPane.ERROR_MESSAGE);
         dispose();//To close the current window 
        
@@ -1223,9 +1226,9 @@ try {
     JOptionPane.showMessageDialog(null, ioException.getMessage(),"Error",JOptionPane.ERROR_MESSAGE);
 }
   }
-    }//GEN-LAST:event_jButton3ActionPerformed
+    }//GEN-LAST:event_FlashTWRPOfficialBTNActionPerformed
 
-    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+    private void RebootBootloaderBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RebootBootloaderBTNActionPerformed
     final File file = new File("C:\\OPTool\\.settings\\bin\\rebootb.bat");
         try {
             file.createNewFile();
@@ -1265,9 +1268,9 @@ try {
 } catch(IOException ioException) {
     JOptionPane.showMessageDialog(null, ioException.getMessage(),"Error",JOptionPane.ERROR_MESSAGE);
 } 
-    }//GEN-LAST:event_jButton5ActionPerformed
+    }//GEN-LAST:event_RebootBootloaderBTNActionPerformed
 
-    private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
+    private void CheckADBDevicesBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CheckADBDevicesBTNActionPerformed
     final File file = new File("C:\\OPTool\\.settings\\bin\\checkadb.bat");
         try {
             file.createNewFile();
@@ -1307,9 +1310,9 @@ try {
 } catch(IOException ioException) {
     JOptionPane.showMessageDialog(null, ioException.getMessage(),"Error",JOptionPane.ERROR_MESSAGE);
 }   
-    }//GEN-LAST:event_jButton7ActionPerformed
+    }//GEN-LAST:event_CheckADBDevicesBTNActionPerformed
 
-    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
+    private void RebootRecoveryBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RebootRecoveryBTNActionPerformed
     final File file = new File("C:\\OPTool\\.settings\\bin\\rebootr.bat");
         try {
             file.createNewFile();
@@ -1349,9 +1352,9 @@ try {
 } catch(IOException ioException) {
     JOptionPane.showMessageDialog(null, ioException.getMessage(),"Error",JOptionPane.ERROR_MESSAGE);
 }   
-    }//GEN-LAST:event_jButton6ActionPerformed
+    }//GEN-LAST:event_RebootRecoveryBTNActionPerformed
 
-    private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
+    private void CheckFastbootDevicesBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CheckFastbootDevicesBTNActionPerformed
 final File file = new File("C:\\OPTool\\.settings\\bin\\checkf.bat");
         try {
             file.createNewFile();
@@ -1400,9 +1403,9 @@ try {
         } catch (IOException ex) {
             Logger.getLogger(OPVisual.class.getName()).log(Level.SEVERE, null, ex);
         }
-    }//GEN-LAST:event_jButton8ActionPerformed
+    }//GEN-LAST:event_CheckFastbootDevicesBTNActionPerformed
 
-    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+    private void FlashTWRPOxygenOSBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_FlashTWRPOxygenOSBTNActionPerformed
         Socket sock= new Socket();
         InetSocketAddress addr=new InetSocketAddress("www.google.com",80);
         try {
@@ -1448,7 +1451,7 @@ try {
                             // update progress bar
                             jProgressBar.setString("Calculando tamaño del archivo...");
                             SwingUtilities.invokeLater(() -> {
-                                jFormattedTextField1.setText("Descargando TWRP Para Flashear Stock OxygenOS..." +currentProgress+ " Bytes");
+                                DebugConsole.setText("Descargando TWRP Para Flashear Stock OxygenOS..." +currentProgress+ " Bytes");
                                 jProgressBar.setString("Descargando TWRP Para Flashear Stock OxygenOS: \n" +currentProgress+ " Bytes");
                                 jProgressBar.setValue(currentProgress);
                             });
@@ -1459,7 +1462,7 @@ try {
                 }
             }catch (FileNotFoundException e) {
             jProgressBar.setString("Descargando TWRP Para Flashear Stock OxygenOS: ERROR");
-            jFormattedTextField1.setText("ERROR: " +e);
+            DebugConsole.setText("ERROR: " +e);
             }catch (IOException ex) {
                 Logger.getLogger(OPVisual.class.getName()).log(Level.SEVERE, null, ex);
             }
@@ -1514,7 +1517,7 @@ try {
            
         }catch (IOException e) {
         
-        jFormattedTextField1.setText("Error no se pudo establecer conexion con el servidor.");            
+        DebugConsole.setText("Error no se pudo establecer conexion con el servidor.");            
         JOptionPane.showMessageDialog(null,"Verifique su conexión a internet y vuelva a intentarlo...","Error",JOptionPane.ERROR_MESSAGE);
         dispose();//To close the current window 
         
@@ -1524,9 +1527,9 @@ try {
         }catch (IOException e) { 
             }
         } 
-    }//GEN-LAST:event_jButton4ActionPerformed
+    }//GEN-LAST:event_FlashTWRPOxygenOSBTNActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void LockBootloaderBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LockBootloaderBTNActionPerformed
     int reply = JOptionPane.showConfirmDialog(null, "Este proceso eliminara toda su memoria interna, realizar backup antes de continuar", "Cuidado! Desea continuar?", JOptionPane.YES_NO_OPTION);
     if (reply == JOptionPane.YES_OPTION) {  
     final File file = new File("C:\\OPTool\\.settings\\bin\\lock.bat");
@@ -1573,9 +1576,9 @@ try {
               dispose();//To close the current window
               new OPVisual().setVisible(true);  
         } 
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }//GEN-LAST:event_LockBootloaderBTNActionPerformed
 
-    private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
+    private void MenuItemChangelogActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MenuItemChangelogActionPerformed
         final File file = new File("C:\\OPTool\\.settings\\bin\\changeloges.bat");
         try {
             file.createNewFile();
@@ -1675,13 +1678,13 @@ try {
 } catch(IOException ioException) {
     JOptionPane.showMessageDialog(null, ioException.getMessage(),"Error",JOptionPane.ERROR_MESSAGE);
 } 
-    }//GEN-LAST:event_jMenuItem2ActionPerformed
+    }//GEN-LAST:event_MenuItemChangelogActionPerformed
 
-    private void jMenuItem3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem3ActionPerformed
+    private void MenuItemCreditsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MenuItemCreditsActionPerformed
               new credits().setVisible(true); 
-    }//GEN-LAST:event_jMenuItem3ActionPerformed
+    }//GEN-LAST:event_MenuItemCreditsActionPerformed
 
-    private void jMenuItem4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem4ActionPerformed
+    private void MenuItemOpenADBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MenuItemOpenADBActionPerformed
         Desktop desktop = Desktop.getDesktop();
         File dirToOpen = null;
         try {
@@ -1692,9 +1695,9 @@ try {
         } catch (IOException ex) {
             Logger.getLogger(OPVisual.class.getName()).log(Level.SEVERE, null, ex);
         }
-    }//GEN-LAST:event_jMenuItem4ActionPerformed
+    }//GEN-LAST:event_MenuItemOpenADBActionPerformed
 
-    private void jMenuItem6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem6ActionPerformed
+    private void MenuItemRebootToolActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MenuItemRebootToolActionPerformed
               this.dispose();//To close the current window
               String path = "Tool.exe";
               File file = new File(path);
@@ -1703,9 +1706,9 @@ try {
         } catch (IOException ex) {
             Logger.getLogger(OPVisual.class.getName()).log(Level.SEVERE, null, ex);
         }
-    }//GEN-LAST:event_jMenuItem6ActionPerformed
+    }//GEN-LAST:event_MenuItemRebootToolActionPerformed
 
-    private void jMenuItem5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem5ActionPerformed
+    private void MenuItemEndJavaProcessActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MenuItemEndJavaProcessActionPerformed
     try {
     Process process = Runtime.getRuntime().exec("TASKKILL /F /IM javaw.exe");
     } catch (IOException e) {
@@ -1717,22 +1720,22 @@ try {
         JOptionPane.showMessageDialog(null, "Error no se pudo cerrar" +e,"Error",JOptionPane.ERROR_MESSAGE);
     }
     System.exit(0);
-    }//GEN-LAST:event_jMenuItem5ActionPerformed
+    }//GEN-LAST:event_MenuItemEndJavaProcessActionPerformed
 
-    private void jMenuItem8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem8ActionPerformed
+    private void MenuItemSpanishActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MenuItemSpanishActionPerformed
         JOptionPane.showMessageDialog(null, "Usted ya se encuentra en el Tool Español ;)","Error",JOptionPane.ERROR_MESSAGE);     
-    }//GEN-LAST:event_jMenuItem8ActionPerformed
+    }//GEN-LAST:event_MenuItemSpanishActionPerformed
 
-    private void jMenuItem7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem7ActionPerformed
+    private void MenuItemEnglishActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MenuItemEnglishActionPerformed
         this.dispose();    
         new OPenVisual().setVisible(true);    
-    }//GEN-LAST:event_jMenuItem7ActionPerformed
+    }//GEN-LAST:event_MenuItemEnglishActionPerformed
 
-    private void jMenuItem9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem9ActionPerformed
+    private void MenuItemFlashFirmwareActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MenuItemFlashFirmwareActionPerformed
         JOptionPane.showMessageDialog(null, "Opción no disponible...");     
-    }//GEN-LAST:event_jMenuItem9ActionPerformed
+    }//GEN-LAST:event_MenuItemFlashFirmwareActionPerformed
 
-    private void jMenuItem10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem10ActionPerformed
+    private void MenuItemDownloadFirmwareActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MenuItemDownloadFirmwareActionPerformed
         int reply = JOptionPane.showConfirmDialog(null, "Durante la descarga no podra utilziar el Tool! \n\n Para verificar la descarga se abrirá la carpeta", "Cuidado! Desea continuar?", JOptionPane.YES_NO_OPTION);
         if (reply == JOptionPane.YES_OPTION) {       
         Socket sock= new Socket();
@@ -1778,7 +1781,7 @@ try {
                             // update progress bar
                             jProgressBar.setString("Calculando tamaño del archivo...");
                             SwingUtilities.invokeLater(() -> {
-                                jFormattedTextField1.setText("Descargando OnePlus5Oxygen_23_OTA_051_all_1907311835_5de64c..." +currentProgress+ " Bytes");
+                                DebugConsole.setText("Descargando OnePlus5Oxygen_23_OTA_051_all_1907311835_5de64c..." +currentProgress+ " Bytes");
                                 jProgressBar.setString("Descargando OnePlus5Oxygen_23_OTA_051_all_1907311835_5de64c: \n" +currentProgress+ " Bytes");
                                 jProgressBar.setValue(currentProgress);
                             });
@@ -1789,7 +1792,7 @@ try {
                 }
             }catch (FileNotFoundException e) {
             jProgressBar.setString("Descargando OnePlus5Oxygen_23_OTA_051_all_1907311835_5de64c: ERROR");
-            jFormattedTextField1.setText("ERROR: " +e);
+            DebugConsole.setText("ERROR: " +e);
             }catch (IOException ex) {
                 Logger.getLogger(OPVisual.class.getName()).log(Level.SEVERE, null, ex);
             }
@@ -1800,7 +1803,7 @@ try {
            
         }catch (IOException e) {
 
-        jFormattedTextField1.setText("Error no se pudo establecer conexion con el servidor.");            
+        DebugConsole.setText("Error no se pudo establecer conexion con el servidor.");            
         JOptionPane.showMessageDialog(null,"Verifique su conexión a internet y vuelva a intentarlo...","Error",JOptionPane.ERROR_MESSAGE);
         dispose();//To close the current window 
        
@@ -1840,9 +1843,9 @@ try {
         } catch (IOException ex) {
             Logger.getLogger(OPVisual.class.getName()).log(Level.SEVERE, null, ex);
         }
-    }//GEN-LAST:event_jMenuItem10ActionPerformed
+    }//GEN-LAST:event_MenuItemDownloadFirmwareActionPerformed
 
-    private void jMenuItem14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem14ActionPerformed
+    private void MenuItemRecoveryActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MenuItemRecoveryActionPerformed
         Desktop desktop = Desktop.getDesktop();
         File dirToOpen = null;
         try {
@@ -1853,9 +1856,9 @@ try {
         } catch (IOException ex) {
             Logger.getLogger(OPVisual.class.getName()).log(Level.SEVERE, null, ex);
         }
-    }//GEN-LAST:event_jMenuItem14ActionPerformed
+    }//GEN-LAST:event_MenuItemRecoveryActionPerformed
 
-    private void jMenuItem12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem12ActionPerformed
+    private void MenuItemTWRPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MenuItemTWRPActionPerformed
         Desktop desktop = Desktop.getDesktop();
         File dirToOpen = null;
         try {
@@ -1866,9 +1869,9 @@ try {
         } catch (IOException ex) {
             Logger.getLogger(OPVisual.class.getName()).log(Level.SEVERE, null, ex);
         }
-    }//GEN-LAST:event_jMenuItem12ActionPerformed
+    }//GEN-LAST:event_MenuItemTWRPActionPerformed
 
-    private void jMenuItem13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem13ActionPerformed
+    private void MenuItemFirmwareActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MenuItemFirmwareActionPerformed
         Desktop desktop = Desktop.getDesktop();
         File dirToOpen = null;
         try {
@@ -1879,13 +1882,13 @@ try {
         } catch (IOException ex) {
             Logger.getLogger(OPVisual.class.getName()).log(Level.SEVERE, null, ex);
         }
-    }//GEN-LAST:event_jMenuItem13ActionPerformed
+    }//GEN-LAST:event_MenuItemFirmwareActionPerformed
 
-    private void jMenuItem15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem15ActionPerformed
+    private void MenuItemXiaomiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MenuItemXiaomiActionPerformed
         JOptionPane.showMessageDialog(null, "Opción no disponible...");     
-    }//GEN-LAST:event_jMenuItem15ActionPerformed
+    }//GEN-LAST:event_MenuItemXiaomiActionPerformed
 
-    private void jMenuItem16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem16ActionPerformed
+    private void MenuItemEndAllProcessActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MenuItemEndAllProcessActionPerformed
     try {
     Process process = Runtime.getRuntime().exec("TASKKILL /F /IM javaw.exe");
     } catch (IOException e) {
@@ -1906,37 +1909,37 @@ try {
     } catch (IOException e) {
         JOptionPane.showMessageDialog(null, "No se pudo cerrar" +e,"Error",JOptionPane.ERROR_MESSAGE);
     }
-    }//GEN-LAST:event_jMenuItem16ActionPerformed
+    }//GEN-LAST:event_MenuItemEndAllProcessActionPerformed
 
-    private void jMenuItem11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem11ActionPerformed
+    private void MenuItemBugsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MenuItemBugsActionPerformed
 try {
     Runtime.getRuntime().exec(new String[] { "c:\\Windows\\notepad.exe", "C:\\OPTool\\.settings\\others\\bugs.txt" });
 } catch (IOException e) {
 } 
-    }//GEN-LAST:event_jMenuItem11ActionPerformed
+    }//GEN-LAST:event_MenuItemBugsActionPerformed
 
-    private void jMenuItem17ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem17ActionPerformed
+    private void MenuItemLisenceActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MenuItemLisenceActionPerformed
 try {
     Runtime.getRuntime().exec(new String[] { "c:\\Windows\\notepad.exe", "C:\\OPTool\\.settings\\LICENSE.txt" });
 } catch (IOException e) {
 } 
-    }//GEN-LAST:event_jMenuItem17ActionPerformed
+    }//GEN-LAST:event_MenuItemLisenceActionPerformed
 
-    private void jMenuItem19ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem19ActionPerformed
+    private void MenuItemPageActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MenuItemPageActionPerformed
 Desktop d = Desktop.getDesktop();
 try {
     d.browse(new URI("https://franco28.github.io/stockrom/"));
 } catch (IOException | URISyntaxException e2) {
 } 
-    }//GEN-LAST:event_jMenuItem19ActionPerformed
+    }//GEN-LAST:event_MenuItemPageActionPerformed
 
-    private void jMenuItem18ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem18ActionPerformed
+    private void MenuItemGitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MenuItemGitActionPerformed
 Desktop d = Desktop.getDesktop();
 try {
     d.browse(new URI("https://github.com/Franco28/FlashTool-OP"));
 } catch (IOException | URISyntaxException e2) {
 } 
-    }//GEN-LAST:event_jMenuItem18ActionPerformed
+    }//GEN-LAST:event_MenuItemGitActionPerformed
 
     private void formWindowClosing(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowClosing
 
@@ -1987,7 +1990,7 @@ try {
 }   
     }//GEN-LAST:event_formWindowClosing
 
-    private void jMenuItem20ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem20ActionPerformed
+    private void MenuItemUninstallToolActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MenuItemUninstallToolActionPerformed
         int reply = JOptionPane.showConfirmDialog(null, "Se eliminaran todas las carpetas y el mismo Tool!", "Cuidado! Desea continuar?", JOptionPane.YES_NO_OPTION);
         if (reply == JOptionPane.YES_OPTION) {               
                 try {
@@ -2049,9 +2052,9 @@ try {
                 Logger.getLogger(OPVisual.class.getName()).log(Level.SEVERE, null, ex);
             }
         }        
-    }//GEN-LAST:event_jMenuItem20ActionPerformed
+    }//GEN-LAST:event_MenuItemUninstallToolActionPerformed
 
-    private void jMenuItem21ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem21ActionPerformed
+    private void MenuItemOpenIMGFolderActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MenuItemOpenIMGFolderActionPerformed
         Desktop desktop = Desktop.getDesktop();
         File dirToOpen = null;
         try {
@@ -2070,9 +2073,9 @@ try {
         } catch (IOException ex) {
             Logger.getLogger(OPVisual.class.getName()).log(Level.SEVERE, null, ex);
         }
-    }//GEN-LAST:event_jMenuItem21ActionPerformed
+    }//GEN-LAST:event_MenuItemOpenIMGFolderActionPerformed
 
-    private void jMenuItem22ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem22ActionPerformed
+    private void MenuItemEmptyIMGFolderActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MenuItemEmptyIMGFolderActionPerformed
         	File files = new File("C:\\OPTool\\img");
 		long size = 0;
 		size = getFileFolderSize(files);
@@ -2082,7 +2085,7 @@ try {
 			sizeMB = (double) size / 1024;
 			s = " KB";
 		}
-                jFormattedTextField1.setText("Tamaño de la carpeta " +files.getName()+ " : " +sizeMB +s);
+                DebugConsole.setText("Tamaño de la carpeta " +files.getName()+ " : " +sizeMB +s);
     int reply = JOptionPane.showConfirmDialog(null, "Se eliminaran todos los contenidos de la carpeta img!", "Cuidado! Desea continuar?", JOptionPane.YES_NO_OPTION);
         if (reply == JOptionPane.YES_OPTION) {            
             try {
@@ -2122,19 +2125,19 @@ try {
             Logger.getLogger(OPVisual.class.getName()).log(Level.SEVERE, null, ex);
         }      
         }    
-    }//GEN-LAST:event_jMenuItem22ActionPerformed
+    }//GEN-LAST:event_MenuItemEmptyIMGFolderActionPerformed
 
-    private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
+    private void MenuItemOP5ToolActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MenuItemOP5ToolActionPerformed
         JOptionPane.showMessageDialog(null, "Este Tool todavía no está listo!");     
-    }//GEN-LAST:event_jMenuItem1ActionPerformed
+    }//GEN-LAST:event_MenuItemOP5ToolActionPerformed
 
-    private void jMenuItem23ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem23ActionPerformed
+    private void MenuItemReleasesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MenuItemReleasesActionPerformed
 Desktop d = Desktop.getDesktop();
 try {
     d.browse(new URI("https://github.com/Franco28/FlashTool-OP/releases"));
 } catch (IOException | URISyntaxException e2) {
 } 
-    }//GEN-LAST:event_jMenuItem23ActionPerformed
+    }//GEN-LAST:event_MenuItemReleasesActionPerformed
 
     /**
      * @param args the command line arguments
@@ -2166,65 +2169,65 @@ try {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
-    private javax.swing.JButton jButton6;
-    private javax.swing.JButton jButton7;
-    private javax.swing.JButton jButton8;
-    private javax.swing.JFormattedTextField jFormattedTextField1;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JMenu jMenu1;
-    private javax.swing.JMenu jMenu2;
-    private javax.swing.JMenu jMenu3;
-    private javax.swing.JMenu jMenu4;
-    private javax.swing.JMenu jMenu5;
-    private javax.swing.JMenu jMenu6;
-    private javax.swing.JMenu jMenu7;
-    private javax.swing.JMenu jMenu8;
-    private javax.swing.JMenu jMenu9;
-    private javax.swing.JMenuBar jMenuBar2;
-    private javax.swing.JMenuItem jMenuItem1;
-    private javax.swing.JMenuItem jMenuItem10;
-    private javax.swing.JMenuItem jMenuItem11;
-    private javax.swing.JMenuItem jMenuItem12;
-    private javax.swing.JMenuItem jMenuItem13;
-    private javax.swing.JMenuItem jMenuItem14;
-    private javax.swing.JMenuItem jMenuItem15;
-    private javax.swing.JMenuItem jMenuItem16;
-    private javax.swing.JMenuItem jMenuItem17;
-    private javax.swing.JMenuItem jMenuItem18;
-    private javax.swing.JMenuItem jMenuItem19;
-    private javax.swing.JMenuItem jMenuItem2;
-    private javax.swing.JMenuItem jMenuItem20;
-    private javax.swing.JMenuItem jMenuItem21;
-    private javax.swing.JMenuItem jMenuItem22;
-    private javax.swing.JMenuItem jMenuItem23;
-    private javax.swing.JMenuItem jMenuItem3;
-    private javax.swing.JMenuItem jMenuItem4;
-    private javax.swing.JMenuItem jMenuItem5;
-    private javax.swing.JMenuItem jMenuItem6;
-    private javax.swing.JMenuItem jMenuItem7;
-    private javax.swing.JMenuItem jMenuItem8;
-    private javax.swing.JMenuItem jMenuItem9;
-    private javax.swing.JPopupMenu.Separator jSeparator11;
-    private javax.swing.JPopupMenu.Separator jSeparator12;
-    private javax.swing.JPopupMenu.Separator jSeparator13;
-    private javax.swing.JPopupMenu.Separator jSeparator14;
-    private javax.swing.JPopupMenu.Separator jSeparator2;
-    private javax.swing.JPopupMenu.Separator jSeparator3;
-    private javax.swing.JPopupMenu.Separator jSeparator5;
-    private javax.swing.JPopupMenu.Separator jSeparator6;
-    private javax.swing.JPopupMenu.Separator jSeparator7;
-    private javax.swing.JPopupMenu.Separator jSeparator8;
-    private javax.swing.JPopupMenu.Separator jSeparator9;
+    private javax.swing.JLabel BootloaderLabel;
+    private javax.swing.JButton CheckADBDevicesBTN;
+    private javax.swing.JButton CheckFastbootDevicesBTN;
+    private javax.swing.JLabel CheckLabel;
+    private javax.swing.JLabel ConsoleLabel;
+    private javax.swing.JFormattedTextField DebugConsole;
+    private javax.swing.JButton FlashTWRPOfficialBTN;
+    private javax.swing.JButton FlashTWRPOxygenOSBTN;
+    private javax.swing.JButton LockBootloaderBTN;
+    private javax.swing.JMenu MenuCodeOthers;
+    private javax.swing.JMenu MenuFiles;
+    private javax.swing.JPopupMenu.Separator MenuFilesSeparator1;
+    private javax.swing.JPopupMenu.Separator MenuFilesSeparator2;
+    private javax.swing.JMenu MenuFlash;
+    private javax.swing.JMenu MenuHelp;
+    private javax.swing.JPopupMenu.Separator MenuHelpSeparator1;
+    private javax.swing.JPopupMenu.Separator MenuHelpSeparator2;
+    private javax.swing.JPopupMenu.Separator MenuHelpSeparator3;
+    private javax.swing.JMenu MenuIMGFolders;
+    private javax.swing.JMenuItem MenuItemBugs;
+    private javax.swing.JMenuItem MenuItemChangelog;
+    private javax.swing.JMenuItem MenuItemCredits;
+    private javax.swing.JMenuItem MenuItemDownloadFirmware;
+    private javax.swing.JMenuItem MenuItemEmptyIMGFolder;
+    private javax.swing.JMenuItem MenuItemEndAllProcess;
+    private javax.swing.JMenuItem MenuItemEndJavaProcess;
+    private javax.swing.JMenuItem MenuItemEnglish;
+    private javax.swing.JMenuItem MenuItemFirmware;
+    private javax.swing.JMenuItem MenuItemFlashFirmware;
+    private javax.swing.JPopupMenu.Separator MenuItemFlashFirmwareSeparator;
+    private javax.swing.JMenuItem MenuItemGit;
+    private javax.swing.JMenuItem MenuItemLisence;
+    private javax.swing.JMenuItem MenuItemOP5Tool;
+    private javax.swing.JMenuItem MenuItemOpenADB;
+    private javax.swing.JMenuItem MenuItemOpenIMGFolder;
+    private javax.swing.JMenuItem MenuItemPage;
+    private javax.swing.JMenuItem MenuItemRebootTool;
+    private javax.swing.JMenuItem MenuItemRecovery;
+    private javax.swing.JMenuItem MenuItemReleases;
+    private javax.swing.JMenuItem MenuItemSpanish;
+    private javax.swing.JMenuItem MenuItemTWRP;
+    private javax.swing.JMenuItem MenuItemUninstallTool;
+    private javax.swing.JMenuItem MenuItemXiaomi;
+    private javax.swing.JMenu MenuLang;
+    private javax.swing.JMenu MenuOthers;
+    private javax.swing.JPopupMenu.Separator MenuOthersSeparator1;
+    private javax.swing.JPopupMenu.Separator MenuOthersSeparator2;
+    private javax.swing.JPopupMenu.Separator MenuOthersSeparator3;
+    private javax.swing.JPopupMenu.Separator MenuOthersSeparator4;
+    private javax.swing.JPopupMenu.Separator MenuOthersSeparator5;
+    private javax.swing.JMenu MenuSubDirs;
+    private javax.swing.JMenu MenuTool;
+    private javax.swing.JLabel OPLogo;
+    private javax.swing.JButton RebootBootloaderBTN;
+    private javax.swing.JLabel RebootLabel;
+    private javax.swing.JButton RebootRecoveryBTN;
+    private javax.swing.JLabel RecoveryLabel;
+    private javax.swing.JMenuBar TaskBar;
+    private javax.swing.JButton UnlockBootloaderBTN;
     // End of variables declaration//GEN-END:variables
 
 }
