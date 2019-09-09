@@ -15,7 +15,7 @@
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
               <Image iconType="3" name="/oneplus/images/open.png"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="Archivo"/>
+            <Property name="text" type="java.lang.String" value="Files"/>
             <Property name="toolTipText" type="java.lang.String" value=""/>
             <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
               <Color id="Cursor de Mano"/>
@@ -36,8 +36,8 @@
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                   <Image iconType="3" name="/oneplus/images/open16.png"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="Carpeta adb"/>
-                <Property name="toolTipText" type="java.lang.String" value="Se abrir&#xe1; la carpeta que contiene los archivos adb&amp;fastboot"/>
+                <Property name="text" type="java.lang.String" value="Open adb"/>
+                <Property name="toolTipText" type="java.lang.String" value="The folder containing the adb &amp; fastboot files will open"/>
                 <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
                   <Color id="Cursor de Mano"/>
                 </Property>
@@ -53,8 +53,8 @@
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                   <Image iconType="3" name="/oneplus/images/open16.png"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="Carpeta img"/>
-                <Property name="toolTipText" type="java.lang.String" value="Vacia o abre la carpeta img"/>
+                <Property name="text" type="java.lang.String" value="img Folder"/>
+                <Property name="toolTipText" type="java.lang.String" value=""/>
                 <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
                   <Color id="Cursor de Mano"/>
                 </Property>
@@ -71,8 +71,8 @@
                     <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                       <Image iconType="3" name="/oneplus/images/open16.png"/>
                     </Property>
-                    <Property name="text" type="java.lang.String" value="Abrir carpeta img"/>
-                    <Property name="toolTipText" type="java.lang.String" value="Abre la ubicacion img donde se encuentran los archivos del usuario"/>
+                    <Property name="text" type="java.lang.String" value="Open img folder"/>
+                    <Property name="toolTipText" type="java.lang.String" value="Open the img location where the user&apos;s files are located"/>
                     <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
                       <Color id="Cursor de Mano"/>
                     </Property>
@@ -89,8 +89,8 @@
                     <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                       <Image iconType="3" name="/oneplus/images/asterix.gif"/>
                     </Property>
-                    <Property name="text" type="java.lang.String" value="Vaciar carpeta img"/>
-                    <Property name="toolTipText" type="java.lang.String" value="Elimina todos los archivos acumulados en la carpeta img"/>
+                    <Property name="text" type="java.lang.String" value="Empty img folder"/>
+                    <Property name="toolTipText" type="java.lang.String" value="Delete all accumulated files in the img folder"/>
                     <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
                       <Color id="Cursor de Mano"/>
                     </Property>
@@ -108,8 +108,8 @@
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                   <Image iconType="3" name="/oneplus/images/open16.png"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="Abrir sub carpetas"/>
-                <Property name="toolTipText" type="java.lang.String" value="Abre las carpetas dentro de img"/>
+                <Property name="text" type="java.lang.String" value="Open sub dirs"/>
+                <Property name="toolTipText" type="java.lang.String" value=""/>
                 <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
                   <Color id="Cursor de Mano"/>
                 </Property>
@@ -127,7 +127,7 @@
                       <Image iconType="3" name="/oneplus/images/rebooto.png"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="TWRP"/>
-                    <Property name="toolTipText" type="java.lang.String" value="Esta carpeta contiene la imagen del recovery twrp oficial"/>
+                    <Property name="toolTipText" type="java.lang.String" value=""/>
                     <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
                       <Color id="Cursor de Mano"/>
                     </Property>
@@ -145,7 +145,7 @@
                       <Image iconType="3" name="/oneplus/images/depurar.png"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="Firmware"/>
-                    <Property name="toolTipText" type="java.lang.String" value="Esta carpeta contiene OxygenOS 9.0.8"/>
+                    <Property name="toolTipText" type="java.lang.String" value=""/>
                     <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
                       <Color id="Cursor de Mano"/>
                     </Property>
@@ -163,7 +163,7 @@
                       <Image iconType="3" name="/oneplus/images/recov.png"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="Recovery"/>
-                    <Property name="toolTipText" type="java.lang.String" value="Esta carpeta contiene el Recovery TWRP pero para flashear el firmware OxygenOS"/>
+                    <Property name="toolTipText" type="java.lang.String" value=""/>
                     <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
                       <Color id="Cursor de Mano"/>
                     </Property>
@@ -182,7 +182,7 @@
               <Image iconType="3" name="/oneplus/images/flashb.png"/>
             </Property>
             <Property name="text" type="java.lang.String" value="Flash"/>
-            <Property name="toolTipText" type="java.lang.String" value="Menu Flash "/>
+            <Property name="toolTipText" type="java.lang.String" value=""/>
             <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
               <Color id="Cursor de Mano"/>
             </Property>
@@ -199,7 +199,7 @@
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                   <Image iconType="3" name="/oneplus/images/edit_add16.png"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="Flashear Firmware Stock"/>
+                <Property name="text" type="java.lang.String" value="Flash Firmware Stock"/>
                 <Property name="toolTipText" type="java.lang.String" value=""/>
                 <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
                   <Color id="Cursor de Mano"/>
@@ -224,7 +224,7 @@
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                   <Image iconType="3" name="/oneplus/images/download.png"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="Descargar &#xfa;ltima OxygenOS One Plus 5"/>
+                <Property name="text" type="java.lang.String" value="Download latest OxygenOS One Plus 5"/>
                 <Property name="toolTipText" type="java.lang.String" value=""/>
                 <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
                   <Color id="Cursor de Mano"/>
@@ -241,7 +241,7 @@
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
               <Image iconType="3" name="/oneplus/images/build.png"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="Otros"/>
+            <Property name="text" type="java.lang.String" value="Others"/>
             <Property name="toolTipText" type="java.lang.String" value=""/>
             <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
               <Color id="Cursor de Mano"/>
@@ -263,7 +263,7 @@
                   <Image iconType="3" name="/oneplus/images/button_ok.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Reiniciar Tool"/>
-                <Property name="toolTipText" type="java.lang.String" value="Se reiniciara el Tool de manera pasiva"/>
+                <Property name="toolTipText" type="java.lang.String" value="The Tool will be reset passively"/>
                 <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
                   <Color id="Cursor de Mano"/>
                 </Property>
@@ -279,8 +279,8 @@
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                   <Image iconType="3" name="/oneplus/images/len.png"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="Idioma"/>
-                <Property name="toolTipText" type="java.lang.String" value="Puede cambiar el idioma"/>
+                <Property name="text" type="java.lang.String" value="Language"/>
+                <Property name="toolTipText" type="java.lang.String" value="Change the language"/>
                 <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
                   <Color id="Cursor de Mano"/>
                 </Property>
@@ -340,8 +340,8 @@
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                   <Image iconType="3" name="/oneplus/images/tool.png"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="Otros Tool"/>
-                <Property name="toolTipText" type="java.lang.String" value="Tools extras para diferentes dispositivos"/>
+                <Property name="text" type="java.lang.String" value="Other Tools"/>
+                <Property name="toolTipText" type="java.lang.String" value="Extra tools for different devices"/>
                 <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
                   <Color id="Cursor de Mano"/>
                 </Property>
@@ -401,8 +401,8 @@
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                   <Image iconType="3" name="/oneplus/images/java.png"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="Terminar proceso Java"/>
-                <Property name="toolTipText" type="java.lang.String" value="Se cerrara por completo Java y del Tool"/>
+                <Property name="text" type="java.lang.String" value="End Java process"/>
+                <Property name="toolTipText" type="java.lang.String" value="Java and Tool will be completely closed"/>
                 <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
                   <Color id="Cursor de Mano"/>
                 </Property>
@@ -424,8 +424,8 @@
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                   <Image iconType="3" name="/oneplus/images/cancel16.png"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="Terminar todos los procesos "/>
-                <Property name="toolTipText" type="java.lang.String" value="Cerrara por completo el programa y sus subprogramas abiertos"/>
+                <Property name="text" type="java.lang.String" value="End all processes"/>
+                <Property name="toolTipText" type="java.lang.String" value="Completely close the program and its open subprograms"/>
                 <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
                   <Color id="Cursor de Mano"/>
                 </Property>
@@ -447,8 +447,8 @@
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                   <Image iconType="3" name="/oneplus/images/warn.png"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="Eliminar Tool por completo"/>
-                <Property name="toolTipText" type="java.lang.String" value="Eliminar tool y sus archivos y carpetas"/>
+                <Property name="text" type="java.lang.String" value="Remove Tool completely"/>
+                <Property name="toolTipText" type="java.lang.String" value="Remove tool and its files and folders"/>
                 <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
                   <Color id="Cursor de Mano"/>
                 </Property>
@@ -464,7 +464,7 @@
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
               <Image iconType="3" name="/oneplus/images/info.png"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="Ayuda"/>
+            <Property name="text" type="java.lang.String" value="Help"/>
             <Property name="toolTipText" type="java.lang.String" value=""/>
             <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
               <Color id="Cursor de Mano"/>
@@ -502,8 +502,8 @@
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                   <Image iconType="3" name="/oneplus/images/new16.png"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="Cr&#xe9;ditos"/>
-                <Property name="toolTipText" type="java.lang.String" value="Cr&#xe9;ditos de autor"/>
+                <Property name="text" type="java.lang.String" value="Credits"/>
+                <Property name="toolTipText" type="java.lang.String" value="Cr&#xe9;ditos de autor y compa&#xf1;eros"/>
                 <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
                   <Color id="Cursor de Mano"/>
                 </Property>
@@ -522,8 +522,8 @@
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                   <Image iconType="3" name="/oneplus/images/new16.png"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="Licencia"/>
-                <Property name="toolTipText" type="java.lang.String" value=""/>
+                <Property name="text" type="java.lang.String" value="License"/>
+                <Property name="toolTipText" type="java.lang.String" value="Licencia "/>
                 <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
                   <Color id="Cursor de Mano"/>
                 </Property>
@@ -539,7 +539,7 @@
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                   <Image iconType="3" name="/oneplus/images/code.png"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="C&#xf3;digo/Otros"/>
+                <Property name="text" type="java.lang.String" value="Code/Others"/>
                 <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
                   <Color id="Cursor de Mano"/>
                 </Property>
@@ -556,7 +556,7 @@
                     <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                       <Image iconType="3" name="/oneplus/images/web.png"/>
                     </Property>
-                    <Property name="text" type="java.lang.String" value="P&#xe1;gina "/>
+                    <Property name="text" type="java.lang.String" value="Page"/>
                     <Property name="toolTipText" type="java.lang.String" value="P&#xe1;gina del desarrollador para contacto"/>
                     <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
                       <Color id="Cursor de Mano"/>
@@ -628,8 +628,8 @@
     </Menu>
   </NonVisualComponents>
   <Properties>
-    <Property name="defaultCloseOperation" type="int" value="3"/>
-    <Property name="title" type="java.lang.String" value="OnePlus Tool - BETA Es"/>
+    <Property name="defaultCloseOperation" type="int" value="0"/>
+    <Property name="title" type="java.lang.String" value="OnePlus Tool - BETA En"/>
     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
       <Color blue="40" green="40" id="darkGray" palette="1" red="40" type="palette"/>
     </Property>
@@ -750,8 +750,8 @@
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
           <Image iconType="3" name="/oneplus/images/unlocked.png"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="Desbloquear Bootloader"/>
-        <Property name="toolTipText" type="java.lang.String" value="Desbloquea bootloader del t&#xe9;lefono, esto eliminara todos sus datos"/>
+        <Property name="text" type="java.lang.String" value="Unlock Bootloader"/>
+        <Property name="toolTipText" type="java.lang.String" value="Unlock bootloader, this will erase all your data"/>
         <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
           <Color id="Cursor de Mano"/>
         </Property>
@@ -769,8 +769,8 @@
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
           <Image iconType="3" name="/oneplus/images/locked.png"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="Bloquear Bootloader"/>
-        <Property name="toolTipText" type="java.lang.String" value="Bloquea bootloader del t&#xe9;lefono, esto eliminara todos sus datos"/>
+        <Property name="text" type="java.lang.String" value="Lock Bootloader"/>
+        <Property name="toolTipText" type="java.lang.String" value="Lock bootloader, this will erase all your data"/>
         <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
           <Color id="Cursor de Mano"/>
         </Property>
@@ -787,7 +787,7 @@
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
           <Image iconType="3" name="/oneplus/images/flash.png"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="Flashear TWRP Oficial"/>
+        <Property name="text" type="java.lang.String" value="Flash TWRP Official"/>
         <Property name="toolTipText" type="java.lang.String" value=""/>
         <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
           <Color id="Cursor de Mano"/>
@@ -805,7 +805,7 @@
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
           <Image iconType="3" name="/oneplus/images/flash.png"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="Flashear TWRP OxygenOS"/>
+        <Property name="text" type="java.lang.String" value="Flash TWRP OxygenOS"/>
         <Property name="toolTipText" type="java.lang.String" value=""/>
         <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
           <Color id="Cursor de Mano"/>
@@ -847,7 +847,7 @@
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
           <Image iconType="3" name="/oneplus/images/rebooto.png"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="Reiniciar Bootloader"/>
+        <Property name="text" type="java.lang.String" value="Reboot Bootloader"/>
         <Property name="toolTipText" type="java.lang.String" value=""/>
         <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
           <Color id="Cursor de Mano"/>
@@ -865,7 +865,7 @@
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
           <Image iconType="3" name="/oneplus/images/rebooto.png"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="Reiniciar Recovery"/>
+        <Property name="text" type="java.lang.String" value="Reboot Recovery"/>
         <Property name="toolTipText" type="java.lang.String" value=""/>
         <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
           <Color id="Cursor de Mano"/>
@@ -902,7 +902,7 @@
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
           <Image iconType="3" name="/oneplus/images/reboot.png"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="Reinicio"/>
+        <Property name="text" type="java.lang.String" value="Reboot"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel4">
@@ -914,7 +914,7 @@
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
           <Image iconType="3" name="/oneplus/images/depurar.png"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="Consola depuradora"/>
+        <Property name="text" type="java.lang.String" value="Debug Console"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JButton" name="jButton7">
@@ -925,7 +925,7 @@
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
           <Image iconType="3" name="/oneplus/images/ok16.png"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="Verificar adb devices"/>
+        <Property name="text" type="java.lang.String" value="Check adb devices"/>
         <Property name="toolTipText" type="java.lang.String" value=""/>
         <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
           <Color id="Cursor de Mano"/>
@@ -943,7 +943,7 @@
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
           <Image iconType="3" name="/oneplus/images/ok16.png"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="Verificar fastboot devices"/>
+        <Property name="text" type="java.lang.String" value="Check fastboot devices"/>
         <Property name="toolTipText" type="java.lang.String" value=""/>
         <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
           <Color id="Cursor de Mano"/>
@@ -969,7 +969,7 @@
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
           <Image iconType="3" name="/oneplus/images/check.png"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="Verificar"/>
+        <Property name="text" type="java.lang.String" value="Check"/>
       </Properties>
     </Component>
   </SubComponents>

@@ -87,7 +87,7 @@
           <Font name="Trebuchet MS" size="18" style="1"/>
         </Property>
         <Property name="horizontalAlignment" type="int" value="0"/>
-        <Property name="text" type="java.lang.String" value="Cr&#xe9;ditos"/>
+        <Property name="text" type="java.lang.String" value="Credits"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JButton" name="jButton2">
