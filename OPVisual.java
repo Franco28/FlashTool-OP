@@ -2,7 +2,7 @@
  * Tool
  * 
  * @author (Franco Mato - franco28) 
- * @version (1.0.0.7.RC1)
+ * @version (1.0.0.8.RC1)
  * 
  * 
  */
@@ -40,7 +40,6 @@ import java.nio.file.attribute.BasicFileAttributes;
 import javax.swing.UIManager;
 import javax.swing.UnsupportedLookAndFeelException;
 import static oneplus.size.getFileFolderSize;
-
 
 public class OPVisual extends javax.swing.JFrame {
        
@@ -263,7 +262,7 @@ public class OPVisual extends javax.swing.JFrame {
         TaskBar.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
 
         MenuFiles.setIcon(new javax.swing.ImageIcon(getClass().getResource("/oneplus/images/open.png"))); // NOI18N
-        MenuFiles.setText("Archivo");
+        MenuFiles.setText("Archivos");
         MenuFiles.setToolTipText("");
         MenuFiles.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         MenuFiles.setFont(new java.awt.Font("Segoe UI Black", 1, 12)); // NOI18N
@@ -271,7 +270,7 @@ public class OPVisual extends javax.swing.JFrame {
         MenuItemOpenADB.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_A, java.awt.event.InputEvent.ALT_MASK | java.awt.event.InputEvent.CTRL_MASK));
         MenuItemOpenADB.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         MenuItemOpenADB.setIcon(new javax.swing.ImageIcon(getClass().getResource("/oneplus/images/open16.png"))); // NOI18N
-        MenuItemOpenADB.setText("Carpeta adb");
+        MenuItemOpenADB.setText("Abrir carpeta adb");
         MenuItemOpenADB.setToolTipText("Se abrirá la carpeta que contiene los archivos adb&fastboot");
         MenuItemOpenADB.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         MenuItemOpenADB.addActionListener(new java.awt.event.ActionListener() {
@@ -283,7 +282,7 @@ public class OPVisual extends javax.swing.JFrame {
         MenuFiles.add(MenuFilesSeparator1);
 
         MenuIMGFolders.setIcon(new javax.swing.ImageIcon(getClass().getResource("/oneplus/images/open16.png"))); // NOI18N
-        MenuIMGFolders.setText("Carpeta adb");
+        MenuIMGFolders.setText("Carpeta img");
         MenuIMGFolders.setToolTipText("Vacia o abre la carpeta img");
         MenuIMGFolders.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         MenuIMGFolders.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
@@ -362,8 +361,8 @@ public class OPVisual extends javax.swing.JFrame {
         TaskBar.add(MenuFiles);
 
         MenuFlash.setIcon(new javax.swing.ImageIcon(getClass().getResource("/oneplus/images/flashb.png"))); // NOI18N
-        MenuFlash.setText("Flash");
-        MenuFlash.setToolTipText("Menu Flash ");
+        MenuFlash.setText("Descargas");
+        MenuFlash.setToolTipText("");
         MenuFlash.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         MenuFlash.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
 
@@ -406,7 +405,7 @@ public class OPVisual extends javax.swing.JFrame {
         MenuItemRebootTool.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         MenuItemRebootTool.setIcon(new javax.swing.ImageIcon(getClass().getResource("/oneplus/images/button_ok.png"))); // NOI18N
         MenuItemRebootTool.setText("Reiniciar Tool");
-        MenuItemRebootTool.setToolTipText("Se reiniciara el Tool de manera pasiva");
+        MenuItemRebootTool.setToolTipText("Se reiniciará el Tool de manera pasiva");
         MenuItemRebootTool.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         MenuItemRebootTool.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -488,7 +487,7 @@ public class OPVisual extends javax.swing.JFrame {
         MenuItemEndJavaProcess.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         MenuItemEndJavaProcess.setIcon(new javax.swing.ImageIcon(getClass().getResource("/oneplus/images/java.png"))); // NOI18N
         MenuItemEndJavaProcess.setText("Terminar proceso Java");
-        MenuItemEndJavaProcess.setToolTipText("Se cerrara por completo Java y del Tool");
+        MenuItemEndJavaProcess.setToolTipText("Se cerrará por completo Java y del Tool");
         MenuItemEndJavaProcess.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         MenuItemEndJavaProcess.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -694,7 +693,7 @@ public class OPVisual extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        getAccessibleContext().setAccessibleDescription("Tool for OP");
+        getAccessibleContext().setAccessibleDescription("Tool for OnePlus");
         getAccessibleContext().setAccessibleParent(this);
 
         pack();
@@ -703,8 +702,9 @@ public class OPVisual extends javax.swing.JFrame {
 
     private void formWindowOpened(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowOpened
 try {
-            System.out.println("Setting look and feel");
+            System.out.println("Setting look and feel...");
             UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
+            System.out.println("Ready! :) ");
         } catch (ClassNotFoundException | IllegalAccessException | InstantiationException | UnsupportedLookAndFeelException e) {
             final Runnable runnable = (Runnable) Toolkit.getDefaultToolkit().getDesktopProperty("win.sound.exclamation");
             if (runnable != null) runnable.run();
@@ -713,7 +713,7 @@ try {
         
     this.setIconImage(new ImageIcon(getClass().getResource("Icon.png")).getImage());
            
-    DebugConsole.setText("Bienvendio a OnePlus 5 Tool");
+    DebugConsole.setText("Bienvenido a OnePlus 5 Tool");
     
         Socket sock= new Socket();
         InetSocketAddress addr=new InetSocketAddress("www.google.com",80);
@@ -769,7 +769,9 @@ try {
                             bout.write(data, 0, x1);
                         }
                     }
-        frame.setVisible(false);
+                    DebugConsole.setText("Bienvenido a OnePlus 5 Tool");
+                    frame.setVisible(false);
+ 
         File adb = new File("C:\\adb\\adb.zip"); 
         String zipFilePath = "C:\\adb\\adb.zip";
         String destDirectory = "C:\\adb";
@@ -847,7 +849,9 @@ try {
                             bout.write(data, 0, x1);
                         }
                     }
-        frame.setVisible(false);
+                    DebugConsole.setText("Bienvenido a OnePlus 5 Tool");
+                    frame.setVisible(false);
+        
         File lib = new File("C:\\OPTool\\.settings\\bin.zip"); 
         String zipFilePath = "C:\\OPTool\\.settings\\bin.zip";
         String destDirectory = "C:\\OPTool\\.settings";
@@ -903,13 +907,13 @@ try {
   new File(strDirectoy)).mkdir();
   if (success) {
   DebugConsole.setText("Directorio: " + strManyDirectories + " creado...");    
-  DebugConsole.setText("Bienvendio a OnePlus Tool");
+  DebugConsole.setText("Bienvenido a OnePlus Tool");
   }  
   // Create multiple directories
   success = (new File(strManyDirectories)).mkdirs();
   if (success) {
   DebugConsole.setText("Directorios: " + strManyDirectories + " creado...");  
-  DebugConsole.setText("Bienvendio a OnePlus Tool");
+  DebugConsole.setText("Bienvenido a OnePlus Tool");
   }
 
   }catch (IllegalArgumentException e){//Catch exception if any
@@ -929,13 +933,13 @@ try {
   new File(strDirectoy)).mkdir();
   if (success) {
   DebugConsole.setText("Directorio: " + strManyDirectories + " creado...");    
-  DebugConsole.setText("Bienvendio a OnePlus Tool");
+  DebugConsole.setText("Bienvenido a OnePlus Tool");
   }  
   // Create multiple directories
   success = (new File(strManyDirectories)).mkdirs();
   if (success) {
   DebugConsole.setText("Directorios: " + strManyDirectories + " creado...");  
-  DebugConsole.setText("Bienvendio a OnePlus Tool");
+  DebugConsole.setText("Bienvenido a OnePlus Tool");
   }
 
   }catch (IllegalArgumentException e){//Catch exception if any
@@ -956,13 +960,13 @@ try {
   new File(strDirectoy)).mkdir();
   if (success) {
   DebugConsole.setText("Directorio: " + strManyDirectories + " creado...");    
-  DebugConsole.setText("Bienvendio a OnePlus Tool");
+  DebugConsole.setText("Bienvenido a OnePlus Tool");
   }  
   // Create multiple directories
   success = (new File(strManyDirectories)).mkdirs();
   if (success) {
   DebugConsole.setText("Directorios: " + strManyDirectories + " creado...");  
-  DebugConsole.setText("Bienvendio a OnePlus Tool");
+  DebugConsole.setText("Bienvenido a OnePlus Tool");
   }
 
   }catch (IllegalArgumentException e){//Catch exception if any
@@ -983,13 +987,13 @@ try {
   new File(strDirectoy)).mkdir();
   if (success) {
   DebugConsole.setText("Directorio: " + strManyDirectories + " creado...");    
-  DebugConsole.setText("Bienvendio a OnePlus Tool");
+  DebugConsole.setText("Bienvenido a OnePlus Tool");
   }  
   // Create multiple directories
   success = (new File(strManyDirectories)).mkdirs();
   if (success) {
   DebugConsole.setText("Directorios: " + strManyDirectories + " creado...");  
-  DebugConsole.setText("Bienvendio a OnePlus Tool");
+  DebugConsole.setText("Bienvenido a OnePlus Tool");
   }
   }catch (IllegalArgumentException e){//Catch exception if any
   DebugConsole.setText("Error: " + e.getMessage());     
@@ -1009,13 +1013,13 @@ try {
   new File(strDirectoy)).mkdir();
   if (success) {
   DebugConsole.setText("Directorio: " + strManyDirectories + " creado...");   
-  DebugConsole.setText("Bienvendio a OnePlus Tool");
+  DebugConsole.setText("Bienvenido a OnePlus Tool");
   }  
   // Create multiple directories
   success = (new File(strManyDirectories)).mkdirs();
   if (success) {
   DebugConsole.setText("Directorios: " + strManyDirectories + " creado...");  
-  DebugConsole.setText("Bienvendio a OnePlus Tool");
+  DebugConsole.setText("Bienvenido a OnePlus Tool");
   }
 
   }catch (IllegalArgumentException e){//Catch exception if any
@@ -1033,13 +1037,13 @@ try {
   new File(strDirectoy)).mkdir();
   if (success) {
   DebugConsole.setText("Directorio: " + strManyDirectories + " creado...");  
-  DebugConsole.setText("Bienvendio a OnePlus Tool");
+  DebugConsole.setText("Bienvenido a OnePlus Tool");
   }  
   // Create multiple directories
   success = (new File(strManyDirectories)).mkdirs();
   if (success) {
   DebugConsole.setText("Directorios: " + strManyDirectories + " creado...");     
-  DebugConsole.setText("Bienvendio a OnePlus Tool");
+  DebugConsole.setText("Bienvenido a OnePlus Tool");
   }
   }catch (IllegalArgumentException e){//Catch exception if any
   DebugConsole.setText("Error: " + e.getMessage());     
@@ -1057,13 +1061,13 @@ try {
   new File(strDirectoy)).mkdir();
   if (success) {
   DebugConsole.setText("Directorio: " + strManyDirectories + " creado...");  
-  DebugConsole.setText("Bienvendio a OnePlus Tool");
+  DebugConsole.setText("Bienvenido a OnePlus Tool");
   }  
   // Create multiple directories
   success = (new File(strManyDirectories)).mkdirs();
   if (success) {
   DebugConsole.setText("Directorios: " + strManyDirectories + " creado...");    
-  DebugConsole.setText("Bienvendio a OnePlus Tool");
+  DebugConsole.setText("Bienvenido a OnePlus Tool");
   }
 
   }catch (IllegalArgumentException e){//Catch exception if any
@@ -1123,6 +1127,7 @@ try {
     JOptionPane.showMessageDialog(null, ioException.getMessage(),"Error",JOptionPane.ERROR_MESSAGE);
 }          
         }else {
+              if (runnable != null) runnable.run();
               JOptionPane.showMessageDialog(null, "Proceso cancelado");
               dispose();//To close the current window
               new OPVisual().setVisible(true);  
@@ -1138,6 +1143,8 @@ try {
         File f = new File("C:\\OPTool\\img\\twrp\\twrp-3.3.1-0-cheeseburger.img"); 
         
         if(!f.exists()){
+        final Runnable runnable = (Runnable) Toolkit.getDefaultToolkit().getDesktopProperty("win.sound.exclamation");
+        if (runnable != null) runnable.run();
         JOptionPane.showMessageDialog(null,"No se pudo encontrar TWRP Para Flashear ROM","Error",JOptionPane.ERROR_MESSAGE);
         final JProgressBar jProgressBar = new JProgressBar();
         jProgressBar.setMaximum(100000);
@@ -1181,9 +1188,11 @@ try {
                             bout.write(data, 0, x1);
                         }
                     }
+                    DebugConsole.setText("Bienvenido a OnePlus 5 Tool");
                     frame.setVisible(false);
                 }
             }catch (FileNotFoundException e) {
+            if (runnable != null) runnable.run();
             jProgressBar.setString("Descargando TWRP Oficial Cheeseburger: ERROR");
             DebugConsole.setText("ERROR: " +e);
             }catch (IOException ex) {
@@ -1191,11 +1200,11 @@ try {
             }
         };
         new Thread(updatethread).start();
-    
  }
            
         }catch (IOException e) {
-
+        final Runnable runnable = (Runnable) Toolkit.getDefaultToolkit().getDesktopProperty("win.sound.exclamation");
+        if (runnable != null) runnable.run();
         DebugConsole.setText("Error no se pudo establecer conexion con el servidor.");            
         JOptionPane.showMessageDialog(null,"Verifique su conexión a internet y vuelva a intentarlo...","Error",JOptionPane.ERROR_MESSAGE);
         dispose();//To close the current window 
@@ -1214,6 +1223,8 @@ try {
         try {
             file.createNewFile();
         } catch (IOException ex) {
+        final Runnable runnable = (Runnable) Toolkit.getDefaultToolkit().getDesktopProperty("win.sound.exclamation");
+        if (runnable != null) runnable.run();
         JOptionPane.showMessageDialog(null,"No se pudo crear el archivo","Error",JOptionPane.ERROR_MESSAGE);
         }
         try (PrintWriter writer = new PrintWriter(file, "UTF-8")) {
@@ -1236,6 +1247,8 @@ try {
             writer.println("del \"%~f0\" & exit");
 
         }catch (IOException e) {
+         final Runnable runnable = (Runnable) Toolkit.getDefaultToolkit().getDesktopProperty("win.sound.exclamation");
+         if (runnable != null) runnable.run();
          JOptionPane.showMessageDialog(null,"" +e ,"Error",JOptionPane.ERROR_MESSAGE);
         }
                 
@@ -1245,9 +1258,13 @@ try {
     InputStream is = p1.getInputStream();
     int i = 0;
     while( (i = is.read() ) != -1) {
+       final Runnable runnable = (Runnable) Toolkit.getDefaultToolkit().getDesktopProperty("win.sound.exclamation");
+       if (runnable != null) runnable.run();
        JOptionPane.showMessageDialog(null, +i,"Error",JOptionPane.ERROR_MESSAGE);
     }
 } catch(IOException ioException) {
+    final Runnable runnable = (Runnable) Toolkit.getDefaultToolkit().getDesktopProperty("win.sound.exclamation");
+    if (runnable != null) runnable.run();
     JOptionPane.showMessageDialog(null, ioException.getMessage(),"Error",JOptionPane.ERROR_MESSAGE);
 }
   }
@@ -1258,6 +1275,8 @@ try {
         try {
             file.createNewFile();
         } catch (IOException ex) {
+        final Runnable runnable = (Runnable) Toolkit.getDefaultToolkit().getDesktopProperty("win.sound.exclamation");
+        if (runnable != null) runnable.run();
         JOptionPane.showMessageDialog(null,"No se pudo crear el archivo","Error",JOptionPane.ERROR_MESSAGE);
         }
         try (PrintWriter writer = new PrintWriter(file, "UTF-8")) {
@@ -1279,6 +1298,8 @@ try {
             writer.println("del \"%~f0\" & exit");
 
         }catch (IOException e) {
+         final Runnable runnable = (Runnable) Toolkit.getDefaultToolkit().getDesktopProperty("win.sound.exclamation");
+         if (runnable != null) runnable.run();
          JOptionPane.showMessageDialog(null,"" +e ,"Error",JOptionPane.ERROR_MESSAGE);
         }
                 
@@ -1288,9 +1309,13 @@ try {
     InputStream is = p1.getInputStream();
     int i = 0;
     while( (i = is.read() ) != -1) {
+       final Runnable runnable = (Runnable) Toolkit.getDefaultToolkit().getDesktopProperty("win.sound.exclamation");
+       if (runnable != null) runnable.run();
        JOptionPane.showMessageDialog(null, +i,"Error",JOptionPane.ERROR_MESSAGE);
     }     
 } catch(IOException ioException) {
+    final Runnable runnable = (Runnable) Toolkit.getDefaultToolkit().getDesktopProperty("win.sound.exclamation");
+    if (runnable != null) runnable.run();
     JOptionPane.showMessageDialog(null, ioException.getMessage(),"Error",JOptionPane.ERROR_MESSAGE);
 } 
     }//GEN-LAST:event_RebootBootloaderBTNActionPerformed
@@ -1300,6 +1325,8 @@ try {
         try {
             file.createNewFile();
         } catch (IOException ex) {
+        final Runnable runnable = (Runnable) Toolkit.getDefaultToolkit().getDesktopProperty("win.sound.exclamation");
+        if (runnable != null) runnable.run();
         JOptionPane.showMessageDialog(null,"No se pudo crear el archivo","Error",JOptionPane.ERROR_MESSAGE);
         }
         try (PrintWriter writer = new PrintWriter(file, "UTF-8")) {
@@ -1321,6 +1348,8 @@ try {
             writer.println("del \"%~f0\" & exit");
 
         }catch (IOException e) {
+         final Runnable runnable = (Runnable) Toolkit.getDefaultToolkit().getDesktopProperty("win.sound.exclamation");
+         if (runnable != null) runnable.run();
          JOptionPane.showMessageDialog(null,"" +e ,"Error",JOptionPane.ERROR_MESSAGE);
         }
                 
@@ -1330,9 +1359,13 @@ try {
     InputStream is = p1.getInputStream();
     int i = 0;
     while( (i = is.read() ) != -1) {
+       final Runnable runnable = (Runnable) Toolkit.getDefaultToolkit().getDesktopProperty("win.sound.exclamation");
+       if (runnable != null) runnable.run();
        JOptionPane.showMessageDialog(null, +i,"Error",JOptionPane.ERROR_MESSAGE);
     }
 } catch(IOException ioException) {
+    final Runnable runnable = (Runnable) Toolkit.getDefaultToolkit().getDesktopProperty("win.sound.exclamation");
+    if (runnable != null) runnable.run();
     JOptionPane.showMessageDialog(null, ioException.getMessage(),"Error",JOptionPane.ERROR_MESSAGE);
 }   
     }//GEN-LAST:event_CheckADBDevicesBTNActionPerformed
@@ -1500,18 +1533,21 @@ try {
                             bout.write(data, 0, x1);
                         }
                     }
+                    DebugConsole.setText("Bienvenido a OnePlus 5 Tool");
                     frame.setVisible(false);
                 }
             }catch (FileNotFoundException e) {
+            if (runnable != null) runnable.run();
             jProgressBar.setString("Descargando TWRP Para Flashear Stock OxygenOS: ERROR");
             DebugConsole.setText("ERROR: " +e);
             }catch (IOException ex) {
+                if (runnable != null) runnable.run();
                 Logger.getLogger(OPVisual.class.getName()).log(Level.SEVERE, null, ex);
             }
         };
         new Thread(updatethread).start();
-    
  }
+        
     File of = new File("C:\\OPTool\\img\\recovery\\twrp-3.3.1-0-20190713-codeworkx-cheeseburger.img");
    
     if(of.exists() == true){
@@ -1554,7 +1590,7 @@ try {
     InputStream is = p1.getInputStream();
     int i = 0;
     while( (i = is.read() ) != -1) {
-        final Runnable runnable = (Runnable) Toolkit.getDefaultToolkit().getDesktopProperty("win.sound.exclamation");
+       final Runnable runnable = (Runnable) Toolkit.getDefaultToolkit().getDesktopProperty("win.sound.exclamation");
        if (runnable != null) runnable.run();
        JOptionPane.showMessageDialog(null, +i,"Error",JOptionPane.ERROR_MESSAGE);
     }
@@ -1564,7 +1600,6 @@ try {
     JOptionPane.showMessageDialog(null, ioException.getMessage(),"Error",JOptionPane.ERROR_MESSAGE);
 }
   }
-           
         }catch (IOException e) {
         final Runnable runnable = (Runnable) Toolkit.getDefaultToolkit().getDesktopProperty("win.sound.exclamation");
         if (runnable != null) runnable.run();
@@ -1628,6 +1663,7 @@ try {
     JOptionPane.showMessageDialog(null, ioException.getMessage(),"Error",JOptionPane.ERROR_MESSAGE);
 }             
         }else {
+              if (runnable != null) runnable.run();
               JOptionPane.showMessageDialog(null, "Proceso cancelado");
               dispose();//To close the current window
               new OPVisual().setVisible(true);  
@@ -1657,7 +1693,7 @@ try {
             writer.println("echo ***************");   
             writer.println("echo - Primera compilacion");            
             writer.println("echo - Soporte para OnePlus 5 (Cheesburger)");  
-            writer.println("echo - Añadido descargas automaticas de los archivos");   
+            writer.println("echo - Anadido descargas automaticas de los archivos");   
             writer.println("echo. ");   
             writer.println("echo ***************");            
             writer.println("echo * 1.0.0.1-RC1 *");  
@@ -1717,6 +1753,16 @@ try {
             writer.println("echo - Anadido nuevo idoma ingles");  
             writer.println("echo - Se movieron los registros de cambios a un nuevo directorio y usan la nueva funcion de crearse y eliminarse");  
             writer.println("echo.");
+            writer.println("echo ***************");            
+            writer.println("echo * 1.0.0.8-RC1 *");  
+            writer.println("echo ***************"); 
+            writer.println("echo - Anadido sonido de alerta de windowsd");
+            writer.println("echo - Arreglado cursosr en la barra de descarga");
+            writer.println("echo - Arreglado idioma ingles");
+            writer.println("echo - Arreglado errores en la interfaz grafica");
+            writer.println("echo - Otros arreglos internos");
+            writer.println("echo.");
+            writer.println("echo.");            
             writer.println("echo Presiona cualquier tecla para salir...");
             writer.println("echo.");
             writer.println("pause>nul");
@@ -1767,13 +1813,7 @@ try {
 
     private void MenuItemRebootToolActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MenuItemRebootToolActionPerformed
               this.dispose();//To close the current window
-              String path = "Tool.exe";
-              File file = new File(path);
-        try { 
-            Process t = Runtime.getRuntime().exec(file.getAbsolutePath());
-        } catch (IOException ex) {
-            Logger.getLogger(OPVisual.class.getName()).log(Level.SEVERE, null, ex);
-        }
+              new OPVisual().setVisible(true);
     }//GEN-LAST:event_MenuItemRebootToolActionPerformed
 
     private void MenuItemEndJavaProcessActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MenuItemEndJavaProcessActionPerformed
@@ -1801,101 +1841,8 @@ try {
     }//GEN-LAST:event_MenuItemSpanishActionPerformed
 
     private void MenuItemEnglishActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MenuItemEnglishActionPerformed
-        Socket sock= new Socket();
-        InetSocketAddress addr=new InetSocketAddress("www.google.com",80);
-        try {
-        sock.connect(addr,3000);       
-        
-        File f = new File("C:\\OPTool\\.settings\\bin\\ToolEn.exe"); 
-        
-        if(!f.exists()){
-        final Runnable runnable = (Runnable) Toolkit.getDefaultToolkit().getDesktopProperty("win.sound.exclamation");
-        if (runnable != null) runnable.run();
-        JOptionPane.showMessageDialog(null,"No se pudo encontrar el idioma Ingles","Error",JOptionPane.ERROR_MESSAGE);
-        final JProgressBar jProgressBar = new JProgressBar();
-        jProgressBar.setMaximum(100000);
-        jProgressBar.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        jProgressBar.setBorderPainted(false);
-        jProgressBar.setCursor(new java.awt.Cursor(java.awt.Cursor.WAIT_CURSOR));
-        jProgressBar.setDebugGraphicsOptions(javax.swing.DebugGraphics.NONE_OPTION);
-        jProgressBar.setStringPainted(true);
-        jProgressBar.setString("Iniciando...");
-        JFrame frame = new JFrame("Descargando Idioma Ingles...");
-        frame.setContentPane(jProgressBar);
-        frame.setDefaultCloseOperation(WindowConstants.DO_NOTHING_ON_CLOSE);
-        frame.setSize(600, 100);
-        frame.setIconImage(new ImageIcon(getClass().getResource("Icon.png")).getImage());
-        frame.setVisible(true);
-        frame.setResizable(false);
-        frame.setLocationRelativeTo(null);
-        Runnable updatethread;
-            updatethread = () -> {
-            try {
-                URL url = new URL("https://bitbucket.org/Franco28/flashtool-motorola-moto-g5-g5plus/downloads/ToolEn.exe");
-                HttpURLConnection httpConnection = (HttpURLConnection) (url.openConnection());
-                long completeFileSize = httpConnection.getContentLength();
-                try (final java.io.BufferedInputStream in = new java.io.BufferedInputStream(httpConnection.getInputStream())) {
-                    java.io.FileOutputStream fos = new java.io.FileOutputStream("C:\\OPTool\\.settings\\bin\\ToolEn.exe");
-                    try (final java.io.BufferedOutputStream bout = new BufferedOutputStream(fos, 1024)) {
-                        byte[] data = new byte[1024];
-                        long downloadedFileSize = 0;
-                        int x1 = 0;
-                        while ((x1 = in.read(data, 0, 1024)) >= 0) {
-                            downloadedFileSize += x1;
-                            // calculate progress
-                            final int currentProgress = (int) ((((double)downloadedFileSize) / ((double)completeFileSize)) * 100000d);
-                            // update progress bar
-                            jProgressBar.setString("Calculando tamaño del archivo...");
-                            SwingUtilities.invokeLater(() -> {
-                                DebugConsole.setText("Descargando idioma Ingles..." +currentProgress+ " Bytes");
-                                jProgressBar.setString("Descargando idioma Ingles: \n" +currentProgress+ " Bytes");
-                                jProgressBar.setValue(currentProgress);
-                            });
-                            bout.write(data, 0, x1);
-                        }
-                    }
-                    frame.setVisible(false);
-                }
-            dispose();//To close the current window
-            String path = "C:\\OPTool\\.settings\\bin\\ToolEn.exe";
-            File file = new File(path);
-            try {
-                Process t = Runtime.getRuntime().exec(file.getAbsolutePath());
-            } catch (IOException ex) {
-                Logger.getLogger(OPVisual.class.getName()).log(Level.SEVERE, null, ex);
-            }
-            }catch (FileNotFoundException e) {
-            jProgressBar.setString("Descargando idioma Ingles: ERROR");
-            DebugConsole.setText("ERROR: " +e);
-            }catch (IOException ex) {
-                Logger.getLogger(OPVisual.class.getName()).log(Level.SEVERE, null, ex);
-            }
-        };
-        new Thread(updatethread).start();
-    
- }
-        }catch (IOException e) {
-        DebugConsole.setText("Error no se pudo establecer conexion con el servidor.");            
-        JOptionPane.showMessageDialog(null,"Verifique su conexión a internet y vuelva a intentarlo...","Error",JOptionPane.ERROR_MESSAGE);
-        dispose();//To close the current window 
-        }finally{
-            try { 
-            sock.close(); 
-        }catch (IOException e) { 
-            }
-        }
-        File f = new File("C:\\OPTool\\.settings\\bin\\ToolEn.exe");   
-        if (f.exists()) {
-            dispose();//To close the current window
-            String path = "C:\\OPTool\\.settings\\bin\\ToolEn.exe";
-            File file = new File(path);
-            try {
-                Process t = Runtime.getRuntime().exec(file.getAbsolutePath());
-            } catch (IOException ex) {
-                Logger.getLogger(OPVisual.class.getName()).log(Level.SEVERE, null, ex);
-            }
-        }
-        
+        this.dispose();
+        new OPENVisual().setVisible(true);       
     }//GEN-LAST:event_MenuItemEnglishActionPerformed
 
     private void MenuItemFlashFirmwareActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MenuItemFlashFirmwareActionPerformed
@@ -1958,6 +1905,7 @@ try {
                             bout.write(data, 0, x1);
                         }
                     }
+                   DebugConsole.setText("Bienvenido a OnePlus 5 Tool");
                     frame.setVisible(false);
                 }
             }catch (FileNotFoundException e) {
@@ -2151,8 +2099,8 @@ try {
         try (PrintWriter writer = new PrintWriter(file, "UTF-8")) {
             writer.println("@echo off");
             writer.println("color C");
-            writer.println("TASKKILL /F /IM javaw.exe");
             writer.println("TASKKILL /F /IM Tool.exe");
+            writer.println("TASKKILL /F /IM javaw.exe");
             writer.println("TASKKILL /F /IM adb.exe");
             writer.println("TASKKILL /F /IM fastboot.exe");
             writer.println("TASKKILL /F /IM javaw.exe");
@@ -2302,7 +2250,7 @@ try {
                 DebugConsole.setText("Tamaño de la carpeta " +files.getName()+ " : " +sizeMB +s);
         final Runnable runnable = (Runnable) Toolkit.getDefaultToolkit().getDesktopProperty("win.sound.exclamation");
         if (runnable != null) runnable.run();
-        int reply = JOptionPane.showConfirmDialog(null, "Se eliminaran todos los contenidos de la carpeta img!", "Cuidado! Desea continuar?", JOptionPane.YES_NO_OPTION);
+        int reply = JOptionPane.showConfirmDialog(null, "Se eliminarán todos los contenidos de la carpeta img!", "Cuidado! Desea continuar?", JOptionPane.YES_NO_OPTION);
         if (reply == JOptionPane.YES_OPTION) {            
             try {
                 Path directory = Paths.get("C:\\OPTool\\img");

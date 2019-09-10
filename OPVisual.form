@@ -15,7 +15,7 @@
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
               <Image iconType="3" name="/oneplus/images/open.png"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="Archivo"/>
+            <Property name="text" type="java.lang.String" value="Archivos"/>
             <Property name="toolTipText" type="java.lang.String" value=""/>
             <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
               <Color id="Cursor de Mano"/>
@@ -36,7 +36,7 @@
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                   <Image iconType="3" name="/oneplus/images/open16.png"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="Carpeta adb"/>
+                <Property name="text" type="java.lang.String" value="Abrir carpeta adb"/>
                 <Property name="toolTipText" type="java.lang.String" value="Se abrir&#xe1; la carpeta que contiene los archivos adb&amp;fastboot"/>
                 <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
                   <Color id="Cursor de Mano"/>
@@ -53,7 +53,7 @@
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                   <Image iconType="3" name="/oneplus/images/open16.png"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="Carpeta adb"/>
+                <Property name="text" type="java.lang.String" value="Carpeta img"/>
                 <Property name="toolTipText" type="java.lang.String" value="Vacia o abre la carpeta img"/>
                 <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
                   <Color id="Cursor de Mano"/>
@@ -181,8 +181,8 @@
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
               <Image iconType="3" name="/oneplus/images/flashb.png"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="Flash"/>
-            <Property name="toolTipText" type="java.lang.String" value="Menu Flash "/>
+            <Property name="text" type="java.lang.String" value="Descargas"/>
+            <Property name="toolTipText" type="java.lang.String" value=""/>
             <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
               <Color id="Cursor de Mano"/>
             </Property>
@@ -263,7 +263,7 @@
                   <Image iconType="3" name="/oneplus/images/button_ok.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Reiniciar Tool"/>
-                <Property name="toolTipText" type="java.lang.String" value="Se reiniciara el Tool de manera pasiva"/>
+                <Property name="toolTipText" type="java.lang.String" value="Se reiniciar&#xe1; el Tool de manera pasiva"/>
                 <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
                   <Color id="Cursor de Mano"/>
                 </Property>
@@ -402,7 +402,7 @@
                   <Image iconType="3" name="/oneplus/images/java.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Terminar proceso Java"/>
-                <Property name="toolTipText" type="java.lang.String" value="Se cerrara por completo Java y del Tool"/>
+                <Property name="toolTipText" type="java.lang.String" value="Se cerrar&#xe1; por completo Java y del Tool"/>
                 <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
                   <Color id="Cursor de Mano"/>
                 </Property>
@@ -639,7 +639,7 @@
     <Property name="resizable" type="boolean" value="false"/>
   </Properties>
   <AccessibilityProperties>
-    <Property name="AccessibleContext.accessibleDescription" type="java.lang.String" value="Tool for OP"/>
+    <Property name="AccessibleContext.accessibleDescription" type="java.lang.String" value="Tool for OnePlus"/>
     <Property name="AccessibleContext.accessibleParent" type="javax.accessibility.Accessible" editor="org.netbeans.modules.form.ComponentChooserEditor">
       <ComponentRef name="Form"/>
     </Property>
