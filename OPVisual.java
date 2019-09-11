@@ -1,5 +1,21 @@
+/*
+ * Copyright 2019 Franco.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
 /**
- * Tool
+ * Tool Es
  * 
  * @author (Franco Mato - franco28) 
  * @version (1.0.0.8.RC1)
@@ -120,7 +136,7 @@ public class OPVisual extends javax.swing.JFrame {
         MenuItemBugs = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("OnePlus Tool - BETA Es");
+        setTitle("OnePlus Tool - BETA Es - 1.0.0.8-RC1");
         setBackground(java.awt.Color.darkGray);
         setForeground(java.awt.Color.darkGray);
         setResizable(false);
@@ -2073,7 +2089,7 @@ try {
     private void MenuItemPageActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MenuItemPageActionPerformed
 Desktop d = Desktop.getDesktop();
 try {
-    d.browse(new URI("https://franco28.github.io/stockrom/"));
+    d.browse(new URI("https://franco28.github.io/stockrom/tool.html"));
 } catch (IOException | URISyntaxException e2) {
 } 
     }//GEN-LAST:event_MenuItemPageActionPerformed
