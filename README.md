@@ -8,7 +8,8 @@ Download the Tool from here * [FlashTool-OP](https://github.com/Franco28/FlashTo
 
 ### Prerequisites
 
-You must have java 64bits installed on your pc
+- You must have JAVA 64 bits installed on your PC * [JAVA](https://www.java.com/en/download/manual.jsp) 
+- Windows 10
 
 ### How it works
 
