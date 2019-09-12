@@ -15,11 +15,20 @@
  */
 package oneplus;
 
+import java.awt.BorderLayout;
+import java.awt.Dimension;
+import java.awt.EventQueue;
 import java.awt.Toolkit;
+import java.net.MalformedURLException;
+import java.net.URL;
+import javax.swing.ImageIcon;
 import javax.swing.JFrame;
+import javax.swing.JLabel;
 import javax.swing.JOptionPane;
+import javax.swing.SwingConstants;
 import javax.swing.UIManager;
 import javax.swing.UnsupportedLookAndFeelException;
+import javax.swing.WindowConstants;
 
 /**
  *
@@ -36,21 +45,40 @@ public interface Welcome {
             final Runnable runnable = (Runnable) Toolkit.getDefaultToolkit().getDesktopProperty("win.sound.exclamation");
             if (runnable != null) runnable.run();
             System.out.println("Unable to set LookAndFeel");
-        }
+        }   
                 
     final Runnable runnable = (Runnable) Toolkit.getDefaultToolkit().getDesktopProperty("win.sound.exclamation");
     if (runnable != null) runnable.run();
-    JFrame f = new JFrame("Select a Tool");
-    f.setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
+            EventQueue.invokeLater(() -> {
+           JLabel label = new JLabel();
+           label.setHorizontalAlignment(SwingConstants.CENTER);
+           try{
+
+               URL imageURL = new URL("https://cdn.dribbble.com/users/299266/screenshots/1700676/1_dribbble.gif");
+               
+               label.setIcon(new ImageIcon(imageURL));
+           }
+           catch (MalformedURLException ex){
+           }        
+           JFrame frame = new JFrame("Welcome to OnePlus Tool");
+           frame.setIconImage(new ImageIcon("Icon.png").getImage());
+           frame.add(label, BorderLayout.CENTER);
+           frame.setDefaultCloseOperation(WindowConstants.DO_NOTHING_ON_CLOSE);
+           frame.setMinimumSize(new Dimension(800, 600));
+           frame.setLocationRelativeTo(null);
+           frame.setResizable(false);
+           frame.setVisible(true);
+            
         Object response = JOptionPane.showInputDialog(null,
                 "Choose One Tool", 
-                "OnePlus Tool",
+                "Welcome to OnePlus Tool",
                 JOptionPane.QUESTION_MESSAGE, 
                 null, 
                 new String[] { "OnePlus 5 Tool", "OnePlus 5T Tool", "Xiaomi MI A2/6X Tool" },
-                "OnePlus 5 Tool");       
-
+                "OnePlus 5 Tool");      
+        
         if(response == "OnePlus 5 Tool") {
+        frame.setVisible(false);
         new OPVisual().setVisible(true);
    }
         
@@ -64,6 +92,10 @@ public interface Welcome {
         System.exit(0);
         }
         
+        if(response == null) {
+        System.exit(0);
+   }
+        });
     };
   }
     

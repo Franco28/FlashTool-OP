@@ -34,14 +34,14 @@ import javafx.stage.Stage;
  *
  * @author Franco
  */
-public interface los {
+public interface help {
     
 public class loos extends Application {
     private Scene scene;
     @Override public void start(Stage stage) {
         // create the scene
-        stage.setTitle("Pixel Experience");
-        Image icon = new Image(getClass().getResourceAsStream("images/pe.png"));
+        stage.setTitle("How to use it");
+        Image icon = new Image(getClass().getResourceAsStream("Icon.png"));
         stage.getIcons().add(icon);
         scene = new Scene(new Browser(),850,450, Color.web("#666970"));
         stage.setScene(scene);      
@@ -61,7 +61,7 @@ class Browser extends Region {
         //apply the styles
         getStyleClass().add("browser");
         // load the web page
-        webEngine.load("https://download.pixelexperience.org/cheeseburger/");
+        webEngine.load("https://github.com/Franco28/FlashTool-OP#how-it-works");
         //add the web view to the scene
         boolean add = getChildren().add(browser);
 
