@@ -18,7 +18,7 @@
  * Tool En
  * 
  * @author (Franco Mato - franco28) 
- * @version (1.0.0.8.RC1)
+ * @version (1.0.1.9.RC1)
  * 
  * 
  */
@@ -102,6 +102,8 @@ public class OPENVisual extends javax.swing.JFrame {
         MenuItemTWRP = new javax.swing.JMenuItem();
         MenuItemFirmware = new javax.swing.JMenuItem();
         MenuItemRecovery = new javax.swing.JMenuItem();
+        jSeparator1 = new javax.swing.JPopupMenu.Separator();
+        MenuItemOpenROM = new javax.swing.JMenuItem();
         MenuFlash = new javax.swing.JMenu();
         MenuItemFlashFirmware = new javax.swing.JMenuItem();
         MenuItemFlashFirmwareSeparator = new javax.swing.JPopupMenu.Separator();
@@ -118,7 +120,6 @@ public class OPENVisual extends javax.swing.JFrame {
         crdroid = new javax.swing.JMenuItem();
         bliss = new javax.swing.JMenuItem();
         validus = new javax.swing.JMenuItem();
-        viper = new javax.swing.JMenuItem();
         moreroms = new javax.swing.JMenuItem();
         MenuOthers = new javax.swing.JMenu();
         MenuItemRebootTool = new javax.swing.JMenuItem();
@@ -136,6 +137,8 @@ public class OPENVisual extends javax.swing.JFrame {
         MenuOthersSeparator5 = new javax.swing.JPopupMenu.Separator();
         MenuItemUninstallTool = new javax.swing.JMenuItem();
         MenuHelp = new javax.swing.JMenu();
+        howtouseit = new javax.swing.JMenuItem();
+        jSeparator3 = new javax.swing.JPopupMenu.Separator();
         MenuItemChangelog = new javax.swing.JMenuItem();
         MenuHelpSeparator1 = new javax.swing.JPopupMenu.Separator();
         MenuItemCredits = new javax.swing.JMenuItem();
@@ -387,6 +390,18 @@ public class OPENVisual extends javax.swing.JFrame {
         MenuSubDirs.add(MenuItemRecovery);
 
         MenuFiles.add(MenuSubDirs);
+        MenuFiles.add(jSeparator1);
+
+        MenuItemOpenROM.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        MenuItemOpenROM.setIcon(new javax.swing.ImageIcon(getClass().getResource("/oneplus/images/open16.png"))); // NOI18N
+        MenuItemOpenROM.setText("ROM Folder");
+        MenuItemOpenROM.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        MenuItemOpenROM.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                MenuItemOpenROMActionPerformed(evt);
+            }
+        });
+        MenuFiles.add(MenuItemOpenROM);
 
         TaskBar.add(MenuFiles);
 
@@ -540,17 +555,6 @@ public class OPENVisual extends javax.swing.JFrame {
         });
         jMenu1.add(validus);
 
-        viper.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        viper.setIcon(new javax.swing.ImageIcon(getClass().getResource("/oneplus/images/viper.png"))); // NOI18N
-        viper.setText("ViperOS");
-        viper.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        viper.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                viperActionPerformed(evt);
-            }
-        });
-        jMenu1.add(viper);
-
         moreroms.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         moreroms.setIcon(new javax.swing.ImageIcon(getClass().getResource("/oneplus/images/xda.png"))); // NOI18N
         moreroms.setText("More ROMS...");
@@ -690,6 +694,18 @@ public class OPENVisual extends javax.swing.JFrame {
         MenuHelp.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         MenuHelp.setFont(new java.awt.Font("Segoe UI Black", 1, 12)); // NOI18N
 
+        howtouseit.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        howtouseit.setIcon(new javax.swing.ImageIcon(getClass().getResource("/oneplus/images/help.png"))); // NOI18N
+        howtouseit.setText("How to use it?");
+        howtouseit.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        howtouseit.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                howtouseitActionPerformed(evt);
+            }
+        });
+        MenuHelp.add(howtouseit);
+        MenuHelp.add(jSeparator3);
+
         MenuItemChangelog.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         MenuItemChangelog.setIcon(new javax.swing.ImageIcon(getClass().getResource("/oneplus/images/new16.png"))); // NOI18N
         MenuItemChangelog.setText("Changelog");
@@ -735,9 +751,9 @@ public class OPENVisual extends javax.swing.JFrame {
         MenuCodeOthers.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
 
         MenuItemPage.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        MenuItemPage.setIcon(new javax.swing.ImageIcon(getClass().getResource("/oneplus/images/web.png"))); // NOI18N
-        MenuItemPage.setText("WebSite");
-        MenuItemPage.setToolTipText("Developer page for contact");
+        MenuItemPage.setIcon(new javax.swing.ImageIcon(getClass().getResource("/oneplus/images/telegram.png"))); // NOI18N
+        MenuItemPage.setText("Contact");
+        MenuItemPage.setToolTipText("Telegram: Enviame un mensaje si tienes dudas o necesitas reportar algún detalle!");
         MenuItemPage.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         MenuItemPage.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1064,14 +1080,14 @@ try {
   boolean success = (
   new File(strDirectoy)).mkdir();
   if (success) {
-  DebugConsole.setText("Directorio: " + strManyDirectories + " creado...");    
-  DebugConsole.setText("Bienvenido a OnePlus Tool");
+  DebugConsole.setText("Directory: " + strManyDirectories + " created...");    
+  DebugConsole.setText("Welcome to OnePlus 5 Tool");
   }  
   // Create multiple directories
   success = (new File(strManyDirectories)).mkdirs();
   if (success) {
-  DebugConsole.setText("Directorios: " + strManyDirectories + " creado...");  
-  DebugConsole.setText("Bienvenido a OnePlus Tool");
+  DebugConsole.setText("Directories: " + strManyDirectories + " created...");  
+  DebugConsole.setText("Welcome to OnePlus 5 Tool");
   }
 
   }catch (IllegalArgumentException e){//Catch exception if any
@@ -1090,14 +1106,14 @@ try {
   boolean success = (
   new File(strDirectoy)).mkdir();
   if (success) {
-  DebugConsole.setText("Directorio: " + strManyDirectories + " creado...");    
-  DebugConsole.setText("Bienvenido a OnePlus Tool");
+  DebugConsole.setText("Directory: " + strManyDirectories + " created...");    
+  DebugConsole.setText("Welcome to OnePlus 5 Tool");
   }  
   // Create multiple directories
   success = (new File(strManyDirectories)).mkdirs();
   if (success) {
-  DebugConsole.setText("Directorios: " + strManyDirectories + " creado...");  
-  DebugConsole.setText("Bienvenido a OnePlus Tool");
+  DebugConsole.setText("Directories: " + strManyDirectories + " created...");  
+  DebugConsole.setText("Welcome to OnePlus 5 Tool");
   }
 
   }catch (IllegalArgumentException e){//Catch exception if any
@@ -1117,14 +1133,14 @@ try {
   boolean success = (
   new File(strDirectoy)).mkdir();
   if (success) {
-  DebugConsole.setText("Directorio: " + strManyDirectories + " creado...");    
-  DebugConsole.setText("Bienvenido a OnePlus Tool");
+  DebugConsole.setText("Directory: " + strManyDirectories + " created...");    
+  DebugConsole.setText("Welcome to OnePlus 5 Tool");
   }  
   // Create multiple directories
   success = (new File(strManyDirectories)).mkdirs();
   if (success) {
-  DebugConsole.setText("Directorios: " + strManyDirectories + " creado...");  
-  DebugConsole.setText("Bienvenido a OnePlus Tool");
+  DebugConsole.setText("Directories: " + strManyDirectories + " created...");  
+  DebugConsole.setText("Welcome to OnePlus 5 Tool");
   }
 
   }catch (IllegalArgumentException e){//Catch exception if any
@@ -1144,14 +1160,14 @@ try {
   boolean success = (
   new File(strDirectoy)).mkdir();
   if (success) {
-  DebugConsole.setText("Directorio: " + strManyDirectories + " creado...");    
-  DebugConsole.setText("Bienvenido a OnePlus Tool");
+  DebugConsole.setText("Directory: " + strManyDirectories + " created...");    
+  DebugConsole.setText("Welcome to OnePlus 5 Tool");
   }  
   // Create multiple directories
   success = (new File(strManyDirectories)).mkdirs();
   if (success) {
-  DebugConsole.setText("Directorios: " + strManyDirectories + " creado...");  
-  DebugConsole.setText("Bienvenido a OnePlus Tool");
+  DebugConsole.setText("Directories: " + strManyDirectories + " created...");  
+  DebugConsole.setText("Welcome to OnePlus 5 Tool");
   }
   }catch (IllegalArgumentException e){//Catch exception if any
   DebugConsole.setText("Error: " + e.getMessage());     
@@ -1170,14 +1186,14 @@ try {
   boolean success = (
   new File(strDirectoy)).mkdir();
   if (success) {
-  DebugConsole.setText("Directorio: " + strManyDirectories + " creado...");   
-  DebugConsole.setText("Bienvenido a OnePlus Tool");
+  DebugConsole.setText("Directory: " + strManyDirectories + " created...");   
+  DebugConsole.setText("Welcome to OnePlus 5 Tool");
   }  
   // Create multiple directories
   success = (new File(strManyDirectories)).mkdirs();
   if (success) {
-  DebugConsole.setText("Directorios: " + strManyDirectories + " creado...");  
-  DebugConsole.setText("Bienvenido a OnePlus Tool");
+  DebugConsole.setText("Directories: " + strManyDirectories + " created...");  
+  DebugConsole.setText("Welcome to OnePlus 5 Tool");
   }
 
   }catch (IllegalArgumentException e){//Catch exception if any
@@ -1194,14 +1210,14 @@ try {
   boolean success = (
   new File(strDirectoy)).mkdir();
   if (success) {
-  DebugConsole.setText("Directorio: " + strManyDirectories + " creado...");  
-  DebugConsole.setText("Bienvenido a OnePlus Tool");
+  DebugConsole.setText("Directory: " + strManyDirectories + " created...");  
+  DebugConsole.setText("Welcome to OnePlus 5 Tool");
   }  
   // Create multiple directories
   success = (new File(strManyDirectories)).mkdirs();
   if (success) {
-  DebugConsole.setText("Directorios: " + strManyDirectories + " creado...");     
-  DebugConsole.setText("Bienvenido a OnePlus Tool");
+  DebugConsole.setText("Directories: " + strManyDirectories + " created...");     
+  DebugConsole.setText("Welcome to OnePlus 5 Tool");
   }
   }catch (IllegalArgumentException e){//Catch exception if any
   DebugConsole.setText("Error: " + e.getMessage());     
@@ -1218,14 +1234,14 @@ try {
   boolean success = (
   new File(strDirectoy)).mkdir();
   if (success) {
-  DebugConsole.setText("Directorio: " + strManyDirectories + " creado...");  
-  DebugConsole.setText("Bienvenido a OnePlus Tool");
+  DebugConsole.setText("Directory: " + strManyDirectories + " created...");  
+  DebugConsole.setText("Welcome to OnePlus 5 Tool");
   }  
   // Create multiple directories
   success = (new File(strManyDirectories)).mkdirs();
   if (success) {
-  DebugConsole.setText("Directorios: " + strManyDirectories + " creado...");    
-  DebugConsole.setText("Bienvenido a OnePlus Tool");
+  DebugConsole.setText("Directories: " + strManyDirectories + " created...");    
+  DebugConsole.setText("Welcome to OnePlus 5 Tool");
   }
 
   }catch (IllegalArgumentException e){//Catch exception if any
@@ -1247,7 +1263,7 @@ try {
             new String[]{"Yes, continue", "No"},
             null);
     if (reply == JOptionPane.YES_OPTION) {   
-    JOptionPane.showMessageDialog(null,"Por favor activa las opciones de desarrollador y activa: \n\n - Desbloqueo OEM \n\n - Depuración por USB");
+    JOptionPane.showMessageDialog(null,"Please activate the developer options and activate: \n\n - OEM Unlock \n\n - USB debugging");
     final File file = new File("C:\\OPTool\\.settings\\bin\\unlock.bat");
         try {
             file.createNewFile();
@@ -1293,7 +1309,7 @@ try {
 }          
         }else {
               if (runnable != null) runnable.run();
-              JOptionPane.showMessageDialog(null, "Proceso cancelado");
+              JOptionPane.showMessageDialog(null, "Process canceled");
               dispose();//To close the current window
               new OPVisual().setVisible(true);  
         }
@@ -1836,7 +1852,7 @@ try {
 }             
         }else {
               if (runnable != null) runnable.run();
-              JOptionPane.showMessageDialog(null, "Proceso cancelado");
+              JOptionPane.showMessageDialog(null, "Process canceled");
               dispose();//To close the current window
               new OPVisual().setVisible(true);  
         } 
@@ -2028,7 +2044,14 @@ try {
     private void MenuItemDownloadFirmwareActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MenuItemDownloadFirmwareActionPerformed
         final Runnable runnable = (Runnable) Toolkit.getDefaultToolkit().getDesktopProperty("win.sound.exclamation");
         if (runnable != null) runnable.run();
-        int reply = JOptionPane.showConfirmDialog(null, "Durante la descarga no podra utilziar el Tool! \n\n Para verificar la descarga se abrirá la Folder", "Warning! Do you want to continue?", JOptionPane.YES_NO_OPTION);
+        int reply = JOptionPane.showOptionDialog(null, 
+            "During the download you will not be able to use the Tool! \n\n To verify the download, the Folder will open", 
+            "Warning! Do you want to continue?",
+            JOptionPane.YES_NO_OPTION,
+            JOptionPane.INFORMATION_MESSAGE, 
+            null,
+            new String[]{"Yes, continue", "No"},
+            null); 
         if (reply == JOptionPane.YES_OPTION) {       
         Socket sock= new Socket();
         InetSocketAddress addr=new InetSocketAddress("www.google.com",80);
@@ -2050,6 +2073,7 @@ try {
         frame.setContentPane(jProgressBar);
         frame.setDefaultCloseOperation(WindowConstants.DO_NOTHING_ON_CLOSE);
         frame.setSize(600, 100);
+        frame.setIconImage(new ImageIcon(getClass().getResource("Icon.png")).getImage());
         frame.setVisible(true);
         frame.setResizable(false);
         frame.setLocationRelativeTo(null);
@@ -2105,7 +2129,6 @@ try {
         }catch (IOException e) { 
             }
         } 
-    }
     if (runnable != null) runnable.run();
     int reply2 = JOptionPane.showConfirmDialog(null, "Do you want to flash the firmware now? If you accept, you must have the phone connected so it will enter recovery mode", "Warning! Do you want to continue?", JOptionPane.YES_NO_OPTION);
     if (reply2 == JOptionPane.YES_OPTION) {     
@@ -2139,6 +2162,7 @@ try {
         } catch (IOException ex) {
             if (runnable != null) runnable.run();
             Logger.getLogger(OPVisual.class.getName()).log(Level.SEVERE, null, ex);
+        }
         }
     }//GEN-LAST:event_MenuItemDownloadFirmwareActionPerformed
 
@@ -2247,7 +2271,7 @@ try {
     private void MenuItemPageActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MenuItemPageActionPerformed
 Desktop d = Desktop.getDesktop();
 try {
-    d.browse(new URI("https://franco28.github.io/stockrom/tool.html"));
+    d.browse(new URI("https://t.me/francom28"));
 } catch (IOException | URISyntaxException e2) {
 } 
     }//GEN-LAST:event_MenuItemPageActionPerformed
@@ -2485,101 +2509,1479 @@ try {
 } 
     }//GEN-LAST:event_MenuItemReleasesActionPerformed
 
-    private void omniActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_omniActionPerformed
-Desktop d = Desktop.getDesktop();
+    private void peActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_peActionPerformed
+        final Runnable runnable = (Runnable) Toolkit.getDefaultToolkit().getDesktopProperty("win.sound.exclamation");
+        if (runnable != null) runnable.run();
+        int reply = JOptionPane.showOptionDialog(null,
+                "If you want to download the ROM with the Tool, be careful since the last registered version of this ROM in the Tool is: PixelExperience_Plus_cheeseburger-9.0-20190908-1605-OFFICIAL \n\n If there is a new version of the ROM it is recommended that you download it from the internet", 
+                "Be careful, read before choosing the option!", 
+                JOptionPane.YES_NO_OPTION,
+                JOptionPane.INFORMATION_MESSAGE, 
+                null,
+                new String[]{"I want to download the ROM with the Tool","I want to download the ROM from the internet"},
+                null);
+        if (reply == JOptionPane.YES_OPTION) {
+            File pixel = new File("C:\\OPTool\\rom\\pe"); 
+        if (!pixel.exists() == true){
+// Create a directory; all non-existent ancestor directories are
+// automatically created
+ try{
+  String strDirectoy ="C:\\OPTool";
+  String strManyDirectories="C:\\OPTool\\rom\\pe";
+
+  // Create one directory
+  boolean success = (
+  new File(strDirectoy)).mkdir();
+  if (success) {
+  DebugConsole.setText("Directory: " + strManyDirectories + " created...");    
+  DebugConsole.setText("Welcome to OnePlus 5 Tool");
+  }  
+  // Create multiple directories
+  success = (new File(strManyDirectories)).mkdirs();
+  if (success) {
+  DebugConsole.setText("Directories: " + strManyDirectories + " created...");  
+  DebugConsole.setText("Welcome to OnePlus 5 Tool");
+  }
+
+  }catch (IllegalArgumentException e){//Catch exception if any
+  DebugConsole.setText("Error: " + e.getMessage());     
+  }
+}
+        Socket sock= new Socket();
+        InetSocketAddress addr=new InetSocketAddress("www.google.com",80);
+        try {
+        sock.connect(addr,3000);       
+        
+        File f = new File("C:\\OPTool\\rom\\pe\\PixelExperience_Plus_cheeseburger-9.0-20190908-1605-OFFICIAL.zip"); 
+        
+        if(!f.exists()){
+        final JProgressBar jProgressBar = new JProgressBar();
+        jProgressBar.setMaximum(100000);
+        jProgressBar.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        jProgressBar.setBorderPainted(false);
+        jProgressBar.setCursor(new java.awt.Cursor(java.awt.Cursor.WAIT_CURSOR));
+        jProgressBar.setDebugGraphicsOptions(javax.swing.DebugGraphics.NONE_OPTION);
+        jProgressBar.setStringPainted(true);
+        jProgressBar.setString("Starting...");
+        JFrame frame = new JFrame("Downloading PixelExperience_Plus_cheeseburger-9.0-20190908-1605-OFFICIAL....");
+        frame.setContentPane(jProgressBar);
+        frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+        frame.setSize(600, 100);
+        frame.setIconImage(new ImageIcon(getClass().getResource("Icon.png")).getImage());
+        frame.setVisible(true);
+        frame.setResizable(false);
+        frame.setLocationRelativeTo(null); 
+        Runnable updatethread;
+            updatethread = () -> {
+            try {
+                URL url = new URL("https://get.pixelexperience.org/get_file/S21zVEZ3UXBGcVJuUEZzVlZTOENhdjN3UW5RN05aQlZ3SnpzNDREMDRQeFc1V0I5MFNSNEtuSUVvdFhpSVpwYmtwTzhwRytMcWlEYnMxV3Q0ZTJzejA0RFJDamJZL05lVXUxUVdvV0p6OTBRbnIzTEFzWUpNbXpJSy80UnpvRWFNRzBzVFdZZEducm5OSjVFNWs0bmRDU0NtYWpQT0RTQXk0aEk0MjhnUVp3PQ==/");
+                HttpURLConnection httpConnection = (HttpURLConnection) (url.openConnection());
+                long completeFileSize = httpConnection.getContentLength();
+                try (final java.io.BufferedInputStream in = new java.io.BufferedInputStream(httpConnection.getInputStream())) {
+                    java.io.FileOutputStream fos = new java.io.FileOutputStream("C:\\OPTool\\rom\\pe\\PixelExperience_Plus_cheeseburger-9.0-20190908-1605-OFFICIAL.zip");
+                    try (final java.io.BufferedOutputStream bout = new BufferedOutputStream(fos, 1024)) {
+                        byte[] data = new byte[1024];
+                        long downloadedFileSize = 0;
+                        int x1 = 0;
+                        while ((x1 = in.read(data, 0, 1024)) >= 0) {
+                            downloadedFileSize += x1;
+                            // calculate progress
+                            final int currentProgress = (int) ((((double)downloadedFileSize) / ((double)completeFileSize)) * 100000d);
+                            // update progress bar
+                            jProgressBar.setString("Calculando tamaño del archivo...");
+                            SwingUtilities.invokeLater(() -> {
+                                DebugConsole.setText("Downloading PixelExperience_Plus_cheeseburger-9.0-20190908-1605-OFFICIAL..." +currentProgress+ " Bytes");
+                                jProgressBar.setString("Downloading PixelExperience_Plus_cheeseburger-9.0-20190908-1605-OFFICIAL: \n" +currentProgress+ " Bytes");
+                                jProgressBar.setValue(currentProgress);
+                            });
+                            bout.write(data, 0, x1);
+                        }
+                    }
+                    DebugConsole.setText("Bienvenido a OnePlus 5 Tool");
+                    frame.setVisible(false);
+                    Desktop desktop = Desktop.getDesktop();
+                    File dirToOpen = null;
+        try {
+            dirToOpen = new File("C:\\OPTool\\rom\\pe");
+            desktop.open(dirToOpen);
+        } catch (IllegalArgumentException iae) {
+            if (runnable != null) runnable.run();
+            JOptionPane.showMessageDialog(null,"Folder " +dirToOpen+ "Not found","Error",JOptionPane.ERROR_MESSAGE);
+        } catch (IOException ex) {
+            if (runnable != null) runnable.run();
+            Logger.getLogger(OPVisual.class.getName()).log(Level.SEVERE, null, ex);
+        }
+                }
+            }catch (FileNotFoundException e) {
+            if (runnable != null) runnable.run();
+            jProgressBar.setString("Downloading PixelExperience_Plus_cheeseburger-9.0-20190908-1605-OFFICIAL: ERROR");
+            DebugConsole.setText("ERROR: " +e);
+            frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+            }catch (IOException ex) {
+                if (runnable != null) runnable.run();
+                Logger.getLogger(OPVisual.class.getName()).log(Level.SEVERE, null, ex);
+                jProgressBar.setString("Downloading PixelExperience_Plus_cheeseburger-9.0-20190908-1605-OFFICIAL: ERROR");
+                DebugConsole.setText("ERROR: " +ex);
+                frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+            }
+        };
+        new Thread(updatethread).start();
+    
+ }
+           
+        }catch (IOException e) {
+        if (runnable != null) runnable.run();
+        DebugConsole.setText("Error could not connect to server.");            
+        JOptionPane.showMessageDialog(null,"Check your internet connection and try again...","Error",JOptionPane.ERROR_MESSAGE);
+        dispose();//To close the current window 
+       
+        }finally{
+            try { 
+            sock.close(); 
+        }catch (IOException e) { 
+            }
+        }            
+        }
+        if (reply == JOptionPane.NO_OPTION) {  
+            Desktop d = Desktop.getDesktop();
+        try {
+            d.browse(new URI("https://forum.xda-developers.com/oneplus-5/development/rom-pixel-experience-t3959201"));
+        } catch (IOException | URISyntaxException e2) {
+            if (runnable != null) runnable.run();
+            DebugConsole.setText("ERROR: " +e2);    
+        }   
+        }
+    }//GEN-LAST:event_peActionPerformed
+
+    private void losActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_losActionPerformed
+        final Runnable runnable = (Runnable) Toolkit.getDefaultToolkit().getDesktopProperty("win.sound.exclamation");
+        if (runnable != null) runnable.run();
+        int reply = JOptionPane.showOptionDialog(null,
+                "If you want to download the ROM with the Tool, be careful since the last registered version of this ROM in the Tool is: lineage-16.0-20190912-nightly-cheeseburger-signed \n\n If there is a new version of the ROM it is recommended that you download it from the internet", 
+                "Be careful, read before choosing the option!", 
+                JOptionPane.YES_NO_OPTION,
+                JOptionPane.INFORMATION_MESSAGE, 
+                null,
+                new String[]{"I want to download the ROM with the Tool","I want to download the ROM from the internet"},
+                null);
+        if (reply == JOptionPane.YES_OPTION) {
+            File lineageos = new File("C:\\OPTool\\rom\\los"); 
+        if (!lineageos.exists() == true){
+// Create a directory; all non-existent ancestor directories are
+// automatically created
+ try{
+  String strDirectoy ="C:\\OPTool";
+  String strManyDirectories="C:\\OPTool\\rom\\los";
+
+  // Create one directory
+  boolean success = (
+  new File(strDirectoy)).mkdir();
+  if (success) {
+  DebugConsole.setText("Directory: " + strManyDirectories + " created...");    
+  DebugConsole.setText("Welcome to OnePlus 5 Tool");
+  }  
+  // Create multiple directories
+  success = (new File(strManyDirectories)).mkdirs();
+  if (success) {
+  DebugConsole.setText("Directories: " + strManyDirectories + " created...");  
+  DebugConsole.setText("Welcome to OnePlus 5 Tool");
+  }
+
+  }catch (IllegalArgumentException e){//Catch exception if any
+  DebugConsole.setText("Error: " + e.getMessage());     
+  }
+}
+        Socket sock= new Socket();
+        InetSocketAddress addr=new InetSocketAddress("www.google.com",80);
+        try {
+        sock.connect(addr,3000);       
+        
+        File f = new File("C:\\OPTool\\rom\\los\\lineage-16.0-20190912-nightly-cheeseburger-signed.zip"); 
+        
+        if(!f.exists()){
+        final JProgressBar jProgressBar = new JProgressBar();
+        jProgressBar.setMaximum(100000);
+        jProgressBar.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        jProgressBar.setBorderPainted(false);
+        jProgressBar.setCursor(new java.awt.Cursor(java.awt.Cursor.WAIT_CURSOR));
+        jProgressBar.setDebugGraphicsOptions(javax.swing.DebugGraphics.NONE_OPTION);
+        jProgressBar.setStringPainted(true);
+        jProgressBar.setString("Starting...");
+        JFrame frame = new JFrame("Downloading lineage-16.0-20190912-nightly-cheeseburger-signed....");
+        frame.setContentPane(jProgressBar);
+        frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+        frame.setSize(600, 100);
+        frame.setIconImage(new ImageIcon(getClass().getResource("Icon.png")).getImage());
+        frame.setVisible(true);
+        frame.setResizable(false);
+        frame.setLocationRelativeTo(null); 
+        Runnable updatethread;
+            updatethread = () -> {
+            try {
+                URL url = new URL("https://mirrorbits.lineageos.org/full/cheeseburger/20190912/lineage-16.0-20190912-nightly-cheeseburger-signed.zip");
+                HttpURLConnection httpConnection = (HttpURLConnection) (url.openConnection());
+                long completeFileSize = httpConnection.getContentLength();
+                try (final java.io.BufferedInputStream in = new java.io.BufferedInputStream(httpConnection.getInputStream())) {
+                    java.io.FileOutputStream fos = new java.io.FileOutputStream("C:\\OPTool\\rom\\los\\lineage-16.0-20190912-nightly-cheeseburger-signed.zip");
+                    try (final java.io.BufferedOutputStream bout = new BufferedOutputStream(fos, 1024)) {
+                        byte[] data = new byte[1024];
+                        long downloadedFileSize = 0;
+                        int x1 = 0;
+                        while ((x1 = in.read(data, 0, 1024)) >= 0) {
+                            downloadedFileSize += x1;
+                            // calculate progress
+                            final int currentProgress = (int) ((((double)downloadedFileSize) / ((double)completeFileSize)) * 100000d);
+                            // update progress bar
+                            jProgressBar.setString("Calculando tamaño del archivo...");
+                            SwingUtilities.invokeLater(() -> {
+                                DebugConsole.setText("Downloading lineage-16.0-20190912-nightly-cheeseburger-signed..." +currentProgress+ " Bytes");
+                                jProgressBar.setString("Downloading lineage-16.0-20190912-nightly-cheeseburger-signed: \n" +currentProgress+ " Bytes");
+                                jProgressBar.setValue(currentProgress);
+                            });
+                            bout.write(data, 0, x1);
+                        }
+                    }
+                    DebugConsole.setText("Bienvenido a OnePlus 5 Tool");
+                    frame.setVisible(false);    
+                    Desktop desktop = Desktop.getDesktop();
+                    File dirToOpen = null;
+        try {
+            dirToOpen = new File("C:\\OPTool\\rom\\los");
+            desktop.open(dirToOpen);
+        } catch (IllegalArgumentException iae) {
+            if (runnable != null) runnable.run();
+            JOptionPane.showMessageDialog(null,"Folder " +dirToOpen+ "Not found","Error",JOptionPane.ERROR_MESSAGE);
+        } catch (IOException ex) {
+            if (runnable != null) runnable.run();
+            Logger.getLogger(OPVisual.class.getName()).log(Level.SEVERE, null, ex);
+        }
+                }
+            }catch (FileNotFoundException e) {
+            if (runnable != null) runnable.run();
+            jProgressBar.setString("Downloading lineage-16.0-20190912-nightly-cheeseburger-signed: ERROR");
+            DebugConsole.setText("ERROR: " +e);
+            frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+            }catch (IOException ex) {
+                if (runnable != null) runnable.run();
+                Logger.getLogger(OPVisual.class.getName()).log(Level.SEVERE, null, ex);
+                jProgressBar.setString("Downloading lineage-16.0-20190912-nightly-cheeseburger-signed: ERROR");
+                DebugConsole.setText("ERROR: " +ex);
+                frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+            }
+        };
+        new Thread(updatethread).start();
+    
+ }
+           
+        }catch (IOException e) {
+        if (runnable != null) runnable.run();
+        DebugConsole.setText("Error could not connect to server.");            
+        JOptionPane.showMessageDialog(null,"Check your internet connection and try again...","Error",JOptionPane.ERROR_MESSAGE);
+        dispose();//To close the current window 
+       
+        }finally{
+            try { 
+            sock.close(); 
+        }catch (IOException e) { 
+            }
+        }            
+        }
+        if (reply == JOptionPane.NO_OPTION) {  
+            Desktop d = Desktop.getDesktop();
+        try {
+            d.browse(new URI("https://forum.xda-developers.com/oneplus-5/development/rom-lineageos-16-0-pie-oneplus-5-t3843064"));
+        } catch (IOException | URISyntaxException e2) {
+            if (runnable != null) runnable.run();
+            DebugConsole.setText("ERROR: " +e2);    
+        }   
+        }
+        
+
+    }//GEN-LAST:event_losActionPerformed
+    
+    private void duActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_duActionPerformed
+        final Runnable runnable = (Runnable) Toolkit.getDefaultToolkit().getDesktopProperty("win.sound.exclamation");
+        if (runnable != null) runnable.run();
+        int reply = JOptionPane.showOptionDialog(null,
+                "If you want to download the ROM with the Tool, be careful since the last registered version of this ROM in the Tool is: du_cheeseburger-v13.5-20190809-1211-OFFICIAL \n\n If there is a new version of the ROM it is recommended that you download it from the internet", 
+                "Be careful, read before choosing the option!", 
+                JOptionPane.YES_NO_OPTION,
+                JOptionPane.INFORMATION_MESSAGE, 
+                null,
+                new String[]{"I want to download the ROM with the Tool","I want to download the ROM from the internet"},
+                null);
+        if (reply == JOptionPane.YES_OPTION) {
+            File pixel = new File("C:\\OPTool\\rom\\du"); 
+        if (!pixel.exists() == true){
+// Create a directory; all non-existent ancestor directories are
+// automatically created
+ try{
+  String strDirectoy ="C:\\OPTool";
+  String strManyDirectories="C:\\OPTool\\rom\\du";
+
+  // Create one directory
+  boolean success = (
+  new File(strDirectoy)).mkdir();
+  if (success) {
+  DebugConsole.setText("Directory: " + strManyDirectories + " created...");    
+  DebugConsole.setText("Welcome to OnePlus 5 Tool");
+  }  
+  // Create multiple directories
+  success = (new File(strManyDirectories)).mkdirs();
+  if (success) {
+  DebugConsole.setText("Directories: " + strManyDirectories + " created...");  
+  DebugConsole.setText("Welcome to OnePlus 5 Tool");
+  }
+
+  }catch (IllegalArgumentException e){//Catch exception if any
+  DebugConsole.setText("Error: " + e.getMessage());     
+  }
+}
+        Socket sock= new Socket();
+        InetSocketAddress addr=new InetSocketAddress("www.google.com",80);
+        try {
+        sock.connect(addr,3000);       
+        
+        File f = new File("C:\\OPTool\\rom\\du\\du_cheeseburger-v13.5-20190809-1211-OFFICIAL.zip"); 
+        
+        if(!f.exists()){
+        final JProgressBar jProgressBar = new JProgressBar();
+        jProgressBar.setMaximum(100000);
+        jProgressBar.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        jProgressBar.setBorderPainted(false);
+        jProgressBar.setCursor(new java.awt.Cursor(java.awt.Cursor.WAIT_CURSOR));
+        jProgressBar.setDebugGraphicsOptions(javax.swing.DebugGraphics.NONE_OPTION);
+        jProgressBar.setStringPainted(true);
+        jProgressBar.setString("Starting...");
+        JFrame frame = new JFrame("Downloading du_cheeseburger-v13.5-20190809-1211-OFFICIAL....");
+        frame.setContentPane(jProgressBar);
+        frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+        frame.setSize(600, 100);
+        frame.setIconImage(new ImageIcon(getClass().getResource("Icon.png")).getImage());
+        frame.setVisible(true);
+        frame.setResizable(false);
+        frame.setLocationRelativeTo(null); 
+        Runnable updatethread;
+            updatethread = () -> {
+            try {
+                URL url = new URL("https://download.dirtyunicorns.com/api/download/cheeseburger/Official/du_cheeseburger-v13.5-20190809-1211-OFFICIAL.zip");
+                HttpURLConnection httpConnection = (HttpURLConnection) (url.openConnection());
+                long completeFileSize = httpConnection.getContentLength();
+                try (final java.io.BufferedInputStream in = new java.io.BufferedInputStream(httpConnection.getInputStream())) {
+                    java.io.FileOutputStream fos = new java.io.FileOutputStream("C:\\OPTool\\rom\\du\\du_cheeseburger-v13.5-20190809-1211-OFFICIAL.zip");
+                    try (final java.io.BufferedOutputStream bout = new BufferedOutputStream(fos, 1024)) {
+                        byte[] data = new byte[1024];
+                        long downloadedFileSize = 0;
+                        int x1 = 0;
+                        while ((x1 = in.read(data, 0, 1024)) >= 0) {
+                            downloadedFileSize += x1;
+                            // calculate progress
+                            final int currentProgress = (int) ((((double)downloadedFileSize) / ((double)completeFileSize)) * 100000d);
+                            // update progress bar
+                            jProgressBar.setString("Calculando tamaño del archivo...");
+                            SwingUtilities.invokeLater(() -> {
+                                DebugConsole.setText("Downloading du_cheeseburger-v13.5-20190809-1211-OFFICIAL..." +currentProgress+ " Bytes");
+                                jProgressBar.setString("Downloading du_cheeseburger-v13.5-20190809-1211-OFFICIAL: \n" +currentProgress+ " Bytes");
+                                jProgressBar.setValue(currentProgress);
+                            });
+                            bout.write(data, 0, x1);
+                        }
+                    }
+                    DebugConsole.setText("Bienvenido a OnePlus 5 Tool");
+                    frame.setVisible(false);
+                    Desktop desktop = Desktop.getDesktop();
+                    File dirToOpen = null;
+        try {
+            dirToOpen = new File("C:\\OPTool\\rom\\du");
+            desktop.open(dirToOpen);
+        } catch (IllegalArgumentException iae) {
+            if (runnable != null) runnable.run();
+            JOptionPane.showMessageDialog(null,"Folder " +dirToOpen+ "Not found","Error",JOptionPane.ERROR_MESSAGE);
+        } catch (IOException ex) {
+            if (runnable != null) runnable.run();
+            Logger.getLogger(OPVisual.class.getName()).log(Level.SEVERE, null, ex);
+        }
+                }
+            }catch (FileNotFoundException e) {
+            if (runnable != null) runnable.run();
+            jProgressBar.setString("Downloading du_cheeseburger-v13.5-20190809-1211-OFFICIAL: ERROR");
+            DebugConsole.setText("ERROR: " +e);
+            frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+            }catch (IOException ex) {
+                if (runnable != null) runnable.run();
+                Logger.getLogger(OPVisual.class.getName()).log(Level.SEVERE, null, ex);
+                jProgressBar.setString("Downloading du_cheeseburger-v13.5-20190809-1211-OFFICIAL: ERROR");
+                DebugConsole.setText("ERROR: " +ex);
+                frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+            }
+        };
+        new Thread(updatethread).start();
+    
+ }
+           
+        }catch (IOException e) {
+        if (runnable != null) runnable.run();
+        DebugConsole.setText("Error could not connect to server.");            
+        JOptionPane.showMessageDialog(null,"Check your internet connection and try again...","Error",JOptionPane.ERROR_MESSAGE);
+        dispose();//To close the current window 
+       
+        }finally{
+            try { 
+            sock.close(); 
+        }catch (IOException e) { 
+            }
+        }            
+        }
+        if (reply == JOptionPane.NO_OPTION) {  
+            Desktop d = Desktop.getDesktop();
+        try {
+            d.browse(new URI("https://download.dirtyunicorns.com/?device=cheeseburger"));
+        } catch (IOException | URISyntaxException e2) {
+            if (runnable != null) runnable.run();
+            DebugConsole.setText("ERROR: " +e2);    
+        }   
+        }
+    }//GEN-LAST:event_duActionPerformed
+
+    private void carbonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_carbonActionPerformed
+        final Runnable runnable = (Runnable) Toolkit.getDefaultToolkit().getDesktopProperty("win.sound.exclamation");
+        if (runnable != null) runnable.run();
+        int reply = JOptionPane.showOptionDialog(null,
+                "If you want to download the ROM with the Tool, be careful since the last registered version of this ROM in the Tool is: CARBON-CR-7.0-OPAL-WEEKLY-cheeseburger-20190911-0306 \n\n If there is a new version of the ROM it is recommended that you download it from the internet", 
+                "Be careful, read before choosing the option!", 
+                JOptionPane.YES_NO_OPTION,
+                JOptionPane.INFORMATION_MESSAGE, 
+                null,
+                new String[]{"I want to download the ROM with the Tool","I want to download the ROM from the internet"},
+                null);
+        if (reply == JOptionPane.YES_OPTION) {
+            File pixel = new File("C:\\OPTool\\rom\\carbon"); 
+        if (!pixel.exists() == true){
+// Create a directory; all non-existent ancestor directories are
+// automatically created
+ try{
+  String strDirectoy ="C:\\OPTool";
+  String strManyDirectories="C:\\OPTool\\rom\\carbon";
+
+  // Create one directory
+  boolean success = (
+  new File(strDirectoy)).mkdir();
+  if (success) {
+  DebugConsole.setText("Directory: " + strManyDirectories + " created...");    
+  DebugConsole.setText("Welcome to OnePlus 5 Tool");
+  }  
+  // Create multiple directories
+  success = (new File(strManyDirectories)).mkdirs();
+  if (success) {
+  DebugConsole.setText("Directories: " + strManyDirectories + " created...");  
+  DebugConsole.setText("Welcome to OnePlus 5 Tool");
+  }
+
+  }catch (IllegalArgumentException e){//Catch exception if any
+  DebugConsole.setText("Error: " + e.getMessage());     
+  }
+}
+        Socket sock= new Socket();
+        InetSocketAddress addr=new InetSocketAddress("www.google.com",80);
+        try {
+        sock.connect(addr,3000);       
+        
+        File f = new File("C:\\OPTool\\rom\\carbon\\CARBON-CR-7.0-OPAL-WEEKLY-cheeseburger-20190911-0306.zip"); 
+        
+        if(!f.exists()){
+        final JProgressBar jProgressBar = new JProgressBar();
+        jProgressBar.setMaximum(100000);
+        jProgressBar.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        jProgressBar.setBorderPainted(false);
+        jProgressBar.setCursor(new java.awt.Cursor(java.awt.Cursor.WAIT_CURSOR));
+        jProgressBar.setDebugGraphicsOptions(javax.swing.DebugGraphics.NONE_OPTION);
+        jProgressBar.setStringPainted(true);
+        jProgressBar.setString("Starting...");
+        JFrame frame = new JFrame("Downloading CARBON-CR-7.0-OPAL-WEEKLY-cheeseburger-20190911-0306....");
+        frame.setContentPane(jProgressBar);
+        frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+        frame.setSize(600, 100);
+        frame.setIconImage(new ImageIcon(getClass().getResource("Icon.png")).getImage());
+        frame.setVisible(true);
+        frame.setResizable(false);
+        frame.setLocationRelativeTo(null); 
+        Runnable updatethread;
+            updatethread = () -> {
+            try {
+                URL url = new URL("https://mirrorbits.carbonrom.org/cheeseburger/CARBON-CR-7.0-OPAL-WEEKLY-cheeseburger-20190911-0306.zip");
+                HttpURLConnection httpConnection = (HttpURLConnection) (url.openConnection());
+                long completeFileSize = httpConnection.getContentLength();
+                try (final java.io.BufferedInputStream in = new java.io.BufferedInputStream(httpConnection.getInputStream())) {
+                    java.io.FileOutputStream fos = new java.io.FileOutputStream("C:\\OPTool\\rom\\carbon\\CARBON-CR-7.0-OPAL-WEEKLY-cheeseburger-20190911-0306.zip");
+                    try (final java.io.BufferedOutputStream bout = new BufferedOutputStream(fos, 1024)) {
+                        byte[] data = new byte[1024];
+                        long downloadedFileSize = 0;
+                        int x1 = 0;
+                        while ((x1 = in.read(data, 0, 1024)) >= 0) {
+                            downloadedFileSize += x1;
+                            // calculate progress
+                            final int currentProgress = (int) ((((double)downloadedFileSize) / ((double)completeFileSize)) * 100000d);
+                            // update progress bar
+                            jProgressBar.setString("Calculando tamaño del archivo...");
+                            SwingUtilities.invokeLater(() -> {
+                                DebugConsole.setText("Downloading CARBON-CR-7.0-OPAL-WEEKLY-cheeseburger-20190911-0306..." +currentProgress+ " Bytes");
+                                jProgressBar.setString("Downloading CARBON-CR-7.0-OPAL-WEEKLY-cheeseburger-20190911-0306: \n" +currentProgress+ " Bytes");
+                                jProgressBar.setValue(currentProgress);
+                            });
+                            bout.write(data, 0, x1);
+                        }
+                    }
+                    DebugConsole.setText("Bienvenido a OnePlus 5 Tool");
+                    frame.setVisible(false);
+                    Desktop desktop = Desktop.getDesktop();
+                    File dirToOpen = null;
+        try {
+            dirToOpen = new File("C:\\OPTool\\rom\\carbon");
+            desktop.open(dirToOpen);
+        } catch (IllegalArgumentException iae) {
+            if (runnable != null) runnable.run();
+            JOptionPane.showMessageDialog(null,"Folder " +dirToOpen+ "Not found","Error",JOptionPane.ERROR_MESSAGE);
+        } catch (IOException ex) {
+            if (runnable != null) runnable.run();
+            Logger.getLogger(OPVisual.class.getName()).log(Level.SEVERE, null, ex);
+        }
+                }
+            }catch (FileNotFoundException e) {
+            if (runnable != null) runnable.run();
+            jProgressBar.setString("Downloading CARBON-CR-7.0-OPAL-WEEKLY-cheeseburger-20190911-0306: ERROR");
+            DebugConsole.setText("ERROR: " +e);
+            frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+            }catch (IOException ex) {
+                if (runnable != null) runnable.run();
+                Logger.getLogger(OPVisual.class.getName()).log(Level.SEVERE, null, ex);
+                jProgressBar.setString("Downloading CARBON-CR-7.0-OPAL-WEEKLY-cheeseburger-20190911-0306: ERROR");
+                DebugConsole.setText("ERROR: " +ex);
+                frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+            }
+        };
+        new Thread(updatethread).start();
+    
+ }
+           
+        }catch (IOException e) {
+        if (runnable != null) runnable.run();
+        DebugConsole.setText("Error could not connect to server.");            
+        JOptionPane.showMessageDialog(null,"Check your internet connection and try again...","Error",JOptionPane.ERROR_MESSAGE);
+        dispose();//To close the current window 
+       
+        }finally{
+            try { 
+            sock.close(); 
+        }catch (IOException e) { 
+            }
+        }            
+        }
+        if (reply == JOptionPane.NO_OPTION) {  
+            Desktop d = Desktop.getDesktop();
+        try {
+            d.browse(new URI("https://forum.xda-developers.com/oneplus-5/development/rom-carbonrom-cr-7-0-t3935702"));
+        } catch (IOException | URISyntaxException e2) {
+            if (runnable != null) runnable.run();
+            DebugConsole.setText("ERROR: " +e2);    
+        }   
+        }
+    }//GEN-LAST:event_carbonActionPerformed
+
+    private void arrowosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_arrowosActionPerformed
+            final Runnable runnable = (Runnable) Toolkit.getDefaultToolkit().getDesktopProperty("win.sound.exclamation");
+        if (runnable != null) runnable.run();
+        int reply = JOptionPane.showOptionDialog(null,
+                "If you want to download the ROM with the Tool, be careful since the last registered version of this ROM in the Tool is: Arrow-v9.0-cheeseburger-OFFICIAL-20190830 \n\n If there is a new version of the ROM it is recommended that you download it from the internet", 
+                "Be careful, read before choosing the option!", 
+                JOptionPane.YES_NO_OPTION,
+                JOptionPane.INFORMATION_MESSAGE, 
+                null,
+                new String[]{"I want to download the ROM with the Tool","I want to download the ROM from the internet"},
+                null);
+        if (reply == JOptionPane.YES_OPTION) {
+            File pixel = new File("C:\\OPTool\\rom\\arrow"); 
+        if (!pixel.exists() == true){
+// Create a directory; all non-existent ancestor directories are
+// automatically created
+ try{
+  String strDirectoy ="C:\\OPTool";
+  String strManyDirectories="C:\\OPTool\\rom\\arrow";
+
+  // Create one directory
+  boolean success = (
+  new File(strDirectoy)).mkdir();
+  if (success) {
+  DebugConsole.setText("Directory: " + strManyDirectories + " created...");    
+  DebugConsole.setText("Welcome to OnePlus 5 Tool");
+  }  
+  // Create multiple directories
+  success = (new File(strManyDirectories)).mkdirs();
+  if (success) {
+  DebugConsole.setText("Directories: " + strManyDirectories + " created...");  
+  DebugConsole.setText("Welcome to OnePlus 5 Tool");
+  }
+
+  }catch (IllegalArgumentException e){//Catch exception if any
+  DebugConsole.setText("Error: " + e.getMessage());     
+  }
+}
+        Socket sock= new Socket();
+        InetSocketAddress addr=new InetSocketAddress("www.google.com",80);
+        try {
+        sock.connect(addr,3000);       
+        
+        File f = new File("C:\\OPTool\\rom\\arrow\\Arrow-v9.0-cheeseburger-OFFICIAL-20190830.zip"); 
+        
+        if(!f.exists()){
+        final JProgressBar jProgressBar = new JProgressBar();
+        jProgressBar.setMaximum(100000);
+        jProgressBar.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        jProgressBar.setBorderPainted(false);
+        jProgressBar.setCursor(new java.awt.Cursor(java.awt.Cursor.WAIT_CURSOR));
+        jProgressBar.setDebugGraphicsOptions(javax.swing.DebugGraphics.NONE_OPTION);
+        jProgressBar.setStringPainted(true);
+        jProgressBar.setString("Starting...");
+        JFrame frame = new JFrame("Downloading Arrow-v9.0-cheeseburger-OFFICIAL-20190830...");
+        frame.setContentPane(jProgressBar);
+        frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+        frame.setSize(600, 100);
+        frame.setIconImage(new ImageIcon(getClass().getResource("Icon.png")).getImage());
+        frame.setVisible(true);
+        frame.setResizable(false);
+        frame.setLocationRelativeTo(null); 
+        Runnable updatethread;
+            updatethread = () -> {
+            try {
+                URL url = new URL("https://ufpr.dl.sourceforge.net/project/arrow-os/arrow-9.x/cheeseburger/Arrow-v9.0-cheeseburger-OFFICIAL-20190830.zip");
+                HttpURLConnection httpConnection = (HttpURLConnection) (url.openConnection());
+                long completeFileSize = httpConnection.getContentLength();
+                try (final java.io.BufferedInputStream in = new java.io.BufferedInputStream(httpConnection.getInputStream())) {
+                    java.io.FileOutputStream fos = new java.io.FileOutputStream("C:\\OPTool\\rom\\arrow\\Arrow-v9.0-cheeseburger-OFFICIAL-20190830.zip");
+                    try (final java.io.BufferedOutputStream bout = new BufferedOutputStream(fos, 1024)) {
+                        byte[] data = new byte[1024];
+                        long downloadedFileSize = 0;
+                        int x1 = 0;
+                        while ((x1 = in.read(data, 0, 1024)) >= 0) {
+                            downloadedFileSize += x1;
+                            // calculate progress
+                            final int currentProgress = (int) ((((double)downloadedFileSize) / ((double)completeFileSize)) * 100000d);
+                            // update progress bar
+                            jProgressBar.setString("Calculando tamaño del archivo...");
+                            SwingUtilities.invokeLater(() -> {
+                                DebugConsole.setText("Downloading Arrow-v9.0-cheeseburger-OFFICIAL-20190830..." +currentProgress+ " Bytes");
+                                jProgressBar.setString("Downloading Arrow-v9.0-cheeseburger-OFFICIAL-20190830: \n" +currentProgress+ " Bytes");
+                                jProgressBar.setValue(currentProgress);
+                            });
+                            bout.write(data, 0, x1);
+                        }
+                    }
+                    DebugConsole.setText("Bienvenido a OnePlus 5 Tool");
+                    frame.setVisible(false);
+                    Desktop desktop = Desktop.getDesktop();
+                    File dirToOpen = null;
+        try {
+            dirToOpen = new File("C:\\OPTool\\rom\\arrow");
+            desktop.open(dirToOpen);
+        } catch (IllegalArgumentException iae) {
+            if (runnable != null) runnable.run();
+            JOptionPane.showMessageDialog(null,"Folder " +dirToOpen+ "Not found","Error",JOptionPane.ERROR_MESSAGE);
+        } catch (IOException ex) {
+            if (runnable != null) runnable.run();
+            Logger.getLogger(OPVisual.class.getName()).log(Level.SEVERE, null, ex);
+        }
+                }
+            }catch (FileNotFoundException e) {
+            if (runnable != null) runnable.run();
+            jProgressBar.setString("Downloading Arrow-v9.0-cheeseburger-OFFICIAL-20190830: ERROR");
+            DebugConsole.setText("ERROR: " +e);
+            frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+            }catch (IOException ex) {
+                if (runnable != null) runnable.run();
+                Logger.getLogger(OPVisual.class.getName()).log(Level.SEVERE, null, ex);
+                jProgressBar.setString("Downloading Arrow-v9.0-cheeseburger-OFFICIAL-20190830: ERROR");
+                DebugConsole.setText("ERROR: " +ex);
+                frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+            }
+        };
+        new Thread(updatethread).start();
+    
+ }
+        }catch (IOException e) {
+        if (runnable != null) runnable.run();
+        DebugConsole.setText("Error could not connect to server.");            
+        JOptionPane.showMessageDialog(null,"Check your internet connection and try again...","Error",JOptionPane.ERROR_MESSAGE);
+        dispose();//To close the current window 
+       
+        }finally{
+            try { 
+            sock.close(); 
+        }catch (IOException e) { 
+            }
+        }            
+        }
+        if (reply == JOptionPane.NO_OPTION) {  
+            Desktop d = Desktop.getDesktop();
+        try {
+            d.browse(new URI("https://forum.xda-developers.com/oneplus-5/development/rom-t3857169"));
+        } catch (IOException | URISyntaxException e2) {
+            if (runnable != null) runnable.run();
+            DebugConsole.setText("ERROR: " +e2);    
+        }   
+        }
+    }//GEN-LAST:event_arrowosActionPerformed
+
+    private void crdroidActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_crdroidActionPerformed
+       final Runnable runnable = (Runnable) Toolkit.getDefaultToolkit().getDesktopProperty("win.sound.exclamation");
+        if (runnable != null) runnable.run();
+        int reply = JOptionPane.showOptionDialog(null,
+                "If you want to download the ROM with the Tool, be careful since the last registered version of this ROM in the Tool is: crDroidAndroid-9.0-20190903-cheeseburger-v5.7 \n\n If there is a new version of the ROM it is recommended that you download it from the internet", 
+                "Be careful, read before choosing the option!", 
+                JOptionPane.YES_NO_OPTION,
+                JOptionPane.INFORMATION_MESSAGE, 
+                null,
+                new String[]{"I want to download the ROM with the Tool","I want to download the ROM from the internet"},
+                null);
+        if (reply == JOptionPane.YES_OPTION) {
+            File pixel = new File("C:\\OPTool\\rom\\crdroid"); 
+        if (!pixel.exists() == true){
+// Create a directory; all non-existent ancestor directories are
+// automatically created
+ try{
+  String strDirectoy ="C:\\OPTool";
+  String strManyDirectories="C:\\OPTool\\rom\\crdroid";
+
+  // Create one directory
+  boolean success = (
+  new File(strDirectoy)).mkdir();
+  if (success) {
+  DebugConsole.setText("Directory: " + strManyDirectories + " created...");    
+  DebugConsole.setText("Welcome to OnePlus 5 Tool");
+  }  
+  // Create multiple directories
+  success = (new File(strManyDirectories)).mkdirs();
+  if (success) {
+  DebugConsole.setText("Directories: " + strManyDirectories + " created...");  
+  DebugConsole.setText("Welcome to OnePlus 5 Tool");
+  }
+
+  }catch (IllegalArgumentException e){//Catch exception if any
+  DebugConsole.setText("Error: " + e.getMessage());     
+  }
+}
+        Socket sock= new Socket();
+        InetSocketAddress addr=new InetSocketAddress("www.google.com",80);
+        try {
+        sock.connect(addr,3000);       
+        
+        File f = new File("C:\\OPTool\\rom\\crdroid\\crDroidAndroid-9.0-20190903-cheeseburger-v5.7.zip"); 
+        
+        if(!f.exists()){
+        final JProgressBar jProgressBar = new JProgressBar();
+        jProgressBar.setMaximum(100000);
+        jProgressBar.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        jProgressBar.setBorderPainted(false);
+        jProgressBar.setCursor(new java.awt.Cursor(java.awt.Cursor.WAIT_CURSOR));
+        jProgressBar.setDebugGraphicsOptions(javax.swing.DebugGraphics.NONE_OPTION);
+        jProgressBar.setStringPainted(true);
+        jProgressBar.setString("Starting...");
+        JFrame frame = new JFrame("Downloading crDroidAndroid-9.0-20190903-cheeseburger-v5.7...");
+        frame.setContentPane(jProgressBar);
+        frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+        frame.setSize(600, 100);
+        frame.setIconImage(new ImageIcon(getClass().getResource("Icon.png")).getImage());
+        frame.setVisible(true);
+        frame.setResizable(false);
+        frame.setLocationRelativeTo(null); 
+        Runnable updatethread;
+            updatethread = () -> {
+            try {
+                URL url = new URL("https://ufpr.dl.sourceforge.net/project/crdroid/cheeseburger/crdroid-p/crDroidAndroid-9.0-20190903-cheeseburger-v5.7.zip");
+                HttpURLConnection httpConnection = (HttpURLConnection) (url.openConnection());
+                long completeFileSize = httpConnection.getContentLength();
+                try (final java.io.BufferedInputStream in = new java.io.BufferedInputStream(httpConnection.getInputStream())) {
+                    java.io.FileOutputStream fos = new java.io.FileOutputStream("C:\\OPTool\\rom\\crdroid\\crDroidAndroid-9.0-20190903-cheeseburger-v5.7.zip");
+                    try (final java.io.BufferedOutputStream bout = new BufferedOutputStream(fos, 1024)) {
+                        byte[] data = new byte[1024];
+                        long downloadedFileSize = 0;
+                        int x1 = 0;
+                        while ((x1 = in.read(data, 0, 1024)) >= 0) {
+                            downloadedFileSize += x1;
+                            // calculate progress
+                            final int currentProgress = (int) ((((double)downloadedFileSize) / ((double)completeFileSize)) * 100000d);
+                            // update progress bar
+                            jProgressBar.setString("Calculando tamaño del archivo...");
+                            SwingUtilities.invokeLater(() -> {
+                                DebugConsole.setText("Downloading crDroidAndroid-9.0-20190903-cheeseburger-v5.7..." +currentProgress+ " Bytes");
+                                jProgressBar.setString("Downloading crDroidAndroid-9.0-20190903-cheeseburger-v5.7: \n" +currentProgress+ " Bytes");
+                                jProgressBar.setValue(currentProgress);
+                            });
+                            bout.write(data, 0, x1);
+                        }
+                    }
+                    DebugConsole.setText("Bienvenido a OnePlus 5 Tool");
+                    frame.setVisible(false);
+                    Desktop desktop = Desktop.getDesktop();
+                    File dirToOpen = null;
+        try {
+            dirToOpen = new File("C:\\OPTool\\rom\\crdroid");
+            desktop.open(dirToOpen);
+        } catch (IllegalArgumentException iae) {
+            if (runnable != null) runnable.run();
+            JOptionPane.showMessageDialog(null,"Folder " +dirToOpen+ "Not found","Error",JOptionPane.ERROR_MESSAGE);
+        } catch (IOException ex) {
+            if (runnable != null) runnable.run();
+            Logger.getLogger(OPVisual.class.getName()).log(Level.SEVERE, null, ex);
+        }
+                }
+            }catch (FileNotFoundException e) {
+            if (runnable != null) runnable.run();
+            jProgressBar.setString("Downloading crDroidAndroid-9.0-20190903-cheeseburger-v5.7: ERROR");
+            DebugConsole.setText("ERROR: " +e);
+            frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+            }catch (IOException ex) {
+                if (runnable != null) runnable.run();
+                Logger.getLogger(OPVisual.class.getName()).log(Level.SEVERE, null, ex);
+                jProgressBar.setString("Downloading crDroidAndroid-9.0-20190903-cheeseburger-v5.7: ERROR");
+                DebugConsole.setText("ERROR: " +ex);
+                frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+            }
+        };
+        new Thread(updatethread).start();
+    
+ }
+        }catch (IOException e) {
+        if (runnable != null) runnable.run();
+        DebugConsole.setText("Error could not connect to server.");            
+        JOptionPane.showMessageDialog(null,"Check your internet connection and try again...","Error",JOptionPane.ERROR_MESSAGE);
+        dispose();//To close the current window 
+       
+        }finally{
+            try { 
+            sock.close(); 
+        }catch (IOException e) { 
+            }
+        }            
+        }
+        if (reply == JOptionPane.NO_OPTION) {  
+            Desktop d = Desktop.getDesktop();
+        try {
+           d.browse(new URI("https://forum.xda-developers.com/oneplus-5/development/rom-crdroid-android-5-0-t3836886"));
+        } catch (IOException | URISyntaxException e2) {
+            if (runnable != null) runnable.run();
+            DebugConsole.setText("ERROR: " +e2);    
+        }   
+        }
+        Desktop d = Desktop.getDesktop();
 try {
-    d.browse(new URI("https://forum.xda-developers.com/oneplus-5/development/official-omnirom-9-0-t3879663"));
+    d.browse(new URI("https://forum.xda-developers.com/oneplus-5/development/rom-crdroid-android-5-0-t3836886"));
 } catch (IOException | URISyntaxException e2) {
 }
+    }//GEN-LAST:event_crdroidActionPerformed
+
+    private void blissActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_blissActionPerformed
+        final Runnable runnable = (Runnable) Toolkit.getDefaultToolkit().getDesktopProperty("win.sound.exclamation");
+        if (runnable != null) runnable.run();
+        int reply = JOptionPane.showOptionDialog(null,
+                "If you want to download the ROM with the Tool, be careful since the last registered version of this ROM in the Tool is: Bliss-v11.9-cheeseburger-OFFICIAL-20190828 \n\n If there is a new version of the ROM it is recommended that you download it from the internet", 
+                "Be careful, read before choosing the option!", 
+                JOptionPane.YES_NO_OPTION,
+                JOptionPane.INFORMATION_MESSAGE, 
+                null,
+                new String[]{"I want to download the ROM with the Tool","I want to download the ROM from the internet"},
+                null);
+        if (reply == JOptionPane.YES_OPTION) {
+            File pixel = new File("C:\\OPTool\\rom\\bliss"); 
+        if (!pixel.exists() == true){
+// Create a directory; all non-existent ancestor directories are
+// automatically created
+ try{
+  String strDirectoy ="C:\\OPTool";
+  String strManyDirectories="C:\\OPTool\\rom\\bliss";
+
+  // Create one directory
+  boolean success = (
+  new File(strDirectoy)).mkdir();
+  if (success) {
+  DebugConsole.setText("Directory: " + strManyDirectories + " created...");    
+  DebugConsole.setText("Welcome to OnePlus 5 Tool");
+  }  
+  // Create multiple directories
+  success = (new File(strManyDirectories)).mkdirs();
+  if (success) {
+  DebugConsole.setText("Directories: " + strManyDirectories + " created...");  
+  DebugConsole.setText("Welcome to OnePlus 5 Tool");
+  }
+
+  }catch (IllegalArgumentException e){//Catch exception if any
+  DebugConsole.setText("Error: " + e.getMessage());     
+  }
+}
+        Socket sock= new Socket();
+        InetSocketAddress addr=new InetSocketAddress("www.google.com",80);
+        try {
+        sock.connect(addr,3000);       
+        
+        File f = new File("C:\\OPTool\\rom\\bliss\\Bliss-v11.9-cheeseburger-OFFICIAL-20190828.zip"); 
+        
+        if(!f.exists()){
+        final JProgressBar jProgressBar = new JProgressBar();
+        jProgressBar.setMaximum(100000);
+        jProgressBar.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        jProgressBar.setBorderPainted(false);
+        jProgressBar.setCursor(new java.awt.Cursor(java.awt.Cursor.WAIT_CURSOR));
+        jProgressBar.setDebugGraphicsOptions(javax.swing.DebugGraphics.NONE_OPTION);
+        jProgressBar.setStringPainted(true);
+        jProgressBar.setString("Starting...");
+        JFrame frame = new JFrame("Downloading Bliss-v11.9-cheeseburger-OFFICIAL-20190828...");
+        frame.setContentPane(jProgressBar);
+        frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+        frame.setSize(600, 100);
+        frame.setIconImage(new ImageIcon(getClass().getResource("Icon.png")).getImage());
+        frame.setVisible(true);
+        frame.setResizable(false);
+        frame.setLocationRelativeTo(null); 
+        Runnable updatethread;
+            updatethread = () -> {
+            try {
+                URL url = new URL("https://downloads.blissroms.com/BlissRoms/Pie/cheeseburger/Bliss-v11.9-cheeseburger-OFFICIAL-20190828.zip");
+                HttpURLConnection httpConnection = (HttpURLConnection) (url.openConnection());
+                long completeFileSize = httpConnection.getContentLength();
+                try (final java.io.BufferedInputStream in = new java.io.BufferedInputStream(httpConnection.getInputStream())) {
+                    java.io.FileOutputStream fos = new java.io.FileOutputStream("C:\\OPTool\\rom\\bliss\\Bliss-v11.9-cheeseburger-OFFICIAL-20190828.zip");
+                    try (final java.io.BufferedOutputStream bout = new BufferedOutputStream(fos, 1024)) {
+                        byte[] data = new byte[1024];
+                        long downloadedFileSize = 0;
+                        int x1 = 0;
+                        while ((x1 = in.read(data, 0, 1024)) >= 0) {
+                            downloadedFileSize += x1;
+                            // calculate progress
+                            final int currentProgress = (int) ((((double)downloadedFileSize) / ((double)completeFileSize)) * 100000d);
+                            // update progress bar
+                            jProgressBar.setString("Calculando tamaño del archivo...");
+                            SwingUtilities.invokeLater(() -> {
+                                DebugConsole.setText("Downloading Bliss-v11.9-cheeseburger-OFFICIAL-20190828..." +currentProgress+ " Bytes");
+                                jProgressBar.setString("Downloading Bliss-v11.9-cheeseburger-OFFICIAL-20190828: \n" +currentProgress+ " Bytes");
+                                jProgressBar.setValue(currentProgress);
+                            });
+                            bout.write(data, 0, x1);
+                        }
+                    }
+                    DebugConsole.setText("Bienvenido a OnePlus 5 Tool");
+                    frame.setVisible(false);
+                    Desktop desktop = Desktop.getDesktop();
+                    File dirToOpen = null;
+        try {
+            dirToOpen = new File("C:\\OPTool\\rom\\bliss");
+            desktop.open(dirToOpen);
+        } catch (IllegalArgumentException iae) {
+            if (runnable != null) runnable.run();
+            JOptionPane.showMessageDialog(null,"Folder " +dirToOpen+ "Not found","Error",JOptionPane.ERROR_MESSAGE);
+        } catch (IOException ex) {
+            if (runnable != null) runnable.run();
+            Logger.getLogger(OPVisual.class.getName()).log(Level.SEVERE, null, ex);
+        }
+                }
+            }catch (FileNotFoundException e) {
+            if (runnable != null) runnable.run();
+            jProgressBar.setString("Downloading Bliss-v11.9-cheeseburger-OFFICIAL-20190828: ERROR");
+            DebugConsole.setText("ERROR: " +e);
+            frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+            }catch (IOException ex) {
+                if (runnable != null) runnable.run();
+                Logger.getLogger(OPVisual.class.getName()).log(Level.SEVERE, null, ex);
+                jProgressBar.setString("Downloading Bliss-v11.9-cheeseburger-OFFICIAL-20190828: ERROR");
+                DebugConsole.setText("ERROR: " +ex);
+                frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+            }
+        };
+        new Thread(updatethread).start();
+    
+ }
+        }catch (IOException e) {
+        if (runnable != null) runnable.run();
+        DebugConsole.setText("Error could not connect to server.");            
+        JOptionPane.showMessageDialog(null,"Check your internet connection and try again...","Error",JOptionPane.ERROR_MESSAGE);
+        dispose();//To close the current window 
+       
+        }finally{
+            try { 
+            sock.close(); 
+        }catch (IOException e) { 
+            }
+        }            
+        }
+        if (reply == JOptionPane.NO_OPTION) {  
+            Desktop d = Desktop.getDesktop();
+        try {
+            d.browse(new URI("https://forum.xda-developers.com/oneplus-5/development/rom-blissroms-9-0-t3875988"));
+        } catch (IOException | URISyntaxException e2) {
+            if (runnable != null) runnable.run();
+            DebugConsole.setText("ERROR: " +e2);    
+        }   
+        }
+    }//GEN-LAST:event_blissActionPerformed
+
+    private void validusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_validusActionPerformed
+        final Runnable runnable = (Runnable) Toolkit.getDefaultToolkit().getDesktopProperty("win.sound.exclamation");
+        if (runnable != null) runnable.run();
+        int reply = JOptionPane.showOptionDialog(null,
+                "If you want to download the ROM with the Tool, be careful since the last registered version of this ROM in the Tool is: Gzosp-cheeseburger-9.Stable.2.1-Official-20190819-1157 \n\n If there is a new version of the ROM it is recommended that you download it from the internet", 
+                "Be careful, read before choosing the option!", 
+                JOptionPane.YES_NO_OPTION,
+                JOptionPane.INFORMATION_MESSAGE, 
+                null,
+                new String[]{"I want to download the ROM with the Tool","I want to download the ROM from the internet"},
+                null);
+        if (reply == JOptionPane.YES_OPTION) {
+            File pixel = new File("C:\\OPTool\\rom\\validus"); 
+        if (!pixel.exists() == true){
+// Create a directory; all non-existent ancestor directories are
+// automatically created
+ try{
+  String strDirectoy ="C:\\OPTool";
+  String strManyDirectories="C:\\OPTool\\rom\\validus";
+
+  // Create one directory
+  boolean success = (
+  new File(strDirectoy)).mkdir();
+  if (success) {
+  DebugConsole.setText("Directory: " + strManyDirectories + " created...");    
+  DebugConsole.setText("Welcome to OnePlus 5 Tool");
+  }  
+  // Create multiple directories
+  success = (new File(strManyDirectories)).mkdirs();
+  if (success) {
+  DebugConsole.setText("Directories: " + strManyDirectories + " created...");  
+  DebugConsole.setText("Welcome to OnePlus 5 Tool");
+  }
+
+  }catch (IllegalArgumentException e){//Catch exception if any
+  DebugConsole.setText("Error: " + e.getMessage());     
+  }
+}
+        Socket sock= new Socket();
+        InetSocketAddress addr=new InetSocketAddress("www.google.com",80);
+        try {
+        sock.connect(addr,3000);       
+        
+        File f = new File("C:\\OPTool\\rom\\validus\\Gzosp-cheeseburger-9.Stable.2.1-Official-20190819-1157.zip"); 
+        
+        if(!f.exists()){
+        final JProgressBar jProgressBar = new JProgressBar();
+        jProgressBar.setMaximum(100000);
+        jProgressBar.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        jProgressBar.setBorderPainted(false);
+        jProgressBar.setCursor(new java.awt.Cursor(java.awt.Cursor.WAIT_CURSOR));
+        jProgressBar.setDebugGraphicsOptions(javax.swing.DebugGraphics.NONE_OPTION);
+        jProgressBar.setStringPainted(true);
+        jProgressBar.setString("Starting...");
+        JFrame frame = new JFrame("Downloading Gzosp-cheeseburger-9.Stable.2.1-Official-20190819-1157...");
+        frame.setContentPane(jProgressBar);
+        frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+        frame.setSize(600, 100);
+        frame.setIconImage(new ImageIcon(getClass().getResource("Icon.png")).getImage());
+        frame.setVisible(true);
+        frame.setResizable(false);
+        frame.setLocationRelativeTo(null); 
+        Runnable updatethread;
+            updatethread = () -> {
+            try {
+                URL url = new URL("https://va2.androidfilehost.com/dl/pXpiACTBP20AE23ew5sFUA/1568535396/6006931924117939906/Gzosp-cheeseburger-9.Stable.2.1-Official-20190819-1157.zip?");
+                HttpURLConnection httpConnection = (HttpURLConnection) (url.openConnection());
+                long completeFileSize = httpConnection.getContentLength();
+                try (final java.io.BufferedInputStream in = new java.io.BufferedInputStream(httpConnection.getInputStream())) {
+                    java.io.FileOutputStream fos = new java.io.FileOutputStream("C:\\OPTool\\rom\\validus\\Gzosp-cheeseburger-9.Stable.2.1-Official-20190819-1157.zip");
+                    try (final java.io.BufferedOutputStream bout = new BufferedOutputStream(fos, 1024)) {
+                        byte[] data = new byte[1024];
+                        long downloadedFileSize = 0;
+                        int x1 = 0;
+                        while ((x1 = in.read(data, 0, 1024)) >= 0) {
+                            downloadedFileSize += x1;
+                            // calculate progress
+                            final int currentProgress = (int) ((((double)downloadedFileSize) / ((double)completeFileSize)) * 100000d);
+                            // update progress bar
+                            jProgressBar.setString("Calculando tamaño del archivo...");
+                            SwingUtilities.invokeLater(() -> {
+                                DebugConsole.setText("Downloading Gzosp-cheeseburger-9.Stable.2.1-Official-20190819-1157..." +currentProgress+ " Bytes");
+                                jProgressBar.setString("Downloading Gzosp-cheeseburger-9.Stable.2.1-Official-20190819-1157: \n" +currentProgress+ " Bytes");
+                                jProgressBar.setValue(currentProgress);
+                            });
+                            bout.write(data, 0, x1);
+                        }
+                    }
+                    DebugConsole.setText("Bienvenido a OnePlus 5 Tool");
+                    frame.setVisible(false);
+                    Desktop desktop = Desktop.getDesktop();
+                    File dirToOpen = null;
+        try {
+            dirToOpen = new File("C:\\OPTool\\rom\\validus");
+            desktop.open(dirToOpen);
+        } catch (IllegalArgumentException iae) {
+            if (runnable != null) runnable.run();
+            JOptionPane.showMessageDialog(null,"Folder " +dirToOpen+ "Not found","Error",JOptionPane.ERROR_MESSAGE);
+        } catch (IOException ex) {
+            if (runnable != null) runnable.run();
+            Logger.getLogger(OPVisual.class.getName()).log(Level.SEVERE, null, ex);
+        }
+                }
+            }catch (FileNotFoundException e) {
+            if (runnable != null) runnable.run();
+            jProgressBar.setString("Downloading Gzosp-cheeseburger-9.Stable.2.1-Official-20190819-1157: ERROR");
+            DebugConsole.setText("ERROR: " +e);
+            frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+            }catch (IOException ex) {
+                if (runnable != null) runnable.run();
+                Logger.getLogger(OPVisual.class.getName()).log(Level.SEVERE, null, ex);
+                jProgressBar.setString("Downloading Gzosp-cheeseburger-9.Stable.2.1-Official-20190819-1157: ERROR");
+                DebugConsole.setText("ERROR: " +ex);
+                frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+            }
+        };
+        new Thread(updatethread).start();
+    
+ }
+        }catch (IOException e) {
+        if (runnable != null) runnable.run();
+        DebugConsole.setText("Error could not connect to server.");            
+        JOptionPane.showMessageDialog(null,"Check your internet connection and try again...","Error",JOptionPane.ERROR_MESSAGE);
+        dispose();//To close the current window 
+       
+        }finally{
+            try { 
+            sock.close(); 
+        }catch (IOException e) { 
+            }
+        }            
+        }
+        if (reply == JOptionPane.NO_OPTION) {  
+            Desktop d = Desktop.getDesktop();
+        try {
+             d.browse(new URI("https://forum.xda-developers.com/oneplus-5/development/op5-validus-t3633818"));
+        } catch (IOException | URISyntaxException e2) {
+            if (runnable != null) runnable.run();
+            DebugConsole.setText("ERROR: " +e2);    
+        }   
+        }
+    }//GEN-LAST:event_validusActionPerformed
+
+    private void aicpActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_aicpActionPerformed
+        final Runnable runnable = (Runnable) Toolkit.getDefaultToolkit().getDesktopProperty("win.sound.exclamation");
+        if (runnable != null) runnable.run();
+        int reply = JOptionPane.showOptionDialog(null,
+                "If you want to download the ROM with the Tool, be careful since the last registered version of this ROM in the Tool is: aicp_cheeseburger_p-14.0-WEEKLY-20190902.zip \n\n If there is a new version of the ROM it is recommended that you download it from the internet", 
+                "Be careful, read before choosing the option!", 
+                JOptionPane.YES_NO_OPTION,
+                JOptionPane.INFORMATION_MESSAGE, 
+                null,
+                new String[]{"I want to download the ROM with the Tool","I want to download the ROM from the internet"},
+                null);
+        if (reply == JOptionPane.YES_OPTION) {
+            File pixel = new File("C:\\OPTool\\rom\\aicp"); 
+        if (!pixel.exists() == true){
+// Create a directory; all non-existent ancestor directories are
+// automatically created
+ try{
+  String strDirectoy ="C:\\OPTool";
+  String strManyDirectories="C:\\OPTool\\rom\\aicp";
+
+  // Create one directory
+  boolean success = (
+  new File(strDirectoy)).mkdir();
+  if (success) {
+  DebugConsole.setText("Directory: " + strManyDirectories + " created...");    
+  DebugConsole.setText("Welcome to OnePlus 5 Tool");
+  }  
+  // Create multiple directories
+  success = (new File(strManyDirectories)).mkdirs();
+  if (success) {
+  DebugConsole.setText("Directories: " + strManyDirectories + " created...");  
+  DebugConsole.setText("Welcome to OnePlus 5 Tool");
+  }
+
+  }catch (IllegalArgumentException e){//Catch exception if any
+  DebugConsole.setText("Error: " + e.getMessage());     
+  }
+}
+        Socket sock= new Socket();
+        InetSocketAddress addr=new InetSocketAddress("www.google.com",80);
+        try {
+        sock.connect(addr,3000);       
+        
+        File f = new File("C:\\OPTool\\rom\\aicp\\aicp_cheeseburger_p-14.0-WEEKLY-20190902.zip"); 
+        
+        if(!f.exists()){
+        final JProgressBar jProgressBar = new JProgressBar();
+        jProgressBar.setMaximum(100000);
+        jProgressBar.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        jProgressBar.setBorderPainted(false);
+        jProgressBar.setCursor(new java.awt.Cursor(java.awt.Cursor.WAIT_CURSOR));
+        jProgressBar.setDebugGraphicsOptions(javax.swing.DebugGraphics.NONE_OPTION);
+        jProgressBar.setStringPainted(true);
+        jProgressBar.setString("Starting...");
+        JFrame frame = new JFrame("Downloading aicp_cheeseburger_p-14.0-WEEKLY-20190902...");
+        frame.setContentPane(jProgressBar);
+        frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+        frame.setSize(600, 100);
+        frame.setIconImage(new ImageIcon(getClass().getResource("Icon.png")).getImage());
+        frame.setVisible(true);
+        frame.setResizable(false);
+        frame.setLocationRelativeTo(null); 
+        Runnable updatethread;
+            updatethread = () -> {
+            try {
+                URL url = new URL("https://dwnld.aicp-rom.com/device/cheeseburger/WEEKLY/aicp_cheeseburger_p-14.0-WEEKLY-20190902.zip");
+                HttpURLConnection httpConnection = (HttpURLConnection) (url.openConnection());
+                long completeFileSize = httpConnection.getContentLength();
+                try (final java.io.BufferedInputStream in = new java.io.BufferedInputStream(httpConnection.getInputStream())) {
+                    java.io.FileOutputStream fos = new java.io.FileOutputStream("C:\\OPTool\\rom\\aicp\\aicp_cheeseburger_p-14.0-WEEKLY-20190902.zip");
+                    try (final java.io.BufferedOutputStream bout = new BufferedOutputStream(fos, 1024)) {
+                        byte[] data = new byte[1024];
+                        long downloadedFileSize = 0;
+                        int x1 = 0;
+                        while ((x1 = in.read(data, 0, 1024)) >= 0) {
+                            downloadedFileSize += x1;
+                            // calculate progress
+                            final int currentProgress = (int) ((((double)downloadedFileSize) / ((double)completeFileSize)) * 100000d);
+                            // update progress bar
+                            jProgressBar.setString("Calculando tamaño del archivo...");
+                            SwingUtilities.invokeLater(() -> {
+                                DebugConsole.setText("Downloading aicp_cheeseburger_p-14.0-WEEKLY-20190902..." +currentProgress+ " Bytes");
+                                jProgressBar.setString("Downloading aicp_cheeseburger_p-14.0-WEEKLY-20190902: \n" +currentProgress+ " Bytes");
+                                jProgressBar.setValue(currentProgress);
+                            });
+                            bout.write(data, 0, x1);
+                        }
+                    }
+                    DebugConsole.setText("Bienvenido a OnePlus 5 Tool");
+                    frame.setVisible(false);
+                    Desktop desktop = Desktop.getDesktop();
+                    File dirToOpen = null;
+        try {
+            dirToOpen = new File("C:\\OPTool\\rom\\omni");
+            desktop.open(dirToOpen);
+        } catch (IllegalArgumentException iae) {
+            if (runnable != null) runnable.run();
+            JOptionPane.showMessageDialog(null,"Folder " +dirToOpen+ "Not found","Error",JOptionPane.ERROR_MESSAGE);
+        } catch (IOException ex) {
+            if (runnable != null) runnable.run();
+            Logger.getLogger(OPVisual.class.getName()).log(Level.SEVERE, null, ex);
+        }
+                }
+            }catch (FileNotFoundException e) {
+            if (runnable != null) runnable.run();
+            jProgressBar.setString("Downloading aicp_cheeseburger_p-14.0-WEEKLY-20190902: ERROR");
+            DebugConsole.setText("ERROR: " +e);
+            frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+            }catch (IOException ex) {
+                if (runnable != null) runnable.run();
+                Logger.getLogger(OPVisual.class.getName()).log(Level.SEVERE, null, ex);
+                jProgressBar.setString("Downloading aicp_cheeseburger_p-14.0-WEEKLY-20190902: ERROR");
+                DebugConsole.setText("ERROR: " +ex);
+                frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+            }
+        };
+        new Thread(updatethread).start();
+    
+ }
+        }catch (IOException e) {
+        if (runnable != null) runnable.run();
+        DebugConsole.setText("Error could not connect to server.");            
+        JOptionPane.showMessageDialog(null,"Check your internet connection and try again...","Error",JOptionPane.ERROR_MESSAGE);
+        dispose();//To close the current window 
+       
+        }finally{
+            try { 
+            sock.close(); 
+        }catch (IOException e) { 
+            }
+        }            
+        }
+        if (reply == JOptionPane.NO_OPTION) {  
+            Desktop d = Desktop.getDesktop();
+        try {
+            d.browse(new URI("https://forum.xda-developers.com/oneplus-5/development/8-1-official-aicp-13-1-t3733171"));
+        } catch (IOException | URISyntaxException e2) {
+            if (runnable != null) runnable.run();
+            DebugConsole.setText("ERROR: " +e2);    
+        }   
+        }
+    }//GEN-LAST:event_aicpActionPerformed
+
+    private void omniActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_omniActionPerformed
+        final Runnable runnable = (Runnable) Toolkit.getDefaultToolkit().getDesktopProperty("win.sound.exclamation");
+        if (runnable != null) runnable.run();
+        int reply = JOptionPane.showOptionDialog(null,
+                "If you want to download the ROM with the Tool, be careful since the last registered version of this ROM in the Tool is: omni-9-20190908-oneplus5-WEEKLY \n\n If there is a new version of the ROM it is recommended that you download it from the internet", 
+                "Be careful, read before choosing the option!", 
+                JOptionPane.YES_NO_OPTION,
+                JOptionPane.INFORMATION_MESSAGE, 
+                null,
+                new String[]{"I want to download the ROM with the Tool","I want to download the ROM from the internet"},
+                null);
+        if (reply == JOptionPane.YES_OPTION) {
+            File pixel = new File("C:\\OPTool\\rom\\omni"); 
+        if (!pixel.exists() == true){
+// Create a directory; all non-existent ancestor directories are
+// automatically created
+ try{
+  String strDirectoy ="C:\\OPTool";
+  String strManyDirectories="C:\\OPTool\\rom\\omni";
+
+  // Create one directory
+  boolean success = (
+  new File(strDirectoy)).mkdir();
+  if (success) {
+  DebugConsole.setText("Directory: " + strManyDirectories + " created...");    
+  DebugConsole.setText("Welcome to OnePlus 5 Tool");
+  }  
+  // Create multiple directories
+  success = (new File(strManyDirectories)).mkdirs();
+  if (success) {
+  DebugConsole.setText("Directories: " + strManyDirectories + " created...");  
+  DebugConsole.setText("Welcome to OnePlus 5 Tool");
+  }
+
+  }catch (IllegalArgumentException e){//Catch exception if any
+  DebugConsole.setText("Error: " + e.getMessage());     
+  }
+}
+        Socket sock= new Socket();
+        InetSocketAddress addr=new InetSocketAddress("www.google.com",80);
+        try {
+        sock.connect(addr,3000);       
+        
+        File f = new File("C:\\OPTool\\rom\\omni\\omni-9-20190908-oneplus5-WEEKLY.zip"); 
+        
+        if(!f.exists()){
+        final JProgressBar jProgressBar = new JProgressBar();
+        jProgressBar.setMaximum(100000);
+        jProgressBar.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        jProgressBar.setBorderPainted(false);
+        jProgressBar.setCursor(new java.awt.Cursor(java.awt.Cursor.WAIT_CURSOR));
+        jProgressBar.setDebugGraphicsOptions(javax.swing.DebugGraphics.NONE_OPTION);
+        jProgressBar.setStringPainted(true);
+        jProgressBar.setString("Starting...");
+        JFrame frame = new JFrame("Downloading omni-9-20190908-oneplus5-WEEKLY....");
+        frame.setContentPane(jProgressBar);
+        frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+        frame.setSize(600, 100);
+        frame.setIconImage(new ImageIcon(getClass().getResource("Icon.png")).getImage());
+        frame.setVisible(true);
+        frame.setResizable(false);
+        frame.setLocationRelativeTo(null); 
+        Runnable updatethread;
+            updatethread = () -> {
+            try {
+                URL url = new URL("http://dl.omnirom.org/oneplus5/omni-9-20190908-oneplus5-WEEKLY.zip");
+                HttpURLConnection httpConnection = (HttpURLConnection) (url.openConnection());
+                long completeFileSize = httpConnection.getContentLength();
+                try (final java.io.BufferedInputStream in = new java.io.BufferedInputStream(httpConnection.getInputStream())) {
+                    java.io.FileOutputStream fos = new java.io.FileOutputStream("C:\\OPTool\\rom\\omni\\omni-9-20190908-oneplus5-WEEKLY.zip");
+                    try (final java.io.BufferedOutputStream bout = new BufferedOutputStream(fos, 1024)) {
+                        byte[] data = new byte[1024];
+                        long downloadedFileSize = 0;
+                        int x1 = 0;
+                        while ((x1 = in.read(data, 0, 1024)) >= 0) {
+                            downloadedFileSize += x1;
+                            // calculate progress
+                            final int currentProgress = (int) ((((double)downloadedFileSize) / ((double)completeFileSize)) * 100000d);
+                            // update progress bar
+                            jProgressBar.setString("Calculando tamaño del archivo...");
+                            SwingUtilities.invokeLater(() -> {
+                                DebugConsole.setText("Downloading omni-9-20190908-oneplus5-WEEKLY..." +currentProgress+ " Bytes");
+                                jProgressBar.setString("Downloading omni-9-20190908-oneplus5-WEEKLY: \n" +currentProgress+ " Bytes");
+                                jProgressBar.setValue(currentProgress);
+                            });
+                            bout.write(data, 0, x1);
+                        }
+                    }
+                    DebugConsole.setText("Bienvenido a OnePlus 5 Tool");
+                    frame.setVisible(false);
+                    Desktop desktop = Desktop.getDesktop();
+                    File dirToOpen = null;
+        try {
+            dirToOpen = new File("C:\\OPTool\\rom\\omni");
+            desktop.open(dirToOpen);
+        } catch (IllegalArgumentException iae) {
+            if (runnable != null) runnable.run();
+            JOptionPane.showMessageDialog(null,"Folder " +dirToOpen+ "Not found","Error",JOptionPane.ERROR_MESSAGE);
+        } catch (IOException ex) {
+            if (runnable != null) runnable.run();
+            Logger.getLogger(OPVisual.class.getName()).log(Level.SEVERE, null, ex);
+        }
+                }
+            }catch (FileNotFoundException e) {
+            if (runnable != null) runnable.run();
+            jProgressBar.setString("Downloading omni-9-20190908-oneplus5-WEEKLY: ERROR");
+            DebugConsole.setText("ERROR: " +e);
+            frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+            }catch (IOException ex) {
+                if (runnable != null) runnable.run();
+                Logger.getLogger(OPVisual.class.getName()).log(Level.SEVERE, null, ex);
+                jProgressBar.setString("Downloading omni-9-20190908-oneplus5-WEEKLY: ERROR");
+                DebugConsole.setText("ERROR: " +ex);
+                frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+            }
+        };
+        new Thread(updatethread).start();
+    
+ }
+        }catch (IOException e) {
+        if (runnable != null) runnable.run();
+        DebugConsole.setText("Error could not connect to server.");            
+        JOptionPane.showMessageDialog(null,"Check your internet connection and try again...","Error",JOptionPane.ERROR_MESSAGE);
+        dispose();//To close the current window 
+       
+        }finally{
+            try { 
+            sock.close(); 
+        }catch (IOException e) { 
+            }
+        }            
+        }
+        if (reply == JOptionPane.NO_OPTION) {  
+            Desktop d = Desktop.getDesktop();
+        try {
+            d.browse(new URI("https://forum.xda-developers.com/oneplus-5/development/official-omnirom-9-0-t3879663"));
+        } catch (IOException | URISyntaxException e2) {
+            if (runnable != null) runnable.run();
+            DebugConsole.setText("ERROR: " +e2);    
+        }   
+        }
     }//GEN-LAST:event_omniActionPerformed
 
-    private void moreromsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_moreromsActionPerformed
+    private void MenuItemOpenROMActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MenuItemOpenROMActionPerformed
+        Desktop desktop = Desktop.getDesktop();
+        File dirToOpen = null;
+        try {
+            dirToOpen = new File("C:\\OPTool\\rom");
+            desktop.open(dirToOpen);
+        } catch (IllegalArgumentException iae) {
+            final Runnable runnable = (Runnable) Toolkit.getDefaultToolkit().getDesktopProperty("win.sound.exclamation");
+            if (runnable != null) runnable.run();
+            JOptionPane.showMessageDialog(null,"Carpeta " +dirToOpen+ "no encontrada","Error",JOptionPane.ERROR_MESSAGE);
+        } catch (IOException ex) {
+            final Runnable runnable = (Runnable) Toolkit.getDefaultToolkit().getDesktopProperty("win.sound.exclamation");
+            if (runnable != null) runnable.run();
+            Logger.getLogger(OPVisual.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }//GEN-LAST:event_MenuItemOpenROMActionPerformed
+
+    private void howtouseitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_howtouseitActionPerformed
+Desktop d = Desktop.getDesktop();
+try {
+    d.browse(new URI("https://github.com/Franco28/FlashTool-OP#how-it-works"));
+} catch (IOException | URISyntaxException e2) {
+} 
+    }//GEN-LAST:event_howtouseitActionPerformed
+
+    private void moreromsActionPerformed(java.awt.event.ActionEvent evt) {                                         
 Desktop d = Desktop.getDesktop();
 try {
     d.browse(new URI("https://forum.xda-developers.com/oneplus-5"));
 } catch (IOException | URISyntaxException e2) {
 }
-    }//GEN-LAST:event_moreromsActionPerformed
-
-    private void peActionPerformed(java.awt.event.ActionEvent evt) {                                   
-Desktop d = Desktop.getDesktop();
-try {
-    d.browse(new URI("https://forum.xda-developers.com/oneplus-5/development/rom-pixel-experience-t3959201"));
-} catch (IOException | URISyntaxException e2) {
-}
-    }       
-    
-     private void losActionPerformed(java.awt.event.ActionEvent evt) {                                    
-Desktop d = Desktop.getDesktop();
-try {
-    d.browse(new URI("https://forum.xda-developers.com/oneplus-5/development/rom-lineageos-16-0-pie-oneplus-5-t3843064"));
-} catch (IOException | URISyntaxException e2) {
-}
-    }                                   
-
-    private void duActionPerformed(java.awt.event.ActionEvent evt) {                                   
-Desktop d = Desktop.getDesktop();
-try {
-    d.browse(new URI("https://download.dirtyunicorns.com/?device=cheeseburger"));
-} catch (IOException | URISyntaxException e2) {
-}
-    }                                  
-
-    private void carbonActionPerformed(java.awt.event.ActionEvent evt) {                                       
-Desktop d = Desktop.getDesktop();
-try {
-    d.browse(new URI("https://forum.xda-developers.com/oneplus-5/development/rom-carbonrom-cr-7-0-t3935702"));
-} catch (IOException | URISyntaxException e2) {
-}
-    }                                      
-
-    private void arrowosActionPerformed(java.awt.event.ActionEvent evt) {                                        
-Desktop d = Desktop.getDesktop();
-try {
-    d.browse(new URI("https://forum.xda-developers.com/oneplus-5/development/rom-t3857169"));
-} catch (IOException | URISyntaxException e2) {
-}
-    }                                       
-
-    private void crdroidActionPerformed(java.awt.event.ActionEvent evt) {                                        
-Desktop d = Desktop.getDesktop();
-try {
-    d.browse(new URI("https://forum.xda-developers.com/oneplus-5/development/rom-crdroid-android-5-0-t3836886"));
-} catch (IOException | URISyntaxException e2) {
-}
-    }                                       
-
-    private void blissActionPerformed(java.awt.event.ActionEvent evt) {                                      
-Desktop d = Desktop.getDesktop();
-try {
-    d.browse(new URI("https://forum.xda-developers.com/oneplus-5/development/rom-blissroms-9-0-t3875988"));
-} catch (IOException | URISyntaxException e2) {
-}
-    }                                     
-
-    private void validusActionPerformed(java.awt.event.ActionEvent evt) {                                        
-Desktop d = Desktop.getDesktop();
-try {
-    d.browse(new URI("https://forum.xda-developers.com/oneplus-5/development/op5-validus-t3633818"));
-} catch (IOException | URISyntaxException e2) {
-}
-    }                                       
-
-    private void aicpActionPerformed(java.awt.event.ActionEvent evt) {                                     
-Desktop d = Desktop.getDesktop();
-try {
-    d.browse(new URI("https://forum.xda-developers.com/oneplus-5/development/8-1-official-aicp-13-1-t3733171"));
-} catch (IOException | URISyntaxException e2) {
-}
-    }                                    
-
-    private void viperActionPerformed(java.awt.event.ActionEvent evt) {                                      
-Desktop d = Desktop.getDesktop();
-try {
-    d.browse(new URI("https://forum.xda-developers.com/oneplus-5/development/rom-viperos-oneplus-5-t3891662"));
-} catch (IOException | URISyntaxException e2) {
-}
-    }                                     
+    }                                                                           
 
     
     /**
@@ -2646,6 +4048,7 @@ try {
     private javax.swing.JMenuItem MenuItemOP5Tool;
     private javax.swing.JMenuItem MenuItemOpenADB;
     private javax.swing.JMenuItem MenuItemOpenIMGFolder;
+    private javax.swing.JMenuItem MenuItemOpenROM;
     private javax.swing.JMenuItem MenuItemPage;
     private javax.swing.JMenuItem MenuItemRebootTool;
     private javax.swing.JMenuItem MenuItemRecovery;
@@ -2676,14 +4079,16 @@ try {
     private javax.swing.JMenuItem carbon;
     private javax.swing.JMenuItem crdroid;
     private javax.swing.JMenuItem du;
+    private javax.swing.JMenuItem howtouseit;
     private javax.swing.JMenu jMenu1;
+    private javax.swing.JPopupMenu.Separator jSeparator1;
     private javax.swing.JPopupMenu.Separator jSeparator2;
+    private javax.swing.JPopupMenu.Separator jSeparator3;
     private javax.swing.JMenuItem los;
     private javax.swing.JMenuItem moreroms;
     private javax.swing.JMenuItem omni;
     private javax.swing.JMenuItem pe;
     private javax.swing.JMenuItem validus;
-    private javax.swing.JMenuItem viper;
     // End of variables declaration//GEN-END:variables
 
 }
