@@ -16,15 +16,15 @@ You must have java 64bits installed on your pc
 - You need internet connection to use the Tool, if this no happens Tool will close it
 - If you want to use the option "Download the ROM with Tool" you need to pay attentio  because maybe some link ROM will be outdated, i´ll try to stay update
 - If you want to flash any TWRP, this will be downloaded and flashed, but remember to put your device on Bootloader mode and ready to flash
-# If you want to help me with ROM links and warning me if there's a new ROM available and i didn't update the Tool, you can contact me and send me a message!
+###### If you want to help me with ROM links and warning me if there's a new ROM available and i didn't update the Tool, you can contact me and send me a message!
 
-# Contact; * [Telegram](https://t.me/francom28) 
+###### Contact: [Telegram](https://t.me/francom28) 
 
-## Home Tool
+### Home Tool
 
 ![Tool](https://raw.githubusercontent.com/Franco28/FlashTool-OP/master/Tool.png "Tool")
 
-# MenuRom Tool
+### MenuRom Tool
 
 ![Tool](https://raw.githubusercontent.com/Franco28/FlashTool-OP/master/Tool2.png "ToolMenuRoms")
 
