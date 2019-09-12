@@ -14,13 +14,13 @@ You must have java 64bits installed on your pc
 
 Exec the "Tool.exe" and you are ready to use it
 
-## Screenshots
+## Home Tool
 
 ![Tool](https://raw.githubusercontent.com/Franco28/FlashTool-OP/master/Tool.png "Tool")
 
-# MenuRom
+# MenuRom Tool
 
-![Tool](https://raw.githubusercontent.com/Franco28/FlashTool-OP/master/Tool.png "ToolMenuRoms")
+![Tool](https://raw.githubusercontent.com/Franco28/FlashTool-OP/master/Tool2.png "ToolMenuRoms")
 
 ## Built With
 
