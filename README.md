@@ -1,6 +1,6 @@
 # FlashTool-OP
 
-A tool made with Netbeans and launch4j based on Java
+A Tool made with Netbeans and launch4j based on Java
 
 ## Getting Started
 
