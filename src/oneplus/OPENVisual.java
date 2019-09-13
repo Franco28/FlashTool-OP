@@ -55,6 +55,7 @@ import java.nio.file.SimpleFileVisitor;
 import java.nio.file.attribute.BasicFileAttributes;
 import javax.swing.UIManager;
 import javax.swing.UnsupportedLookAndFeelException;
+import static oneplus.Welcome.OS;
 import static oneplus.size.getFileFolderSize;
 
 
@@ -103,14 +104,14 @@ public class OPENVisual extends javax.swing.JFrame {
         MenuItemTWRP = new javax.swing.JMenuItem();
         MenuItemFirmware = new javax.swing.JMenuItem();
         MenuItemRecovery = new javax.swing.JMenuItem();
-        jSeparator2 = new javax.swing.JPopupMenu.Separator();
+        jSeparator1 = new javax.swing.JPopupMenu.Separator();
         MenuItemOpenROM = new javax.swing.JMenuItem();
         MenuFlash = new javax.swing.JMenu();
         MenuItemFlashFirmware = new javax.swing.JMenuItem();
         MenuItemFlashFirmwareSeparator = new javax.swing.JPopupMenu.Separator();
         MenuItemDownloadFirmware = new javax.swing.JMenuItem();
-        jSeparator1 = new javax.swing.JPopupMenu.Separator();
-        xdarom = new javax.swing.JMenu();
+        jSeparator2 = new javax.swing.JPopupMenu.Separator();
+        jMenu1 = new javax.swing.JMenu();
         los = new javax.swing.JMenuItem();
         pe = new javax.swing.JMenuItem();
         carbon = new javax.swing.JMenuItem();
@@ -118,10 +119,10 @@ public class OPENVisual extends javax.swing.JFrame {
         omni = new javax.swing.JMenuItem();
         aicp = new javax.swing.JMenuItem();
         arrowos = new javax.swing.JMenuItem();
-        bliss = new javax.swing.JMenuItem();
         crdroid = new javax.swing.JMenuItem();
+        bliss = new javax.swing.JMenuItem();
         validus = new javax.swing.JMenuItem();
-        masroms = new javax.swing.JMenuItem();
+        moreroms = new javax.swing.JMenuItem();
         MenuOthers = new javax.swing.JMenu();
         MenuItemRebootTool = new javax.swing.JMenuItem();
         MenuOthersSeparator1 = new javax.swing.JPopupMenu.Separator();
@@ -153,7 +154,8 @@ public class OPENVisual extends javax.swing.JFrame {
         MenuItemBugs = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("OnePlus 5 Tool - ESTABLE - Es - 1.0.2.9-RC1");
+        setTitle("OnePlus 5 Tool - STABLE - En - 1.0.3.9-RC1");
+        setAlwaysOnTop(true);
         setBackground(java.awt.Color.darkGray);
         setForeground(java.awt.Color.darkGray);
         setResizable(false);
@@ -168,8 +170,8 @@ public class OPENVisual extends javax.swing.JFrame {
 
         UnlockBootloaderBTN.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
         UnlockBootloaderBTN.setIcon(new javax.swing.ImageIcon(getClass().getResource("/oneplus/images/unlocked.png"))); // NOI18N
-        UnlockBootloaderBTN.setText("Ulock Bootloader");
-        UnlockBootloaderBTN.setToolTipText("Unlock bootloader, this will erase all your data");
+        UnlockBootloaderBTN.setText("Unlock Bootloader");
+        UnlockBootloaderBTN.setToolTipText("Unlock  bootloader, this will delete all your data");
         UnlockBootloaderBTN.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         UnlockBootloaderBTN.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
         UnlockBootloaderBTN.addActionListener(new java.awt.event.ActionListener() {
@@ -181,7 +183,7 @@ public class OPENVisual extends javax.swing.JFrame {
         LockBootloaderBTN.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
         LockBootloaderBTN.setIcon(new javax.swing.ImageIcon(getClass().getResource("/oneplus/images/locked.png"))); // NOI18N
         LockBootloaderBTN.setText("Lock Bootloader");
-        LockBootloaderBTN.setToolTipText("Lock bootloader, this will erase all your data");
+        LockBootloaderBTN.setToolTipText("Lock  bootloader, this will delete all your data");
         LockBootloaderBTN.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         LockBootloaderBTN.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -191,7 +193,7 @@ public class OPENVisual extends javax.swing.JFrame {
 
         FlashTWRPOfficialBTN.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
         FlashTWRPOfficialBTN.setIcon(new javax.swing.ImageIcon(getClass().getResource("/oneplus/images/flash.png"))); // NOI18N
-        FlashTWRPOfficialBTN.setText("Flas TWRP Official");
+        FlashTWRPOfficialBTN.setText("Flash TWRP Official");
         FlashTWRPOfficialBTN.setToolTipText("");
         FlashTWRPOfficialBTN.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         FlashTWRPOfficialBTN.addActionListener(new java.awt.event.ActionListener() {
@@ -202,7 +204,7 @@ public class OPENVisual extends javax.swing.JFrame {
 
         FlashTWRPOxygenOSBTN.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
         FlashTWRPOxygenOSBTN.setIcon(new javax.swing.ImageIcon(getClass().getResource("/oneplus/images/flash.png"))); // NOI18N
-        FlashTWRPOxygenOSBTN.setText("Flash TWRP by Codeworkx");
+        FlashTWRPOxygenOSBTN.setText("Flash TWRP  by Codeworkx");
         FlashTWRPOxygenOSBTN.setToolTipText("");
         FlashTWRPOxygenOSBTN.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         FlashTWRPOxygenOSBTN.addActionListener(new java.awt.event.ActionListener() {
@@ -258,7 +260,7 @@ public class OPENVisual extends javax.swing.JFrame {
         ConsoleLabel.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
         ConsoleLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         ConsoleLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/oneplus/images/depurar.png"))); // NOI18N
-        ConsoleLabel.setText("Debug console");
+        ConsoleLabel.setText("Debug Console");
 
         CheckADBDevicesBTN.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
         CheckADBDevicesBTN.setIcon(new javax.swing.ImageIcon(getClass().getResource("/oneplus/images/ok16.png"))); // NOI18N
@@ -291,7 +293,7 @@ public class OPENVisual extends javax.swing.JFrame {
         CheckLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/oneplus/images/check.png"))); // NOI18N
         CheckLabel.setText("Check");
 
-        TaskBar.setToolTipText("Taskbar");
+        TaskBar.setToolTipText("TaskBar");
         TaskBar.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
 
         MenuFiles.setIcon(new javax.swing.ImageIcon(getClass().getResource("/oneplus/images/open.png"))); // NOI18N
@@ -303,7 +305,7 @@ public class OPENVisual extends javax.swing.JFrame {
         MenuItemOpenADB.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_A, java.awt.event.InputEvent.ALT_MASK | java.awt.event.InputEvent.CTRL_MASK));
         MenuItemOpenADB.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         MenuItemOpenADB.setIcon(new javax.swing.ImageIcon(getClass().getResource("/oneplus/images/open16.png"))); // NOI18N
-        MenuItemOpenADB.setText("Open adb folder");
+        MenuItemOpenADB.setText("adb Folder");
         MenuItemOpenADB.setToolTipText("The folder containing the adb & fastboot files will open");
         MenuItemOpenADB.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         MenuItemOpenADB.addActionListener(new java.awt.event.ActionListener() {
@@ -315,14 +317,14 @@ public class OPENVisual extends javax.swing.JFrame {
         MenuFiles.add(MenuFilesSeparator1);
 
         MenuIMGFolders.setIcon(new javax.swing.ImageIcon(getClass().getResource("/oneplus/images/open16.png"))); // NOI18N
-        MenuIMGFolders.setText("img folder");
+        MenuIMGFolders.setText("img Folder");
         MenuIMGFolders.setToolTipText("Empty or open the img folder");
         MenuIMGFolders.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         MenuIMGFolders.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
 
         MenuItemOpenIMGFolder.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         MenuItemOpenIMGFolder.setIcon(new javax.swing.ImageIcon(getClass().getResource("/oneplus/images/open16.png"))); // NOI18N
-        MenuItemOpenIMGFolder.setText("Open img folder");
+        MenuItemOpenIMGFolder.setText("Open im folder");
         MenuItemOpenIMGFolder.setToolTipText("Open the img location where the user's files are located");
         MenuItemOpenIMGFolder.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         MenuItemOpenIMGFolder.addActionListener(new java.awt.event.ActionListener() {
@@ -348,7 +350,7 @@ public class OPENVisual extends javax.swing.JFrame {
         MenuFiles.add(MenuFilesSeparator2);
 
         MenuSubDirs.setIcon(new javax.swing.ImageIcon(getClass().getResource("/oneplus/images/open16.png"))); // NOI18N
-        MenuSubDirs.setText("Open subfolders");
+        MenuSubDirs.setText("Open subdirs");
         MenuSubDirs.setToolTipText("Open the folders inside img");
         MenuSubDirs.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         MenuSubDirs.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
@@ -390,11 +392,11 @@ public class OPENVisual extends javax.swing.JFrame {
         MenuSubDirs.add(MenuItemRecovery);
 
         MenuFiles.add(MenuSubDirs);
-        MenuFiles.add(jSeparator2);
+        MenuFiles.add(jSeparator1);
 
         MenuItemOpenROM.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         MenuItemOpenROM.setIcon(new javax.swing.ImageIcon(getClass().getResource("/oneplus/images/open16.png"))); // NOI18N
-        MenuItemOpenROM.setText("Open ROMS folder");
+        MenuItemOpenROM.setText("ROM Folder");
         MenuItemOpenROM.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         MenuItemOpenROM.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -406,7 +408,7 @@ public class OPENVisual extends javax.swing.JFrame {
         TaskBar.add(MenuFiles);
 
         MenuFlash.setIcon(new javax.swing.ImageIcon(getClass().getResource("/oneplus/images/flashb.png"))); // NOI18N
-        MenuFlash.setText("Descargas");
+        MenuFlash.setText("Downloads");
         MenuFlash.setToolTipText("");
         MenuFlash.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         MenuFlash.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
@@ -437,13 +439,13 @@ public class OPENVisual extends javax.swing.JFrame {
             }
         });
         MenuFlash.add(MenuItemDownloadFirmware);
-        MenuFlash.add(jSeparator1);
+        MenuFlash.add(jSeparator2);
 
-        xdarom.setIcon(new javax.swing.ImageIcon(getClass().getResource("/oneplus/images/xda.png"))); // NOI18N
-        xdarom.setText("List of Official Available ROMS");
-        xdarom.setToolTipText("The most popular XDA ROMS");
-        xdarom.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        xdarom.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        jMenu1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/oneplus/images/xda.png"))); // NOI18N
+        jMenu1.setText("List of Official Available ROMS");
+        jMenu1.setToolTipText("All XDA Official ROMS");
+        jMenu1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jMenu1.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
 
         los.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         los.setIcon(new javax.swing.ImageIcon(getClass().getResource("/oneplus/images/los.png"))); // NOI18N
@@ -454,7 +456,7 @@ public class OPENVisual extends javax.swing.JFrame {
                 losActionPerformed(evt);
             }
         });
-        xdarom.add(los);
+        jMenu1.add(los);
 
         pe.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         pe.setIcon(new javax.swing.ImageIcon(getClass().getResource("/oneplus/images/pe.png"))); // NOI18N
@@ -465,7 +467,7 @@ public class OPENVisual extends javax.swing.JFrame {
                 peActionPerformed(evt);
             }
         });
-        xdarom.add(pe);
+        jMenu1.add(pe);
 
         carbon.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         carbon.setIcon(new javax.swing.ImageIcon(getClass().getResource("/oneplus/images/carbon.png"))); // NOI18N
@@ -476,7 +478,7 @@ public class OPENVisual extends javax.swing.JFrame {
                 carbonActionPerformed(evt);
             }
         });
-        xdarom.add(carbon);
+        jMenu1.add(carbon);
 
         du.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         du.setIcon(new javax.swing.ImageIcon(getClass().getResource("/oneplus/images/du.png"))); // NOI18N
@@ -487,18 +489,18 @@ public class OPENVisual extends javax.swing.JFrame {
                 duActionPerformed(evt);
             }
         });
-        xdarom.add(du);
+        jMenu1.add(du);
 
         omni.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         omni.setIcon(new javax.swing.ImageIcon(getClass().getResource("/oneplus/images/omni.png"))); // NOI18N
-        omni.setText("Omni");
+        omni.setText("Omin");
         omni.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         omni.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 omniActionPerformed(evt);
             }
         });
-        xdarom.add(omni);
+        jMenu1.add(omni);
 
         aicp.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         aicp.setIcon(new javax.swing.ImageIcon(getClass().getResource("/oneplus/images/aicp.png"))); // NOI18N
@@ -509,7 +511,7 @@ public class OPENVisual extends javax.swing.JFrame {
                 aicpActionPerformed(evt);
             }
         });
-        xdarom.add(aicp);
+        jMenu1.add(aicp);
 
         arrowos.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         arrowos.setIcon(new javax.swing.ImageIcon(getClass().getResource("/oneplus/images/arrow.png"))); // NOI18N
@@ -520,18 +522,7 @@ public class OPENVisual extends javax.swing.JFrame {
                 arrowosActionPerformed(evt);
             }
         });
-        xdarom.add(arrowos);
-
-        bliss.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        bliss.setIcon(new javax.swing.ImageIcon(getClass().getResource("/oneplus/images/bliss.png"))); // NOI18N
-        bliss.setText("BlissRoms ");
-        bliss.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        bliss.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                blissActionPerformed(evt);
-            }
-        });
-        xdarom.add(bliss);
+        jMenu1.add(arrowos);
 
         crdroid.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         crdroid.setIcon(new javax.swing.ImageIcon(getClass().getResource("/oneplus/images/crdroid.png"))); // NOI18N
@@ -542,7 +533,18 @@ public class OPENVisual extends javax.swing.JFrame {
                 crdroidActionPerformed(evt);
             }
         });
-        xdarom.add(crdroid);
+        jMenu1.add(crdroid);
+
+        bliss.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        bliss.setIcon(new javax.swing.ImageIcon(getClass().getResource("/oneplus/images/bliss.png"))); // NOI18N
+        bliss.setText("BlissRoms ");
+        bliss.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        bliss.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                blissActionPerformed(evt);
+            }
+        });
+        jMenu1.add(bliss);
 
         validus.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         validus.setIcon(new javax.swing.ImageIcon(getClass().getResource("/oneplus/images/validus.png"))); // NOI18N
@@ -553,20 +555,20 @@ public class OPENVisual extends javax.swing.JFrame {
                 validusActionPerformed(evt);
             }
         });
-        xdarom.add(validus);
+        jMenu1.add(validus);
 
-        masroms.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        masroms.setIcon(new javax.swing.ImageIcon(getClass().getResource("/oneplus/images/xda.png"))); // NOI18N
-        masroms.setText("More ROMS...");
-        masroms.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        masroms.addActionListener(new java.awt.event.ActionListener() {
+        moreroms.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        moreroms.setIcon(new javax.swing.ImageIcon(getClass().getResource("/oneplus/images/xda.png"))); // NOI18N
+        moreroms.setText("More ROMS...");
+        moreroms.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        moreroms.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                masromsActionPerformed(evt);
+                moreromsActionPerformed(evt);
             }
         });
-        xdarom.add(masroms);
+        jMenu1.add(moreroms);
 
-        MenuFlash.add(xdarom);
+        MenuFlash.add(jMenu1);
 
         TaskBar.add(MenuFlash);
 
@@ -592,11 +594,11 @@ public class OPENVisual extends javax.swing.JFrame {
 
         MenuLang.setIcon(new javax.swing.ImageIcon(getClass().getResource("/oneplus/images/len.png"))); // NOI18N
         MenuLang.setText("Language");
-        MenuLang.setToolTipText("You can change the language");
+        MenuLang.setToolTipText("Select your language");
         MenuLang.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         MenuLang.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
 
-        MenuItemSpanish.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_E, java.awt.event.InputEvent.ALT_MASK | java.awt.event.InputEvent.CTRL_MASK));
+        MenuItemSpanish.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_E, java.awt.event.InputEvent.ALT_MASK));
         MenuItemSpanish.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         MenuItemSpanish.setIcon(new javax.swing.ImageIcon(getClass().getResource("/oneplus/images/spanish-language.png"))); // NOI18N
         MenuItemSpanish.setText("Español");
@@ -649,7 +651,7 @@ public class OPENVisual extends javax.swing.JFrame {
         MenuItemEndJavaProcess.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         MenuItemEndJavaProcess.setIcon(new javax.swing.ImageIcon(getClass().getResource("/oneplus/images/java.png"))); // NOI18N
         MenuItemEndJavaProcess.setText("End Java process");
-        MenuItemEndJavaProcess.setToolTipText("Java and the Tool will close completely");
+        MenuItemEndJavaProcess.setToolTipText("Java and Tool will be completely closed");
         MenuItemEndJavaProcess.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         MenuItemEndJavaProcess.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -662,7 +664,7 @@ public class OPENVisual extends javax.swing.JFrame {
         MenuItemEndAllProcess.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         MenuItemEndAllProcess.setForeground(new java.awt.Color(204, 102, 0));
         MenuItemEndAllProcess.setIcon(new javax.swing.ImageIcon(getClass().getResource("/oneplus/images/cancel16.png"))); // NOI18N
-        MenuItemEndAllProcess.setText("End all processes");
+        MenuItemEndAllProcess.setText("End all process");
         MenuItemEndAllProcess.setToolTipText("It will completely close the program and its open subprograms");
         MenuItemEndAllProcess.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         MenuItemEndAllProcess.addActionListener(new java.awt.event.ActionListener() {
@@ -696,7 +698,7 @@ public class OPENVisual extends javax.swing.JFrame {
 
         howtouseit.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         howtouseit.setIcon(new javax.swing.ImageIcon(getClass().getResource("/oneplus/images/help.png"))); // NOI18N
-        howtouseit.setText("How to use the Tool?");
+        howtouseit.setText("How to use it?");
         howtouseit.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         howtouseit.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -753,7 +755,7 @@ public class OPENVisual extends javax.swing.JFrame {
         MenuItemPage.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         MenuItemPage.setIcon(new javax.swing.ImageIcon(getClass().getResource("/oneplus/images/telegram.png"))); // NOI18N
         MenuItemPage.setText("Contact");
-        MenuItemPage.setToolTipText("Telegram: Send me a message if you have questions or need to report any details!");
+        MenuItemPage.setToolTipText("Telegram: Enviame un mensaje si tienes dudas o necesitas reportar algún detalle!");
         MenuItemPage.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         MenuItemPage.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -765,7 +767,7 @@ public class OPENVisual extends javax.swing.JFrame {
         MenuItemReleases.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         MenuItemReleases.setIcon(new javax.swing.ImageIcon(getClass().getResource("/oneplus/images/update.png"))); // NOI18N
         MenuItemReleases.setText("Releases");
-        MenuItemReleases.setToolTipText("Download Tool");
+        MenuItemReleases.setToolTipText("Tool Downloads");
         MenuItemReleases.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         MenuItemReleases.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -867,7 +869,6 @@ public class OPENVisual extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        getAccessibleContext().setAccessibleName("OnePlus Tool 5 - STABLE - En - 1.0.3.9-RC1");
         getAccessibleContext().setAccessibleDescription("Tool for OnePlus 5");
         getAccessibleContext().setAccessibleParent(this);
 
@@ -876,15 +877,15 @@ public class OPENVisual extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void formWindowOpened(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowOpened
-    try {
-            System.out.println("Setting look and feel...");
+        try {
+            System.out.println("Setting " +OS+ " look and feel...");
             UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
             System.out.println("Ready! :) ");
         } catch (ClassNotFoundException | IllegalAccessException | InstantiationException | UnsupportedLookAndFeelException e) {
             final Runnable runnable = (Runnable) Toolkit.getDefaultToolkit().getDesktopProperty("win.sound.exclamation");
             if (runnable != null) runnable.run();
             System.out.println("Unable to set LookAndFeel");
-    }
+        } 
         
     this.setIconImage(new ImageIcon(getClass().getResource("Icon.png")).getImage());
            
@@ -1243,18 +1244,21 @@ if (!f.exists() == true){
             if (runnable != null) runnable.run();
             JOptionPane.showMessageDialog(null,"Could not unzip file " +opdrivers,"Error",JOptionPane.ERROR_MESSAGE);
         }
+            DebugConsole.setText("Please wait, the files are being verified: " +opdrivers);
             opdrivers.delete();
-            this.dispose();//To close the current window
-            new OPVisual().setVisible(true);
-            String path = "C:\\OPTool\\.settings\\OnePlus_setup.exe";
-            File file = new File(path);
-            Process t = Runtime.getRuntime().exec(file.getAbsolutePath());
-            
-            String path2 = "C:\\OPTool\\.settings\\OnePlus_USB_Drivers_Setup";
-            File file2 = new File(path2);
-            Process t2 = Runtime.getRuntime().exec(file.getAbsolutePath());
- 
- 
+            DebugConsole.setText("Removing: " +opdrivers);
+            File readydrivers = new File("C:\\OPTool\\.settings\\OnePlus_USB_Drivers_Setup.exe"); 
+            File readydrivers2 = new File("C:\\OPTool\\.settings\\autorun.inf"); 
+            File readydrivers3 = new File("C:\\OPTool\\.settings\\OnePlus_setup.exe"); 
+            if (readydrivers.exists() == true){
+                DebugConsole.setText("An installer will open please wait...");
+                String command = "C:\\OPTool\\.settings\\OnePlus_setup.exe";
+                Runtime.getRuntime().exec("cmd /c \"" + command + "\"");
+                DebugConsole.setText("Another installer will open please wait...");
+                String command2 = "C:\\OPTool\\.settings\\OnePlus_USB_Drivers_Setup.exe";
+                Runtime.getRuntime().exec("cmd /c \"" + command2 + "\"");
+                DebugConsole.setText("Welcome to OnePlus 5 Tool: Please reboot the Tool");
+            }
     }
             }catch (FileNotFoundException e) {
             if (runnable != null) runnable.run();
@@ -1361,6 +1365,16 @@ if (!f.exists() == true){
         }catch (IOException e) { 
             }
         }   
+            File readydrivers = new File("C:\\OPTool\\.settings\\OnePlus_USB_Drivers_Setup.exe"); 
+            File readydrivers2 = new File("C:\\OPTool\\.settings\\autorun.inf"); 
+            File readydrivers3 = new File("C:\\OPTool\\.settings\\OnePlus_setup.exe"); 
+            if (readydrivers.exists() == true){
+                readydrivers.delete();
+                readydrivers2.delete();
+                readydrivers3.delete();
+                this.dispose();
+                new OPENVisual().setVisible(true);
+            }
     }//GEN-LAST:event_formWindowOpened
 
     private void UnlockBootloaderBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_UnlockBootloaderBTNActionPerformed
@@ -4064,13 +4078,13 @@ try {
         }
     }//GEN-LAST:event_omniActionPerformed
 
-    private void masromsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_masromsActionPerformed
+    private void moreromsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_moreromsActionPerformed
 Desktop d = Desktop.getDesktop();
 try {
     d.browse(new URI("https://forum.xda-developers.com/oneplus-5"));
 } catch (IOException | URISyntaxException e2) {
 }
-    }//GEN-LAST:event_masromsActionPerformed
+    }//GEN-LAST:event_moreromsActionPerformed
 
     private void MenuItemOpenROMActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MenuItemOpenROMActionPerformed
         Desktop desktop = Desktop.getDesktop();
@@ -4153,7 +4167,6 @@ try {
     private javax.swing.JMenuItem MenuItemEmptyIMGFolder;
     private javax.swing.JMenuItem MenuItemEndAllProcess;
     private javax.swing.JMenuItem MenuItemEndJavaProcess;
-    private javax.swing.JMenuItem MenuItemSpanish;
     private javax.swing.JMenuItem MenuItemFirmware;
     private javax.swing.JMenuItem MenuItemFlashFirmware;
     private javax.swing.JPopupMenu.Separator MenuItemFlashFirmwareSeparator;
@@ -4167,6 +4180,7 @@ try {
     private javax.swing.JMenuItem MenuItemRebootTool;
     private javax.swing.JMenuItem MenuItemRecovery;
     private javax.swing.JMenuItem MenuItemReleases;
+    private javax.swing.JMenuItem MenuItemSpanish;
     private javax.swing.JMenuItem MenuItemTWRP;
     private javax.swing.JMenuItem MenuItemUninstallTool;
     private javax.swing.JMenuItem MenuItemXiaomi;
@@ -4193,15 +4207,15 @@ try {
     private javax.swing.JMenuItem crdroid;
     private javax.swing.JMenuItem du;
     private javax.swing.JMenuItem howtouseit;
+    private javax.swing.JMenu jMenu1;
     private javax.swing.JPopupMenu.Separator jSeparator1;
     private javax.swing.JPopupMenu.Separator jSeparator2;
     private javax.swing.JPopupMenu.Separator jSeparator3;
     private javax.swing.JMenuItem los;
-    private javax.swing.JMenuItem masroms;
+    private javax.swing.JMenuItem moreroms;
     private javax.swing.JMenuItem omni;
     private javax.swing.JMenuItem pe;
     private javax.swing.JMenuItem validus;
-    private javax.swing.JMenu xdarom;
     // End of variables declaration//GEN-END:variables
 
 }

@@ -47,6 +47,7 @@ import java.net.URISyntaxException;
 import javax.swing.ImageIcon;
 import java.io.IOException;
 import java.io.PrintWriter;
+import static java.lang.Compiler.command;
 import java.nio.file.FileVisitResult;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -55,6 +56,7 @@ import java.nio.file.SimpleFileVisitor;
 import java.nio.file.attribute.BasicFileAttributes;
 import javax.swing.UIManager;
 import javax.swing.UnsupportedLookAndFeelException;
+import static oneplus.Welcome.OS;
 import static oneplus.size.getFileFolderSize;
 
 
@@ -153,7 +155,7 @@ public class OPVisual extends javax.swing.JFrame {
         MenuItemBugs = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("OnePlus 5 Tool - ESTABLE - Es - 1.0.2.9-RC1");
+        setTitle("OnePlus 5 Tool - ESTABLE - Es - 1.0.3.9-RC1");
         setBackground(java.awt.Color.darkGray);
         setForeground(java.awt.Color.darkGray);
         setResizable(false);
@@ -169,7 +171,7 @@ public class OPVisual extends javax.swing.JFrame {
         UnlockBootloaderBTN.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
         UnlockBootloaderBTN.setIcon(new javax.swing.ImageIcon(getClass().getResource("/oneplus/images/unlocked.png"))); // NOI18N
         UnlockBootloaderBTN.setText("Desbloquear Bootloader");
-        UnlockBootloaderBTN.setToolTipText("Desbloquear bootloader del télefono, esto eliminará todos sus datos");
+        UnlockBootloaderBTN.setToolTipText("Desbloquea bootloader del télefono, esto eliminara todos sus datos");
         UnlockBootloaderBTN.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         UnlockBootloaderBTN.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
         UnlockBootloaderBTN.addActionListener(new java.awt.event.ActionListener() {
@@ -181,7 +183,7 @@ public class OPVisual extends javax.swing.JFrame {
         LockBootloaderBTN.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
         LockBootloaderBTN.setIcon(new javax.swing.ImageIcon(getClass().getResource("/oneplus/images/locked.png"))); // NOI18N
         LockBootloaderBTN.setText("Bloquear Bootloader");
-        LockBootloaderBTN.setToolTipText("Bloquear bootloader del télefono, esto eliminará todos sus datos");
+        LockBootloaderBTN.setToolTipText("Bloquea bootloader del télefono, esto eliminara todos sus datos");
         LockBootloaderBTN.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         LockBootloaderBTN.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -202,7 +204,7 @@ public class OPVisual extends javax.swing.JFrame {
 
         FlashTWRPOxygenOSBTN.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
         FlashTWRPOxygenOSBTN.setIcon(new javax.swing.ImageIcon(getClass().getResource("/oneplus/images/flash.png"))); // NOI18N
-        FlashTWRPOxygenOSBTN.setText("Flashear TWRP por Codeworkx");
+        FlashTWRPOxygenOSBTN.setText("Flashear TWRP por  Codeworkx");
         FlashTWRPOxygenOSBTN.setToolTipText("");
         FlashTWRPOxygenOSBTN.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         FlashTWRPOxygenOSBTN.addActionListener(new java.awt.event.ActionListener() {
@@ -304,7 +306,7 @@ public class OPVisual extends javax.swing.JFrame {
         MenuItemOpenADB.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         MenuItemOpenADB.setIcon(new javax.swing.ImageIcon(getClass().getResource("/oneplus/images/open16.png"))); // NOI18N
         MenuItemOpenADB.setText("Abrir carpeta adb");
-        MenuItemOpenADB.setToolTipText("Se abrirá la carpeta que contiene los archivos adb & fastboot");
+        MenuItemOpenADB.setToolTipText("Se abrirá la carpeta que contiene los archivos adb&fastboot");
         MenuItemOpenADB.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         MenuItemOpenADB.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -316,14 +318,14 @@ public class OPVisual extends javax.swing.JFrame {
 
         MenuIMGFolders.setIcon(new javax.swing.ImageIcon(getClass().getResource("/oneplus/images/open16.png"))); // NOI18N
         MenuIMGFolders.setText("Carpeta img");
-        MenuIMGFolders.setToolTipText("Vacía o abre la carpeta img");
+        MenuIMGFolders.setToolTipText("Vacia o abre la carpeta img");
         MenuIMGFolders.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         MenuIMGFolders.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
 
         MenuItemOpenIMGFolder.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         MenuItemOpenIMGFolder.setIcon(new javax.swing.ImageIcon(getClass().getResource("/oneplus/images/open16.png"))); // NOI18N
         MenuItemOpenIMGFolder.setText("Abrir carpeta img");
-        MenuItemOpenIMGFolder.setToolTipText("Abre la ubicación img donde se encuentran los archivos del usuario");
+        MenuItemOpenIMGFolder.setToolTipText("Abre la ubicacion img donde se encuentran los archivos del usuario");
         MenuItemOpenIMGFolder.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         MenuItemOpenIMGFolder.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -663,7 +665,7 @@ public class OPVisual extends javax.swing.JFrame {
         MenuItemEndAllProcess.setForeground(new java.awt.Color(204, 102, 0));
         MenuItemEndAllProcess.setIcon(new javax.swing.ImageIcon(getClass().getResource("/oneplus/images/cancel16.png"))); // NOI18N
         MenuItemEndAllProcess.setText("Terminar todos los procesos ");
-        MenuItemEndAllProcess.setToolTipText("Cerrará por completo el programa y sus subprogramas abiertos");
+        MenuItemEndAllProcess.setToolTipText("Cerrara por completo el programa y sus subprogramas abiertos");
         MenuItemEndAllProcess.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         MenuItemEndAllProcess.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -876,15 +878,15 @@ public class OPVisual extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void formWindowOpened(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowOpened
-    try {
-            System.out.println("Setting look and feel...");
+        try {
+            System.out.println("Configurando " +OS+ " look and feel...");
             UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
-            System.out.println("Ready! :) ");
+            System.out.println("Listo! :) ");
         } catch (ClassNotFoundException | IllegalAccessException | InstantiationException | UnsupportedLookAndFeelException e) {
             final Runnable runnable = (Runnable) Toolkit.getDefaultToolkit().getDesktopProperty("win.sound.exclamation");
             if (runnable != null) runnable.run();
-            System.out.println("Unable to set LookAndFeel");
-    }
+            System.out.println("No se pudo configurar el LookAndFeel");
+        } 
         
     this.setIconImage(new ImageIcon(getClass().getResource("Icon.png")).getImage());
            
@@ -1180,7 +1182,7 @@ if (!f.exists() == true){
         };
         new Thread(updatethread).start(); 
  }
-        
+                      
         File driverop = new File("C:\\Program Files (x86)\\OnePlus USB Drivers\\Uninstall.exe");
         
         if (!driverop.exists() == true){
@@ -1243,19 +1245,22 @@ if (!f.exists() == true){
             if (runnable != null) runnable.run();
             JOptionPane.showMessageDialog(null,"No se pudo descomprimir el archivo " +opdrivers,"Error",JOptionPane.ERROR_MESSAGE);
         }
+            DebugConsole.setText("Espere por favor, se están verificando los archivos: " +opdrivers);
             opdrivers.delete();
-            this.dispose();//To close the current window
-            new OPVisual().setVisible(true);
-            String path = "C:\\OPTool\\.settings\\OnePlus_setup.exe";
-            File file = new File(path);
-            Process t = Runtime.getRuntime().exec(file.getAbsolutePath());
-            
-            String path2 = "C:\\OPTool\\.settings\\OnePlus_USB_Drivers_Setup";
-            File file2 = new File(path2);
-            Process t2 = Runtime.getRuntime().exec(file.getAbsolutePath());
- 
- 
-    }
+            DebugConsole.setText("Eliminando: " +opdrivers);
+            File readydrivers = new File("C:\\OPTool\\.settings\\OnePlus_USB_Drivers_Setup.exe"); 
+            File readydrivers2 = new File("C:\\OPTool\\.settings\\autorun.inf"); 
+            File readydrivers3 = new File("C:\\OPTool\\.settings\\OnePlus_setup.exe"); 
+            if (readydrivers.exists() == true){
+                DebugConsole.setText("Se abrirá un instalador aguarde por favor...");
+                String command = "C:\\OPTool\\.settings\\OnePlus_setup.exe";
+                Runtime.getRuntime().exec("cmd /c \"" + command + "\"");
+                DebugConsole.setText("Se abrirá otro instalador aguarde por favor...");
+                String command2 = "C:\\OPTool\\.settings\\OnePlus_USB_Drivers_Setup.exe";
+                Runtime.getRuntime().exec("cmd /c \"" + command2 + "\"");
+                DebugConsole.setText("Bienvenido a OnePlus 5 Tool: Por favor reinicia el Tool");
+            }
+     }
             }catch (FileNotFoundException e) {
             if (runnable != null) runnable.run();
             jProgressBar.setString("Descargando OnePlus drivers: ERROR");
@@ -1361,6 +1366,16 @@ if (!f.exists() == true){
         }catch (IOException e) { 
             }
         }   
+            File readydrivers = new File("C:\\OPTool\\.settings\\OnePlus_USB_Drivers_Setup.exe"); 
+            File readydrivers2 = new File("C:\\OPTool\\.settings\\autorun.inf"); 
+            File readydrivers3 = new File("C:\\OPTool\\.settings\\OnePlus_setup.exe"); 
+            if (readydrivers.exists() == true){
+                readydrivers.delete();
+                readydrivers2.delete();
+                readydrivers3.delete();
+                this.dispose();
+                new OPVisual().setVisible(true);
+            }
     }//GEN-LAST:event_formWindowOpened
 
     private void UnlockBootloaderBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_UnlockBootloaderBTNActionPerformed
