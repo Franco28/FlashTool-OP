@@ -18,7 +18,7 @@
  * Tool Es
  * 
  * @author (Franco Mato - franco28) 
- * @version (1.0.2.9.RC1)
+ * @version (1.0.3.9.RC1)
  * 
  * 
  */
@@ -169,7 +169,7 @@ public class OPVisual extends javax.swing.JFrame {
         UnlockBootloaderBTN.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
         UnlockBootloaderBTN.setIcon(new javax.swing.ImageIcon(getClass().getResource("/oneplus/images/unlocked.png"))); // NOI18N
         UnlockBootloaderBTN.setText("Desbloquear Bootloader");
-        UnlockBootloaderBTN.setToolTipText("Desbloquea bootloader del télefono, esto eliminara todos sus datos");
+        UnlockBootloaderBTN.setToolTipText("Desbloquear bootloader del télefono, esto eliminará todos sus datos");
         UnlockBootloaderBTN.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         UnlockBootloaderBTN.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
         UnlockBootloaderBTN.addActionListener(new java.awt.event.ActionListener() {
@@ -181,7 +181,7 @@ public class OPVisual extends javax.swing.JFrame {
         LockBootloaderBTN.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
         LockBootloaderBTN.setIcon(new javax.swing.ImageIcon(getClass().getResource("/oneplus/images/locked.png"))); // NOI18N
         LockBootloaderBTN.setText("Bloquear Bootloader");
-        LockBootloaderBTN.setToolTipText("Bloquea bootloader del télefono, esto eliminara todos sus datos");
+        LockBootloaderBTN.setToolTipText("Bloquear bootloader del télefono, esto eliminará todos sus datos");
         LockBootloaderBTN.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         LockBootloaderBTN.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -202,7 +202,7 @@ public class OPVisual extends javax.swing.JFrame {
 
         FlashTWRPOxygenOSBTN.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
         FlashTWRPOxygenOSBTN.setIcon(new javax.swing.ImageIcon(getClass().getResource("/oneplus/images/flash.png"))); // NOI18N
-        FlashTWRPOxygenOSBTN.setText("Flashear TWRP por  Codeworkx");
+        FlashTWRPOxygenOSBTN.setText("Flashear TWRP por Codeworkx");
         FlashTWRPOxygenOSBTN.setToolTipText("");
         FlashTWRPOxygenOSBTN.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         FlashTWRPOxygenOSBTN.addActionListener(new java.awt.event.ActionListener() {
@@ -304,7 +304,7 @@ public class OPVisual extends javax.swing.JFrame {
         MenuItemOpenADB.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         MenuItemOpenADB.setIcon(new javax.swing.ImageIcon(getClass().getResource("/oneplus/images/open16.png"))); // NOI18N
         MenuItemOpenADB.setText("Abrir carpeta adb");
-        MenuItemOpenADB.setToolTipText("Se abrirá la carpeta que contiene los archivos adb&fastboot");
+        MenuItemOpenADB.setToolTipText("Se abrirá la carpeta que contiene los archivos adb & fastboot");
         MenuItemOpenADB.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         MenuItemOpenADB.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -316,14 +316,14 @@ public class OPVisual extends javax.swing.JFrame {
 
         MenuIMGFolders.setIcon(new javax.swing.ImageIcon(getClass().getResource("/oneplus/images/open16.png"))); // NOI18N
         MenuIMGFolders.setText("Carpeta img");
-        MenuIMGFolders.setToolTipText("Vacia o abre la carpeta img");
+        MenuIMGFolders.setToolTipText("Vacía o abre la carpeta img");
         MenuIMGFolders.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         MenuIMGFolders.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
 
         MenuItemOpenIMGFolder.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         MenuItemOpenIMGFolder.setIcon(new javax.swing.ImageIcon(getClass().getResource("/oneplus/images/open16.png"))); // NOI18N
         MenuItemOpenIMGFolder.setText("Abrir carpeta img");
-        MenuItemOpenIMGFolder.setToolTipText("Abre la ubicacion img donde se encuentran los archivos del usuario");
+        MenuItemOpenIMGFolder.setToolTipText("Abre la ubicación img donde se encuentran los archivos del usuario");
         MenuItemOpenIMGFolder.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         MenuItemOpenIMGFolder.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -663,7 +663,7 @@ public class OPVisual extends javax.swing.JFrame {
         MenuItemEndAllProcess.setForeground(new java.awt.Color(204, 102, 0));
         MenuItemEndAllProcess.setIcon(new javax.swing.ImageIcon(getClass().getResource("/oneplus/images/cancel16.png"))); // NOI18N
         MenuItemEndAllProcess.setText("Terminar todos los procesos ");
-        MenuItemEndAllProcess.setToolTipText("Cerrara por completo el programa y sus subprogramas abiertos");
+        MenuItemEndAllProcess.setToolTipText("Cerrará por completo el programa y sus subprogramas abiertos");
         MenuItemEndAllProcess.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         MenuItemEndAllProcess.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -876,7 +876,7 @@ public class OPVisual extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void formWindowOpened(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowOpened
-try {
+    try {
             System.out.println("Setting look and feel...");
             UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
             System.out.println("Ready! :) ");
@@ -884,193 +884,14 @@ try {
             final Runnable runnable = (Runnable) Toolkit.getDefaultToolkit().getDesktopProperty("win.sound.exclamation");
             if (runnable != null) runnable.run();
             System.out.println("Unable to set LookAndFeel");
-        }
+    }
         
     this.setIconImage(new ImageIcon(getClass().getResource("Icon.png")).getImage());
            
     DebugConsole.setText("Bienvenido a OnePlus 5 Tool");
-    
-        Socket sock= new Socket();
-        InetSocketAddress addr=new InetSocketAddress("www.google.com",80);
-        try {
-        sock.connect(addr,3000);
-        
-        File f = new File("C:\\adb\\adb.exe"); 
-        
-        if (!f.exists() == true){
-        final Runnable runnable = (Runnable) Toolkit.getDefaultToolkit().getDesktopProperty("win.sound.exclamation");
-        if (runnable != null) runnable.run();
-        JOptionPane.showMessageDialog(null,"No se pudo encontrar los archivos adb & fastboot \n\n El archivo se instalará en C:\\adb","Error",JOptionPane.ERROR_MESSAGE);
-        final JProgressBar jProgressBar = new JProgressBar();
-        jProgressBar.setMaximum(100000);
-        jProgressBar.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        jProgressBar.setBorderPainted(false);
-        jProgressBar.setCursor(new java.awt.Cursor(java.awt.Cursor.WAIT_CURSOR));
-        jProgressBar.setDebugGraphicsOptions(javax.swing.DebugGraphics.NONE_OPTION);
-        jProgressBar.setStringPainted(true);
-        jProgressBar.setString("Iniciando...");
-        JFrame frame = new JFrame("Descargando adb & fastboot...");
-        frame.setContentPane(jProgressBar);
-        frame.setDefaultCloseOperation(WindowConstants.DO_NOTHING_ON_CLOSE);
-        frame.setSize(600, 100);
-        frame.setIconImage(new ImageIcon(getClass().getResource("Icon.png")).getImage());
-        frame.setVisible(true);
-        frame.setResizable(false);
-        frame.setLocationRelativeTo(null);
-        frame.setAlwaysOnTop(true);
-        Runnable updatethread;
-            updatethread = () -> {
-            try {
-                URL url = new URL("https://bitbucket.org/Franco28/flashtool-motorola-moto-g5-g5plus/downloads/adb.zip");
-                HttpURLConnection httpConnection = (HttpURLConnection) (url.openConnection());
-                long completeFileSize = httpConnection.getContentLength();
-                try (final java.io.BufferedInputStream in = new java.io.BufferedInputStream(httpConnection.getInputStream())) {
-                    java.io.FileOutputStream fos = new java.io.FileOutputStream("C:\\adb\\adb.zip");
-                    try (final java.io.BufferedOutputStream bout = new BufferedOutputStream(fos, 1024)) {
-                        byte[] data = new byte[1024];
-                        long downloadedFileSize = 0;
-                        int x1 = 0;
-                        while ((x1 = in.read(data, 0, 1024)) >= 0) {
-                            downloadedFileSize += x1;
-                            // calculate progress
-                            final int currentProgress = (int) ((((double)downloadedFileSize) / ((double)completeFileSize)) * 100000d);
-                            // update progress bar
-                            jProgressBar.setString("Calculando tamaño del archivo...");
-                            SwingUtilities.invokeLater(() -> {
-                                DebugConsole.setText("Descargando adb & fastboot... " +currentProgress+ " Bytes");
-                                jProgressBar.setString("Descargando adb & fastboot: \n" +currentProgress+ " Bytes");
-                                jProgressBar.setValue(currentProgress);
-                            });
-                            bout.write(data, 0, x1);
-                        }
-                    }
-                    DebugConsole.setText("Bienvenido a OnePlus 5 Tool");
-                    frame.setVisible(false);
- 
-        File adb = new File("C:\\adb\\adb.zip"); 
-        String zipFilePath = "C:\\adb\\adb.zip";
-        String destDirectory = "C:\\adb";
-        UnzipUtility unzipper = new UnzipUtility();
-        try {
-            unzipper.unzip(zipFilePath, destDirectory);
-        } catch (IOException ex) {
-            if (runnable != null) runnable.run();
-            JOptionPane.showMessageDialog(null,"No se pudo descomprimir el archivo " +adb,"Error",JOptionPane.ERROR_MESSAGE);
-        }
-            adb.delete();
-            dispose();//To close the current window
-            String path = "Tool.exe";
-            File file = new File(path);
-            Process t = Runtime.getRuntime().exec(file.getAbsolutePath());
- 
-    }
-            }catch (FileNotFoundException e) {
-            if (runnable != null) runnable.run();
-            jProgressBar.setString("Descargando adb & fastboot: ERROR");
-            DebugConsole.setText("ERROR: " +e);
-            }catch (IOException ex) {
-                if (runnable != null) runnable.run();
-                Logger.getLogger(OPVisual.class.getName()).log(Level.SEVERE, null, ex);
-            }
-        };
-        new Thread(updatethread).start(); 
- }
-        
-        File bin = new File("C:\\OPTool\\.settings"); 
-        if (!bin.exists() == true){
-        final Runnable runnable = (Runnable) Toolkit.getDefaultToolkit().getDesktopProperty("win.sound.exclamation");
-        if (runnable != null) runnable.run();
-        JOptionPane.showMessageDialog(null,"No se pudieron encontrar los binarios \n\n El archivo se instalará en C:\\OPTool\\.settings","Error",JOptionPane.ERROR_MESSAGE);
-        final JProgressBar jProgressBar = new JProgressBar();
-        jProgressBar.setMaximum(100000);
-        jProgressBar.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        jProgressBar.setBorderPainted(false);
-        jProgressBar.setCursor(new java.awt.Cursor(java.awt.Cursor.WAIT_CURSOR));
-        jProgressBar.setDebugGraphicsOptions(javax.swing.DebugGraphics.NONE_OPTION);
-        jProgressBar.setStringPainted(true);
-        jProgressBar.setString("Iniciando...");
-        JFrame frame = new JFrame("Descargando binarios...");
-        frame.setContentPane(jProgressBar);
-        frame.setDefaultCloseOperation(WindowConstants.DO_NOTHING_ON_CLOSE);
-        frame.setSize(600, 100);
-        frame.setIconImage(new ImageIcon(getClass().getResource("Icon.png")).getImage());
-        frame.setVisible(true);
-        frame.setResizable(false);
-        frame.setLocationRelativeTo(null);
-        frame.setAlwaysOnTop(true);
-        Runnable updatethread;
-            updatethread = () -> {
-            try {
-                URL url = new URL("https://bitbucket.org/Franco28/flashtool-motorola-moto-g5-g5plus/downloads/bin.zip");
-                HttpURLConnection httpConnection = (HttpURLConnection) (url.openConnection());
-                long completeFileSize = httpConnection.getContentLength();
-                try (final java.io.BufferedInputStream in = new java.io.BufferedInputStream(httpConnection.getInputStream())) {
-                    java.io.FileOutputStream fos = new java.io.FileOutputStream("C:\\OPTool\\.settings\\bin.zip");
-                    try (final java.io.BufferedOutputStream bout = new BufferedOutputStream(fos, 1024)) {                       
-                        byte[] data = new byte[1024];
-                        long downloadedFileSize = 0;
-                        int x1 = 0;
-                        while ((x1 = in.read(data, 0, 1024)) >= 0) {
-                            downloadedFileSize += x1;
-                            // calculate progress
-                            final int currentProgress = (int) ((((double)downloadedFileSize) / ((double)completeFileSize)) * 100000);
-                            // update progress bar
-                            jProgressBar.setString("Calculando tamaño del archivo...");
-                            SwingUtilities.invokeLater(() -> {
-                                DebugConsole.setText("Descargando binarios... " +currentProgress+ " Bytes");
-                                jProgressBar.setString("Descargando binarios: \n" +currentProgress+ " Bytes");
-                                jProgressBar.setValue(currentProgress);
-                            });
-                            bout.write(data, 0, x1);
-                        }
-                    }
-                    DebugConsole.setText("Bienvenido a OnePlus 5 Tool");
-                    frame.setVisible(false);
-        
-        File lib = new File("C:\\OPTool\\.settings\\bin.zip"); 
-        String zipFilePath = "C:\\OPTool\\.settings\\bin.zip";
-        String destDirectory = "C:\\OPTool\\.settings";
-        UnzipUtility unzipper = new UnzipUtility();
-        try {
-            unzipper.unzip(zipFilePath, destDirectory);
-        } catch (IOException ex) {
-            if (runnable != null) runnable.run();
-            JOptionPane.showMessageDialog(null,"No se pudo descomprimir el archivo " +lib,"Error",JOptionPane.ERROR_MESSAGE);
-        }
-            lib.delete();
-            dispose();//To close the current window
-            String path = "Tool.exe";
-            File file = new File(path);
-            Process t = Runtime.getRuntime().exec(file.getAbsolutePath());
- 
-    }
-            }catch (FileNotFoundException e) {
-            if (runnable != null) runnable.run();
-            jProgressBar.setString("Descargando binarios: ERROR");
-            DebugConsole.setText("ERROR: " +e);
-            }catch (IOException ex) {
-                if (runnable != null) runnable.run();
-                Logger.getLogger(OPVisual.class.getName()).log(Level.SEVERE, null, ex);
-            }
-        };
-        new Thread(updatethread).start(); 
- }
-        
-        }catch (IOException e) {
-        final Runnable runnable = (Runnable) Toolkit.getDefaultToolkit().getDesktopProperty("win.sound.exclamation");
-        if (runnable != null) runnable.run();
-        DebugConsole.setText("Error no se pudo establecer conexión con el servidor.");            
-        JOptionPane.showMessageDialog(null,"Verifique su conexión a internet y vuelva a intentarlo...","Error",JOptionPane.ERROR_MESSAGE);
-        dispose();//To close the current window         
-        }finally{
-            try { 
-            sock.close(); 
-        }catch (IOException e) { 
-            }
-        } 
-        
-        File f = new File("C:\\OPTool\\img"); 
-        if (!f.exists() == true){
+
+File f = new File("C:\\OPTool\\img"); 
+if (!f.exists() == true){
 // Create a directory; all non-existent ancestor directories are
 // automatically created
  try{
@@ -1276,7 +1097,270 @@ try {
   DebugConsole.setText("Error: " + e.getMessage());     
   }
     }
-  
+    
+        Socket sock= new Socket();
+        InetSocketAddress addr=new InetSocketAddress("www.google.com",80);
+        try {
+        sock.connect(addr,3000);
+        
+        File adbb2 = new File("C:\\adb\\adb.exe"); 
+        
+        if (!adbb2.exists() == true){
+        final Runnable runnable = (Runnable) Toolkit.getDefaultToolkit().getDesktopProperty("win.sound.exclamation");
+        if (runnable != null) runnable.run();
+        JOptionPane.showMessageDialog(null,"No se pudo encontrar los archivos adb & fastboot \n\n El archivo se instalará en C:\\adb","Error",JOptionPane.ERROR_MESSAGE);
+        final JProgressBar jProgressBar = new JProgressBar();
+        jProgressBar.setMaximum(100000);
+        jProgressBar.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        jProgressBar.setBorderPainted(false);
+        jProgressBar.setCursor(new java.awt.Cursor(java.awt.Cursor.WAIT_CURSOR));
+        jProgressBar.setDebugGraphicsOptions(javax.swing.DebugGraphics.NONE_OPTION);
+        jProgressBar.setStringPainted(true);
+        jProgressBar.setString("Iniciando...");
+        JFrame frame = new JFrame("Descargando adb & fastboot...");
+        frame.setContentPane(jProgressBar);
+        frame.setDefaultCloseOperation(WindowConstants.DO_NOTHING_ON_CLOSE);
+        frame.setSize(600, 100);
+        frame.setIconImage(new ImageIcon(getClass().getResource("Icon.png")).getImage());
+        frame.setVisible(true);
+        frame.setResizable(false);
+        frame.setLocationRelativeTo(null);
+        frame.setAlwaysOnTop(true);
+        Runnable updatethread;
+            updatethread = () -> {
+            try {
+                URL url = new URL("https://bitbucket.org/Franco28/flashtool-motorola-moto-g5-g5plus/downloads/adb.zip");
+                HttpURLConnection httpConnection = (HttpURLConnection) (url.openConnection());
+                long completeFileSize = httpConnection.getContentLength();
+                try (final java.io.BufferedInputStream in = new java.io.BufferedInputStream(httpConnection.getInputStream())) {
+                    java.io.FileOutputStream fos = new java.io.FileOutputStream("C:\\adb\\adb.zip");
+                    try (final java.io.BufferedOutputStream bout = new BufferedOutputStream(fos, 1024)) {
+                        byte[] data = new byte[1024];
+                        long downloadedFileSize = 0;
+                        int x1 = 0;
+                        while ((x1 = in.read(data, 0, 1024)) >= 0) {
+                            downloadedFileSize += x1;
+                            // calculate progress
+                            final int currentProgress = (int) ((((double)downloadedFileSize) / ((double)completeFileSize)) * 100000d);
+                            // update progress bar
+                            jProgressBar.setString("Calculando tamaño del archivo...");
+                            SwingUtilities.invokeLater(() -> {
+                                DebugConsole.setText("Descargando adb & fastboot... " +currentProgress+ " Bytes");
+                                jProgressBar.setString("Descargando adb & fastboot: \n" +currentProgress+ " Bytes");
+                                jProgressBar.setValue(currentProgress);
+                            });
+                            bout.write(data, 0, x1);
+                        }
+                    }
+                    DebugConsole.setText("Bienvenido a OnePlus 5 Tool");
+                    frame.setVisible(false);
+ 
+        File adb2 = new File("C:\\adb\\adb.zip"); 
+        String zipFilePath = "C:\\adb\\adb.zip";
+        String destDirectory = "C:\\adb";
+        UnzipUtility unzipper = new UnzipUtility();
+        try {
+            unzipper.unzip(zipFilePath, destDirectory);
+        } catch (IOException ex) {
+            if (runnable != null) runnable.run();
+            JOptionPane.showMessageDialog(null,"No se pudo descomprimir el archivo " +adb2,"Error",JOptionPane.ERROR_MESSAGE);
+        }
+            adb2.delete();
+            this.dispose();//To close the current window
+            new OPVisual().setVisible(true);
+    }
+            }catch (FileNotFoundException e) {
+            if (runnable != null) runnable.run();
+            jProgressBar.setString("Descargando adb & fastboot: ERROR");
+            DebugConsole.setText("ERROR: " +e);
+            }catch (IOException ex) {
+                if (runnable != null) runnable.run();
+                Logger.getLogger(OPVisual.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        };
+        new Thread(updatethread).start(); 
+ }
+        
+        File driverop = new File("C:\\Program Files (x86)\\OnePlus USB Drivers\\Uninstall.exe");
+        
+        if (!driverop.exists() == true){
+        final Runnable runnable = (Runnable) Toolkit.getDefaultToolkit().getDesktopProperty("win.sound.exclamation");
+        if (runnable != null) runnable.run();
+        JOptionPane.showMessageDialog(null,"No se pudo encontrar el driver de OnePlus \n\n El archivo se instalará en C:\\Program Files (x86)\\OnePlus USB Drivers","Error",JOptionPane.ERROR_MESSAGE);
+        final JProgressBar jProgressBar = new JProgressBar();
+        jProgressBar.setMaximum(100000);
+        jProgressBar.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        jProgressBar.setBorderPainted(false);
+        jProgressBar.setCursor(new java.awt.Cursor(java.awt.Cursor.WAIT_CURSOR));
+        jProgressBar.setDebugGraphicsOptions(javax.swing.DebugGraphics.NONE_OPTION);
+        jProgressBar.setStringPainted(true);
+        jProgressBar.setString("Iniciando...");
+        JFrame frame = new JFrame("Descargando OnePlus drivers...");
+        frame.setContentPane(jProgressBar);
+        frame.setDefaultCloseOperation(WindowConstants.DO_NOTHING_ON_CLOSE);
+        frame.setSize(600, 100);
+        frame.setIconImage(new ImageIcon(getClass().getResource("Icon.png")).getImage());
+        frame.setVisible(true);
+        frame.setResizable(false);
+        frame.setLocationRelativeTo(null);
+        frame.setAlwaysOnTop(true);
+        Runnable updatethread;
+            updatethread = () -> {
+            try {
+                URL url = new URL("https://bitbucket.org/Franco28/flashtool-motorola-moto-g5-g5plus/downloads/oneplusdrivers.zip");
+                HttpURLConnection httpConnection = (HttpURLConnection) (url.openConnection());
+                long completeFileSize = httpConnection.getContentLength();
+                try (final java.io.BufferedInputStream in = new java.io.BufferedInputStream(httpConnection.getInputStream())) {
+                    java.io.FileOutputStream fos = new java.io.FileOutputStream("C:\\OPTool\\.settings\\oneplusdrivers.zip");
+                    try (final java.io.BufferedOutputStream bout = new BufferedOutputStream(fos, 1024)) {
+                        byte[] data = new byte[1024];
+                        long downloadedFileSize = 0;
+                        int x1 = 0;
+                        while ((x1 = in.read(data, 0, 1024)) >= 0) {
+                            downloadedFileSize += x1;
+                            // calculate progress
+                            final int currentProgress = (int) ((((double)downloadedFileSize) / ((double)completeFileSize)) * 100000d);
+                            // update progress bar
+                            jProgressBar.setString("Calculando tamaño del archivo...");
+                            SwingUtilities.invokeLater(() -> {
+                                DebugConsole.setText("Descargando OnePlus drivers... " +currentProgress+ " Bytes");
+                                jProgressBar.setString("Descargando OnePlus drivers: \n" +currentProgress+ " Bytes");
+                                jProgressBar.setValue(currentProgress);
+                            });
+                            bout.write(data, 0, x1);
+                        }
+                    }
+                    DebugConsole.setText("Bienvenido a OnePlus 5 Tool");
+                    frame.setVisible(false);
+ 
+        File opdrivers = new File("C:\\OPTool\\.settings\\oneplusdrivers.zip"); 
+        String zipFilePath = "C:\\OPTool\\.settings\\oneplusdrivers.zip";
+        String destDirectory = "C:\\OPTool\\.settings";
+        UnzipUtility unzipper = new UnzipUtility();
+        try {
+            unzipper.unzip(zipFilePath, destDirectory);
+        } catch (IOException ex) {
+            if (runnable != null) runnable.run();
+            JOptionPane.showMessageDialog(null,"No se pudo descomprimir el archivo " +opdrivers,"Error",JOptionPane.ERROR_MESSAGE);
+        }
+            opdrivers.delete();
+            this.dispose();//To close the current window
+            new OPVisual().setVisible(true);
+            String path = "C:\\OPTool\\.settings\\OnePlus_setup.exe";
+            File file = new File(path);
+            Process t = Runtime.getRuntime().exec(file.getAbsolutePath());
+            
+            String path2 = "C:\\OPTool\\.settings\\OnePlus_USB_Drivers_Setup";
+            File file2 = new File(path2);
+            Process t2 = Runtime.getRuntime().exec(file.getAbsolutePath());
+ 
+ 
+    }
+            }catch (FileNotFoundException e) {
+            if (runnable != null) runnable.run();
+            jProgressBar.setString("Descargando OnePlus drivers: ERROR");
+            DebugConsole.setText("ERROR: " +e);
+            }catch (IOException ex) {
+                if (runnable != null) runnable.run();
+                Logger.getLogger(OPVisual.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        };
+        new Thread(updatethread).start(); 
+ }else{
+        System.out.println("Driver it´s - OK!");
+}
+            
+        
+        File bin = new File("C:\\OPTool\\.settings"); 
+        if (!bin.exists() == true){
+        final Runnable runnable = (Runnable) Toolkit.getDefaultToolkit().getDesktopProperty("win.sound.exclamation");
+        if (runnable != null) runnable.run();
+        JOptionPane.showMessageDialog(null,"No se pudieron encontrar los binarios \n\n El archivo se instalará en C:\\OPTool\\.settings","Error",JOptionPane.ERROR_MESSAGE);
+        final JProgressBar jProgressBar = new JProgressBar();
+        jProgressBar.setMaximum(100000);
+        jProgressBar.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        jProgressBar.setBorderPainted(false);
+        jProgressBar.setCursor(new java.awt.Cursor(java.awt.Cursor.WAIT_CURSOR));
+        jProgressBar.setDebugGraphicsOptions(javax.swing.DebugGraphics.NONE_OPTION);
+        jProgressBar.setStringPainted(true);
+        jProgressBar.setString("Iniciando...");
+        JFrame frame = new JFrame("Descargando binarios...");
+        frame.setContentPane(jProgressBar);
+        frame.setDefaultCloseOperation(WindowConstants.DO_NOTHING_ON_CLOSE);
+        frame.setSize(600, 100);
+        frame.setIconImage(new ImageIcon(getClass().getResource("Icon.png")).getImage());
+        frame.setVisible(true);
+        frame.setResizable(false);
+        frame.setLocationRelativeTo(null);
+        frame.setAlwaysOnTop(true);
+        Runnable updatethread;
+            updatethread = () -> {
+            try {
+                URL url = new URL("https://bitbucket.org/Franco28/flashtool-motorola-moto-g5-g5plus/downloads/bin.zip");
+                HttpURLConnection httpConnection = (HttpURLConnection) (url.openConnection());
+                long completeFileSize = httpConnection.getContentLength();
+                try (final java.io.BufferedInputStream in = new java.io.BufferedInputStream(httpConnection.getInputStream())) {
+                    java.io.FileOutputStream fos = new java.io.FileOutputStream("C:\\OPTool\\.settings\\bin.zip");
+                    try (final java.io.BufferedOutputStream bout = new BufferedOutputStream(fos, 1024)) {                       
+                        byte[] data = new byte[1024];
+                        long downloadedFileSize = 0;
+                        int x1 = 0;
+                        while ((x1 = in.read(data, 0, 1024)) >= 0) {
+                            downloadedFileSize += x1;
+                            // calculate progress
+                            final int currentProgress = (int) ((((double)downloadedFileSize) / ((double)completeFileSize)) * 100000);
+                            // update progress bar
+                            jProgressBar.setString("Calculando tamaño del archivo...");
+                            SwingUtilities.invokeLater(() -> {
+                                DebugConsole.setText("Descargando binarios... " +currentProgress+ " Bytes");
+                                jProgressBar.setString("Descargando binarios: \n" +currentProgress+ " Bytes");
+                                jProgressBar.setValue(currentProgress);
+                            });
+                            bout.write(data, 0, x1);
+                        }
+                    }
+                    DebugConsole.setText("Bienvenido a OnePlus 5 Tool");
+                    frame.setVisible(false);
+        
+        File lib = new File("C:\\OPTool\\.settings\\bin.zip"); 
+        String zipFilePath = "C:\\OPTool\\.settings\\bin.zip";
+        String destDirectory = "C:\\OPTool\\.settings";
+        UnzipUtility unzipper = new UnzipUtility();
+        try {
+            unzipper.unzip(zipFilePath, destDirectory);
+        } catch (IOException ex) {
+            if (runnable != null) runnable.run();
+            JOptionPane.showMessageDialog(null,"No se pudo descomprimir el archivo " +lib,"Error",JOptionPane.ERROR_MESSAGE);
+        }
+            lib.delete();
+              this.dispose();//To close the current window
+              new OPVisual().setVisible(true);
+ 
+    }
+            }catch (FileNotFoundException e) {
+            if (runnable != null) runnable.run();
+            jProgressBar.setString("Descargando binarios: ERROR");
+            DebugConsole.setText("ERROR: " +e);
+            }catch (IOException ex) {
+                if (runnable != null) runnable.run();
+                Logger.getLogger(OPVisual.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        };
+        new Thread(updatethread).start(); 
+ }
+        
+        }catch (IOException e) {
+        final Runnable runnable = (Runnable) Toolkit.getDefaultToolkit().getDesktopProperty("win.sound.exclamation");
+        if (runnable != null) runnable.run();
+        DebugConsole.setText("Error no se pudo establecer conexión con el servidor.");            
+        JOptionPane.showMessageDialog(null,"Verifique su conexión a internet y vuelva a intentarlo...","Error",JOptionPane.ERROR_MESSAGE);
+        dispose();//To close the current window         
+        }finally{
+            try { 
+            sock.close(); 
+        }catch (IOException e) { 
+            }
+        }   
     }//GEN-LAST:event_formWindowOpened
 
     private void UnlockBootloaderBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_UnlockBootloaderBTNActionPerformed
@@ -1672,13 +1756,7 @@ try {
     JOptionPane.showMessageDialog(null, ioException.getMessage(),"Error",JOptionPane.ERROR_MESSAGE);
 }   
               this.dispose();//To close the current window
-              String path = "Tool.exe";
-              File kill = new File(path);
-        try { 
-            Process t = Runtime.getRuntime().exec(file.getAbsolutePath());
-        } catch (IOException ex) {
-            Logger.getLogger(OPVisual.class.getName()).log(Level.SEVERE, null, ex);
-        }
+              new OPVisual().setVisible(true);
     }//GEN-LAST:event_CheckFastbootDevicesBTNActionPerformed
 
     private void FlashTWRPOxygenOSBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_FlashTWRPOxygenOSBTNActionPerformed
@@ -2393,7 +2471,7 @@ try {
     private void MenuItemUninstallToolActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MenuItemUninstallToolActionPerformed
     final Runnable runnable = (Runnable) Toolkit.getDefaultToolkit().getDesktopProperty("win.sound.exclamation");
     if (runnable != null) runnable.run();
-        int reply = JOptionPane.showConfirmDialog(null, "Se eliminaran todas las carpetas y el mismo Tool!", "Cuidado! Desea continuar?", JOptionPane.YES_NO_OPTION);
+        int reply = JOptionPane.showConfirmDialog(null, "Se Eliminarán todas las carpetas y el mismo Tool!", "Cuidado! Desea continuar?", JOptionPane.YES_NO_OPTION);
         if (reply == JOptionPane.YES_OPTION) {               
                 try {
                 Path directory = Paths.get("C:\\OPTool");
@@ -2450,14 +2528,8 @@ try {
     JOptionPane.showMessageDialog(null, ioException.getMessage(),"Error",JOptionPane.ERROR_MESSAGE);
 }
         }else{
-            dispose();//To close the current window
-            String path = "Tool.exe";
-            File file = new File(path);
-            try {
-                Process t = Runtime.getRuntime().exec(file.getAbsolutePath());
-            } catch (IOException ex) {
-                Logger.getLogger(OPVisual.class.getName()).log(Level.SEVERE, null, ex);
-            }
+              this.dispose();//To close the current window
+              new OPVisual().setVisible(true);
         }        
     }//GEN-LAST:event_MenuItemUninstallToolActionPerformed
 
@@ -2471,14 +2543,8 @@ try {
             final Runnable runnable = (Runnable) Toolkit.getDefaultToolkit().getDesktopProperty("win.sound.exclamation");
             if (runnable != null) runnable.run();
             JOptionPane.showMessageDialog(null,"Carpeta " +dirToOpen+ " no encontrada " +iae,"Error",JOptionPane.ERROR_MESSAGE);
-            dispose();//To close the current window
-            String path = "Tool.exe";
-            File file = new File(path);
-            try {   
-                Process t = Runtime.getRuntime().exec(file.getAbsolutePath());
-            } catch (IOException ex) {
-                Logger.getLogger(OPVisual.class.getName()).log(Level.SEVERE, null, ex);
-            }
+              this.dispose();//To close the current window
+              new OPVisual().setVisible(true);
         } catch (IOException ex) {
             Logger.getLogger(OPVisual.class.getName()).log(Level.SEVERE, null, ex);
         }
@@ -2515,13 +2581,8 @@ try {
                     }
                 });
               this.dispose();//To close the current window
-              String path = "Tool.exe";
-              File file = new File(path);
-        try { 
-            Process t = Runtime.getRuntime().exec(file.getAbsolutePath());
-        } catch (IOException ex) {
-            Logger.getLogger(OPVisual.class.getName()).log(Level.SEVERE, null, ex);
-        } 
+              new OPVisual().setVisible(true);
+              
             } catch (IOException ex) {
             if (runnable != null) runnable.run();
             JOptionPane.showMessageDialog(null, "No se pudo eliminar " +ex,"Error",JOptionPane.ERROR_MESSAGE);
@@ -2529,13 +2590,7 @@ try {
         }
         if (reply == JOptionPane.NO_OPTION) {            
               this.dispose();//To close the current window
-              String path = "Tool.exe";
-              File file = new File(path);
-        try { 
-            Process t = Runtime.getRuntime().exec(file.getAbsolutePath());
-        } catch (IOException ex) {
-            Logger.getLogger(OPVisual.class.getName()).log(Level.SEVERE, null, ex);
-        }      
+              new OPVisual().setVisible(true);
         }    
     }//GEN-LAST:event_MenuItemEmptyIMGFolderActionPerformed
 
