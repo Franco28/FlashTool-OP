@@ -81,7 +81,7 @@ public interface Welcome {
    
             EventQueue.invokeLater(() -> {
             JLabel label = new JLabel();
-            JFrame frame = new JFrame("Bienvenido al OnePlus Tool 1.0.2.9.RC1 " +OS +LOCALE);
+            JFrame frame = new JFrame("Bienvenido al OnePlus Tool 1.0.3.9.RC1 " +OS+ " " +LOCALE);
             label.setHorizontalAlignment(SwingConstants.CENTER);
             Socket sock= new Socket();
             InetSocketAddress addr=new InetSocketAddress("www.google.com",80);
@@ -212,7 +212,7 @@ public interface Welcome {
    
             EventQueue.invokeLater(() -> {
             JLabel label = new JLabel();
-            JFrame frame = new JFrame("Welcome To OnePlus Tool 1.0.2.9.RC1 " +OS);
+            JFrame frame = new JFrame("Welcome To OnePlus Tool 1.0.3.9.RC1 " +OS+ " " +LOCALE);
             label.setHorizontalAlignment(SwingConstants.CENTER);
             Socket sock= new Socket();
             InetSocketAddress addr=new InetSocketAddress("www.google.com",80);

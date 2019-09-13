@@ -2059,6 +2059,14 @@ try {
             writer.println("echo - Nuevo modo de inicio con animacion");
             writer.println("echo - Se arreglo el codigo de descargar el firmware");
             writer.println("echo - Otros arreglos internos");
+            writer.println("echo.");
+            writer.println("echo ***************");            
+            writer.println("echo * 1.0.3.9-RC1 *");  
+            writer.println("echo ***************"); 
+            writer.println("echo - Agregado Drivers de OnePlus");
+            writer.println("echo - Arreglado -adb- no se puede instalar debido a error en el codigo");
+            writer.println("echo - Anadido motor de lenguaje y sistema operativo");
+            writer.println("echo - Arreglado OP5 ingles Tool");
             writer.println("echo.");            
             writer.println("echo Presiona cualquier tecla para salir...");
             writer.println("echo.");
