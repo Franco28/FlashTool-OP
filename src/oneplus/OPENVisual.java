@@ -18,7 +18,7 @@
  * Tool En
  * 
  * @author (Franco Mato - franco28) 
- * @version (1.0.1.9.RC1)
+ * @version (1.0.2.9.RC1)
  * 
  * 
  */
@@ -152,7 +152,7 @@ public class OPENVisual extends javax.swing.JFrame {
         MenuItemBugs = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("OnePlus 5 Tool - STABLE - En - 1.0.1.9-RC1");
+        setTitle("OnePlus 5 Tool - STABLE - En - 1.0.2.9-RC1");
         setAlwaysOnTop(true);
         setBackground(java.awt.Color.darkGray);
         setForeground(java.awt.Color.darkGray);
@@ -979,7 +979,7 @@ try {
         if (!bin.exists() == true){
         final Runnable runnable = (Runnable) Toolkit.getDefaultToolkit().getDesktopProperty("win.sound.exclamation");
         if (runnable != null) runnable.run();
-        JOptionPane.showMessageDialog(null,"No se pudieron encontrar los binarios \n\n El archivo se instalará en C:\\OPTool\\.settings","Error",JOptionPane.ERROR_MESSAGE);
+        JOptionPane.showMessageDialog(null,"Could not find binaries \n\n The file will be installed in C:\\OPTool\\.settings","Error",JOptionPane.ERROR_MESSAGE);
         final JProgressBar jProgressBar = new JProgressBar();
         jProgressBar.setMaximum(100000);
         jProgressBar.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
@@ -988,7 +988,7 @@ try {
         jProgressBar.setDebugGraphicsOptions(javax.swing.DebugGraphics.NONE_OPTION);
         jProgressBar.setStringPainted(true);
         jProgressBar.setString("Starting...");
-        JFrame frame = new JFrame("Downloading binarios...");
+        JFrame frame = new JFrame("Downloading binaries...");
         frame.setContentPane(jProgressBar);
         frame.setDefaultCloseOperation(WindowConstants.DO_NOTHING_ON_CLOSE);
         frame.setSize(600, 100);
@@ -1016,8 +1016,8 @@ try {
                             // update progress bar
                             jProgressBar.setString("Calculating file size...");
                             SwingUtilities.invokeLater(() -> {
-                                DebugConsole.setText("Downloading binarios... " +currentProgress+ " Bytes");
-                                jProgressBar.setString("Downloading binarios: \n" +currentProgress+ " Bytes");
+                                DebugConsole.setText("Downloading binaries... " +currentProgress+ " Bytes");
+                                jProgressBar.setString("Downloading binaries: \n" +currentProgress+ " Bytes");
                                 jProgressBar.setValue(currentProgress);
                             });
                             bout.write(data, 0, x1);
@@ -1045,7 +1045,7 @@ try {
     }
             }catch (FileNotFoundException e) {
             if (runnable != null) runnable.run();
-            jProgressBar.setString("Downloading binarios: ERROR");
+            jProgressBar.setString("Downloading binaries: ERROR");
             DebugConsole.setText("ERROR: " +e);
             }catch (IOException ex) {
                 if (runnable != null) runnable.run();
@@ -1959,6 +1959,14 @@ try {
             writer.println("echo - Fixed English language in the Tool for OnePlus 5");
             writer.println("echo - Other code fixes");
             writer.println("echo.");
+            writer.println("echo ***************");            
+            writer.println("echo * 1.0.2.9-RC1 *");  
+            writer.println("echo ***************"); 
+            writer.println("echo - Dropped OP 5T for now");
+            writer.println("echo - New start mode with animation");
+            writer.println("echo - Fixed firmware download code");
+            writer.println("echo - Other internal arrangements");
+            writer.println("echo.");
             writer.println("echo Press any key to exit...");
             writer.println("echo.");
             writer.println("pause>nul");
@@ -2044,23 +2052,14 @@ try {
     private void MenuItemDownloadFirmwareActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MenuItemDownloadFirmwareActionPerformed
         final Runnable runnable = (Runnable) Toolkit.getDefaultToolkit().getDesktopProperty("win.sound.exclamation");
         if (runnable != null) runnable.run();
-        int reply = JOptionPane.showOptionDialog(null, 
-            "During the download you will not be able to use the Tool! \n\n To verify the download, the Folder will open", 
-            "Warning! Do you want to continue?",
-            JOptionPane.YES_NO_OPTION,
-            JOptionPane.INFORMATION_MESSAGE, 
-            null,
-            new String[]{"Yes, continue", "No"},
-            null); 
-        if (reply == JOptionPane.YES_OPTION) {       
+        File f = new File("C:\\OPTool\\img\\firmware\\OnePlus5Oxygen_23_OTA_051_all_1907311835_5de64c.zip");         
         Socket sock= new Socket();
         InetSocketAddress addr=new InetSocketAddress("www.google.com",80);
-        try {
-        sock.connect(addr,3000);       
-        
-        File f = new File("C:\\OPTool\\img\\firmware\\OnePlus5Oxygen_23_OTA_051_all_1907311835_5de64c.zip"); 
-        
         if(!f.exists()){
+        int reply = JOptionPane.showConfirmDialog(null, "Durante la descarga no podra utilziar el Tool! \n\n Para verificar la descarga se abrirá la carpeta", "Cuidado! Desea continuar?", JOptionPane.YES_NO_OPTION);
+        try {
+        sock.connect(addr,3000);   
+        if (reply == JOptionPane.YES_OPTION) {          
         final JProgressBar jProgressBar = new JProgressBar();
         jProgressBar.setMaximum(100000);
         jProgressBar.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
@@ -2069,7 +2068,7 @@ try {
         jProgressBar.setDebugGraphicsOptions(javax.swing.DebugGraphics.NONE_OPTION);
         jProgressBar.setStringPainted(true);
         jProgressBar.setString("Starting...");
-        JFrame frame = new JFrame("Downloading OnePlus5Oxygen_23_OTA_051_all_1907311835_5de64c....");
+        JFrame frame = new JFrame("Downloading OnePlus5Oxygen_23_OTA_051_all_1907311835_5de64c... ");
         frame.setContentPane(jProgressBar);
         frame.setDefaultCloseOperation(WindowConstants.DO_NOTHING_ON_CLOSE);
         frame.setSize(600, 100);
@@ -2103,7 +2102,7 @@ try {
                             bout.write(data, 0, x1);
                         }
                     }
-                   DebugConsole.setText("Welcome to OnePlus 5 Tool");
+                    DebugConsole.setText("Bienvenido a OnePlus 5 Tool");
                     frame.setVisible(false);
                 }
             }catch (FileNotFoundException e) {
@@ -2120,7 +2119,7 @@ try {
         }catch (IOException e) {
         if (runnable != null) runnable.run();
         DebugConsole.setText("Error could not connect to server.");            
-        JOptionPane.showMessageDialog(null,"Check your internet connection and try again....","Error",JOptionPane.ERROR_MESSAGE);
+        JOptionPane.showMessageDialog(null,"Check your internet connection and try again...","Error",JOptionPane.ERROR_MESSAGE);
         dispose();//To close the current window 
        
         }finally{
@@ -2129,26 +2128,16 @@ try {
         }catch (IOException e) { 
             }
         } 
-    if (runnable != null) runnable.run();
-    int reply2 = JOptionPane.showConfirmDialog(null, "Do you want to flash the firmware now? If you accept, you must have the phone connected so it will enter recovery mode", "Warning! Do you want to continue?", JOptionPane.YES_NO_OPTION);
-    if (reply2 == JOptionPane.YES_OPTION) {     
-    File f = new File("C:\\OPTool\\img\\bootloader\\rebootr.bat");
-    if(f.exists() == true){        
-   Runtime runtime = Runtime.getRuntime();
-try {
-    Process p1 = runtime.exec("cmd /c start C:\\OPTool\\.settings\\bin\\twrp.bat");
-    InputStream is = p1.getInputStream();
-    int i = 0;
-    while( (i = is.read() ) != -1) {
-       if (runnable != null) runnable.run();
-       JOptionPane.showMessageDialog(null, +i,"Error",JOptionPane.ERROR_MESSAGE);
-    }
-} catch(IOException ioException) {
-    if (runnable != null) runnable.run();
-    JOptionPane.showMessageDialog(null, ioException.getMessage(),"Error",JOptionPane.ERROR_MESSAGE);
 }
-  }
-    }
+    File oos = new File("C:\\OPTool\\img\\bootloader\\rebootr.bat");
+    File ooos = new File("C:\\OPTool\\img\\firmware\\OnePlus5Oxygen_23_OTA_051_all_1907311835_5de64c.zip");
+    if(oos.exists() == true || ooos.exists() == true){   
+        String fileName = "C:\\OPTool\\img\\firmware\\OnePlus5Oxygen_23_OTA_051_all_1907311835_5de64c.zip";
+        File rom = new File(fileName);
+        long fileSize = rom.length();
+        JOptionPane.showMessageDialog(null,"The size of the downloaded file is: " +fileSize+ " Bytes \n\n Size of the original file in Bytes: 1.907.085.197 \n\n If these do not match please download the file again","Warning! Read carefully before continuing",JOptionPane.WARNING_MESSAGE);
+    int reply2 = JOptionPane.showConfirmDialog(null, "Do you want to flash the firmware now? If you accept, you must have the phone connected so it will enter recovery mode", "Warning! Do you want to continue?", JOptionPane.YES_NO_OPTION);
+    if (reply2 == JOptionPane.YES_OPTION) {   
        Desktop desktop = Desktop.getDesktop();
         File dirToOpen = null;
         if (runnable != null) runnable.run();
@@ -2163,7 +2152,52 @@ try {
             if (runnable != null) runnable.run();
             Logger.getLogger(OPVisual.class.getName()).log(Level.SEVERE, null, ex);
         }
+        
+        final File file = new File("C:\\OPTool\\.settings\\bin\\rebootr.bat");
+        try {
+            file.createNewFile();
+        } catch (IOException ex) {
+        if (runnable != null) runnable.run();
+        JOptionPane.showMessageDialog(null,"Could not create file","Error",JOptionPane.ERROR_MESSAGE);
         }
+        try (PrintWriter writer = new PrintWriter(file, "UTF-8")) {
+            writer.println("@echo off");
+            writer.println("title Reboot Recovery");
+            writer.println("color C");
+            writer.println("echo.");
+            writer.println("echo Reboot Recovery...");
+            writer.println("echo.");
+            writer.println("echo Press any key to continue...");
+            writer.println("pause>nul");
+            writer.println("echo.");
+            writer.println("adb reboot recovery");
+            writer.println("echo.");
+            writer.println("echo Press any key to exit...");
+            writer.println("echo.");
+            writer.println("pause>nul");
+            writer.println("TASKKILL /F /IM adb.exe");
+            writer.println("del \"%~f0\" & exit");
+
+        }catch (IOException e) {
+         if (runnable != null) runnable.run();
+         JOptionPane.showMessageDialog(null,"" +e ,"Error",JOptionPane.ERROR_MESSAGE);
+        }
+        
+    Runtime runtime = Runtime.getRuntime();
+try {
+    Process p1 = runtime.exec("cmd /c start C:\\OPTool\\.settings\\bin\\rebootr.bat");
+    InputStream is = p1.getInputStream();
+    int i = 0;
+    while( (i = is.read() ) != -1) {
+       if (runnable != null) runnable.run();
+       JOptionPane.showMessageDialog(null, +i,"Error",JOptionPane.ERROR_MESSAGE);
+    }
+} catch(IOException ioException) {
+    if (runnable != null) runnable.run();
+    JOptionPane.showMessageDialog(null, ioException.getMessage(),"Error",JOptionPane.ERROR_MESSAGE);
+}
+  }
+     }
     }//GEN-LAST:event_MenuItemDownloadFirmwareActionPerformed
 
     private void MenuItemRecoveryActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MenuItemRecoveryActionPerformed
@@ -2497,8 +2531,16 @@ try {
     }//GEN-LAST:event_MenuItemEmptyIMGFolderActionPerformed
 
     private void MenuItemOP5ToolActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MenuItemOP5ToolActionPerformed
-        this.dispose();
-        new OPENVisual5T().setVisible(true);    
+        final Runnable runnable = (Runnable) Toolkit.getDefaultToolkit().getDesktopProperty("win.sound.exclamation");
+        if (runnable != null) runnable.run();
+        JOptionPane.showOptionDialog(null, 
+            "is not ready yet! :(, im working on it!", 
+            "No ready yet",
+            JOptionPane.OK_OPTION,
+            JOptionPane.INFORMATION_MESSAGE, 
+            null,
+            new String[]{"Okey :("},
+            null);
     }//GEN-LAST:event_MenuItemOP5ToolActionPerformed
 
     private void MenuItemReleasesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MenuItemReleasesActionPerformed

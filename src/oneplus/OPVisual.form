@@ -852,7 +852,7 @@
   </NonVisualComponents>
   <Properties>
     <Property name="defaultCloseOperation" type="int" value="3"/>
-    <Property name="title" type="java.lang.String" value="OnePlus 5 Tool - ESTABLE - Es - 1.0.1.9-RC1"/>
+    <Property name="title" type="java.lang.String" value="OnePlus 5 Tool - ESTABLE - Es - 1.0.2.9-RC1"/>
     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
       <Color blue="40" green="40" id="darkGray" palette="1" red="40" type="palette"/>
     </Property>
@@ -862,7 +862,7 @@
     <Property name="resizable" type="boolean" value="false"/>
   </Properties>
   <AccessibilityProperties>
-    <Property name="AccessibleContext.accessibleName" type="java.lang.String" value="OnePlus Tool 5 - ESTABLE - Es - 1.0.1.9-RC1"/>
+    <Property name="AccessibleContext.accessibleName" type="java.lang.String" value="OnePlus Tool 5 - ESTABLE - Es - 1.0.2.9-RC1"/>
     <Property name="AccessibleContext.accessibleDescription" type="java.lang.String" value="Tool for OnePlus 5"/>
     <Property name="AccessibleContext.accessibleParent" type="javax.accessibility.Accessible" editor="org.netbeans.modules.form.ComponentChooserEditor">
       <ComponentRef name="Form"/>

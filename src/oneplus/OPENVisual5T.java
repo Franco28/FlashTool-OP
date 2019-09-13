@@ -807,7 +807,7 @@ try {
         if (!bin.exists() == true){
         final Runnable runnable = (Runnable) Toolkit.getDefaultToolkit().getDesktopProperty("win.sound.exclamation");
         if (runnable != null) runnable.run();
-        JOptionPane.showMessageDialog(null,"No se pudieron encontrar los binarios \n\n El archivo se instalará en C:\\OPTool\\.settings","Error",JOptionPane.ERROR_MESSAGE);
+        JOptionPane.showMessageDialog(null,"Could not find binaries \n\n The file will be installed in C:\\OPTool\\.settings","Error",JOptionPane.ERROR_MESSAGE);
         final JProgressBar jProgressBar = new JProgressBar();
         jProgressBar.setMaximum(100000);
         jProgressBar.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
@@ -816,7 +816,7 @@ try {
         jProgressBar.setDebugGraphicsOptions(javax.swing.DebugGraphics.NONE_OPTION);
         jProgressBar.setStringPainted(true);
         jProgressBar.setString("Starting...");
-        JFrame frame = new JFrame("Downloading binarios...");
+        JFrame frame = new JFrame("Downloading binaries...");
         frame.setContentPane(jProgressBar);
         frame.setDefaultCloseOperation(WindowConstants.DO_NOTHING_ON_CLOSE);
         frame.setSize(600, 100);
@@ -844,8 +844,8 @@ try {
                             // update progress bar
                             jProgressBar.setString("Calculating file size...");
                             SwingUtilities.invokeLater(() -> {
-                                DebugConsole.setText("Downloading binarios... " +currentProgress+ " Bytes");
-                                jProgressBar.setString("Downloading binarios: \n" +currentProgress+ " Bytes");
+                                DebugConsole.setText("Downloading binaries... " +currentProgress+ " Bytes");
+                                jProgressBar.setString("Downloading binaries: \n" +currentProgress+ " Bytes");
                                 jProgressBar.setValue(currentProgress);
                             });
                             bout.write(data, 0, x1);
@@ -873,7 +873,7 @@ try {
     }
             }catch (FileNotFoundException e) {
             if (runnable != null) runnable.run();
-            jProgressBar.setString("Downloading binarios: ERROR");
+            jProgressBar.setString("Downloading binaries: ERROR");
             DebugConsole.setText("ERROR: " +e);
             }catch (IOException ex) {
                 if (runnable != null) runnable.run();

@@ -13,13 +13,27 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+
+/**
+ * Tool Welcome
+ * 
+ * @author (Franco Mato - franco28) 
+ * @version (1.0.2.9.RC1)
+ * 
+ * 
+ */
+
 package oneplus;
 
 import java.awt.BorderLayout;
+import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.EventQueue;
 import java.awt.Toolkit;
+import java.io.IOException;
+import java.net.InetSocketAddress;
 import java.net.MalformedURLException;
+import java.net.Socket;
 import java.net.URL;
 import javax.swing.ImageIcon;
 import javax.swing.JFrame;
@@ -35,8 +49,8 @@ import javax.swing.WindowConstants;
  * @author franco28
  */
 public interface Welcome {
-    
-    public static void main(String args[]) { 
+    public static void main(String args[]) throws IOException { 
+
         try {
             System.out.println("Setting look and feel...");
             UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
@@ -47,22 +61,29 @@ public interface Welcome {
             System.out.println("Unable to set LookAndFeel");
         }   
                 
-    final Runnable runnable = (Runnable) Toolkit.getDefaultToolkit().getDesktopProperty("win.sound.exclamation");
-    if (runnable != null) runnable.run();
+        final Runnable runnable = (Runnable) Toolkit.getDefaultToolkit().getDesktopProperty("win.sound.exclamation");
+        if (runnable != null) runnable.run();
+   
             EventQueue.invokeLater(() -> {
-           JLabel label = new JLabel();
-           label.setHorizontalAlignment(SwingConstants.CENTER);
+            JLabel label = new JLabel();
+            JFrame frame = new JFrame("Welcome To OnePlus Tool 1.0.2.9.RC1");
+            label.setHorizontalAlignment(SwingConstants.CENTER);
+            Socket sock= new Socket();
+            InetSocketAddress addr=new InetSocketAddress("www.google.com",80);
            try{
-
-               URL imageURL = new URL("https://cdn.dribbble.com/users/299266/screenshots/1700676/1_dribbble.gif");
-               
+               sock.connect(addr,3000);  
+               URL imageURL = new URL("https://raw.githubusercontent.com/Franco28/FlashTool-OP/master/src/oneplus/images/splash.gif");              
                label.setIcon(new ImageIcon(imageURL));
            }
            catch (MalformedURLException ex){
-           }        
-           JFrame frame = new JFrame("Welcome to OnePlus Tool");
-           frame.setIconImage(new ImageIcon("Icon.png").getImage());
+           System.out.println("Unable to read the splash");            
+           } catch (IOException ex) {   
+               frame.setTitle("Error with network connection, the splash wont´t work and Tool won´t load... " +ex);
+               JOptionPane.showMessageDialog(null,"Check your internet connection and try again....","Error",JOptionPane.ERROR_MESSAGE);
+           }
+
            frame.add(label, BorderLayout.CENTER);
+           frame.setBackground(Color.RED);
            frame.setDefaultCloseOperation(WindowConstants.DO_NOTHING_ON_CLOSE);
            frame.setMinimumSize(new Dimension(800, 600));
            frame.setLocationRelativeTo(null);
@@ -83,20 +104,38 @@ public interface Welcome {
    }
         
         if(response == "OnePlus 5T Tool") {
-        new OPVisual5T().setVisible(true);
+        if (runnable != null) runnable.run();
+        JOptionPane.showOptionDialog(null, 
+            response+ " is not ready yet! :(, im working on it!", 
+            "No ready yet",
+            JOptionPane.OK_OPTION,
+            JOptionPane.INFORMATION_MESSAGE, 
+            null,
+            new String[]{"Okey :("},
+            null);
+        System.exit(0);
         }
         
         if(response == "Xiaomi MI A2/6X Tool") {
         if (runnable != null) runnable.run();
-        JOptionPane.showMessageDialog(null, response+ " is not ready yet! :( ");   
+        JOptionPane.showOptionDialog(null, 
+            response+ " is not ready yet! :(", 
+            "No ready yet",
+            JOptionPane.OK_OPTION,
+            JOptionPane.INFORMATION_MESSAGE, 
+            null,
+            new String[]{"Okey :("},
+            null);
         System.exit(0);
         }
         
         if(response == null) {
+        if (runnable != null) runnable.run();
         System.exit(0);
-   }
+        }
         });
     };
+
   }
     
 
