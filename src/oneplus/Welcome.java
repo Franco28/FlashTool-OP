@@ -246,7 +246,7 @@ public interface Welcome {
         
         if(response == "OnePlus 5 Tool") {
         frame.setVisible(false);
-        new OPENVisual().setVisible(true);
+        new OPVisualEN().setVisible(true);
    }
         
         if(response == "OnePlus 5T Tool") {
