@@ -1,10 +1,10 @@
-# FlashTool-OP
+# FlashTool-Moto
 
 A Tool made with Netbeans and launch4j based on Java
 
 ## Getting Started
 
-Download the Tool from here * [FlashTool-OP](https://github.com/Franco28/FlashTool-OP/releases) 
+Download the Tool from here * [FlashTool-Moto](https://github.com/Franco28/FlashTool-OP/releases) 
 
 ### Prerequisites
 
