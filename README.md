@@ -23,11 +23,11 @@ Download the Tool from here * [FlashTool-Moto](https://github.com/Franco28/Flash
 
 ### Welcome Tool
 
-![Tool](https://raw.githubusercontent.com/Franco28/FlashTool-OP/master/Welcome.png "Welcome Tool")
+![Tool](https://raw.githubusercontent.com/Franco28/FlashTool-OP/MotoTool/Welcome.png "Welcome Tool")
 
 ### Home Tool
 
-![Tool](https://raw.githubusercontent.com/Franco28/FlashTool-OP/master/Tool.png "Tool")
+![Tool](https://raw.githubusercontent.com/Franco28/FlashTool-OP/MotoTool/Tool.png "Tool")
 
 ## Built With
 
