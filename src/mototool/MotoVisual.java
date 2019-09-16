@@ -104,8 +104,6 @@ public class MotoVisual extends javax.swing.JFrame {
         MenuItemTWRP = new javax.swing.JMenuItem();
         MenuItemFirmware = new javax.swing.JMenuItem();
         MenuItemRecovery = new javax.swing.JMenuItem();
-        jSeparator2 = new javax.swing.JPopupMenu.Separator();
-        MenuItemOpenROM = new javax.swing.JMenuItem();
         MenuFlash = new javax.swing.JMenu();
         MenuItemFlashFirmware = new javax.swing.JMenuItem();
         MenuItemFlashFirmwareSeparator = new javax.swing.JPopupMenu.Separator();
@@ -376,18 +374,6 @@ public class MotoVisual extends javax.swing.JFrame {
         MenuSubDirs.add(MenuItemRecovery);
 
         MenuFiles.add(MenuSubDirs);
-        MenuFiles.add(jSeparator2);
-
-        MenuItemOpenROM.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        MenuItemOpenROM.setIcon(new javax.swing.ImageIcon(getClass().getResource("/mototool/images/open16.png"))); // NOI18N
-        MenuItemOpenROM.setText("Abrir carpeta ROMS");
-        MenuItemOpenROM.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        MenuItemOpenROM.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                MenuItemOpenROMActionPerformed(evt);
-            }
-        });
-        MenuFiles.add(MenuItemOpenROM);
 
         TaskBar.add(MenuFiles);
 
@@ -476,7 +462,7 @@ public class MotoVisual extends javax.swing.JFrame {
 
         MenuItemOP5Tool.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         MenuItemOP5Tool.setIcon(new javax.swing.ImageIcon(getClass().getResource("/mototool/images/favicon.png"))); // NOI18N
-        MenuItemOP5Tool.setText("mototool 5T Tool");
+        MenuItemOP5Tool.setText("OnePlus Tool");
         MenuItemOP5Tool.setToolTipText("");
         MenuItemOP5Tool.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         MenuItemOP5Tool.addActionListener(new java.awt.event.ActionListener() {
@@ -906,11 +892,11 @@ try {
         Runnable updatethread;
             updatethread = () -> {
             try {
-                URL url = new URL("https://bitbucket.org/Franco28/flashtool-motorola-moto-g5-g5plus/downloads/bin.zip");
+                URL url = new URL("https://bitbucket.org/Franco28/flashtool-motorola-moto-g5-g5plus/downloads/binmoto.zip");
                 HttpURLConnection httpConnection = (HttpURLConnection) (url.openConnection());
                 long completeFileSize = httpConnection.getContentLength();
                 try (final java.io.BufferedInputStream in = new java.io.BufferedInputStream(httpConnection.getInputStream())) {
-                    java.io.FileOutputStream fos = new java.io.FileOutputStream("C:\\MotoTool\\.settings\\bin.zip");
+                    java.io.FileOutputStream fos = new java.io.FileOutputStream("C:\\MotoTool\\.settings\\binmoto.zip");
                     try (final java.io.BufferedOutputStream bout = new BufferedOutputStream(fos, 1024)) {                       
                         byte[] data = new byte[1024];
                         long downloadedFileSize = 0;
@@ -932,8 +918,8 @@ try {
                     DebugConsole.setText("Bienvenido a MotoTool para Moto Z3 Play");
                     frame.setVisible(false);
         
-        File lib = new File("C:\\MotoTool\\.settings\\bin.zip"); 
-        String zipFilePath = "C:\\MotoTool\\.settings\\bin.zip";
+        File lib = new File("C:\\MotoTool\\.settings\\binmoto.zip"); 
+        String zipFilePath = "C:\\MotoTool\\.settings\\binmoto.zip";
         String destDirectory = "C:\\MotoTool\\.settings";
         UnzipUtility unzipper = new UnzipUtility();
         try {
@@ -971,16 +957,6 @@ try {
         }catch (IOException e) { 
             }
         }   
-            File readydrivers = new File("C:\\MotoTool\\.settings\\mototool_USB_Drivers_Setup.exe"); 
-            File readydrivers2 = new File("C:\\MotoTool\\.settings\\autorun.inf"); 
-            File readydrivers3 = new File("C:\\MotoTool\\.settings\\mototool_setup.exe"); 
-            if (readydrivers.exists() == true){
-                readydrivers.delete();
-                readydrivers2.delete();
-                readydrivers3.delete();
-                this.dispose();
-                new MotoVisual().setVisible(true);
-            }
             
         File binf = new File("C:\\MotoTool\\.settings\\bin"); 
         if (!binf.exists() == true){
@@ -1035,32 +1011,6 @@ if (!f.exists() == true){
   DebugConsole.setText("Error: " + e.getMessage());     
   }
 }
-    File rom = new File("C:\\MotoTool\\rom"); 
-        if (!rom.exists() == true){
-// Create a directory; all non-existent ancestor directories are
-// automatically created
- try{
-  String strDirectoy ="C:\\MotoTool";
-  String strManyDirectories="C:\\MotoTool\\rom";
-
-  // Create one directory
-  boolean success = (
-  new File(strDirectoy)).mkdir();
-  if (success) {
-  DebugConsole.setText("Directorio: " + strManyDirectories + " creado...");    
-  DebugConsole.setText("Bienvenido a MotoTool para Moto Z3 Play");
-  }  
-  // Create multiple directories
-  success = (new File(strManyDirectories)).mkdirs();
-  if (success) {
-  DebugConsole.setText("Directorios: " + strManyDirectories + " creado...");  
-  DebugConsole.setText("Bienvenido a MotoTool para Moto Z3 Play");
-  }
-
-  }catch (IllegalArgumentException e){//Catch exception if any
-  DebugConsole.setText("Error: " + e.getMessage());     
-  }
-        }
         
         File MotoTool = new File("MotoTool"); 
         if (!MotoTool.exists() == true){
@@ -1670,7 +1620,9 @@ try {
     }//GEN-LAST:event_MenuItemEndJavaProcessActionPerformed
 
     private void MenuItemEnglishActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MenuItemEnglishActionPerformed
-        this.dispose();
+        final Runnable runnable = (Runnable) Toolkit.getDefaultToolkit().getDesktopProperty("win.sound.exclamation");
+        if (runnable != null) runnable.run();
+        JOptionPane.showMessageDialog(null, "Opción no disponible...");     
     }//GEN-LAST:event_MenuItemEnglishActionPerformed
 
     private void MenuItemFlashFirmwareActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MenuItemFlashFirmwareActionPerformed
@@ -1989,16 +1941,11 @@ try {
     }//GEN-LAST:event_MenuItemEmptyIMGFolderActionPerformed
 
     private void MenuItemOP5ToolActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MenuItemOP5ToolActionPerformed
-        final Runnable runnable = (Runnable) Toolkit.getDefaultToolkit().getDesktopProperty("win.sound.exclamation");
-        if (runnable != null) runnable.run();
-        JOptionPane.showOptionDialog(null, 
-            "No está listo todavía! :(, im working on it!", 
-            "En proceso...",
-            JOptionPane.OK_OPTION,
-            JOptionPane.INFORMATION_MESSAGE, 
-            null,
-            new String[]{"Okay :("},
-            null);
+Desktop d = Desktop.getDesktop();
+try {
+    d.browse(new URI("https://github.com/Franco28/FlashTool-OP"));
+} catch (IOException | URISyntaxException e2) {
+} 
     }//GEN-LAST:event_MenuItemOP5ToolActionPerformed
 
     private void MenuItemReleasesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MenuItemReleasesActionPerformed
@@ -2009,23 +1956,6 @@ try {
 } 
     }//GEN-LAST:event_MenuItemReleasesActionPerformed
     
-    private void MenuItemOpenROMActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MenuItemOpenROMActionPerformed
-        Desktop desktop = Desktop.getDesktop();
-        File dirToOpen = null;
-        try {
-            dirToOpen = new File("C:\\MotoTool\\rom");
-            desktop.open(dirToOpen);
-        } catch (IllegalArgumentException iae) {
-            final Runnable runnable = (Runnable) Toolkit.getDefaultToolkit().getDesktopProperty("win.sound.exclamation");
-            if (runnable != null) runnable.run();
-            JOptionPane.showMessageDialog(null,"Carpeta " +dirToOpen+ "no encontrada","Error",JOptionPane.ERROR_MESSAGE);
-        } catch (IOException ex) {
-            final Runnable runnable = (Runnable) Toolkit.getDefaultToolkit().getDesktopProperty("win.sound.exclamation");
-            if (runnable != null) runnable.run();
-            Logger.getLogger(MotoVisual.class.getName()).log(Level.SEVERE, null, ex);
-        }
-    }//GEN-LAST:event_MenuItemOpenROMActionPerformed
-
     private void howtouseitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_howtouseitActionPerformed
 Desktop d = Desktop.getDesktop();
 try {
@@ -2097,7 +2027,6 @@ try {
     private javax.swing.JMenuItem MenuItemOP5Tool;
     private javax.swing.JMenuItem MenuItemOpenADB;
     private javax.swing.JMenuItem MenuItemOpenIMGFolder;
-    private javax.swing.JMenuItem MenuItemOpenROM;
     private javax.swing.JMenuItem MenuItemPage;
     private javax.swing.JMenuItem MenuItemRebootTool;
     private javax.swing.JMenuItem MenuItemRecovery;
@@ -2122,7 +2051,6 @@ try {
     private javax.swing.JMenuBar TaskBar;
     private javax.swing.JButton UnlockBootloaderBTN;
     private javax.swing.JMenuItem howtouseit;
-    private javax.swing.JPopupMenu.Separator jSeparator2;
     private javax.swing.JPopupMenu.Separator jSeparator3;
     // End of variables declaration//GEN-END:variables
 
