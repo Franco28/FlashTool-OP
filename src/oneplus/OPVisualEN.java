@@ -18,7 +18,7 @@
  * Tool En
  * 
  * @author (Franco Mato - franco28) 
- * @version (1.0.3.9.RC1)
+ * @version (1.0.4.9.RC1)
  * 
  * 
  */
@@ -154,7 +154,7 @@ public class OPVisualEN extends javax.swing.JFrame {
         MenuItemBugs = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("OnePlus 5 Tool - STABLE - En - 1.0.3.9-RC1");
+        setTitle("OnePlus 5 Tool - STABLE - En - 1.0.4.9-RC1");
         setBackground(java.awt.Color.darkGray);
         setForeground(java.awt.Color.darkGray);
         setResizable(false);
@@ -868,7 +868,7 @@ public class OPVisualEN extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        getAccessibleContext().setAccessibleName("OnePlus Tool 5 - STABLE - En - 1.0.3.9-RC1");
+        getAccessibleContext().setAccessibleName("OnePlus Tool 5 - STABLE - En - 1.0.4.9-RC1");
         getAccessibleContext().setAccessibleDescription("Tool for OnePlus 5");
         getAccessibleContext().setAccessibleParent(this);
 

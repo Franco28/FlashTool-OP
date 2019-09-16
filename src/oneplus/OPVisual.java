@@ -18,7 +18,7 @@
  * Tool Es
  * 
  * @author (Franco Mato - franco28) 
- * @version (1.0.3.9.RC1)
+ * @version (1.0.4.9.RC1)
  * 
  * 
  */
@@ -154,7 +154,7 @@ public class OPVisual extends javax.swing.JFrame {
         MenuItemBugs = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("OnePlus 5 Tool - ESTABLE - Es - 1.0.3.9-RC1");
+        setTitle("OnePlus 5 Tool - ESTABLE - Es - 1.0.4.9-RC1");
         setBackground(java.awt.Color.darkGray);
         setForeground(java.awt.Color.darkGray);
         setResizable(false);
@@ -170,7 +170,7 @@ public class OPVisual extends javax.swing.JFrame {
         UnlockBootloaderBTN.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
         UnlockBootloaderBTN.setIcon(new javax.swing.ImageIcon(getClass().getResource("/oneplus/images/unlocked.png"))); // NOI18N
         UnlockBootloaderBTN.setText("Desbloquear Bootloader");
-        UnlockBootloaderBTN.setToolTipText("Desbloquea bootloader del télefono, esto eliminará todos sus datos");
+        UnlockBootloaderBTN.setToolTipText("Desbloquea bootloader del télefono, esto eliminara todos sus datos");
         UnlockBootloaderBTN.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         UnlockBootloaderBTN.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
         UnlockBootloaderBTN.addActionListener(new java.awt.event.ActionListener() {
@@ -182,7 +182,7 @@ public class OPVisual extends javax.swing.JFrame {
         LockBootloaderBTN.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
         LockBootloaderBTN.setIcon(new javax.swing.ImageIcon(getClass().getResource("/oneplus/images/locked.png"))); // NOI18N
         LockBootloaderBTN.setText("Bloquear Bootloader");
-        LockBootloaderBTN.setToolTipText("Bloquea bootloader del télefono, esto eliminará todos sus datos");
+        LockBootloaderBTN.setToolTipText("Bloquea bootloader del télefono, esto eliminara todos sus datos");
         LockBootloaderBTN.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         LockBootloaderBTN.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -868,7 +868,7 @@ public class OPVisual extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        getAccessibleContext().setAccessibleName("OnePlus Tool 5 - ESTABLE - Es - 1.0.2.9-RC1");
+        getAccessibleContext().setAccessibleName("OnePlus Tool 5 - ESTABLE - Es - 1.0.4.9-RC1");
         getAccessibleContext().setAccessibleDescription("Tool for OnePlus 5");
         getAccessibleContext().setAccessibleParent(this);
 
