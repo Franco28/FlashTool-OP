@@ -108,6 +108,8 @@ public class MotoVisual extends javax.swing.JFrame {
         MenuItemFlashFirmware = new javax.swing.JMenuItem();
         MenuItemFlashFirmwareSeparator = new javax.swing.JPopupMenu.Separator();
         MenuItemDownloadFirmware = new javax.swing.JMenuItem();
+        jSeparator1 = new javax.swing.JPopupMenu.Separator();
+        jMenuItem1 = new javax.swing.JMenuItem();
         MenuOthers = new javax.swing.JMenu();
         MenuItemRebootTool = new javax.swing.JMenuItem();
         MenuOthersSeparator1 = new javax.swing.JPopupMenu.Separator();
@@ -409,6 +411,18 @@ public class MotoVisual extends javax.swing.JFrame {
             }
         });
         MenuFlash.add(MenuItemDownloadFirmware);
+        MenuFlash.add(jSeparator1);
+
+        jMenuItem1.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        jMenuItem1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/mototool/images/xda.png"))); // NOI18N
+        jMenuItem1.setText("XDA Foro");
+        jMenuItem1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem1ActionPerformed(evt);
+            }
+        });
+        MenuFlash.add(jMenuItem1);
 
         TaskBar.add(MenuFlash);
 
@@ -664,8 +678,9 @@ public class MotoVisual extends javax.swing.JFrame {
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(OPLogo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap(30, Short.MAX_VALUE)
+                .addComponent(OPLogo, javax.swing.GroupLayout.PREFERRED_SIZE, 165, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(BootloaderLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(RebootLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -1551,6 +1566,7 @@ try {
             writer.println("echo ***************");   
             writer.println("echo - Primera compilacion");            
             writer.println("echo - Soporte para Moto Z3 Play (beckham)");  
+            writer.println("echo - Anadido menu firmwares");    
             writer.println("echo.");            
             writer.println("echo Presiona cualquier tecla para salir...");
             writer.println("echo.");
@@ -1626,17 +1642,172 @@ try {
     }//GEN-LAST:event_MenuItemEnglishActionPerformed
 
     private void MenuItemFlashFirmwareActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MenuItemFlashFirmwareActionPerformed
+    File f = new File("C:\\MotoTool\\firmware\\*.xml.zip");
+    int reply = JOptionPane.showConfirmDialog(null, "Está opción sigue en fase beta, tenga cuidado!", "Cuidado! Desea continuar?", JOptionPane.YES_NO_OPTION);
+
+    if (reply == JOptionPane.YES_OPTION) {           
+    if(f.exists() == true){
+                
+        File f2 = new File("C:\\MotoTool\\firmware\\*.xml.zip"); 
+        String zipFilePath = "C:\\MotoTool\\firmware\\*.xml.zip";
+        String destDirectory = "C:\\*.xml.zip";
+        UnzipUtility unzipper = new UnzipUtility();
+        try {
+            unzipper.unzip(zipFilePath, destDirectory);
+        } catch (IOException ex) {
+            JOptionPane.showMessageDialog(null,"No se pudo descomprimir el archivo " +f2,"Error",JOptionPane.ERROR_MESSAGE);
+        }
+                
+    final File file = new File("C:\\MotoTool\\.settings\\bin\\flash.bat");
+        try {
+            file.createNewFile();
+        } catch (IOException ex) {
         final Runnable runnable = (Runnable) Toolkit.getDefaultToolkit().getDesktopProperty("win.sound.exclamation");
         if (runnable != null) runnable.run();
-        JOptionPane.showMessageDialog(null, "Opción no disponible...");     
+        JOptionPane.showMessageDialog(null,"No se pudo crear el archivo","Error",JOptionPane.ERROR_MESSAGE);
+        }
+        try (PrintWriter writer = new PrintWriter(file, "UTF-8")) {
+            writer.println("@echo off");
+            writer.println("title FLASH FIRMWARE");
+            writer.println("color C");
+            writer.println("echo.");
+            writer.println("echo Flashear firmware para Moto Z3 Play...");
+            writer.println("echo.");
+            writer.println("echo Pulse cualquier tecla para continuar...");
+            writer.println("pause>nul");
+            writer.println("cd C:\\MotoTool\\firmware");
+            writer.println("echo.");
+            writer.println("fastboot flash partition gpt.bin");
+            writer.println("fastboot flash bootloader bootloader.img");
+            writer.println("fastboot flash bluetooth BTFM.bin");
+            writer.println("fastboot flash dsp dspso.bin");
+            writer.println("fastboot flash logo logo.bin");
+            writer.println("fastboot flash boot boot.img");
+            writer.println("fastboot flash system system.img_sparsechunk.0");
+            writer.println("fastboot flash system system.img_sparsechunk.1");
+            writer.println("fastboot flash system system.img_sparsechunk.2");
+            writer.println("fastboot flash system system.img_sparsechunk.3");
+            writer.println("fastboot flash system system.img_sparsechunk.4");
+            writer.println("fastboot flash system system.img_sparsechunk.5");
+            writer.println("fastboot flash system_b system_other.img");
+            writer.println("fastboot flash oem oem.img");
+            writer.println("fastboot flash oem_b oem_other.img");
+            writer.println("fastboot flash vendor vendor.img_sparsechunk.0");
+            writer.println("fastboot flash vendor vendor.img_sparsechunk.1");
+            writer.println("fastboot erase carrier");
+            writer.println("fastboot erase cache");
+            writer.println("fastboot erase userdata");
+            writer.println("fastboot erase DDR");
+            writer.println("echo.");
+            writer.println("echo Presione cualquier tecla para continuar...");
+            writer.println("pause>nul");
+            writer.println("fastboot reboot");
+            writer.println("echo.");
+            writer.println("echo Presiona cualquier tecla para salir...");
+            writer.println("echo.");
+            writer.println("pause>nul");
+            writer.println("TASKKILL /F /IM fastboot.exe");
+            writer.println("del \"%~f0\" & exit");
+
+        }catch (IOException e) {
+         final Runnable runnable = (Runnable) Toolkit.getDefaultToolkit().getDesktopProperty("win.sound.exclamation");
+         if (runnable != null) runnable.run();
+         JOptionPane.showMessageDialog(null,"" +e ,"Error",JOptionPane.ERROR_MESSAGE);
+        }
+                
+   Runtime runtime = Runtime.getRuntime();
+try {
+    Process p1 = runtime.exec("cmd /c start C:\\MotoTool\\.settings\\bin\\flash.bat");
+    InputStream is = p1.getInputStream();
+    int i = 0;
+    while( (i = is.read() ) != -1) {
+       final Runnable runnable = (Runnable) Toolkit.getDefaultToolkit().getDesktopProperty("win.sound.exclamation");
+       if (runnable != null) runnable.run();
+       JOptionPane.showMessageDialog(null, +i,"Error",JOptionPane.ERROR_MESSAGE);
+    }
+} catch(IOException ioException) {
+    final Runnable runnable = (Runnable) Toolkit.getDefaultToolkit().getDesktopProperty("win.sound.exclamation");
+    if (runnable != null) runnable.run();
+    JOptionPane.showMessageDialog(null, ioException.getMessage(),"Error",JOptionPane.ERROR_MESSAGE);
+}
+  }else{
+       JOptionPane.showMessageDialog(null, "No se encontro el firmware " +f,"Error",JOptionPane.ERROR_MESSAGE);
+    }
+}else{
+        this.dispose();
+        new MotoVisual().setVisible(true);
+    }
     }//GEN-LAST:event_MenuItemFlashFirmwareActionPerformed
 
     private void MenuItemDownloadFirmwareActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MenuItemDownloadFirmwareActionPerformed
-    Desktop d = Desktop.getDesktop();
-try {
-    d.browse(new URI("https://mirrors.lolinet.com/firmware/moto/beckham/official/"));
-} catch (IOException | URISyntaxException e2) {
-} 
+        Object response = JOptionPane.showInputDialog(null,
+                "Elija un firmware", 
+                "Seleccione un firmware por favor",
+                JOptionPane.QUESTION_MESSAGE, 
+                null, 
+                new String[] { "Todos los firmwares","RETEU","RETAR","RETLA","RETCA","RETAIL"},
+                "Todos los firmwares");      
+        
+        if(response == "Todos los firmwares") {
+            Desktop d = Desktop.getDesktop();
+        try {
+            d.browse(new URI("https://mirrors.lolinet.com/firmware/moto/beckham/official/"));
+        }catch (IOException | URISyntaxException e2) {
+        DebugConsole.setText("Error: " + e2);     
+        } 
+ }
+        
+        if(response == "RETEU") {
+            Desktop d = Desktop.getDesktop();
+        try {
+            d.browse(new URI("https://mirrors.lolinet.com/firmware/moto/beckham/official/RETEU/"));
+        }catch (IOException | URISyntaxException e2) {
+        DebugConsole.setText("Error: " + e2);     
+        } 
+ }
+        
+        if(response == "RETAR") {
+            Desktop d = Desktop.getDesktop();
+        try {
+            d.browse(new URI("https://mirrors.lolinet.com/firmware/moto/beckham/official/RETAR/"));
+        }catch (IOException | URISyntaxException e2) {
+        DebugConsole.setText("Error: " + e2);     
+        } 
+ }
+        
+        if(response == "RETLA") {
+            Desktop d = Desktop.getDesktop();
+        try {
+            d.browse(new URI("https://mirrors.lolinet.com/firmware/moto/beckham/official/RETLA/"));
+        }catch (IOException | URISyntaxException e2) {
+        DebugConsole.setText("Error: " + e2);     
+        } 
+ }
+     
+        if(response == "RETCA") {
+            Desktop d = Desktop.getDesktop();
+        try {
+            d.browse(new URI("https://mirrors.lolinet.com/firmware/moto/beckham/official/RETCA/"));
+        }catch (IOException | URISyntaxException e2) {
+        DebugConsole.setText("Error: " + e2);     
+        } 
+ }
+        
+        if(response == "RETAIL") {
+            Desktop d = Desktop.getDesktop();
+        try {
+            d.browse(new URI("https://mirrors.lolinet.com/firmware/moto/beckham/official/RETAIL/"));
+        }catch (IOException | URISyntaxException e2) {
+        DebugConsole.setText("Error: " + e2);     
+        } 
+ }
+                
+        if(response == null) {
+        this.dispose();
+        new MotoVisual().setVisible(true);
+        }
+        
+        
     }//GEN-LAST:event_MenuItemDownloadFirmwareActionPerformed
 
     private void MenuItemRecoveryActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MenuItemRecoveryActionPerformed
@@ -1964,6 +2135,14 @@ try {
 } 
     }//GEN-LAST:event_howtouseitActionPerformed
 
+    private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
+Desktop d = Desktop.getDesktop();
+try {
+    d.browse(new URI("https://forum.xda-developers.com/z3-play"));
+} catch (IOException | URISyntaxException e2) {
+} 
+    }//GEN-LAST:event_jMenuItem1ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -2051,6 +2230,8 @@ try {
     private javax.swing.JMenuBar TaskBar;
     private javax.swing.JButton UnlockBootloaderBTN;
     private javax.swing.JMenuItem howtouseit;
+    private javax.swing.JMenuItem jMenuItem1;
+    private javax.swing.JPopupMenu.Separator jSeparator1;
     private javax.swing.JPopupMenu.Separator jSeparator3;
     // End of variables declaration//GEN-END:variables
 
