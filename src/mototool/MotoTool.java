@@ -13,6 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+
 package mototool;
 
 import java.awt.BorderLayout;
@@ -87,7 +88,7 @@ public class MotoTool extends Application {
                sock.connect(addr,3000);  
                mp.play();
                System.out.println("Reproduciendo Hello Moto :)...");
-               URL imageURL = new URL("https://raw.githubusercontent.com/Franco28/FlashTool-OP/MotoTool/images/motosplash.gif");              
+               URL imageURL = new URL("https://raw.githubusercontent.com/Franco28/FlashTool-OP/MotoTool/src/mototool/images/motosplash.gif");              
                label.setIcon(new ImageIcon(imageURL));
            }
            catch (MalformedURLException ex){
