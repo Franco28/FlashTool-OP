@@ -58,7 +58,6 @@ import javax.swing.UnsupportedLookAndFeelException;
 import static mototool.MotoTool.OS;
 import static mototool.size.getFileFolderSize;
 
-
 public class MotoVisual extends javax.swing.JFrame {
        
     /**
@@ -1642,22 +1641,24 @@ try {
     }//GEN-LAST:event_MenuItemEnglishActionPerformed
 
     private void MenuItemFlashFirmwareActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MenuItemFlashFirmwareActionPerformed
-    File f = new File("C:\\MotoTool\\firmware\\*.xml.zip");
     int reply = JOptionPane.showConfirmDialog(null, "Está opción sigue en fase beta, tenga cuidado!", "Cuidado! Desea continuar?", JOptionPane.YES_NO_OPTION);
 
     if (reply == JOptionPane.YES_OPTION) {           
-    if(f.exists() == true){
-                
-        File f2 = new File("C:\\MotoTool\\firmware\\*.xml.zip"); 
-        String zipFilePath = "C:\\MotoTool\\firmware\\*.xml.zip";
-        String destDirectory = "C:\\*.xml.zip";
-        UnzipUtility unzipper = new UnzipUtility();
+       JOptionPane.showMessageDialog(null, "Coloque el archivo en la carpeta que se abrirá y descomprima el archivo por favor...");   
+        Desktop desktop = Desktop.getDesktop();
+        File dirToOpen = null;
         try {
-            unzipper.unzip(zipFilePath, destDirectory);
+            dirToOpen = new File("C:\\MotoTool\\img\\firmware");
+            desktop.open(dirToOpen);
+        } catch (IllegalArgumentException iae) {
+            final Runnable runnable = (Runnable) Toolkit.getDefaultToolkit().getDesktopProperty("win.sound.exclamation");
+            if (runnable != null) runnable.run();
+            JOptionPane.showMessageDialog(null,"Carpeta " +dirToOpen+ " no encontrada","Error",JOptionPane.ERROR_MESSAGE);
         } catch (IOException ex) {
-            JOptionPane.showMessageDialog(null,"No se pudo descomprimir el archivo " +f2,"Error",JOptionPane.ERROR_MESSAGE);
+            final Runnable runnable = (Runnable) Toolkit.getDefaultToolkit().getDesktopProperty("win.sound.exclamation");
+            if (runnable != null) runnable.run();
+            Logger.getLogger(MotoVisual.class.getName()).log(Level.SEVERE, null, ex);
         }
-                
     final File file = new File("C:\\MotoTool\\.settings\\bin\\flash.bat");
         try {
             file.createNewFile();
@@ -1714,7 +1715,7 @@ try {
          if (runnable != null) runnable.run();
          JOptionPane.showMessageDialog(null,"" +e ,"Error",JOptionPane.ERROR_MESSAGE);
         }
-                
+
    Runtime runtime = Runtime.getRuntime();
 try {
     Process p1 = runtime.exec("cmd /c start C:\\MotoTool\\.settings\\bin\\flash.bat");
@@ -1730,10 +1731,7 @@ try {
     if (runnable != null) runnable.run();
     JOptionPane.showMessageDialog(null, ioException.getMessage(),"Error",JOptionPane.ERROR_MESSAGE);
 }
-  }else{
-       JOptionPane.showMessageDialog(null, "No se encontro el firmware " +f,"Error",JOptionPane.ERROR_MESSAGE);
-    }
-}else{
+    }else{
         this.dispose();
         new MotoVisual().setVisible(true);
     }
