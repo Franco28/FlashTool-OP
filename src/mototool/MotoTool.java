@@ -188,13 +188,15 @@ public class MotoTool extends Application {
    
             EventQueue.invokeLater(() -> {
             JLabel label = new JLabel();
-            JFrame frame = new JFrame("Welcome To OnePlus Tool 1.0.3.9.RC1 " +OS+ " " +LOCALE);
+            JFrame frame = new JFrame("Welcome To Moto Tool 1.0.0.0.RC1 " +OS+ " " +LOCALE);
             label.setHorizontalAlignment(SwingConstants.CENTER);
             Socket sock= new Socket();
             InetSocketAddress addr=new InetSocketAddress("www.google.com",80);
            try{
                sock.connect(addr,3000);  
-               URL imageURL = new URL("https://raw.githubusercontent.com/Franco28/FlashTool-OP/master/src/oneplus/images/splash.gif");              
+                mp.play();
+               System.out.println("Playing Hello Moto :)...");
+               URL imageURL = new URL("https://raw.githubusercontent.com/Franco28/FlashTool-OP/MotoTool/src/mototool/images/motosplash.gif");              
                label.setIcon(new ImageIcon(imageURL));
            }
            catch (MalformedURLException ex){
@@ -217,38 +219,20 @@ public class MotoTool extends Application {
                 "Welcome to OnePlus Tool",
                 JOptionPane.QUESTION_MESSAGE, 
                 null, 
-                new String[] { "OnePlus 5 Tool", "OnePlus 5T Tool", "Xiaomi MI A2/6X Tool" },
-                "OnePlus 5 Tool");      
+                new String[] { "Moto Z3 Play Tool"},
+                "Moto Z3 Play Tool");     
         
-        if(response == "OnePlus 5 Tool") {
+        if(response == "Moto Z3 Play Tool") {
+            JOptionPane.showOptionDialog(null, 
+            LOCALE+ " it´s not available yet!", 
+            "This language it´s not ready",
+            JOptionPane.OK_OPTION,
+            JOptionPane.INFORMATION_MESSAGE, 
+            null,
+            new String[]{"Okey :("},
+            null);
         frame.setVisible(false);
    }
-        
-        if(response == "OnePlus 5T Tool") {
-        if (runnable != null) runnable.run();
-        JOptionPane.showOptionDialog(null, 
-            response+ " is not ready yet! :(, im working on it!", 
-            "No ready yet",
-            JOptionPane.OK_OPTION,
-            JOptionPane.INFORMATION_MESSAGE, 
-            null,
-            new String[]{"Okey :("},
-            null);
-        System.exit(0);
-        }
-        
-        if(response == "Xiaomi MI A2/6X Tool") {
-        if (runnable != null) runnable.run();
-        JOptionPane.showOptionDialog(null, 
-            response+ " is not ready yet! :(", 
-            "No ready yet",
-            JOptionPane.OK_OPTION,
-            JOptionPane.INFORMATION_MESSAGE, 
-            null,
-            new String[]{"Okey :("},
-            null);
-        System.exit(0);
-        }
         
         if(response == null) {
         if (runnable != null) runnable.run();
