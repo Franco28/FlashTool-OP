@@ -45,10 +45,7 @@ import javax.swing.UIManager;
 import javax.swing.UnsupportedLookAndFeelException;
 import javax.swing.WindowConstants;
 
-/**
- *
- * @author franco28
- */
+
 public interface Welcome {
         
     static String OS = System.getProperty("os.name").toLowerCase();
@@ -97,6 +94,7 @@ public interface Welcome {
                JOptionPane.showMessageDialog(null,"Verifique su conexión a Internet e intente nuevamente....","Error",JOptionPane.ERROR_MESSAGE);
            }
 
+           frame.setIconImage(new ImageIcon(Welcome.class.getResource("Icon.png")).getImage());
            frame.add(label, BorderLayout.CENTER);
            frame.setBackground(Color.RED);
            frame.setDefaultCloseOperation(WindowConstants.DO_NOTHING_ON_CLOSE);
