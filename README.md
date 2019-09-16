@@ -29,10 +29,6 @@ Download the Tool from here * [FlashTool-OP](https://github.com/Franco28/FlashTo
 
 ![Tool](https://raw.githubusercontent.com/Franco28/FlashTool-OP/master/Tool.png "Tool")
 
-### MenuRom Tool
-
-![Tool](https://raw.githubusercontent.com/Franco28/FlashTool-OP/master/Tool2.png "ToolMenuRoms")
-
 ## Built With
 
 * [launch4j](http://launch4j.sourceforge.net/)
